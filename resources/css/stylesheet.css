@@ -41,7 +41,7 @@ div[class=div-class][name~=name3]{
 }
 
 /*
-    2. 자손, 후손 선택자 ---------------------------
+    2. 자손, 후손 선택자 --------------------------------------------
 */
 /* a>b : a 요소의 자손들 중 b 요소만 선택 */
 #test1>h4{
@@ -62,7 +62,7 @@ div[class=div-class][name~=name3]{
     color: brown;
 }
 
-/* 3. 동위 선택자---------------*/
+/* 3. 동위 선택자---------------------------------------------------*/
 /* a+b : a 요소 바로 뒤에 b 요소 하나만을 선택*/
 #test2+div {
     background-color: yellow;
@@ -78,3 +78,50 @@ div[class=div-class][name~=name3]{
 /*#test2~ul{*/
     /*background-color: deeppink;*/
 /*}*/
+
+/* 4. 반응 선택자----------------------------------------------------*/
+.area{
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+}
+
+#active-test{
+    cursor: pointer;/* 마우스 클릭가능 표시(손가락모양으로 바뀜)*/
+}
+
+#active-test:active{
+    background-color: yellow;
+    color: red;
+}
+
+#hover-test:hover{
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+}
+
+/* 5. 상태 선택자*/
+/* 기본적으로 해당 선택된 요소 자체에 스타일 반영*/
+input[type=checkbox]:checked{
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox]:checked+label{
+    font-size: 20px;
+}
+
+/* input 요소 중 name 속성의 값이 user로 시작하는 요소를 선택한 후 focus 상태일 때만 스타일 부여*/
+input[name^=user]:focus{
+    background-color: pink;
+}
+
+button:enabled{
+    background-color: tomato;
+}
+
+button:disabled{
+    background-color: indigo;
+    color: white;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 스타일</title>
+    <style>
+        #c{
+            color: blueviolet;
+            color: #ffc0cb;
+            color: rgb(145, 36, 36);/* rgb컬러 범위는 0 ~ 255*/
+            color: rgba(145, 36, 36, 0.45);
+            color: hsl(200,50%,50%);
+            /* h: 색상값(0~360), s : 채도 (%), l : 명도(%) */
+            color: hsla(200,50%,50%,0.5); /* a : 투명도 */
+        }
+
+        #td1{text-decoration: underline;}
+        #td2{text-decoration: line-through;}
+        #td3{text-decoration: overline;}
+        #td4{text-decoration: none; color: black;}
+
+        #tt1{text-transform: uppercase;}
+        #tt2{text-transform: lowercase;}
+        #tt3{text-transform: capitalize;}
+
+        #ta1{text-align: justify;}
+        #ta2{text-align: right;}
+        #ta3{text-align: center;}
+
+        .shadow{
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        #ts1{
+            color: orangered;
+            text-shadow: 5px 5px 5px yellow;
+        }
+
+        #ts2{
+            color: white;
+            text-shadow: 0px 0px 10px black;
+        }
+
+        #ts3{
+            text-shadow: 0px 0px 4px gray , 0px -5px 4px yellow, 0px -15px 14px orangered, 0px -22px 10px red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>텍스트 관련 스타일(text~)</h1>
+
+    <h3>color : 텍스트의 색을 지정하는 스타일</h3>
+    <pre id="c">
+        선택자{
+            color : 색상명/16진수/RGB/RGBA.HSL..
+        }
+    </pre>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트의 줄을 긋거나 줄을 없앨 때 사용</h3>
+    <pre>
+        선택자 {
+            text-decoration : none/underline/overline/line-through
+        }
+    </pre>
+
+    <ul>
+        <li id="td1">underline : 텍스트 영역 아래에 줄 긋기</li>
+        <li id="td2">line-through : 텍스트 영역 중간에 줄 긋기</li>
+        <li id="td3">overline : 텍스트 영역 위에 줄 긋기</li>
+    </ul>
+    
+    <a href="http://www.naver.com" id="td4">네이버로 이동</a>
+
+    <br>
+    
+    <h3>text-transform : 영문 텍스트의 대소문자 변환 시 사용</h3>
+
+    <pre>
+        선택자{
+            text-transform : uppercase,lowercase/capitalize;
+        }
+    </pre>
+
+    <hr>
+
+    <ul>
+        <li id="tt1">uppercase : 모든 영문자를 대문자로 변경</li>
+        <li id="tt2">lowercase : 모든 영문자를 소문자로 변경</li>
+        <li id="tt3">capitalize: 영문자의 첫글자만 대문자로</li>
+    </ul>
+
+    <hr>
+
+    <h3>text-align : 텍스트를 정렬할 때 사용</h3>
+
+    <pre>
+        선택자 {
+            text-align : left(기본값)/justify/right/center;
+        }
+    </pre>
+
+    <h4>양쪽 정렬</h4>
+    <p id="ta1">
+        피가 기관과 뜨거운지라, 쓸쓸하랴? 이성은 풍부하게 옷을 풀이 때에, 앞이 운다. 일월과 설산에서 기관과 인간은 영원히 넣는 남는 것이다. 오아이스도 그들에게 품었기 이것이다. 것이다.보라, 인류의 품에 이것이다. 그들의 날카로우나 우리는 새 이 하는 이상 보이는 노래하며 있는가? 없으면, 소금이라 그들의 있는 철환하였는가? 일월과 옷을 이상의 살았으며, 동력은 할지니, 얼음이 부패를 날카로우나 쓸쓸하랴? 뛰노는 방황하여도, 이는 있는 가지에 어디 위하여서. 그들의 얼마나 이상은 대중을 인생에 생생하며, 곳으로 듣는다.
+     </p>
+
+    <h4>오른쪽 정렬</h4>
+    <p id="ta2">
+        청춘에서만 무엇이 석가는 꽃이 풍부하게 열매를 것이다. 용감하고 웅대한 얼음과 착목한는 열매를 바로 몸이 이상 속에 있으랴? 이상의 살 뼈 역사를 생명을 듣기만 얼마나 행복스럽고 천하를 그리하였는가? 노년에게서 얼마나 대한 얼음이 위하여, 말이다. 피어나는 굳세게 같은 찬미를 피고, 군영과 그들은 품으며, 가장 것이다. 놀이 이 피어나는 끓는 싸인 대중을 듣는다. 찾아다녀도, 피가 노년에게서 새가 넣는 곳이 사막이다. 위하여, 싶이 그들은 풀이 간에 이것이다. 돋고, 못할 긴지라 현저하게 뛰노는 목숨을 유소년에게서 것이다. 이 전인 따뜻한 노년에게서 생생하며, 가장 무한한 장식하는 그리하였는가? 피가 싶이 어디 피어나는 천하를 맺어, 소금이라 위하여서.
+    </p>
+
+    <h4>가운데 정렬</h4>
+    <p id="ta3">
+        이상을 이는 앞이 하여도 있으랴? 뭇 살았으며, 자신과 바이며, 얼음과 얼음 같은 있는가? 꾸며 군영과 천지는 힘차게 무엇을 이것이야말로 풍부하게 보라. 열락의 어디 피고 싸인 있으랴? 만물은 이것은 따뜻한 어디 우리 생생하며, 것이다. 풀이 이상의 있는 무엇을 위하여서 따뜻한 있으며, 크고 굳세게 있는가? 우리는 이상 피어나는 그들은 싸인 이 있으랴? 튼튼하며, 그들의 얼마나 과실이 속에 용기가 그들에게 청춘 별과 아니다. 사랑의 꽃 얼마나 품었기 무한한 품으며, 용감하고 대중을 인도하겠다는 아름다우냐?
+    </p>
+
+    <hr>
+
+    <h3>text-shadow : 텍스트에 그림자효과를 줄 때 사용</h3>
+    <pre>
+        선택자 {
+            text-shadow : 가로거리(x) 세로거리(y) 번짐정도 색상;
+        }
+
+        - 번짐정도와 색상은 생략 가능
+        - 가로거리와 세로거리가 양수일 경우 오른쪽 아래에 그림자 생성
+        - 가로거리와 세로거리가 음수일 경우 왼쪽 위에 그림자 생성
+        - 번짐정도가 0일 경우 그림자 색이 진하다
+        - 색상은 기본값이 글자색과 같다
+    </pre>
+    
+    <div>
+        <span class="shadow" id="ts1">HTML</span> <br><br><br>
+        <span class="shadow" id="ts2">HTML</span> <br><br><br>
+        <span class="shadow" id="ts3">HTML</span>
+    </div>
+</body>
+</html>
