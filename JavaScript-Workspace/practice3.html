@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        div{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>회원가입</legend>
+        <label for="아이디">아이디 : </label><input type="text" onkeyup="checkId();" class="input" id="아이디"> <div id="area1"></div> <br><br>
+
+        <label for="비밀번호">비밀번호 : </label><input type="password" class="input" id="비밀번호"> <div id="area2"></div> <br><br>
+
+        <label for="비밀번호확인">비밀번호 확인 : </label><input type="password" onblur="checkPwd();" class="input" id="비밀번호확인"> <div id="area3"></div> <br><br>
+
+        <label for="이름">이름 : </label><input type="text" class="input" id="이름"> <div id="area4"></div> <br><br>
+
+        <button onclick="checkAll();" id="form">회원가입</button>
+    </fieldset>
+
+    <script>
+        function checkAll(){
+            let input = document.getElementsByClassName("input");
+            let name = document.getElementById("이름").value;
+            for(let i of input){
+                if(!i.value){
+                    window.alert(i.id +"을(를) 입력해주세요.");
+                    i.focus();
+                    return;
+                }
+            }
+            let id = document.getElementById("아이디");
+            if(id.value == 'user01'){
+                window.alert("사용할 수 없는 아이디입니다.")
+                id.value = "";
+                id.focus();
+                return;
+            }
+            let pwd = document.getElementById("비밀번호").value;
+            let pwdC= document.getElementById("비밀번호확인");
+            if(pwd != pwdC.value){
+                window.alert("비밀번호가 일치하지 않습니다.");
+                pwdC.value = "";
+                pwdC.focus();
+                return;
+            }
+            window.alert(name +"님, 회원가입이 성공적으로 완료되었습니다^^");
+        }
+        function checkId(){
+            let id = document.getElementById("아이디");
+            let div = document.getElementById("area1");
+            if(id.value == 'user01'){
+                div.innerHTML = "이미 존재하는 아이디입니다.";
+                div.style.color="red";
+            }else if(!id.value){
+                div.innerHTML = "";
+            }else{
+                div.innerHTML = "사용 가능한 아이디입니다.";
+                div.style.color="green";
+            }
+        }
+        function checkPwd(){
+            let pwd = document.getElementById("비밀번호").value;
+            let pwdC= document.getElementById("비밀번호확인").value;
+            let div3 = document.getElementById("area3")
+            if(pwd == pwdC){
+                div3.innerHTML = "비밀번호가 일치합니다.";
+                div3.style.color="green";
+            }else{
+                div3.innerHTML = "비밀번호가 일치하지 않습니다.";
+                div3.style.color="red";
+            }
+        }
+    </script>
+</body>
+</html>

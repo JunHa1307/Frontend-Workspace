@@ -6,45 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>책 카테고리 선택</title>
     <style>
-        div,fieldset{
-            width: 700px;
+        body>div,fieldset{
+            width: 900px;
             height: 70px;
             border: 1px solid black;
         }
-        input, label{
+        fieldset>div,input, label{
             float: left;
-            display: flex;
+        }
+        fieldset>div{
+            width: 70%;
+        }
+        #lang{
+            padding-right: 22px;
+        }
+        #com{
+            padding-right: 16px;
         }
     </style>
 </head>
 <body>
-    <form action="">
-        <fieldset>
-            <legend>취미</legend>
-            <input type="checkbox" onclick="check();" name="all" id="all" value="all"><label for="all">전체선택</label>
-    
-            <input type="checkbox" onclick="allCheck();" name="category" id="a" value="종합"><label for="종합">종합</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="novel" value="소설"><label for="소설">소설</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="essay" value="시/에세이"><label for="시/에세이">시/에세이</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="economy" value="경제/경영"><label for="경제/경영">경제/경영</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="study" value="자기계발"><label for="자기계발">자기계발</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="child" value="아동"><label for="아동">아동</label> <br>
-
-            <input type="checkbox" onclick="allCheck();" name="category" id="travel" value="여행"><label for="여행">여행</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="science" value="과학"><label for="과학">과학</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="history" value="역사/문화"><label for="역사/문화">역사/문화</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="language" value="외국어"><label for="외국어">외국어</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="computer" value="컴퓨터"><label for="컴퓨터">컴퓨터</label>
-            <input type="checkbox" onclick="allCheck();" name="category" id="animation" value="만화"><label for="만화">만화</label>
-    
-        </fieldset>
-    </form>
+    <!-- 테이블로 만들고 행과 열로 나누면 편하게 구간을 나눌 수 있다 -->
+    <!-- <table>
+             <tr>
+                <td>
+                    <input><label>
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                    <input><label>
+                </td>
+            </tr>
+         </table> -->
+    <fieldset>
+        <legend>취미</legend>
+        <input type="checkbox" onclick="check();" name="all" id="all" value="all"><label for="all">전체선택</label>
+        <div>
+            <input type="checkbox"  name="category" id="a" value="종합"><label for="종합">종합</label>
+            <input type="checkbox"  name="category" id="novel" value="소설"><label for="소설">소설</label>
+            <input type="checkbox"  name="category" id="essay" value="시/에세이"><label for="시/에세이">시/에세이</label>
+            <input type="checkbox"  name="category" id="economy" value="경제/경영"><label for="경제/경영">경제/경영</label>
+            <input type="checkbox"  name="category" id="study" value="자기계발"><label for="자기계발">자기계발</label>
+            <input type="checkbox"  name="category" id="child" value="아동"><label for="아동">아동</label> <br>
+            
+            <input type="checkbox"  name="category" id="travel" value="여행"><label for="여행">여행</label>
+            <input type="checkbox"  name="category" id="science" value="과학"><label for="과학">과학</label>
+            <input type="checkbox"  name="category" id="history" value="역사/문화"><label for="역사/문화">역사/문화</label>
+            <input type="checkbox"  name="category" id="language" value="외국어"><label for="외국어" id="lang">외국어</label>
+            <input type="checkbox"  name="category" id="computer" value="컴퓨터"><label for="컴퓨터" id="com">컴퓨터</label>
+            <input type="checkbox"  name="category" id="animation" value="만화"><label for="만화">만화</label>
+        </div>
+    </fieldset>
     <button onclick="print();">카테고리 선택</button>
     <div id="area2"></div>
 
     <script>
-        function print(){
-            let category = document.getElementsByName("category");
+        let category = document.getElementsByName("category");
+
+        for(let i = 0; i < category.length; i++){//3
+            category[i].onclick = function(){
+                let checkedListLength = document.querySelectorAll("input[name=category]:checked").length;
+                // 선택된 체크박스 길이 == 전체 체크박스 길이
+                if(checkedListLength == category.length){
+                    document.getElementById("all").checked = true;
+                }else{
+                    document.getElementById("all").checked = false;
+                }
+                // 전체 체크박스 길이 : 12
+            }
+         }
+        // function allCheck(){//3
+        //     for(i in category){
+        //         if(category[i].checked==false){
+        //             all.checked = false;
+        //             break;
+        //         }else{
+        //             all.checked = true;
+        //         }
+        //     }
+        // }
+        function print(){//1
+            // let checkedList = document.querySelectorAll(input[type="checkbox":checked]);
+            // let area = document.getElementById("area");
+            //
+            // checkedList.forEach(function(item,index,array){
+            //      area.innerHTML += item.value + " ";
+            // })
             let checkedItem = "";
 
             for(let i = 0; i < category.length; i++){
@@ -55,29 +103,22 @@
 
             document.getElementById("area2").innerHTML = checkedItem;
         }
-        function check(){
-            let all = document.getElementById("all");
-            let category = document.getElementsByName("category");
-            if(all.checked==true){
-                for(let i in category){
-                    category[i].checked = true;
-                }
-            }else{
-                for(let i in category){
-                    category[i].checked = false;
-                }
+        function check(){//2
+            let checked = document.getElementById("all").checked;
+            let categorys = document.getElementsByName("category");
+            for(let i = 0; i < categorys.length; i++){
+                categorys[i].checked = checked;
             }
-        }
-        function allCheck(){
-            let category = document.getElementsByName("category");
-            for(i in category){
-                if(category[i].checked==false){
-                    all.checked = false;
-                    break;
-                }else{
-                    all.checked = true;
-                }
-            }
+            // let all = document.getElementById("all");
+            // if(all.checked==true){
+            //     for(let i in category){
+            //         category[i].checked = true;
+            //     }
+            // }else{
+            //     for(let i in category){
+            //         category[i].checked = false;
+            //     }
+            // }
         }
     </script>
 </body>

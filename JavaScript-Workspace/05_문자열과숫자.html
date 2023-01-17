@@ -57,6 +57,8 @@
             let str2 = "사과,바나나,삼겹살,복숭아";
             let arr = str2.split(","); // ["사과","바나나"."삼겹살",복숭아]
 
+            arr = arr.join(" ||| ");
+
             area1.innerHTML += "arr : " + arr + "<br>";
             area1.innerHTML += " arr의 자료형은 : " +typeof(arr);
         }
@@ -94,17 +96,17 @@
 
     <script>
         function arithmetic(){
-            let test1 = 7+7;
-            let test2 = 7+"7";
-            let test3 = "7"+7;
-            let test4 = "7"+7+7;
+            let test1 = 7+7;// 14
+            let test2 = 7+"7";// 77
+            let test3 = "7"+7;// 77
+            let test4 = "7"+7+7;// 777
 
             console.log(test1, test2, test3, test4);
 
             // 그 외의 산술연산
-            let test5 = "7" * 7;
-            let test6 = "7" - 7;
-            let test7 = "7" / 7;
+            let test5 = "7" * 7;//49
+            let test6 = "7" - 7;// 0
+            let test7 = "7" / 7;// 1
             // 문자열이 자동형변환으로 숫자로 변한 뒤 산술연산이 시작됨, 이때, 문자열에는 숫자만 존재해야 한다.
 
             let area3 = document.getElementById("area3");

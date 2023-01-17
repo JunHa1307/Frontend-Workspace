@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단 계산</title>
+
+</head>
+<body>
+    <input type="text" id="num1">
+    <select onchange="onchange1();" name="oper" id="oper">
+        <option name="option" value="plus">+</option>
+        <option name="option" value="minus">-</option>
+        <option name="option" value="multi">*</option>
+        <option name="option" value="divi">/</option>
+        <option name="option" value="rem">%</option>
+    </select>
+    <input type="text" id="num2">
+    <button onclick="calc();">=</button>
+    <input type="text" id="area1">
+
+    <script>
+        function onchange1(){
+            let oper1 = document.getElementById("oper");
+            let option1 = oper1.options[oper1.selectedIndex].value;
+        }
+        function calc(){
+            oper1 = document.getElementById("oper");
+            option1 = oper1.options[oper1.selectedIndex].value;
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let print = document.getElementById("area1");
+            print.value = 0;
+            print.style.backgroundColor="white";
+            if(option1 == "plus"){
+                print.value = (num1*1) + (num2*1);
+            }else if(option1 == "minus"){
+                print.value = num1*1-num2*1;   
+            }else if(option1 == "multi"){
+                print.value = (num1*1) * (num2*1);   
+            }else if(option1 == "divi"){
+                print.value = (num1*1) / (num2*1);   
+            }else{
+                print.value = (num1*1) % (num2*1);   
+            }
+            if(print.value == Infinity || isNaN(print.value)){
+                print.style.backgroundColor= "red";
+                print.value = "연산불가";
+            }
+        }
+    </script>
+</body>
+</html>
