@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>간단 계산</title>
+    <style>
+        input{
+            width: 70px;
+        }
+    </style>
 
 </head>
 <body>
-    <input type="text" id="num1">
+    <input type="number" id="num1">
     <select onchange="onchange1();" name="oper" id="oper">
         <option name="option" value="plus">+</option>
         <option name="option" value="minus">-</option>
@@ -16,9 +21,9 @@
         <option name="option" value="divi">/</option>
         <option name="option" value="rem">%</option>
     </select>
-    <input type="text" id="num2">
+    <input type="number" id="num2">
     <button onclick="calc();">=</button>
-    <input type="text" id="area1">
+    <input type="text" id="area1" readonly>
 
     <script>
         function onchange1(){

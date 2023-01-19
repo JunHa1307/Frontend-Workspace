@@ -134,9 +134,9 @@
                 area2.innerHTML += index +"번 째 인덱스에 있습니다.";
             }
             console.log("0"==[]);// 0 == [] : true, 0 == "0" : true, "0" == [] : false!!
-            console.log(1==1);// true
-            console.log(1=='1');//true > 동등연산자 : 자료형과 무관하게 실제값만 일치하면 true
-            console.log(1==='1');// false > 일치연산자 : 값 + 자료형이 일치해야 true값을 반환
+            console.log(1 == 1);// true
+            console.log(1 == '1');//true > 동등연산자 : 자료형과 무관하게 실제값만 일치하면 true
+            console.log(1 === '1');// false > 일치연산자 : 값 + 자료형이 일치해야 true값을 반환
         }
     </script>
 
@@ -416,7 +416,8 @@
 
             let boolean;
             
-            // 내가 원하는 요소를 찾으면 true값을 반환 후 반복종료(찾는 값이 없다면 undifined 반환.)
+            // 내가 원하는 요소를 찾으면 true값을 반환 후 item값을 최종적으로 반환 후
+            // 반복종료(찾는 값이 없다면 undifined 반환.)
             boolean = a.find(function(item,index,array){
                 if(item.id == '민경민2'){
                     console.log(item,index,array);
