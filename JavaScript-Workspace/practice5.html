@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2</title>
+    <style>
+        fieldset{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        div{
+            padding: 10px;
+            border: 1px solid black;
+            height: 50px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요</legend>
+        <input type="radio" name="search"  id="title"><label for="title">제목</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="search" id="date"><label for="date">날짜</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="search" id="author"><label for="author">작성자</label> &nbsp;
+    </fieldset>
+    <br><br>
+    <div id="area1"></div>
+    <script>
+        let title = document.getElementsByTagName("input");
+        for(let i = 0; i < title.length; i++){
+            title[i].addEventListener("click",function(){
+                let checked = document.getElementsByTagName("input");
+                let area1 = document.getElementById("area1");
+                if(checked[0].checked){
+                    area1.innerHTML = "검색할 제목을 입력하세요 : <br>"
+                    + `<input type='text' style='width : 70%;'> &nbsp <button>검색</button>`;
+                }else if(checked[1].checked){
+                    area1.innerHTML = "검색할 날짜를 선택하세요 : <br>"
+                    + `<input type="number" placeholder="연도-월-일"> - <input type="search" placeholder="연도-월-일"> &nbsp; <button>검색</button>`;
+                }else if(checked[2].checked){
+                    area1.innerHTML = "검색할 작성자 아이디를 입력하세요 : <br>"
+                    + `<input type='text'> &nbsp <button>검색</button>`;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

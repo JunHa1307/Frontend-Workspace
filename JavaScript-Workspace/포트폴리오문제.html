@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            width: 200px;
+        }
+        #textarea{
+            width: 200px;
+            height: 150px;
+            vertical-align: middle;
+        }
+        span{
+            display: inline-block;
+            width: 70px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        div{
+            display: inline-block;
+            width: 140px;
+        }
+        table,fieldset{
+            width: 830px;
+            padding-right: 0;
+        }
+        table{
+            height: 300px;
+        }
+        #tHead,#tFoot{
+            background-color: rgb(255,135,0);
+            color: white;
+            width: 100%;
+        }
+        td>input{
+            width: 100%;
+            height: 100%;
+        }
+        #tBody{
+            background-color: rgb(245,255,50);
+        }
+        #tNumber{
+            width: 5%;
+        }
+        #tTitle{
+            width: 60%;
+        }
+        #tUser,#tDate{
+            width: 14%;
+        }
+        #tView{
+            width: 7%;
+        }
+        #tdTitle{
+            width:500px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <form action="insert.no" method="post">
+            <span><b>제목</b></span> <input type="text" id="title" name="title" placeholder="제목을 입력하시오."> <br><br>
+            <span><b>내용</b></span> <textarea id="textarea" name="content" placeholder="내용을 입력하시오." ></textarea> <br><br>
+            <span><b>첨부파일</b></span> <input type="button" name="uploadFile" value="파일선택"> 선택된 파일 없음 <br><br>
+            <div></div><input type="submit" value="작성하기">
+        </form>
+    </fieldset>
+    <br>
+    <hr>
+    <br>
+
+    <table border="1">
+        <tr id="tHead">
+            <th id="tNumber">번호</th>
+            <th colspan="2" id="tTitle">제목</th>
+            <th id="tUser">작성자</th>
+            <th id="tDate">작성일</th>
+            <th id="tView">조회수</th>
+        </tr>
+        <tr id="tBody">
+            <td>9</td>
+            <td id="tdTitle">공지사항 제목 9</td>
+            <td><input type="button" value="바로가기"></td>
+            <td>user01</td>
+            <td>2021-03-29</td>
+            <td>34</td>
+        </tr>
+        <tr id="tBody">
+            <td>6</td>
+            <td>공지사항 제목 6</td>
+            <td><input type="button" value="바로가기"></td>
+            <td>answ445</td>
+            <td>2021-03-12</td>
+            <td>67</td>
+        </tr>
+        <tr id="tBody">
+            <td>3</td>
+            <td>공지사항 제목 3</td>
+            <td><input type="button" value="바로가기"></td>
+            <td>testg12</td>
+            <td>2021-03-01</td>
+            <td>98</td>
+        </tr>
+        <tr id="tBody">
+            <td>2</td>
+            <td>공지사항 제목 2</td>
+            <td><input type="button" value="바로가기"></td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+        </tr>
+        <tr id="tBody">
+            <td>1</td>
+            <td>공지사항 제목 1</td>
+            <td><input type="button" value="바로가기"></td>
+            <td>xml23</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+        </tr>
+
+        <tr id="tFoot">
+            <th id="tf1" colspan="4">전체공지사항 갯수</th>
+            <th id="tf2" colspan="2">5개</th>
+        </tr>
+
+    </table>
+</body>
+</html>
