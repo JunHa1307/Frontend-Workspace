@@ -31,9 +31,11 @@
 
     <script>
         let userId = document.getElementById("userId");
+        let userPwd = document.getElementById("userPwd");
         let inputCheckPwd = document.getElementById("checkPwd");
         let btn = document.getElementById("btn");
         let userName = document.getElementById("userName");
+
 
         inputCheckPwd.addEventListener('blur',checkPwd);
         btn.addEventListener('click',validation);
@@ -63,21 +65,21 @@
                     return;
                 }
             }
-            let regExp = /[a-zA-Z][a-zA-Z0-9]{3,11}/;
+            let regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
             if(regExp.test(userId.value)){
             }else{
                 alert("유효하지 않은 아이디");
                 userId.select();
                 return;
             }
-            regExp = /[a-zA-Z0-9!@#$%^]{8,15}/;
+            regExp = /^[a-zA-Z0-9!@#$%^]{8,15}$/;
             if(regExp.test(userPwd.value)){
             }else{
                 alert("유효하지 않은 비밀번호");
                 userPwd.select();
                 return;
             }
-            regExp = /[ㄱ-ㅎㅏ-ㅣ가-힣]{2,}/;
+            regExp = /^[ㄱ-ㅎㅏ-ㅣ가-힣]{2,}$/;
             if(regExp.test(userName.value)){
             }else{
                 alert("유효하지 않은 이름");
