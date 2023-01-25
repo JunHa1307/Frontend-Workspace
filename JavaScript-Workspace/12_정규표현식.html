@@ -144,8 +144,41 @@
         }
     </script>
     <br>
+    <hr>
+
+    <h3>* 플래그 문자</h3>
+    <p>
+        i : 대소문자를 가리지 않고 비교를 수행하겠다. <br>
+        g : 문자열 내의 모든 패턴을 찾는다(전역으로 비교를 수행하겠따)<br>
+        m : 여러줄 비교를 수행하겠다.
+    </p>
+
+    <button onclick="test3();">실행확인</button>
+    <script>
+        function test3(){
+            let str = "JavaScript JQuery Ajax";
+
+            let regExp = /a/;
+            console.log("/a/ : "+str.replace(regExp, "(****)"));
+
+            regExp = /a/g;
+            console.log("/a/g : "+str.replace(regExp,"(****)"));
+
+            regExp = /a/ig;
+            console.log("/a/ig : "+str.replace(regExp,"(****)"));
+
+            str = "JavaScript\nJQuery\nAjax";
+
+            regExp = /^J/g; // 여러줄일 경우 g가 적용되지 않는다.
+            console.log("/^J/g : "+str.replace(regExp, "(***)"));
+
+            regExp = /^J/mg;
+            console.log("/^J/gm : "+str.replace(regExp, "(***)"));
+        }
+    </script>
 
     <hr>
+
 
     <h3>* 정규 표현식을 가지고 주민번호 확인</h3>
     

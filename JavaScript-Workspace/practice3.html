@@ -26,6 +26,8 @@
     </fieldset>
 
     <script>
+        let id = document.getElementById("아이디");
+        
         function checkAll(){
             let input = document.getElementsByClassName("input");
             let name = document.getElementById("이름").value;
@@ -36,7 +38,6 @@
                     return;
                 }
             }
-            let id = document.getElementById("아이디");
             if(id.value == 'user01'){
                 window.alert("사용할 수 없는 아이디입니다.")
                 id.value = "";
@@ -54,7 +55,6 @@
             window.alert(name +"님, 회원가입이 성공적으로 완료되었습니다^^");
         }
         function checkId(){
-            let id = document.getElementById("아이디");
             let div = document.getElementById("area1");
             if(id.value == 'user01'){
                 div.innerHTML = "이미 존재하는 아이디입니다.";
