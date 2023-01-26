@@ -5,28 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <style>
+        label{
+            font-size: 10px;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
     <h1>practice6</h1>
     <fieldset>
         <legend>회원가입</legend>
-        * 아이디 : <input type="text" id="userId"><span id="span_id"></span> <br>
-        <label style="font-size: 10px; color: gray;">첫 글자는 반드시 영문자로, 그리고 영문자, 숫자를 포함하여 총 4~12자로 입력하시오.</label><br><br>
-        * 비밀번호 : <input type="password" id="userPwd"> <br>
-        <label style="font-size: 10px; color: gray;">영문자, 숫자, 특수문자(!@#$%^)로 총 8~15자로 입력하시오.</label><br><br>
-        * 비밀번호 확인 : <input type="password" id="checkPwd"><span id="span_pwd"></span> <br>
-        <label style="font-size: 10px; color: gray;">위의 비밀번호와 일치하게 입력하시오.</label><br><br>
-        * 이름 : <input type="text" id="userName"> <br>
-        <label style="font-size: 10px; color: gray;">한글로만 이루어져야 하며 2글자 이상으로 입력하시오.</label><br><br>
-        * 이메일 : <input type="text" id="email"> <br>
-        <label style="font-size: 10px; color: gray;">이메일 형식에 맞춰서 입력하시오.</label><br><br>
-        * 취미 : <input type="text" id="hobby" placeholder="축구,농구,야구,독서 등"> <br><br>
-        * 거주지 : <select name="" id="">
-            <option value="">서울</option>
-            <option value="">경기</option>
-        </select> <br><br>
-        <button type="button" id="btn">회원가입</button>
-        <button type="reset">취소</button>
+        <form action="">
+            * 아이디 : 
+            <input type="text" id="userId"> <br>
+            <label>첫 글자는 반드시 영문자로, 그리고 영문자, 숫자를 포함하여 총 4~12자로 입력하시오.</label><br><br>
+            
+            * 비밀번호 : 
+            <input type="password" id="userPwd"> <br>
+            <label>영문자, 숫자, 특수문자(!@#$%^)로 총 8~15자로 입력하시오.</label><br><br>
+
+            * 비밀번호 확인 : 
+            <input type="password" id="checkPwd"><span id="span_pwd"></span> <br>
+            <label>위의 비밀번호와 일치하게 입력하시오.</label><br><br>
+
+            * 이름 : 
+            <input type="text" id="userName"> <br>
+            <label>한글로만 이루어져야 하며 2글자 이상으로 입력하시오.</label><br><br>
+
+            * 이메일 : 
+            <input type="email" id="email"> <br>
+            <label>이메일 형식에 맞춰서 입력하시오.</label><br><br>
+
+            * 취미 : 
+            <input type="text" id="hobby" placeholder="축구,농구,야구,독서 등"> <br><br>
+
+            * 거주지 : 
+            <select name="" id="">
+                <option value="">서울</option>
+                <option value="">경기</option>
+            </select> <br><br>
+
+            <button type="button" id="btn">회원가입</button>
+            <button type="reset">취소</button>
+        </form>
     </fieldset>
 
     <script>
@@ -55,7 +77,6 @@
         }
 
         function validation(){
-            // 1. 입력하지 않은 값이 있는지 체크
             let inputs = document.getElementsByTagName('input');
             let inputNames = ["아이디","비밀번호","비밀번호 확인","이름","이메일","취미"];
             for(let i = 0; i < inputs.length; i++){
