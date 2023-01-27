@@ -20,6 +20,7 @@
     </style>
 </head>
 <body>
+    <h1>practice5</h1>
     <fieldset>
         <legend>검색할 항목을 선택하세요</legend>
         <input type="radio" name="search"  id="title"><label for="title">제목</label> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,7 +40,7 @@
                     + `<input type='text' style='width : 70%;'> &nbsp <button>검색</button>`;
                 }else if(checked[1].checked){
                     area1.innerHTML = "검색할 날짜를 선택하세요 : <br>"
-                    + `<input type="number" placeholder="연도-월-일"> - <input type="search" placeholder="연도-월-일"> &nbsp; <button>검색</button>`;
+                    + `<input type="date" placeholder="연도-월-일"> - <input type="date" placeholder="연도-월-일"> &nbsp; <button>검색</button>`;
                 }else if(checked[2].checked){
                     area1.innerHTML = "검색할 작성자 아이디를 입력하세요 : <br>"
                     + `<input type='text'> &nbsp <button>검색</button>`;

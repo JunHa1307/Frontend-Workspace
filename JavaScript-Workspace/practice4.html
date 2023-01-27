@@ -7,26 +7,26 @@
     <title>practice4</title>
 </head>
 <body>
-    <fieldset>
-        <legend>구매 정보</legend>
-        <form action="뭔가 쌤은 이걸로 할거 같은 느낌이라 혹시나해서 넣었어오..">
-        <ul>
-            <li>구매자 : <input type="text" id="consumer" placeholder="구매자의 이름을 입력하세요."></li>
-            <li>상품 명 : <input type="text" id="content" placeholder="구매 상품 명을 입력하세요."></li>
-            <li>가격 : <input type="text" id="price" placeholder="구매 가격을 입력하세요."></li>
-            <li>구매 수량 : <input type="number" id="number" placeholder="최소 10." min="10" max="100" step="10"></li>
-            <li>납품 등급 : <input type="range" id="grade" min="1" max="9" step="2"></li>
-            <li>기타 사항 : <textarea name="textarea" id="etc" cols="30" rows="10"></textarea></li>
-        </ul>
-        </form>
-    </fieldset>
+    <form action="gotcha">
+        <fieldset>
+            <legend>구매 정보</legend>
+            <ul>
+                <li>구매자 : <input type="text" placeholder="구매자의 이름을 입력하세요."></li>
+                <li>상품 명 : <input type="text" placeholder="구매 상품 명을 입력하세요."></li>
+                <li>가격 : <input type="text" placeholder="구매 가격을 입력하세요."></li>
+                <li>구매 수량 : <input type="number" placeholder="최소 10." min="10" max="100" step="10"></li>
+                <li>납품 등급 : <input type="range" min="1" max="9" step="2"></li>
+                <li>기타 사항 : <textarea id="etc" cols="30" rows="5"></textarea></li>
+            </ul>
+        </fieldset>
+    </form>
     <br>
     <button onclick="practice4()">입력 값 출력하기</button>
     <br>
     <br>
-
+            
     <div id="area1" style="border: 1px solid black; width: 500px; height: 200px;"></div>
-
+    
     <script>
         function practice4(){
             let input = document.getElementsByTagName("input");
@@ -35,8 +35,8 @@
 
             area1.innerHTML += "구매자 명 : " + input[0].value +"님 <br>"
                             + "상품 명 : " + input[1].value + "<br>"
-                            + "가격 : " + input[2].value + "<br>"
-                            + "구매 수량 : " + input[3].value + "<br>"
+                            + "가격 : " + input[2].value + "만원<br>"
+                            + "구매 수량 : " + input[3].value + "개 <br>"
                             + "납품 등급 : " + input[4].value + "등급 <br>"
                             + "기타사항 : " + textarea + "<br>";
         }
