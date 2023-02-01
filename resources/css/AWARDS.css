@@ -1,31 +1,41 @@
-body{
+body {
     margin: 0;
 }
-div{
+
+div {
     border: 1px solid red;
 }
-#wrap{
+
+#wrap {
     width: 100%;
 }
-a{
+
+.header-wrap a{
     text-decoration: none;
-    font-family: "samsungSharpSansRegular";
     font-size: 18px;
     line-height: 1.44444;
     color: #000;
     padding: 7px;
 }
-.header-navi>ul,.header-wrap,.header-navi,.header-widget{
+
+.header-navi>ul,
+.header-wrap,
+.header-navi,
+.header-widget {
     display: flex;
+    font-family: "Samsung Sharp Sans Regular";
 }
-ul{
+
+ul {
     list-style: none;
 }
-.header-navi>ul{
+
+.header-navi>ul {
     width: 435.92px;
     height: 26.36px;
 }
-.header-wrap{
+
+.header-wrap {
     width: 100%;
     height: 90px;
     padding: 0px 50px 0px 50px;
@@ -34,24 +44,26 @@ ul{
     align-items: center;
     background: white;
     z-index: 9;
-    
     box-sizing: border-box;
 }
-.header-navi{
+
+.header-navi {
     height: 100%;
     width: 634.92px;
     position: relative;
     align-items: center;
     box-sizing: border-box;
 }
-.header-widget{
+
+.header-widget {
     height: 100%;
     width: 394.5px;
     position: relative;
     justify-content: space-between;
     align-items: center;
 }
-.widget{
+
+.widget {
     width: 300px;
     height: 31px;
     padding-right: 40px;
@@ -63,28 +75,139 @@ ul{
     overflow: hidden;
 
 }
-.widget>ul>li{
+
+.widget>ul>li {
     animation: header-rolling 15s ease-in-out infinite;
     overflow: hidden;
-    font-family: "samsungSharpSansBold";
+    font-family: "samsung Sharp Sans";
     font-size: 18px;
     line-height: 1.44444;
     font-weight: bold;
 }
-.content{
-    width: 1280px;
+/* 바디 */
+.content {
+    width: 100%;
+    height: 3000px;
     position: relative;
     box-sizing: border-box;
     padding-top: 90px;
 }
-.content-container{
+
+.content-container {
+    width: 1280px;
+    height: 100%;
+    margin: auto;
 }
-.content-container>#h1{
+
+.content-container>div {
     display: inline-block;
     position: relative;
-    left: 200px;
-    top: 95px;
 }
+
+#h1{
+    left: 100px;
+    top: 90px;
+}
+
+.award_Menu{
+    position: relative;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    top: 125px;
+    left: 100px;
+}
+
+.award_Menu>li>a{
+    display: inline-block;
+    width: 204px;
+    height: 43px;
+}
+
+.award_Menu>li{
+    display: flex;
+}
+
+.btn1_hide,.btn2_hide,.btn3_hide{
+    background-color: #000;
+    position: absolute;
+    display: none;
+    left: 42px;
+    padding-left: 0;
+    z-index: 1;
+}
+
+.btn1_hide a{
+    display: inline-block;
+    width: 83px;
+    height: 24px;
+}
+.btn2_hide a{
+    display: inline-block;
+    width: 140px;
+    height: 24px;
+}
+.btn3_hide a{
+    display: inline-block;
+    width: 164px;
+    height: 24px;
+}
+
+.btn1:hover+ul,.btn1_hide:hover,.btn2:hover+ul,.btn2_hide:hover,.btn3:hover+ul,.btn3_hide:hover{
+    display: inline-block;
+}
+
+.year{
+    top: -70px;
+    left: 780px;
+    z-index: -1;
+}
+
+
+/* 푸터 */
+.footer{
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.footer>div{
+    height: 100%;
+}
+#f1{
+    width: 40%;
+    font-family:"Samsung Sharp Sans Medium";
+    vertical-align: middle;
+    float: left;
+}
+#f1>ul{
+    display: flex;
+}
+#f1>ul>li{
+    padding-right: 10px;
+    padding-top: 9px;
+    font-size: 14px;
+}
+#f2{
+    width: 50%;
+    vertical-align: middle;
+    float: right;
+}
+#f2>ul{
+    display: flex;
+    justify-content: end;
+}
+#f2>ul>li{
+    padding-right: 30px;
+    padding-top: 7px;
+}
+.footer_a{
+    color :black;
+    text-decoration: none;
+    font-family:"Samsung Sharp Sans Medium";
+    font-size: 14px;
+    font-weight: 600;
+}
+
 
 @keyframes header-rolling {
     0% {
