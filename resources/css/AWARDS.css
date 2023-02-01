@@ -33,6 +33,7 @@ ul {
 .header-navi>ul {
     width: 435.92px;
     height: 26.36px;
+    box-sizing: border-box;
 }
 
 .header-wrap {
@@ -163,18 +164,79 @@ ul {
     z-index: -1;
 }
 
+.award_contents{
+    position: relative;
+}
+
+.award_contents>ul{
+    width: 1000px;
+    position: absolute;
+    display:flex;
+    flex-wrap: wrap;
+    top: -92px;
+    left: -90px;
+    padding: 0;
+    margin: 0;
+}
+
+.award_contents>ul>li{
+    width: 204px;
+    height: 96px;
+}
+
+.award_contents li>a{
+    display: inline-block;
+    width: 204px;
+    height: 96px;
+    background-color: white;
+}
+
+.thumbs{
+    width: 198px;
+    height: 90px;
+    display: inline-block;
+    position: relative;
+    top: -200px;
+    background: #f3f3f3;
+    color: #000;
+}
+
+.thumbs>p{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 19px;
+    top: 15px;
+    font-size: 13px;
+    line-height: 15px;
+    font-family: 'samsungonelatin 600';
+}
+
+.thumbs>div{
+    position: absolute;
+    left: 19px;
+    bottom: 13px;
+    font-size: 11px;
+    line-height: 11px;
+    font-family: 'samsungonelatin 600';
+    color: #989898;
+}
+
+.thumbs>img{
+    float: right;
+    z-index: -1;
+}
 
 /* 푸터 */
 .footer{
     height: 70px;
     width: 100%;
-    box-sizing: border-box;
 }
 .footer>div{
     height: 100%;
 }
 #f1{
-    width: 40%;
+    width: 60%;
     font-family:"Samsung Sharp Sans Medium";
     vertical-align: middle;
     float: left;
@@ -188,7 +250,7 @@ ul {
     font-size: 14px;
 }
 #f2{
-    width: 50%;
+    width: 39%;
     vertical-align: middle;
     float: right;
 }
