@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>세부 메뉴바 만들기</title>
     <style>
-        div{
+        div {
             /* border: 1px solid red; */
             box-sizing: border-box;
         }
 
-        #navigator{
+        #navigator {
             width: 1000px;
             height: 40px;
         }
-        #navi{
+
+        #navi {
             /* border: 1px solid blue; */
             margin: 0;
             padding: 0;
@@ -25,14 +27,16 @@
                 padding : 0, margin : 0으로 모든 글자들이 왼쪽 정렬하게 함 */
             height: 100%;
         }
-        #navi>li{
+
+        #navi>li {
             /* border: 1px solid blue; */
             float: left;
             width: 15%;
             height: 100%;
             text-align: center;
         }
-        #navi a{
+
+        #navi a {
             /* border: 1px solid blue; */
             text-decoration: none;
             color: lightcoral;
@@ -50,35 +54,41 @@
                 블럭요소의 세로선상 정렬을 도와주는 속성
                 임시로 35PX로 만듬, 추후 수정 필요*/
         }
-        #navi a:hover{
+
+        #navi a:hover {
             color: crimson;
             font-size: 15px;
         }
-        #navi>li>ul{
+
+        #navi>li>ul {
             list-style-type: none;
             padding: 0;
             /* 평소에 가려주다가 마우스가 올라가는 순간 펼쳐지는 효과부여 1단계 */
             display: none;
         }
-        #navi>li>ul a{
+
+        #navi>li>ul a {
             font-size: 10px;
         }
-        #navi>li>ul a:hover{
+
+        #navi>li>ul a:hover {
             font-size: 13px;
         }
+
         /* 평소에는 안보이다가, 마우스가 올라가는 순간 펼쳐지는 효과 부여 2단계 */
-        #navi>li>a:hover+ul{
+        #navi>li>a:hover+ul {
             display: block;
             /* 메인 메뉴에만 마우스가 올라갈 때 보여지도록 설정*/
         }
+
         /* 3단계*/
-        #navi>li>ul:hover{/* 서브메뉴에도 마우스가 올라갈 때 표시가 유지되게끔 속성 부여*/
+        #navi>li>ul:hover {
+            /* 서브메뉴에도 마우스가 올라갈 때 표시가 유지되게끔 속성 부여*/
             display: block;
         }
-        
-
     </style>
 </head>
+
 <body>
     <div id="navigator">
         <ul id="navi">
@@ -112,4 +122,5 @@
         </ul>
     </div>
 </body>
+
 </html>
