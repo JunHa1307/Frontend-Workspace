@@ -1,3 +1,9 @@
+@font-face {font-family: "Samsung Sharp Sans Regular";src: url("../font/SamsungSharpSans-Regular.ttf") format("ttf"), url("../font/SamsungSharpSans-Regular.woff") format("woff");}
+@font-face {font-family: "Samsung Sharp Sans"; src: url("../font/Samsung-Sharp-Sans-Bold.ttf") format("ttf"), url("../font/Samsung-Sharp-Sans-Bold.woff") format("woff");}
+@font-face {font-family: "SamsungOneLatin 400"; src: url("../font/SamsungOneLatin-400-400.ttf") format("ttf"), url("../font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");}
+@font-face {font-family: "Samsung Sharp Sans Medium"; src: url("../font/Samsung-Sharp-Sans-Medium-Regular.ttf") format("ttf"), url("../font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");}
+@font-face {font-family: "SamsungOneLatin 600"; src:url("../font/SamsungOneLatin-600-600.ttf") format("ttf"), url("../font/SamsungOneLatin-600-600.woff") format("woff");}
+
 body {
     margin: 0;
 }

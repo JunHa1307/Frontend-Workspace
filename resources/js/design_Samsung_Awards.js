@@ -1,6 +1,6 @@
 $(function(){
 
-    $('a').click(function(e) {
+    $('.content a').click(function(e) {
         e.preventDefault();
     });
 
@@ -38,10 +38,10 @@ $(function(){
         stop1();
         $(this).parent().children().each(function(){
             $(this).children().css("background",`url(resources/image/nav_year_${$(this).index()}.png) no-repeat`);
-            $(this).children().removeClass("on");
+            $(this).children().attr("id","off");
         });
         $(this).children().css("background",`url(resources/image/nav_year_${$(this).index()}_on.png) no-repeat`);
-        $(this).children().addClass("on");
+        $(this).children().attr("id","on");
     });
 
     $(".btn2_hide>li").click(function(){
@@ -141,5 +141,7 @@ $(function(){
             i = 0;
         }
     }, 5000);
-
 });
+function qwre () {
+    console.log("1");
+}
