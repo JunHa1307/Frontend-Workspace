@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
-div {
+div,ul {
     /* border: 1px solid red; */
 }
 

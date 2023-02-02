@@ -1,6 +1,7 @@
 const year1 = document.querySelectorAll("a[class=year1]");
 
 change2022();
+
 for (let i = 0; i < 5; i++) {
     let a = document.querySelectorAll("a[id=off]");
     a[i].addEventListener("click", function () {
