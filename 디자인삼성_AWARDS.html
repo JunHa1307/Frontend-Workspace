@@ -11,32 +11,56 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="header-wrap">
+          <div class="header-wrap">
             <div class="header-navi">
-                <a href="https://design.samsung.com/kr/">
-                    <img src="resources/image/header-logo-samsung-design-svg.svg" style="width: 181px;height: 25px;padding-top: 7px;">
+                <a href="https://design.samsung.com/kr/" >
+                    <img src="/resources/image/header-logo-samsung-design-svg.svg" style="width: 181px;height: 25px; padding-top: 7px;">
                 </a>
-                <ul>
-                    <li><a href="">Our Stories</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Career</a></li>
-                    <li><a href="">News</a></li>
+                <ul class="header_aa">
+                    <li><a href="" class="header_a">Our Stories</a></li>
+                    <li><a href="" class="header_a">About Us</a></li>
+                    <li><a href="" class="header_a">Career</a></li>
+                    <li><a href="" class="header_a">News</a></li>
                 </ul>
             </div>
             <div class="header-widget">
                 <div class="widget"><ul>
-                    <li><a href="">#A_Sence_of_Color</a></li>
-                    <li><a href="">#Expanding_the_World</a></li>
-                    <li><a href="">#Living_Smarter</a></li>
-                    <li><a href="">#Inspire_for_the_Better</a></li>
-                    <li><a href="">#Design_for_All</a></li>
-                    <li><a href="">#A_Sence_of_Color</a></li>
+                    <li><a href="" class="header_b">#A_Sence_of_Color</a></li>
+                    <li><a href="" class="header_b">#Expanding_the_World</a></li>
+                    <li><a href="" class="header_b">#Living_Smarter</a></li>
+                    <li><a href="" class="header_b">#Inspire_for_the_Better</a></li>
+                    <li><a href="" class="header_b">#Design_for_All</a></li>
+                    <li><a href="" class="header_b">#A_Sence_of_Color</a></li>
                 </ul></div>
-                <div><img src="resources/image/header-search-icn2022.svg"></div>
-                <div><img src="resources/image/header-lang-icn2022.svg"></div>
+                <div id="sc"><img src="../resources/image/header-search-icn2022.svg" style="cursor : pointer"></div>
+                <div id="lang2"><img src="../resources/image/header-lang-icn2022.svg" id="lang">
+                    <ul>
+                        <li><a href="#" class="langbtn" id="off">KR</a></li>
+                        <li><a href="#" class="langbtn" id="off" style="color: #A0A0A0; border-bottom: 2px solid #A0A0A0;">EN</a></li>
+                    </ul>
+                </div>
+                <div id="lang3"></div>
             </div>
         </div>
+        <div class="search">
+            <div class="search_in">
+                <input type="search" placeholder="Input Keyword" id="search_input">
+                <div id="s_img"><img src="../resources/image/header-search-icn2022.svg"></div>
+                <div class="s_li">
+                    <ul>
+                        <li><a href="" class="">Galaxy Z Unpacked</a></li>
+                        <li><a href="" class="">Watch5</a></li>
+                        <li><a href="" class="">One UI</a></li>
+                        <li><a href="" class="">Bespoke</a></li>
+                        <li><a href="" class="">Metaverse</a></li>
+                        <li><a href="" class="">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
         <div class="content">
+            <div id="veil"></div>
             <div class="content-container">
                 <div id="h1"><img src="resources/image/s1_h1-2022.jpg"></div>
                 <ul class="award_Menu">
@@ -420,5 +444,6 @@
     </div>
     <script src="resources/js/awards_contents.js"></script>
     <script src="resources/js/design_Samsung_Awards.js"></script>
+    <script src="resources/js/changeLang.js"></script>
 </body>
 </html>

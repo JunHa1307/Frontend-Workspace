@@ -1,36 +1,43 @@
-const year1 = document.querySelectorAll("a[class=year1]");
-
+let arr1 = document.querySelectorAll(".year1");
+let a = document.querySelectorAll("a[id=off],a[id=on]");
+let arr2 = document.querySelectorAll(".langbtn");
 change2022();
 
 for (let i = 0; i < 5; i++) {
-    let a = document.querySelectorAll("a[id=off]");
     a[i].addEventListener("click", function () {
-        setTimeout(check, 50);
+            setTimeout(check,50);
+            setTimeout(en_check,50);
     });
 }
 
+arr1[0].id="on";
+
 function check() {
-    arr = document.getElementsByClassName("year1");
-    arr1 = document.querySelectorAll(".year1");
-    if (arr1[0].id == "on") {
-        change2022();
-    } else if (arr1[1].id == "on") {
-        change2021();
-    } else {
-        console.log("2");
+    if(a[0].id=="on"){
+        if (arr1[0].id == "on") {
+            change2022();
+        } else if (arr1[1].id == "on") {
+            change2021();
+        }
     }
 }
 
-function change2021() {
+function en_check(){
+    if(a[1].id=="on"){
+        if (arr1[0].id == "on") {
+            en_change2022();
+        } else if (arr1[1].id == "on") {
+            en_change2021();
+        }
+    }
+}
+
+a[0].id="on";
+
+// default => .year , sthumb$
+function default2021(){
     document.querySelector(".year").innerHTML =
-        '<img src="resources/image/year_21.png">';
-    document.querySelector(".image").innerHTML =
-        `<img src="resources/image/2021_01.jpg" style="opacity: 1;"><br>
-        <img src="resources/image/2021_02.jpg"><br>
-        <img src="resources/image/2021_03.jpg"><br>
-        <img src="resources/image/2021_04.jpg"><br>
-        <img src="resources/image/2021_05.jpg">`;
-    // small thumbs 시작
+    '<img src="resources/image/year_21.png">';
     document.querySelector("#sthumb1").innerHTML =
         `<p>2020 QLED 8K<br>Visual Identity<br>System</p>
         <img src="resources/image/001_2020-QLED-8K-VIS_90x90.png">
@@ -127,8 +134,120 @@ function change2021() {
         `<p>BESPOKE<br>Stick VS6800</p>
         <img src="resources/image/024_IDEAGD_BESPOKE-Stick-VS6800_90x90.png">
         <div>IDEA</div>`;
+}
 
+function default2022(){
+    document.querySelector(".year").innerHTML =
+        '<img src="resources/image/year_22.png">';
+        document.querySelector("#sthumb1").innerHTML =
+        `<p>2022 Neo<br>QLED TV<br>Visual Branding</p>
+        <img src="resources/image/001_-2022-Neo-QLED-TV-Visual-Branding_90x90_2022.png">
+        <div>GOOD DESIGN</div>`;
+    document.querySelector("#sthumb2").innerHTML =
+        `<p>2022 Smart<br>Hub</p>
+        <img src="resources/image/002_2022-Smart-Hub_90x90_2022.png">
+        <div>IF</div>`;
+    document.querySelector("#sthumb3").innerHTML =
+        `<p>24” Built-in<br>Wall Oven<br>Package</p>
+        <img src="resources/image/003_24-Built-in-Wall-Oven-Package_90x90_2022.png">
+        <div>GOOD DESIGN</div>`;
+    document.querySelector("#sthumb4").innerHTML =
+        `<p>5G Massive MIMO<br>Radio Solution</p>
+        <img src="resources/image/004_5G-Massive-MIMO-Radio-Solution_90x90_2022.png">
+        <div>IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb5").innerHTML =
+        `<p>5G Network<br>Design Identity<br>3.0</p>
+        <img src="resources/image/005_5G-Network-Design-Identity-3.0_90x90_2022.png">
+        <div>IDEA</div>`;
+    document.querySelector("#sthumb6").innerHTML =
+        `<p>5G Outdoor<br>Radio Solution</p>
+        <img src="resources/image/006_5G-Outdoor-Radio-Solution_90x90_2022.png">
+        <div>IF</div>`;
+    document.querySelector("#sthumb7").innerHTML =
+        `<p>Air Purifier<br>AX5500K</p>
+        <img src="resources/image/007_Air-Purifier-AX5500K_90x90_2022.png">
+        <div>IDEA·IF</div>`;
+    document.querySelector("#sthumb8").innerHTML =
+        `<p>Animated<br>Emoji Pair<br>Stickers</p>
+        <img src="resources/image/008_Animated-Emoji-Pair-Stickers_90x90_2022.png">
+        <div>IDEA</div>`;
+    document.querySelector("#sthumb9").innerHTML =
+        ` <p>Art Mode Mobile</p>
+        <img src="resources/image/009_Art-Mode-Mobile_90x90_2022.png">
+        <div>IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb10").innerHTML =
+        ` <p>ATMOS Soundbar<br>HW-Q990B</p>
+        <img src="resources/image/010_ATMOS-Soundbar-HW-Q990B_90x90_2022.png">
+        <div>GOOD DESIGN</div>`;
+    document.querySelector("#sthumb11").innerHTML =
+        `<p>Auto Rotation<br>Accessory</p>
+        <img src="resources/image/011_Auto-Rotation-Accessory_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb12").innerHTML =
+        `<p>Bespoke<br>1DR<br>RR7000A</p>
+        <img src="resources/image/013_Bespoke-1DR-RR7000A_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb13").innerHTML =
+        `<p>Bespoke<br>1DR<br>RR9000B</p>
+        <img src="resources/image/014_Bespoke-1DR-RR9000B_90x90_2022.png">
+        <div>IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb14").innerHTML =
+        `<p>Bespoke 4DR<br>RF9000/7000<br>Series</p>
+        <img src="resources/image/015_Bespoke-4DR-Flex-RF9000-7000-Series_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb15").innerHTML =
+        `<p>Bespoke 4DR<br>RQ9500A</p>
+        <img src="resources/image/016_Bespoke-4DR-Multi-RQ9500A_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb16").innerHTML =
+        `<p>Bespoke<br>Air Dresser</p>
+        <img src="resources/image/017_Bespoke-AirDresser_90x90_2022.png">
+        <div>IF</div>`;
+    document.querySelector("#sthumb17").innerHTML =
+        `<p>Bespoke<br>Curator AI</p>
+        <img src="resources/image/018_Bespoke-Curator-AI_90x90_2022.png">
+        <div>GOOD DESIGN</div>`;
+    document.querySelector("#sthumb18").innerHTML =
+        `<p>Bespoke<br>Dishwasher<br>Countertop</p>
+        <img src="resources/image/019_Bespoke-Dishwasher-Countertop_90x90_2022.png">
+        <div>IDEA</div>`;
+    document.querySelector("#sthumb19").innerHTML =
+        `<p>Bespoke FDR<br>RF8000 Series</p>
+        <img src="resources/image/020_Bespoke-FDR-RF8000-Series_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb20").innerHTML =
+        `<p>Bespoke<br>Grande AI 2.0</p>
+        <img src="resources/image/021_Bespoke-Grande-AI-2.0_90x90_2022.png">
+        <div>IDEA·IF·GOOD DESIGN</div>`;
+    document.querySelector("#sthumb21").innerHTML =
+        `<p>Bespoke<br>Induction Built-in<br>Infinite Line</p>
+        <img src="resources/image/022_Bespoke-Induction-Built-in-Infinite-Line_90x90_2022.png">
+        <div>GOOD DESIGN</div>`;
+    document.querySelector("#sthumb22").innerHTML =
+        `<p>Bespoke<br>Jet Bot AI UX</p>
+        <img src="resources/image/023_Bespoke-Jet-Bot-AI-UX_90x90_2022.png">
+        <div>IF</div>`;
+    document.querySelector("#sthumb23").innerHTML =
+        `<p>Bespoke Jet™<br>VS9500</p>
+        <img src="resources/image/024_Bespoke-Jet-VS9500_90x90_2022.png">
+        <div>IDEA·IF</div>`;
+    document.querySelector("#sthumb24").innerHTML =
+        `<p>Bespoke<br>Kitchen Packege<br>CMF Strategy</p>
+        <img src="resources/image/012_Bespoke-Kitchen-Package-CMF-Strategy_90x90_2022.png">
+        <div>IDEA</div>`;
+}
 
+function change2021() {
+
+    default2021();
+
+    document.querySelector(".image").innerHTML =
+        `<img src="resources/image/2021_01.jpg" style="opacity: 1;">
+        <img src="resources/image/2021_02.jpg">
+        <img src="resources/image/2021_03.jpg">
+        <img src="resources/image/2021_04.jpg">
+        <img src="resources/image/2021_05.jpg">`;
+    // largethumbs 시작
     document.querySelector("#lthumb1").innerHTML =
         `<img src="resources/image/001_2020-QLED-8K-VIS_276x276.png">
         <b>2020 QLED 8K<br>Visual Identity<br>System</b>
@@ -254,112 +373,15 @@ function change2021() {
 }
 
 function change2022() {
-    document.querySelector(".year").innerHTML =
-        '<img src="resources/image/year_22.png">';
+
+    default2022();
+
     document.querySelector(".image").innerHTML =
-        `<img src="resources/image/2022_01.jpg" style="opacity: 1;"><br>
-        <img src="resources/image/2022_02.jpg"><br>
-        <img src="resources/image/2022_03.jpg"><br>
-        <img src="resources/image/2022_04.jpg"><br>
+        `<img src="resources/image/2022_01.jpg" style="opacity: 1;">
+        <img src="resources/image/2022_02.jpg">
+        <img src="resources/image/2022_03.jpg">
+        <img src="resources/image/2022_04.jpg">
         <img src="resources/image/2022_05.jpg">`;
-    // small thumbs 시작
-    document.querySelector("#sthumb1").innerHTML =
-        `<p>2022 Neo<br>QLED TV<br>Visual Branding</p>
-        <img src="resources/image/001_-2022-Neo-QLED-TV-Visual-Branding_90x90_2022.png">
-        <div>GOOD DESIGN</div>`;
-    document.querySelector("#sthumb2").innerHTML =
-        `<p>2022 Smart<br>Hub</p>
-        <img src="resources/image/002_2022-Smart-Hub_90x90_2022.png">
-        <div>IF</div>`;
-    document.querySelector("#sthumb3").innerHTML =
-        `<p>24” Built-in<br>Wall Oven<br>Package</p>
-        <img src="resources/image/003_24-Built-in-Wall-Oven-Package_90x90_2022.png">
-        <div>GOOD DESIGN</div>`;
-    document.querySelector("#sthumb4").innerHTML =
-        `<p>5G Massive MIMO<br>Radio Solution</p>
-        <img src="resources/image/004_5G-Massive-MIMO-Radio-Solution_90x90_2022.png">
-        <div>IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb5").innerHTML =
-        `<p>5G Network<br>Design Identity<br>3.0</p>
-        <img src="resources/image/005_5G-Network-Design-Identity-3.0_90x90_2022.png">
-        <div>IDEA</div>`;
-    document.querySelector("#sthumb6").innerHTML =
-        `<p>5G Outdoor<br>Radio Solution</p>
-        <img src="resources/image/006_5G-Outdoor-Radio-Solution_90x90_2022.png">
-        <div>IF</div>`;
-    document.querySelector("#sthumb7").innerHTML =
-        `<p>Air Purifier<br>AX5500K</p>
-        <img src="resources/image/007_Air-Purifier-AX5500K_90x90_2022.png">
-        <div>IDEA·IF</div>`;
-    document.querySelector("#sthumb8").innerHTML =
-        `<p>Animated<br>Emoji Pair<br>Stickers</p>
-        <img src="resources/image/008_Animated-Emoji-Pair-Stickers_90x90_2022.png">
-        <div>IDEA</div>`;
-    document.querySelector("#sthumb9").innerHTML =
-        ` <p>Art Mode Mobile</p>
-        <img src="resources/image/009_Art-Mode-Mobile_90x90_2022.png">
-        <div>IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb10").innerHTML =
-        ` <p>ATMOS Soundbar<br>HW-Q990B</p>
-        <img src="resources/image/010_ATMOS-Soundbar-HW-Q990B_90x90_2022.png">
-        <div>GOOD DESIGN</div>`;
-    document.querySelector("#sthumb11").innerHTML =
-        `<p>Auto Rotation<br>Accessory</p>
-        <img src="resources/image/011_Auto-Rotation-Accessory_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb12").innerHTML =
-        `<p>Bespoke<br>1DR<br>RR7000A</p>
-        <img src="resources/image/013_Bespoke-1DR-RR7000A_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb13").innerHTML =
-        `<p>Bespoke<br>1DR<br>RR9000B</p>
-        <img src="resources/image/014_Bespoke-1DR-RR9000B_90x90_2022.png">
-        <div>IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb14").innerHTML =
-        `<p>Bespoke 4DR<br>RF9000/7000<br>Series</p>
-        <img src="resources/image/015_Bespoke-4DR-Flex-RF9000-7000-Series_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb15").innerHTML =
-        `<p>Bespoke 4DR<br>RQ9500A</p>
-        <img src="resources/image/016_Bespoke-4DR-Multi-RQ9500A_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb16").innerHTML =
-        `<p>Bespoke<br>Air Dresser</p>
-        <img src="resources/image/017_Bespoke-AirDresser_90x90_2022.png">
-        <div>IF</div>`;
-    document.querySelector("#sthumb17").innerHTML =
-        `<p>Bespoke<br>Curator AI</p>
-        <img src="resources/image/018_Bespoke-Curator-AI_90x90_2022.png">
-        <div>GOOD DESIGN</div>`;
-    document.querySelector("#sthumb18").innerHTML =
-        `<p>Bespoke<br>Dishwasher<br>Countertop</p>
-        <img src="resources/image/019_Bespoke-Dishwasher-Countertop_90x90_2022.png">
-        <div>IDEA</div>`;
-    document.querySelector("#sthumb19").innerHTML =
-        `<p>Bespoke FDR<br>RF8000 Series</p>
-        <img src="resources/image/020_Bespoke-FDR-RF8000-Series_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb20").innerHTML =
-        `<p>Bespoke<br>Grande AI 2.0</p>
-        <img src="resources/image/021_Bespoke-Grande-AI-2.0_90x90_2022.png">
-        <div>IDEA·IF·GOOD DESIGN</div>`;
-    document.querySelector("#sthumb21").innerHTML =
-        `<p>Bespoke<br>Induction Built-in<br>Infinite Line</p>
-        <img src="resources/image/022_Bespoke-Induction-Built-in-Infinite-Line_90x90_2022.png">
-        <div>GOOD DESIGN</div>`;
-    document.querySelector("#sthumb22").innerHTML =
-        `<p>Bespoke<br>Jet Bot AI UX</p>
-        <img src="resources/image/023_Bespoke-Jet-Bot-AI-UX_90x90_2022.png">
-        <div>IF</div>`;
-    document.querySelector("#sthumb23").innerHTML =
-        `<p>Bespoke Jet™<br>VS9500</p>
-        <img src="resources/image/024_Bespoke-Jet-VS9500_90x90_2022.png">
-        <div>IDEA·IF</div>`;
-    document.querySelector("#sthumb24").innerHTML =
-        `<p>Bespoke<br>Kitchen Packege<br>CMF Strategy</p>
-        <img src="resources/image/012_Bespoke-Kitchen-Package-CMF-Strategy_90x90_2022.png">
-        <div>IDEA</div>`;
-    // small thumbs 종료
     // large thumbs 시작
     document.querySelector("#lthumb1").innerHTML =
         `<img src="resources/image/001_-2022-Neo-QLED-TV-Visual-Branding_276x276_2022.png">

@@ -1,15 +1,51 @@
 $(function(){
-
     $('.content a').click(function(e) {
         e.preventDefault();
     });
+    
+    // 검색 슬라이드 기능
+    $("#sc").click(function(){
+        if($(".search").css("visibility")=="hidden"){
+            $(".search").css("visibility","visible");
+            $(".widget").css("visibility","hidden");
+            $("#sc").css("visibility","hidden");
+            $("#img").hover(function(){
+                $("#img").css("transform","scale(1.0)");
+            });
+            $('body').css({overflow :"hidden",scroll:"no"});
+            $("#search_input").focus();
+            $("#veil").css("display","block");
+        }
+    });
 
+    $(".content").click(function(){
+        if($(".search").css("visibility")=="visible"){
+            $(".search").css("visibility","hidden"); 
+            $(".widget").css("visibility","visible");
+            $("#sc").css("visibility","visible");
+            $('body').css({overflow :"scroll",scroll:"yes"});
+            $("#veil").css("display","none");
+        }
+    });
+    
+    // 동작 중 클릭 시 멈춤
     function stop1(){
         $(".large_thumbs>li").each(function(){
             $(this).children().css("display","none");
         });
     }
 
+    // 언어 메뉴
+    $("#lang2 li").click(function(){
+        $(this).parent().children().each(function(){
+            $(this).children().css("color","#A0A0A0").css("border-bottom","2px solid #A0A0A0");
+            $(this).children().attr("id","off");
+        });
+        $(this).children().css("color","black").css("border-bottom","2px solid black");
+        $(this).children().attr("id","on");
+    });
+
+    //사이드 메뉴 숨김 버튼 활성화
     $(".award_Menu").hover(function(){
         $(".btn1,.btn1_hide").mouseenter(function(){
             $(".btn1").css("background", "url(resources/image/nav_1_on.png) no-repeat");
@@ -34,6 +70,7 @@ $(function(){
         }
     });
 
+    // 사이드 메뉴 버튼 기능 활성화
     $(".btn1_hide>li").click(function(){
         stop1();
         $(this).parent().children().each(function(){
@@ -102,6 +139,7 @@ $(function(){
         });
     });
 
+    // 컨텐츠 클릭 시 큰 이미지 슬라이드 기능
     $(".thumb").click(function(){
         let $index = $(this).parent().parents("li").index();
         $(".large_thumbs>li").each(function(index,el){
@@ -128,8 +166,9 @@ $(function(){
         $(this).parent().css("display","none");
     });
 
+    // 사이드 이미지 자동 슬라이드 기능
     let i = 0;
-   setInterval(function(){ 
+    setInterval(function(){ 
         if(i == 0){
         $(".image>img").eq(4).animate({opacity:"0"},2000);
         }else{
@@ -142,6 +181,3 @@ $(function(){
         }
     }, 5000);
 });
-function qwre () {
-    console.log("1");
-}
