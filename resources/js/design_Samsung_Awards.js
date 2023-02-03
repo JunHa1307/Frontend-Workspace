@@ -38,7 +38,7 @@ $(function(){
     // 언어 메뉴
     $("#lang2 li").click(function(){
         $(this).parent().children().each(function(){
-            $(this).children().css("color","#A0A0A0").css("border-bottom","2px solid #A0A0A0");
+            $(this).children().css("color","#A0A0A0").css("border-bottom","0px");
             $(this).children().attr("id","off");
         });
         $(this).children().css("color","black").css("border-bottom","2px solid black");
