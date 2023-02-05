@@ -25,8 +25,10 @@ function check() {
 function en_check() {
     if (a[1].id == "on") {
         if (arr1[0].id == "on") {
+            change2022();
             en_change2022();
         } else if (arr1[1].id == "on") {
+            change2021();
             en_change2021();
         }
     }
