@@ -1,5 +1,21 @@
 function change2021() {
     default2021();
+    document.querySelector(".header-navi>a").setAttribute("href","삼성디자인-main.html");
+    document.querySelectorAll(".header_a")[0].setAttribute("href","our stories_1.html");
+    document.querySelectorAll(".header_a")[1].setAttribute("href","about us_1.html");
+    document.querySelectorAll(".header_a")[2].setAttribute("href","career_1.html");
+    document.querySelectorAll(".header_a")[3].setAttribute("href","news_1.html");
+    document.querySelectorAll(".footer_a")[2].setAttribute("href","our stories_1.html");
+    document.querySelectorAll(".footer_a")[3].setAttribute("href","about us_1.html");
+    document.querySelectorAll(".footer_a")[4].setAttribute("href","career_1.html");
+    document.querySelectorAll(".footer_a")[5].setAttribute("href","news_1.html");
+    for(let i = 0; i < 6; i++){
+        header_b = document.querySelectorAll(".header_b");
+        header_b[i].setAttribute("href",`삼성디자인-main.html#toggle_${i}`);
+        if(i == 5){
+            header_b[i].setAttribute("href",`삼성디자인-main.html#toggle_0`);
+        }
+    }
     document.querySelector(".image").innerHTML =
         `<img src="resources/image/2021_01.jpg" style="opacity: 1;">
         <img src="resources/image/2021_02.jpg">
@@ -132,6 +148,22 @@ function change2021() {
 
 function change2022() {
     default2022();
+    document.querySelector(".header-navi>a").setAttribute("href","삼성디자인-main.html");
+    document.querySelectorAll(".header_a")[0].setAttribute("href","our stories_1.html");
+    document.querySelectorAll(".header_a")[1].setAttribute("href","about us_1.html");
+    document.querySelectorAll(".header_a")[2].setAttribute("href","career_1.html");
+    document.querySelectorAll(".header_a")[3].setAttribute("href","news_1.html");
+    document.querySelectorAll(".footer_a")[2].setAttribute("href","our stories_1.html");
+    document.querySelectorAll(".footer_a")[3].setAttribute("href","about us_1.html");
+    document.querySelectorAll(".footer_a")[4].setAttribute("href","career_1.html");
+    document.querySelectorAll(".footer_a")[5].setAttribute("href","news_1.html");
+    for(let i = 0; i < 6; i++){
+        header_b = document.querySelectorAll(".header_b");
+        header_b[i].setAttribute("href",`삼성디자인-main.html#toggle_${i}`);
+        if(i == 5){
+            header_b[i].setAttribute("href",`삼성디자인-main.html#toggle_0`);
+        }
+    }
     document.querySelector(".image").innerHTML =
         `<img src="resources/image/2022_01.jpg" style="opacity: 1;">
         <img src="resources/image/2022_02.jpg">
@@ -262,7 +294,22 @@ function change2022() {
 }
 
 function en_change2021() {
-    default2021();
+    document.querySelector(".header-navi>a").setAttribute("href","삼성디자인-main-eng.html");
+    document.querySelectorAll(".header_a")[0].setAttribute("href","our stories_en.html");
+    document.querySelectorAll(".header_a")[1].setAttribute("href","about us.html");
+    document.querySelectorAll(".header_a")[2].setAttribute("href","career us.html");
+    document.querySelectorAll(".header_a")[3].setAttribute("href","news_en.html");
+    document.querySelectorAll(".footer_a")[2].setAttribute("href","our stories_en.html");
+    document.querySelectorAll(".footer_a")[3].setAttribute("href","about us.html");
+    document.querySelectorAll(".footer_a")[4].setAttribute("href","career us.html");
+    document.querySelectorAll(".footer_a")[5].setAttribute("href","news_en.html");
+    for(let i = 0; i < 6; i++){
+        header_b = document.querySelectorAll(".header_b");
+        header_b[i].setAttribute("href",`삼성디자인-main-eng.html#toggle_${i}`);
+        if(i == 5){
+            header_b[i].setAttribute("href",`삼성디자인-main-eng.html#toggle_0`);
+        }
+    }
     document.querySelector(".image").innerHTML =
         `<img src="resources/image/2021_01_en.jpg" style="opacity: 1;">
         <img src="resources/image/2021_02_en.jpg">
@@ -320,7 +367,22 @@ function en_change2021() {
 }
 
 function en_change2022() {
-    default2022();
+    document.querySelector(".header-navi>a").setAttribute("href","삼성디자인-main-eng.html");
+    document.querySelectorAll(".header_a")[0].setAttribute("href","our stories_en.html");
+    document.querySelectorAll(".header_a")[1].setAttribute("href","about us.html");
+    document.querySelectorAll(".header_a")[2].setAttribute("href","career us.html");
+    document.querySelectorAll(".header_a")[3].setAttribute("href","news_en.html");
+    document.querySelectorAll(".footer_a")[2].setAttribute("href","our stories_en.html");
+    document.querySelectorAll(".footer_a")[3].setAttribute("href","about us.html");
+    document.querySelectorAll(".footer_a")[4].setAttribute("href","career us.html");
+    document.querySelectorAll(".footer_a")[5].setAttribute("href","news_en.html");
+    for(let i = 0; i < 6; i++){
+        header_b = document.querySelectorAll(".header_b");
+        header_b[i].setAttribute("href",`삼성디자인-main-eng.html#toggle_${i}`);
+        if(i == 5){
+            header_b[i].setAttribute("href",`삼성디자인-main-eng.html#toggle_0`);
+        }
+    }
     document.querySelector(".image").innerHTML =
         `<img src="resources/image/2022_01_en.jpg" style="opacity: 1;">
         <img src="resources/image/2022_02_en.jpg">
