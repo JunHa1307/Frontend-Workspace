@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플레이 방법 - 리그 오브 레전드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../jQuery-worksapce/resources/css/롤toy copy 4.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="first">
+      <div id="header">
+        <div id="header1">
+          <a href="" id="riotbar_logo">
+            <div id="main-logo" class="mainBtn">
+              <svg id="riotgame-menu" viewBox="0 0 587.93 165">
+                <path
+                  d="M98.77.33L0 46.07l24.61 93.66 18.73-2.3-5.15-58.89 6.15-2.74L54.96 136l32.01-3.93-5.69-65 6.09-2.71 11.68 66.23 32.38-3.98-6.23-71.25 6.16-2.74 12.77 72.43 32.01-3.93V19.71L98.77.33zm2.32 142.05l1.63 9.22 73.42 12.24v-30.68l-75.01 9.22h-.04zm144.49-19.22v12.63h15.57a14.84 14.84 0 01-1.92 7.31 13 13 0 01-5.6 5.11 20 20 0 01-8.9 1.8 17.53 17.53 0 01-10-2.8 17.87 17.87 0 01-6.44-8.14 33.06 33.06 0 01-2.27-12.93 31.81 31.81 0 012.32-12.81 18.14 18.14 0 016.5-8 17.27 17.27 0 019.82-2.78 19.31 19.31 0 015.36.71 14.15 14.15 0 014.33 2.09 12.92 12.92 0 013.18 3.29 15.61 15.61 0 012 4.44h17.27a27.22 27.22 0 00-3.46-10.28 28.84 28.84 0 00-7.05-8.1 32.6 32.6 0 00-9.91-5.29 37.91 37.91 0 00-12.06-1.86 37.32 37.32 0 00-14 2.6 32.6 32.6 0 00-11.36 7.61 35 35 0 00-7.61 12.21 46.15 46.15 0 00-2.73 16.44q0 11.94 4.54 20.59a32.4 32.4 0 0012.69 13.27 39.84 39.84 0 0035.84.84 28.39 28.39 0 0011.67-11q4.25-7.19 4.24-17.2v-9.76zm215.03 40.81V88.53h51.67v13.96h-34.62v16.76h27.99v13.96h-27.99v16.8h34.7v13.96h-51.75zm101.83-53.3a9 9 0 00-3.54-6.64c-2.09-1.59-5-2.38-8.69-2.38a16.63 16.63 0 00-6.26 1 8.62 8.62 0 00-3.83 2.78 6.74 6.74 0 00-1.33 4 6.2 6.2 0 00.79 3.29 7.27 7.27 0 002.4 2.45 16.54 16.54 0 003.7 1.79 40.14 40.14 0 004.64 1.31l6.63 1.54a47.19 47.19 0 019.45 3.08 27.46 27.46 0 017.2 4.68 18.84 18.84 0 014.58 6.39 20.37 20.37 0 011.61 8.29 20.65 20.65 0 01-3.54 12.11 22.56 22.56 0 01-10.15 7.85 41.31 41.31 0 01-15.93 2.76 42.69 42.69 0 01-16.17-2.81 23.22 23.22 0 01-10.72-8.48q-3.83-5.66-4-14.12h16.43a10.68 10.68 0 007.05 9.94 19.37 19.37 0 007.24 1.26 18.44 18.44 0 006.66-1.09 10 10 0 004.33-3 7.22 7.22 0 001.57-4.48 6.16 6.16 0 00-1.42-4 10.86 10.86 0 00-4.14-2.81 42.07 42.07 0 00-6.89-2.14l-8.07-1.95q-9.65-2.3-15.23-7.26t-5.54-13.44a19.86 19.86 0 013.72-12.12 24.74 24.74 0 0110.33-8.11 36.74 36.74 0 0115-2.91 35.62 35.62 0 0114.92 2.91 23.43 23.43 0 019.91 8.14 21.54 21.54 0 013.6 12.12zm-113.99 53.3h-16.87v-57.35l-1.73-.02-17.04 57.37h-16.86l-16.58-57.37-2.15.02v57.35h-16.87V88.53h28.67l14.48 50.56h1.75l14.48-50.56h28.72v75.44zm-114.66 0h18.27l-25.33-75.43h-23.15l-25.37 75.43h18.3l4.93-16.54h27.42zm-28.43-29.7l8.22-27.65h3.1l8.26 27.65zm278.58-37.76a4 4 0 01-3.67-2.44 4 4 0 010-3.1 4 4 0 01.85-1.27 4.25 4.25 0 011.27-.86 4.15 4.15 0 013.1 0 4.13 4.13 0 011.27.86 4.08 4.08 0 01.86 1.27 4 4 0 010 3.1 4.08 4.08 0 01-.86 1.27 4 4 0 01-1.27.86 4 4 0 01-1.55.31zm0-1.09a2.84 2.84 0 001.47-.39 2.94 2.94 0 001.05-1 2.93 2.93 0 000-2.92 3 3 0 00-1.06-1 2.93 2.93 0 00-2.92 0 3 3 0 00-1 1 2.86 2.86 0 000 2.92 3 3 0 001 1 2.83 2.83 0 001.46.39zm-1.46-1.15V90.6h1.78a1.52 1.52 0 01.69.15 1.13 1.13 0 01.47.42 1.24 1.24 0 01.17.66 1.16 1.16 0 01-.18.66 1 1 0 01-.48.41 1.56 1.56 0 01-.7.14h-1.2v-.72h1a.52.52 0 00.36-.12.5.5 0 00.14-.37.47.47 0 00-.14-.37.52.52 0 00-.36-.12h-.55v2.93zm2.39-1.68l.82 1.68h-1.11l-.75-1.68zM282.41 1.03h17.05v75.44h-17.05zm98.02 37.72q0 12.42-4.71 21a32.67 32.67 0 01-12.79 13.17 38.57 38.57 0 01-36.31 0 32.75 32.75 0 01-12.79-13.2q-4.71-8.66-4.71-21t4.71-21.05a32.67 32.67 0 0112.75-13.14 38.65 38.65 0 0136.31 0 32.67 32.67 0 0112.79 13.17q4.71 8.64 4.71 21.05m-17.35 0a33.35 33.35 0 00-2.23-13 17.47 17.47 0 00-6.33-8 18.57 18.57 0 00-19.45 0 17.57 17.57 0 00-6.35 8 38.59 38.59 0 000 26 17.49 17.49 0 006.35 8 18.57 18.57 0 0019.45 0 17.39 17.39 0 006.33-8 33.4 33.4 0 002.23-13M246.58 50.17l8.76 26.3h18.71l-9.74-28.33h-13.23l-.79-2.44c2.52-.49 6.83-1.25 10.65-3.85a20 20 0 008.75-16.39 24.15 24.15 0 00-3.26-12.75 21.9 21.9 0 00-9.36-8.64 32.56 32.56 0 00-14.64-3H212v75.4h17.06v-26.3zm-.32-15.61a19.35 19.35 0 01-7.26 1.18h-9.94V14.88h9.91a18.68 18.68 0 017.25 1.24 9.12 9.12 0 014.4 3.7 10 10 0 011.5 5.64 9.65 9.65 0 01-1.48 5.55 8.86 8.86 0 01-4.38 3.55M382.04 1.03v14h29.3l.8 2.45c-2.48.48-6.67 1.22-10.43 3.7v55.31h16.87v-61.5h19.62v-14z" />
+              </svg>
+            </div>
+            <div id="main-btn" class="mainBtn">
+              <svg id="riotgame-menuBtn" viewBox="0 0 8 5">
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <div id="header2">
+          <div id="tft-logo">
+            <div>
+              <a href="롤토체스메인.html">
+                <svg xmlns="http://www.w3.org/2000/svg" class="league" width="30" height="32" viewBox="0 0 30 32"
+                  fill="none">
+                  <g>
+                    <path
+                      d="M1.80644 9.75049C0.655032 11.8373 0 14.2271 0 16.7683C0 19.3095 0.655032 21.7015 1.80644 23.7883V9.75049Z"
+                      fill="#C28F2C"></path>
+                    <path
+                      d="M15 2.02222C13.7829 2.02222 12.602 2.16921 11.4688 2.43647V4.75718C12.5907 4.44093 13.7738 4.26721 15 4.26721C22.0218 4.26721 27.7153 9.84627 27.7153 16.7305C27.7153 19.8307 26.5571 22.6659 24.6464 24.8463L24.2838 26.118L23.4814 28.9331C27.4184 26.2761 30.0023 21.8195 30.0023 16.7705C30 8.62355 23.2843 2.02222 15 2.02222Z"
+                      fill="#C28F2C"></path>
+                    <path
+                      d="M11.4688 24.4209H22.9737H23.2253C25.1723 22.4209 26.3713 19.7126 26.3713 16.7305C26.3713 10.5746 21.2806 5.58569 15 5.58569C13.767 5.58569 12.5816 5.78168 11.4688 6.1358V24.4209Z"
+                      fill="#C28F2C"></path>
+                    <path d="M10.1088 0H1.55029L3.16634 3.29844V28.7038L1.55029 32H21.1922L22.9737 25.7572H10.1088V0Z"
+                      fill="#C28F2C"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div id="nav-menu">
+            <div id="menu1" class="nav-link nav-size">
+              <a href="">
+                <p>게임정보</p>
+              </a>
+              <div></div>
+            </div>
+            <div id="menu2" class="nav-link nav-size">
+              <a href="">
+                <p>챔피언</p>
+              </a>
+              <div></div>
+            </div>
+            <div id="menu3" class="nav-links nav-size">
+              <a href="">
+                <p>새소식
+                  <svg id="menu3-btn" viewBox="0 0 8 5">
+                    <path
+                      d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" />
+                  </svg>
+                </p>
+              </a>
+              <ul id="menu3_1">
+                <li id="menu3_1_1" class="menuHover">
+                  <a href="">더블 업</a>
+                </li>
+                <li id="ment3_1_2" class="menuHover">
+                  <a href="">초고속 모드</a>
+                </li>
+              </ul>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div id="header3">
+          <div id="lang">
+            <div class="lang">
+              <a href="">
+                <svg id="lang-switch">
+                  <path
+                    d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0113.536 4.8zM8 1.632A11.27 11.27 0 019.528 4.8H6.472A11.27 11.27 0 018 1.632zM1.808 9.6A6.594 6.594 0 011.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 004.4 8c0 .544.048 1.072.112 1.6H1.808zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 012.464 11.2zm2.36-6.4h-2.36a6.39 6.39 0 013.464-2.848A12.52 12.52 0 004.824 4.8zM8 14.368A11.27 11.27 0 016.472 11.2h3.056A11.27 11.27 0 018 14.368zM9.872 9.6H6.128A11.77 11.77 0 016 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6zm.2 4.448a12.52 12.52 0 001.104-2.848h2.36a6.424 6.424 0 01-3.464 2.848zM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div id="sign">
+            <div id="login">
+              <a href="">로그인</a>
+            </div>
+            <div id="join">
+              <a href="">회원가입</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="second">
+      <div class="second-text">
+        <span class="second-text1">소환사의 협곡에 오신 것을 환영합니다</span>
+        <h1 class="second-text2">기본 정보를 배워 보세요</h1>
+        <p class="second-text3">우선 리그 오브 레전드의 기본부터 알아보겠습니다. 아래 가이드를 통해 가장 인기 있는 게임 모드를 간략히 배워 보세요.</p>
+        <div><button class="second-btn">플레이하기</button></div>
+      </div>
+
+      <div class="second-background">
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경1.png);" class="inner1"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경2.png);" class="inner2"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경3.png);" class="inner3"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경4.png);" class="inner4"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경5.png);" class="inner5"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경6.png);" class="inner6"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경7.png);" class="inner7"></div>
+      </div>
+    </div>
+
+
+    <div class="third">
+      <div class="third-text">
+        <div class="third-text1">리그 오브 레전드란?</div>
+        <div class="third-text2">리그 오브 레전드는 5명의 강력한 챔피언으로 구성된 양 팀이 서로의 기지를 파괴하기 위해 치열한 사투를 벌이는 전략 게임입니다. 140여 명의 챔피언 중
+          하나를 선택해 화려한 플레이를 펼치며 적을 처치하고 포탑을 파괴해 승리를 쟁취하세요.</div>
+        <video src="../jQuery-worksapce/resources/video/배경영상1.webm" muted autoplay loop class="vi1"></video>
+      </div>
+    </div>
+
+    <div class="four">
+      <div class="four-map">
+        <div class="four-map-inner1">
+          <div class="four-map-inner2">
+            <div class="four-map-background">
+              <div class="four-map-background1"></div>
+              <div class="four-map-background2"></div>
+              <div class="four-map-background3"></div>
+              <div class="four-map-background4"></div>
+              <div class="four-map-background5"></div>
+            </div>
+
+            <div x="0.106" y="0.865" class="four-1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="0" class="four-svg-1">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-2">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back1">
+                <div class="four-map-back1-1">
+                  <div class="four-map-back1-1-1">
+                    <div class="four-map-back1-1-1-1">
+                      <div class="four-map-back1-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-3">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-4">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-5">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.84" y="0.07" class="four-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="1" class="four-svg-6">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-7">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back2">
+                <div class="four-map-back2-1">
+                  <div class="four-map-back2-1-1">
+                    <div class="four-map-back2-1-1-1">
+                      <div class="four-map-back2-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-8">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-9">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-10">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.625" y="0.333" class="four-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="0" class="four-svg-11">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-12">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back3">
+                <div class="four-map-back3-1">
+                  <div class="four-map-back3-1-1">
+                    <div class="four-map-back3-1-1-1">
+                      <div class="four-map-back3-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-13">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-14">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-15">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.764" y="0.148" class="four-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="1" class="four-svg-16">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-17">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back4">
+                <div class="four-map-back4-1">
+                  <div class="four-map-back4-1-1">
+                    <div class="four-map-back4-1-1-1">
+                      <div class="four-map-back4-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-18">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-19">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-20">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.398" y="0.196" class="four-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="0" class="four-svg-21">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-22">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back5">
+                <div class="four-map-back5-1">
+                  <div class="four-map-back5-1-1">
+                    <div class="four-map-back5-1-1-1">
+                      <div class="four-map-back5-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-23">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-24">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-25">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.705" y="0.654" class="four-6">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="1" class="four-svg-26">
+                <path d="M60 0H40v40H0v20h40v40h20V60h40V40H60z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-27">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back6">
+                <div class="four-map-back6-1">
+                  <div class="four-map-back6-1-1">
+                    <div class="four-map-back6-1-1-1">
+                      <div class="four-map-back6-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-28">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-29">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-30">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.247" y="0.077" class="four-7">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="0" class="four-svg-31">
+                <path fill-opacity="0.3" d="M11.11 100l16.67-16.67h55.55V27.78L100 11.11V100z"></path>
+                <path fill-opacity="0.3" d="M38.94 38.94v22.24h22.24V38.94z"></path>
+                <path d="M0 0v88.89l16.67-16.67V16.67h55.55L88.89 0z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-32">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back7">
+                <div class="four-map-back7-1">
+                  <div class="four-map-back7-1-1">
+                    <div class="four-map-back7-1-1-1">
+                      <div class="four-map-back7-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-33">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-34">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-35">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.35" y="0.415" class="four-8">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="1" class="four-svg-36">
+                <path
+                  d="M81.82 0a124.75 124.75 0 00-27.27 36.36 160.53 160.53 0 014.54 22.73S63.6 50 63.64 50c0-13.25 18.18-50 18.18-50zM31.82 59.09c-5.54-14.94-12.45-20-27.27-27.27C18.07 43 22.73 72.73 22.73 72.73S39.16 79.68 50 100C66 63 38.2 23.47 18.18 0c9.34 23.47 13.64 34 13.64 59.09zM63.64 72.73v13.63l18.18-18.18c0-15.1.11-29.71 13.63-40.91C77 36.33 63.64 62.09 63.64 72.73z">
+                </path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-37">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back8">
+                <div class="four-map-back8-1">
+                  <div class="four-map-back8-1-1">
+                    <div class="four-map-back8-1-1-1">
+                      <div class="four-map-back8-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-38">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-39">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-40">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.529" y="0.412" class="four-9">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="2" class="four-svg-41">
+                <path d="M16.67 100L100 16.67V0H83.33L0 83.33V100z"></path>
+                <path fill-opacity="0.3"
+                  d="M83.33 50L100 33.33V100H33.33L50 83.33h33.33zM66.67 0L50 16.67H16.67V50L0 66.67V0z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-42">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back9">
+                <div class="four-map-back9-1">
+                  <div class="four-map-back9-1-1">
+                    <div class="four-map-back9-1-1-1">
+                      <div class="four-map-back9-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-43">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-44">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="-four-svg-45">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.917" y="0.836" class="four-10">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="3" class="four-svg-46">
+                <path d="M11.11 100l16.67-16.67h55.55V27.78L100 11.11V100z"></path>
+                <path fill-opacity="0.3" d="M38.94 38.94v22.24h22.24V38.94z"></path>
+                <path fill-opacity="0.3" d="M0 0v88.89l16.67-16.67V16.67h55.55L88.89 0z"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-47">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back10">
+                <div class="four-map-back10-1">
+                  <div class="four-map-back10-1-1">
+                    <div class="four-map-back10-1-1-1">
+                      <div class="four-map-back10-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-48">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-49">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-50">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div x="0.677" y="0.929" class="four-11">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" index="4" class="four-svg-51">
+                <path
+                  d="M90.4 2.11c0 27.3-25.4 36.63-25.4 36.63L60.94 61a8.39 8.39 0 00-.48 2.39 6.95 6.95 0 0013.89 0 6.7 6.7 0 00-5.75-6.7c6.71-11.5 16.29-6 16.29-6 1.43-1.44 2.63-2.88 3.83-4.07l-7.19-2.88h9.34a38.5 38.5 0 005.75-11.25L87 28.69h10.3a33 33 0 00-6.9-26.58M35.32 38.74S9.93 29.41 9.93 2.11c0 0-9.82 10.77-7.42 26.1h10.3L3.23 32a41.09 41.09 0 004.07 8.9h11l-8.61 3.59a39.83 39.83 0 005.27 6s9.58-5.51 16.29 6a6.7 6.7 0 00-5.75 6.7 6.95 6.95 0 1013.41-2.39zM45.14 22.7l2.63-6.7h4.79l2.63 6.94-5 13.89zm-1-16l-7 16 10.15 25.38v23.71l-5 16 5 10H53l5-10-5-16V48.08L63.1 22.7l-7-16z">
+                </path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-52">
+                <path
+                  d="M96.38 46.38a46.38 46.38 0 10-56.06 45.36 9.8 9.8 0 0019.36 0 46.49 46.49 0 0036.7-45.36zM50 98.22a8 8 0 118-8 8 8 0 01-8 8zm9.58-10.13a9.81 9.81 0 00-19.16 0 42.82 42.82 0 1119.16 0z">
+                </path>
+              </svg>
+              <div class="four-map-back11">
+                <div class="four-map-back11-1">
+                  <div class="four-map-back11-1-1">
+                    <div class="four-map-back11-1-1-1">
+                      <div class="four-map-back11-1-1-1-1"></div>
+                    </div>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-53">
+                  <path
+                    d="M95.58 43.52A46.61 46.61 0 0059.84 7.78L50 17.63l-9.84-9.85a46.63 46.63 0 1055.42 35.74zm-3.39 20.64a43.55 43.55 0 11-53-52.95L50 22l10.82-10.79a43.52 43.52 0 0131.37 52.95z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-54">
+                  <path d="M56.87 15.14a38.86 38.86 0 11-13.74 0l-1.36-1.34a40.42 40.42 0 1016.46 0z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-svg-55">
+                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="four-text">
+        <div class="four-text1"></div>
+        <div class="four-text2">
+          <div class="four-text2-1">
+            <div class="four-text2-1-1">
+              <div class="four-text2-1-1-1">목표</div>
+            </div>
+          </div>
+          <div class="four-text2-2">
+            <div class="four-text2-2-1">
+              <div class="four-text2-2-1-1">
+                <div class="four-text2-2-1-1-1">
+                  <section class="four-sc-1">
+                    <h3 class="four-sc-1-1">
+                      <div class="four-sc-1-1-1"
+                        style="animation-duration: 1400ms; animation-delay: 0ms; animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);">
+                        기지 파괴하기</div>
+                    </h3>
+                    <p class="four-sc-1-2">넥서스는 양 팀 기지의 심장부입니다. 적의 넥서스를 먼저 파괴하는 팀이 게임에서 승리합니다.</p>
+                  </section>
+                  <section class="four-sc-2">
+                    <div class="four-sc-2-1">
+                      <canvas class="four-sc-2-1-1" id="canvas1" width="422" height="208"
+                        style="width: 422px; height: 208.469px; left: -2px; top: -2px;"></canvas>
+                    </div>
+                    <p class="four-sc-2-2">1 / 2</p>
+                    <ul class="four-sc-2-3">
+                      <li class="four-sc-2-3-1">
+                        <h4 class="four-sc-2-3-1-1">아군 넥서스</h4>
+                        <p class="four-sc-2-3-1-2">
+                          <span class="four-sc-2-3-1-2-1">
+                            <span class="four-sc-2-3-1-2-1-1">넥서스에서 <span class="four-line1">미니언</span>이 생성됩니다. 넥서스 뒤에
+                              있는 <span class="four-line1">소환사의 제단</span>에서 체력과 마나를 빠르게 회복하고 <span
+                                class="four-line1">상점</span>을 이용할 수 있습니다.</span>
+                          </span>
+                        </p>
+                      </li>
+                      <li class="four-sc-2-3-2">
+                        <h4 class="four-sc-2-3-2-1">적팀 넥서스</h4>
+                        <p class="four-sc-2-3-2-2">
+                          <span class="four-sc-2-3-2-2-1">
+                            <span class="four-sc-2-3-2-2-1-1">적팀 기지에는 아군과 동일한 넥서스가 있습니다. 적팀 넥서스를 파괴하면 게임에서 승리합니다.</span>
+                          </span>
+                        </p>
+                      </li>
+                    </ul>
+                    <nav class="four-sc-2-4">
+                      <button class="four-sc-btn1">
+                        <div class="four-sc-btn1-1">
+                          <canvas class="four-sc-bt1-1-1" id="canvas2" width="42" height="34"
+                            style="width: 42px; height: 34px; left: -2px; top: -2px;"></canvas>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-sc-svg-1">
+                          <path
+                            d="M96.53 46.53A3.47 3.47 0 1193.06 50a3.47 3.47 0 013.47-3.47zM73.76 53.47H13.29l23 23-4.91 4.91L0 50l31.38-31.38 4.91 4.91-23 23h60.47z">
+                          </path>
+                        </svg>
+                      </button>
+                      <button class="four-sc-btn2">
+                        <div class="four-sc-btn2-1">
+                          <canvas class="four-sc-btn2-1-1" id="canvas3" width="42" height="34"
+                            style="width: 42px; height: 34px; left: -2px; top: -2px;"></canvas>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="four-sc-svg-2">
+                          <path
+                            d="M3.47 53.47A3.47 3.47 0 116.94 50a3.47 3.47 0 01-3.47 3.47zM26.24 46.53h60.47l-23-23 4.91-4.91L100 50 68.62 81.38l-4.91-4.91 23-23H26.24z">
+                          </path>
+                        </svg>
+                      </button>
+                    </nav>
+                  </section>
+                </div>
+                <div class="four-text2-2-1-1-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <script>
+    let st;
+    let dh;
+    $(function () {
+      dh = $('body').height();
+      console.log('body의 높이 : ' + dh);
+
+      $(window).scroll(function () {
+        st = $(this).scrollTop();
+
+        /* $('body').html('<div id=box>scrollTop(): '+st + 'px</div>'); */
+        if (st > 1700) {
+          $(".vi1").css("opacity", "1");
+          $(".vi1").css("transition", "0.5s");
+          $(".third-text1").css("opacity", "1");
+          $(".third-text1").css("transition", "0.5s");
+          $(".third-text2").css("opacity", "1");
+          $(".third-text2").css("transition", "0.5s");
+
+        } else {
+          $(".vi1").css("opacity", "0");
+          $(".vi1").css("transition", "2s");
+          $(".third-text1").css("opacity", "0");
+          $(".third-text1").css("transition", "2s");
+          $(".third-text2").css("opacity", "0");
+          $(".third-text2").css("transition", "2s");
+        };
+      });
+    });
+
+    $(function () {
+      $(window).scroll(function () {
+        if (st > 1900) {
+          $(".vi1").css("transform", "translateY(300px)");
+          $(".third-text1").css("transform", "translateY(300px)");
+          $(".third-text2").css("transform", "translateY(300px)");
+          $(".vi1").css("transition", "2s");
+          $(".third-text1").css("transition", "2s");
+          $(".third-text2").css("transition", "2s");
+        } else {
+          $(".vi1").css("transform", "translateY(-100px)");
+          $(".third-text1").css("transform", "translateY(-100px)");
+          $(".third-text2").css("transform", "translateY(-100px)");
+          $(".vi1").css("transition", "2s");
+          $(".third-text1").css("transition", "2s");
+          $(".third-text2").css("transition", "2s");
+        };
+      });
+    });
+
+    $(function () {
+      $(window).scroll(function () {
+        if (st > 2200) {
+          $(".vi1").css({ "scale": "0.9", "transition": "3s" });
+          $(".third-text1").css({ "scale": "0.9", "transition": "3s" });
+          $(".third-text2").css({ "scale": "0.9", "transition": "3s" });
+        } else {
+          $(".vi1").css({ "scale": "1", "transition": "3s" });
+          $(".third-text1").css({ "scale": "1", "transition": "3s" });
+          $(".third-text2").css({ "scale": "1", "transition": "3s" });
+        };
+      });
+    });
+
+  </script>
+
+
+  <script>
+    $("body").on("mousewheel", function (e) {
+      var wheel = e.originalEvent.wheelDelta;
+
+      if (wheel > 0) {
+        //스크롤 올릴때
+        console.log("올리는 중");
+        $('.inner1,.inner2,.inner3,.inner4,.inner5').css({ "scale": "1", "transition": "1.2s" })
+        $('.inner6').css({ "scale": "1", "transition": "1.2s" })
+        $('.inner7').css({ "scale": "1", "transition": "1.2s" })
+      } else {
+        //스크롤 내릴때
+        console.log("내리는 중");
+        $('.inner1,.inner2,.inner3,.inner4,.inner5').css({ "scale": "1.1", "transition": "1.2s" })
+        $('.inner6').css({ "scale": "1.2", "transition": "1.2s" })
+        $('.inner7').css({ "scale": "1.3", "transition": "1.2s" })
+      }
+    });
+  </script>
+
+  <script>
+    const canvas = document.getElementById('canvas1');
+    const ctx = canvas.getContext("2d");
+    ctx.strokeStyle = 'white';
+    ctx.strokeRect(0, 0, 422, 208);
+    ctx.clearRect(380, 0, 300, 40);
+    ctx.beginPath();
+    // 4. 출발점 지정
+    ctx.moveTo(380, 0);
+    // 5. 도착점 지정
+    ctx.lineTo(422, 40);
+    // 6. 선 그리기
+    ctx.stroke();
+  </script>
+
+  <script>
+    const canvas2 = document.getElementById('canvas2');
+    const ctx2 = canvas2.getContext("2d");
+    ctx2.strokeStyle = 'rgb(11, 198, 227)';
+    ctx2.strokeRect(0, 0, 38, 31);
+    ctx2.clearRect(-25, 0, 36, 12);
+    ctx2.beginPath();
+    // 4. 출발점 지정
+    ctx2.moveTo(-25, 38);
+    // 5. 도착점 지정
+    ctx2.lineTo(12, 0);
+    // 6. 선 그리기
+    ctx2.stroke();
+  </script>
+
+  <script>
+    const canvas3 = document.getElementById('canvas3');
+    const ctx3 = canvas3.getContext("2d");
+    ctx3.strokeStyle = 'rgb(11, 198, 227)';
+    ctx3.strokeRect(0, 0, 38, 31);
+    ctx3.clearRect(30, 20, 36, 40);
+    ctx3.beginPath();
+    // 4. 출발점 지정
+    ctx3.moveTo(30, 31);
+    // 5. 도착점 지정
+    ctx3.lineTo(38, 20);
+    // 6. 선 그리기
+    ctx3.stroke();
+
+  </script>
+
+  <script>
+    $(function () {
+
+      $(".four-sc-btn2").click(function () {
+        $(".four-sc-2-2").html("2 / 2");
+        $(".four-sc-2-3-1").css("transform", "translateX(-105%)");
+        $(".four-sc-2-3-2").css("transform", "translateX(-100%)");
+        $(".four-map-back1").css("opacity", "0");
+      });
+
+      $(".four-sc-btn1").click(function () {
+        $(".four-sc-2-2").html("1 / 2");
+        $(".four-sc-2-3-1").css("transform", "translateX(0%)");
+        $(".four-sc-2-3-2").css("transform", "translateX(0%)");
+        $(".four-map-back1").css("opacity", "1");
+      });
+    });
+  </script>
+
+
+  <!--
+<script>
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 100){
+            $('.inner').css("height","110%");
+        };
+    });
+</scr>
+
+
+
+
+<script>
+    $( document ).ready( function() {
+      var jbTime = 5000;
+      $( '.second' ).animate( {
+        opacity: '1'
+      }, jbTime, function() {
+        $( '.jb-2' ).animate( {
+          opacity: '1'
+        }, jbTime, function() {
+          $( '.jb-3' ).animate( {
+            opacity: '1'
+          }, jbTime );
+        } );
+      } );
+    } );
+  </script>
+-->
+
+
+</body>
+
+</html>

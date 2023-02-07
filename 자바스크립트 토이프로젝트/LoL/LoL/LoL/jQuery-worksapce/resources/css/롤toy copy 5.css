@@ -1,0 +1,2747 @@
+body{
+    height: 118700.3px;
+}
+div#box{
+    position: fixed;
+}
+
+@keyframes LRzMk{
+    from {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 11870.3px;
+}
+
+div{
+    border: 1px solid red;
+}
+
+span{
+    border: 1px solid blue;
+}
+
+h1{
+    border: 1px solid green;
+}
+
+.first{
+    height: 80px;
+}
+
+#header {
+    display: flex;
+    height: 80px;
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 18);
+}
+
+#header1 {
+    width: 131px;
+    margin: 0 0 0 36px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* .mainBtn>svg:hover {} */
+
+#riotbar_logo {
+    display: flex;
+    align-items: center;
+    width: 121px;
+    height: 32px;
+}
+
+#riotbar_logo:hover>div>svg {
+    fill: #eb0029;
+    cursor: pointer;
+}
+
+#main-logo {
+    width: 95px;
+    height: 32px;
+    margin: 0;
+    fill: #f9f9f9;
+}
+
+#riotgame-menu {
+    width: 100%;
+    height: 100%;
+}
+
+#main-btn {
+    width: 23px;
+    height: 17px;
+    fill: #7e7e7e;
+}
+
+#riotgame-menuBtn {
+    width: 7.18px;
+    height: 4.59px;
+    margin: 0 0 4.5px 2.4px;
+}
+
+#header2 {
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+#nav-menu {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    display: flex;
+    margin: 0 0 0 18px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* #nav-menu>div {} */
+
+#nav-link {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#menu1 {
+    width: 75px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#menu2 {
+    width: 91.81px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#menu3 {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#menu3-btn {
+    fill: #7e7e7e;
+    width: 7.18px;
+    height: 4.59px;
+    margin: 0 0 1.5px 1px;
+}
+
+#nav-menu>div>a {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    height: 66px;
+    color: #f9f9f9;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    height: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+
+#nav-menu>div:hover>a {
+    position: relative;
+    border-radius: 6.4px;
+    background: rgba(128, 128, 128, .2);
+    margin-right: 10px;
+}
+
+#nav-menu>div:hover>a>p>svg {
+    fill: #f9f9f9;
+}
+
+#menu1:hover>div {
+    display: block;
+    background-color: rgb(158, 108, 54);
+    position: absolute;
+    bottom: 8px;
+    height: 4px;
+    border-radius: 2px;
+    width: 72px;
+    box-sizing: border-box;
+}
+
+#menu2:hover>div {
+    display: block;
+    background-color: rgb(158, 108, 54);
+    position: absolute;
+    bottom: 8px;
+    height: 4px;
+    border-radius: 2px;
+    width: 90px;
+}
+
+#menu3:hover>div {
+    display: block;
+    background-color: rgb(158, 108, 54);
+    position: absolute;
+    bottom: 8px;
+    height: 4px;
+    border-radius: 2px;
+    width: 180px;
+}
+
+#menu3_1 {
+    position: absolute;
+    left: 10;
+    top: 59px;
+    list-style-type: none;
+    background-color: #292929;
+    box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 20%);
+    border-radius: 0 0 2px 2px;
+    text-align: left;
+    font-size: 13px;
+    width: 140px;
+    height: 105px;
+    opacity: 1;
+    /* transition: opacity .5s cubic-bezier(0.06, 0.81, 0, 0.98) 0s,visibility 0s; */
+    display: none;
+    z-index: 100;
+}
+
+/* .nav-links>#menu3_1:hover{
+    display: block;
+    z-index: 100;
+} */
+
+.nav-links:hover>#menu3_1{
+    display: block;
+    z-index: 100;
+}
+
+.menuHover>a{
+    color: #f9f9f9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 0px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin: 10px -5px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+#tft-logo {
+    width: 38px;
+    margin: 0 0 0 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#tft-logo>div>a>img {
+    width: 30px;
+    height: 30px;
+}
+
+#header3 {
+    width: 243px;
+    margin: 0 32px 0 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+#lang {
+    width: 32px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.lang>a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+}
+
+.lang>a>svg {
+    height: 16px;
+    width: 16px;
+    /* border: 1px solid greenyellow; */
+}
+
+#lang-switch {
+    fill: rgb(232, 232, 232);
+}
+
+.lang {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    padding: 0;
+}
+
+/* .lang *{
+    z-index: 1000000;
+    display: inline-block;
+} */
+
+#sign {
+    width: 179px;
+    display: flex;
+    position: relative;
+    /* box-sizing: border-box; */
+}
+
+#login>a {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(128, 128, 128, .2);
+    padding: 8px 16px;
+    border-radius: 6.4px;
+    line-height: 120%;
+    height: 32px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+#login {
+    width: 83px;
+    padding: 0px 6px;
+}
+
+#join>a {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(128, 128, 128, .2);
+    padding: 8px 16px;
+    border-radius: 12px;
+    line-height: 16px;
+    text-align: center;
+    height: 32px;
+    box-sizing: border-box;
+    background: linear-gradient(132.87deg, rgb(255, 100, 51) 0%, rgb(254, 157, 58) 96.39%);
+    text-decoration: none;
+    color: #111;
+}
+
+#join {
+    width: 96px;
+    padding: 0px 6px;
+}
+
+
+
+
+
+.second{
+    height: 1700.57px;
+    width: 100%;
+    /* opacity: 0; */
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.second-text{
+    height: 510.78px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-text1{
+    font-family: 'NotoSans-kr' , serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26.4px;
+    margin-top: 239.220px;
+    letter-spacing: -1px;
+}
+
+.second-text2{
+    font-family: 'NotoSans-Medium', 'serif';
+    font-size: 74px;
+    padding: 0px 15px 10px;
+    margin-bottom: -10px;
+    font-weight: 800;
+    line-height: 79.2px;
+    letter-spacing: -7px;
+}
+
+.second-text3{
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22.4px;
+    word-break: keep-all;
+    margin: 20px auto 25px;
+    letter-spacing: -1px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.second-btn{
+    cursor: pointer;
+    background: rgb(224, 182, 103);
+    height: 56px;
+    width: 195px;
+    border: 3px solid lightgray;
+    margin: 5px;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: 100%;
+}
+
+.second-btn:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.second-background{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 2000px;
+    opacity: 1;
+}
+
+.second-background>div{
+    position: absolute;
+    left: -10px;
+    /* bottom: 0px; */
+    width: calc(100% + 20px);
+    height: calc(66.25vw + 20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.third{
+    height: 1500px;
+    width: 100%;
+    background-color: rgb(7, 18, 26);
+}
+
+.third-text{
+    position: relative;
+}
+
+.vi1{
+    position: relative;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.third-text1{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    left: 35%;
+    top: 45%;
+    z-index: 3;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    line-height: 51px;
+    word-spacing: 1px;
+}
+
+.third-text2{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    left: 31%;
+    top: 51%;
+    z-index: 3;
+    font-size: 14px;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    line-height: 22.4px;
+    max-width: 730px;
+    word-break: keep-all;
+    text-align: center;
+    word-spacing: 1px;
+}
+
+.four{
+    position: relative;
+    height: 400vh;
+    padding-top: 25vh;
+    margin-top: -2px;
+    background: rgb(7, 18, 26);
+}
+
+.four-map{
+    overflow: hidden;
+    position: sticky;
+    z-index: 1;
+    margin-top: -25vh;
+    top: 0;
+    height: calc(100vh - 0px);
+    width: 100%;
+    word-break: keep-all;
+    letter-spacing: normal;
+    font-family: 'NotoSans-Medium', sans-serif;
+}
+
+.four-map-inner1{
+   margin: 0px calc((100vw - 112.5rem) / 2);
+   position: relative;
+   display: flex;
+   align-items: flex-start;
+   width: calc(100% - 3.75rem);
+   max-width: 112.5rem;
+   height: 100%;
+   padding-left: 3.75rem;
+}
+
+.four-map-inner1-1{
+    display: block;
+    width: calc(100% - 33.75rem);
+    min-height: 100%;
+    padding-top: 45vh;
+    margin-left: 30rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+}
+
+.four-map-inner-1-1-1{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+}
+
+.four-map-inner-1-1-1-1{
+    transform: translate3d(14.7781px, 5.79975px, 0px) scale3d(1, 1, 1);
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    display: block;
+}
+
+.four-map-inner2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1028px;
+    height: 640px;
+    transform: translate(-50%, -50%);
+}
+
+.four-map-background{
+    background-image: url(../image/지도1.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 2000px;
+    height: 1244px;
+    left: -517px;
+    top: -182px;
+}
+
+.four-map-background1,.four-map-background2,.four-map-background3,.four-map-background4,.four-map-background5 {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0s, visibility 0s ease 0.8s;
+}
+.four-map-background1{
+    background-image: url(../image/지도2.png);
+}
+.four-map-background2{
+    background-image: url(../image/지도3.png);
+}
+.four-map-background3{
+    background-image: url(../image/지도4.png);
+}
+.four-map-background4{
+    background-image: url(../image/지도5.png);
+}
+.four-map-background5{
+    background-image: url(../image/지도6.png);
+}
+
+.four-1{
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 10.6%;
+    top: 86.5%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+}
+
+.four-svg-1{
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    opacity: 1;
+    transform: scale(0.25,0.25);
+    transition-delay: 0.34s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.four-svg-2{
+    opacity: 1;
+    transform: scale(0.9, 0.9);
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back1{
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.four-map-back1-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+}
+
+.four-map-back1-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back1-1-1-1{
+    opacity: 1;
+    transform: rotate(0deg) scale(1, 1) translate3d(0px, 0px, 0px);
+    transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s, transform 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+}
+
+.four-map-back1-1-1-1-1{
+    background-image: url(../image/건물1.jpg);
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-3{
+    transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    transform: none;
+    opacity: 1;
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-4{
+    transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    transform: none;
+    opacity: 1;
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-5{
+    transform: none;
+    transition: transform 1.8s cubic-bezier(0.23, 1, 0.32, 1) 0.35s, opacity 1.8s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-2{
+    opacity: 1;
+    animation: 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) 1.6s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 84%;
+    top: 7%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+}
+
+.four-svg-6{
+    opacity: 1;
+    transition-delay: 0.34s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    transform: scale(0.25, 0.25);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-7{
+    opacity: 1;
+    transform: scale(0.9, 0.9);
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    transform: scale(0.8, 0.8);
+}
+
+.four-map-back2{
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.four-map-back2-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back2-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back2-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back2-1-1-1-1{
+    background-image: url(../image/건물2.jpg);
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-8{
+    transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+
+.four-svg-9{
+    transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-10{
+    transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 1.8s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transform: translate3d(0px, -8%, 0px);
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-3{
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 62.5%;
+    top: 33.3%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-11{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    opacity: 0;
+    fill: rgb(255, 255, 255);
+    transform: scale(0.25, 0.25);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-12{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back3{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back3-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back3-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back3-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back3-1-1-1-1{
+    background-image: url(../image/건물3.jpg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-13{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-14{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-15{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-4{
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 76.4%;
+    top: 14.8%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-16{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    opacity: 0;
+    fill: rgb(255, 255, 255);
+    transform: scale(0.25, 0.25);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-17{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back4{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back4-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back4-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back4-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back4-1-1-1-1{
+    background-image: url(../image/건물4.jpg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-18{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-19{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-20{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(191, 48, 42);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-5{
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 39.8%;
+    top: 19.6%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-21{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    opacity: 0;
+    fill: rgb(255, 255, 255);
+    transform: scale(0.25, 0.25);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-22{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back5{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back5-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back5-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back5-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back5-1-1-1-1{
+    background-image: url(../image/건물5.jpg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-23{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-24{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-25{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-6{
+    opacity: 1;
+    animation: 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) 1.6s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 70.5%;
+    top: 65.4%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-26{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    opacity: 0;
+    fill: rgb(255, 255, 255);
+    transform: scale(0.25, 0.25);
+    transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-27{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back6{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back6-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back6-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back6-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back6-1-1-1-1{
+    background-image: url(../image/건물6.jpg);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-28{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-29{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-30{
+    position: absolute;
+    left: -65px;
+    top: -65px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    margin-top: -7px;
+    fill: rgb(11, 198, 227);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-7{
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) 1.4s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 24.7%;
+    top: 7.7%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-31{
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+    transition: fill 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-32{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back7{
+    transform: translate3d(0px, -150%, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back7-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back7-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back7-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 1;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back7-1-1-1-1{
+    background-image: url(undefined);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-33{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-34{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-35{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-8{
+    opacity: 1;
+    animation: 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) 1.6s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 35%;
+    top: 41.5%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-36{
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+    transition: fill 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-37{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back8{
+    transform: translate3d(0px, -150%, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back8-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back8-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.four-map-back8-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back8-1-1-1-1{
+    background-image: url(undefined);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-38{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    margin-top: -7px;
+    z-index: 1;
+    position: absolute;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-39{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-40{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.four-9{
+    opacity: 1;
+    animation: 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1.8s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 52.9%;
+    top: 41.2%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-41{
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+    transition: fill 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-42{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back9{
+    transform: translate3d(0px, -150%, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back9-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back9-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back9-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back9-1-1-1-1{
+    background-image: url(undefined);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-43{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-44{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-45{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-10{
+    opacity: 1;
+    animation: 1.8s cubic-bezier(0.165, 0.84, 0.44, 1) 2s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 91.7%;
+    top: 83.6%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-46{
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+    transition: fill 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-47{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back10{
+    transform: translate3d(0px, -150%, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back10-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back10-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back10-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back10-1-1-1-1{
+    background-image: url(undefined);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-48{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-49{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-50{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-11{
+    opacity: 1;
+    animation: 2s cubic-bezier(0.165, 0.84, 0.44, 1) 2.2s 1 normal backwards running LRzMk;
+    position: absolute;
+    left: 67.7%;
+    top: 92.9%;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.four-svg-51{
+    opacity: 0;
+    transform: scale(0.4, 0.4);
+    transition: fill 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: -4%;
+    fill: rgb(255, 255, 255);
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-52{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    fill: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s, opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-map-back11{
+    transform: translate3d(0px, -150%, 0px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.four-map-back11-1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    pointer-events: none;
+}
+
+.four-map-back11-1-1{
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.four-map-back11-1-1-1{
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 190px;
+    height: 190px;
+    will-change: transform;
+    opacity: 0;
+    transform: rotate(3deg) scale(0.8, 0.8) translate3d(0px, 0px, 0px);
+    transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s, transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+}
+
+.four-map-back11-1-1-1-1{
+    background-image: url(undefined);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four-svg-53{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(1.05, 1.05);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-54{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: rotate(10deg) scale(0.95, 0.95);
+    transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1) 0s, opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-svg-55{
+    left: -33.365px;
+    top: -33.365px;
+    width: 126.73px;
+    height: 126.73px;
+    fill: rgb(208, 168, 92);
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0px, -8%, 0px);
+    transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s, opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.four-text{
+    position: absolute;
+    left: 0px;
+    top: 25vh;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 10vh;
+    overflow: hidden;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    font-family: 'NotoSans-Medium', sans-serif;
+}
+
+.four-text1{
+    height: 5px;
+    width: 5px;
+    position: relative;
+    top: -90px;
+}
+
+.four-text2{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.four-text2-1{
+    width: 60px;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.four-text2-1-1{
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.four-text2-1-1-1{
+    padding-top: 100%;
+    transform: rotate(-90deg) translate(-100%, -50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    font-size: 0.625rem;
+    font-weight: bold;
+}
+
+.four-text2-1-1-1::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.4em;
+    height: 1px;
+    margin-left: 0.5em;
+    background-color: currentcolor;
+}
+
+.four-text2-2{
+    flex: 1 1 100%;
+    min-width: 0px;
+}
+
+.four-text2-2::after{
+    display: block;
+    content: "";
+    width: 60px;
+}
+
+.four-text2-2-1{
+    box-sizing: border-box;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+.four-text2-2-1-1{
+    margin: 0px calc((100vw - 112.5rem) / 2);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: calc(100% - 3.75rem);
+    max-width: 112.5rem;
+    height: 100%;
+    padding-left: 3.75rem;
+}
+
+.four-text2-2-1-1-1{
+    position: relative;
+    z-index: 1;
+    width: 26.25rem;
+}
+
+.four-text2-2-1-1-2{
+    width: calc(100% - 33.75rem);
+    min-height: 100%;
+    padding-top: 45vh;
+    margin-left: 30rem;
+    display: none;
+}
+
+.four-sc-1{
+    padding: 0px 1.875rem;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-1-1{
+    line-height: 1.1;
+    width: 100%;
+    margin-top: -9px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.four-sc-1-1-1{
+    clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+    animation-name: iueStm;
+    display: inline-block;
+    animation-fill-mode: backwards;
+    font-size: 2.5rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+}
+
+.four-sc-1-2{
+    opacity: 1;
+    transition-duration: 1.2s;
+    transition-delay: 0.35s;
+    line-height: 1.7;
+    margin-top: 0.625rem;
+    font-size: 0.75rem;
+    transition: opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.03s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.four-sc-2{
+    opacity: 1;
+    transition-duration: 1.2s;
+    transition-delay: 0.45s;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 1.875rem;
+    margin-top: 3.75rem;
+    opacity: 1;
+    transition: opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+.four-sc-2-1{
+    position: absolute;
+    inset: 1px;
+    pointer-events: none;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    display: block;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+.four-sc-2-1-1{
+    position: absolute;
+    display: block;
+    aspect-ratio: auto 422 / 208;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+.four-sc-2-2{
+    margin-top: 0px;
+    color: rgb(93, 97, 102);
+    font-size: 0.75rem;
+    font-weight: 600;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    display: block;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+.four-sc-2-3{
+    overflow: hidden;
+    white-space: nowrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    display: block;
+    padding-inline-start: 40px;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+.four-sc-2-3-1{
+    box-sizing: content-box;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-right: 10%;
+    color: rgb(255, 255, 255);
+    transform: translate(0%, 0px);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    list-style: none;
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+}
+
+.four-sc-2-3-1-1{
+    margin-top: 0.9375rem;
+    font-size: 0.875rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    font-family: "Beaufort for LOL", serif;
+    line-height: .85;
+    font-weight: 800;
+    display: block;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-1-2{
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    display: block;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-1-2-1{
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    line-height: 1.7;
+    font-size: 0.75rem;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-1-2-1-1{
+    font-family: 'NotoSans-Medium', sans-serif;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    line-height: 1.7;
+    font-size: 0.75rem;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-line1{
+    color: rgb(11, 198, 227);
+    border-bottom: 1px solid currentcolor;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    font-size: 0.75rem;
+    white-space: normal;
+}
+
+.four-sc-2-3-2{
+    box-sizing: content-box;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-right: 10%;
+    color: rgb(255, 255, 255);
+    transform: translate(0%, 0px);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    list-style: none;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+}
+
+.four-sc-2-3-2-1{
+    margin-top: 0.9375rem;
+    font-size: 0.875rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    font-family: "Beaufort for LOL", serif;
+    line-height: .85;
+    font-weight: 800;
+    display: block;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-2-2{
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    margin-bottom: 0px;
+    display: block;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-2-2-1{
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    line-height: 1.7;
+    font-size: 0.75rem;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-3-2-2-1-1{
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    line-height: 1.7;
+    font-size: 0.75rem;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+}
+
+.four-sc-2-4{
+    display: flex;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+}
+
+.four-sc-btn1{
+    appearance: none;
+    padding: 0px;
+    margin: 1.5625rem 0.3125rem 0px 0px;
+    border: 0px;
+    background: none;
+    position: relative;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-btn1-1{
+    position: absolute;
+    inset: 1px;
+    pointer-events: none;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-bt1-1-1{
+    position: absolute;
+    display: block;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    aspect-ratio: auto 42 / 34;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-svg-1{
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0px 30%;
+    fill: rgb(11, 198, 227);
+    stroke: rgb(11, 198, 227);
+    transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, stroke 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-btn2{
+    appearance: none;
+    padding: 0px;
+    margin: 1.5625rem 0.3125rem 0px 0px;
+    border: 0px;
+    background: none;
+    position: relative;
+    width: 2.5rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-btn2-1{
+    position: absolute;
+    inset: 1px;
+    pointer-events: none;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-btn2-1-1{
+    position: absolute;
+    display: block;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    aspect-ratio: auto 42 / 34;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.four-sc-svg-2{
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0px 30%;
+    fill: rgb(11, 198, 227);
+    stroke: rgb(11, 198, 227);
+    transition: fill 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, stroke 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    word-break: keep-all;
+    letter-spacing: normal !important;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}

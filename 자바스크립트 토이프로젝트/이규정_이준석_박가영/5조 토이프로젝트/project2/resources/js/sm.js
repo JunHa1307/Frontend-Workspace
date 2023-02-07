@@ -1,0 +1,1 @@
+document.querySelector("#media_player > div#control_container > div#control > div#play_button > a")

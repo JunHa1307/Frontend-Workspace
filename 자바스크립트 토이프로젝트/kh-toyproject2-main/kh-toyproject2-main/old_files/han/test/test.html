@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <style>
+      #test-wrap,
+      #test {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #img-div {
+        width: 70vw;
+        max-height: 80vh;
+        margin: auto;
+        text-align: center;
+      }
+
+      .test-img {
+        max-width: 100%;
+        max-height: 80vh;
+        margin: auto;
+      }
+
+      #test-item {
+        width: 30%;
+        height: 100%;
+        background-color: aqua;
+      }
+
+      .modal-dialog {
+        max-width: 80vw;
+      }
+
+      #imgAuthor {
+        font-size: x-large;
+        font-weight: 600;
+      }
+
+      .swiper {
+        width: 600px;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="test-wrap" style="height: auto">
+      <div id="test">
+        <div id="test-item">
+          <!-- <div id="imgAuthor">author: Alejandro Escamilla</div>
+          <div id="imgUrl">url:https://picsum.photos/id/0/5000/3333</div>
+          <div id="imgHeight">height: 3333</div>
+          <div id="imgWidth">width: 5000</div>
+          <div id="imgFavorite">즐겨찾기구역</div> -->
+        </div>
+      </div>
+    </div>
+
+    <a href="https://picsum.photos/id/14/2500/1667" download
+      ><button type="button">다운 테스트</button></a
+    >
+
+    <!-- Button trigger modal -->
+    <button
+      id="testBtn"
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imgAuthor"></h5>
+            <div>
+              <button id="modalFavorite">하트</button>
+              <button id="modalShare">공유</button>
+              <button id="modalDown">다운로드</button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div id="img-div"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /* 위쪽으로 페이드 효과 */ -->
+    <div data-aos="fade-up">1</div>
+
+    <!-- /* 아래쪽으로 페이드 효과 */ -->
+    <div data-aos="fade-down">2</div>
+
+    <!-- /* 오른쪽으로 페이드 효과 */ -->
+    <div data-aos="fade-right">3</div>
+
+    <!-- /* 왼쪽으로 페이드 효과 */ -->
+    <div data-aos="fade-left">4</div>
+
+    <!-- /* 왼쪽으로 플립 효과 */ -->
+    <div data-aos="flip-left">5</div>
+
+    <div data-aos="flip-right">6</div>
+
+    <div data-aos="flip-up">7</div>
+
+    <div data-aos="flip-down">8</div>
+
+    <div data-aos="zoom-in">9</div>
+
+    <div>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      />
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../test/test.js"></script>
+
+    <script>
+      // const swiper = new Swiper(".swiper", {
+      //   // Optional parameters
+      //   direction: "vertical",
+      //   loop: true,
+
+      //   // If we need pagination
+      //   pagination: {
+      //     el: ".swiper-pagination",
+      //   },
+
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: ".swiper-scrollbar",
+      //   },
+      // });
+    </script>
+  </body>
+</html>

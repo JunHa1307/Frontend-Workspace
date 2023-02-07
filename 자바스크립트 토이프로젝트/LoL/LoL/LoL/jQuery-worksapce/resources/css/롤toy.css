@@ -1,0 +1,174 @@
+body{
+    height: 118700.3px;
+}
+div#box{
+    position: fixed;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 11870.3px;
+}
+
+div{
+    border: 1px solid red;
+}
+
+span{
+    border: 1px solid blue;
+}
+
+h1{
+    border: 1px solid green;
+}
+
+.first{
+    height: 80px;
+}
+
+.second{
+    height: 1700.57px;
+    width: 100%;
+    /* opacity: 0; */
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.second-text{
+    height: 510.78px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-text1{
+    font-family: 'NotoSans-kr' , serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26.4px;
+    margin-top: 239.220px;
+    letter-spacing: -1px;
+}
+
+.second-text2{
+    font-family: 'NotoSans-Medium', 'serif';
+    font-size: 74px;
+    padding: 0px 15px 10px;
+    margin-bottom: -10px;
+    font-weight: 800;
+    line-height: 79.2px;
+    letter-spacing: -7px;
+}
+
+.second-text3{
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22.4px;
+    word-break: keep-all;
+    margin: 20px auto 25px;
+    letter-spacing: -1px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.second-btn{
+    cursor: pointer;
+    background: rgb(224, 182, 103);
+    height: 56px;
+    width: 195px;
+    border: 3px solid lightgray;
+    margin: 5px;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: 100%;
+}
+
+.second-btn:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.second-background{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 2000px;
+    opacity: 1;
+}
+
+.second-background>div{
+    position: absolute;
+    left: -10px;
+    /* bottom: 0px; */
+    width: calc(100% + 20px);
+    height: calc(66.25vw + 20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+}
+
+.third{
+    height: 2000px;
+    width: 100%;
+    background-color: rgb(7, 18, 26);
+}
+
+.third-text{
+    position: relative;
+}
+
+.vi1{
+    position: relative;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.third-text1{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    left: 35%;
+    top: 45%;
+    z-index: 3;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    line-height: 51px;
+    word-spacing: 1px;
+}
+
+.third-text2{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    left: 31%;
+    top: 51%;
+    z-index: 3;
+    font-size: 14px;
+    font-family: 'NotoSans-Medium', 'sans-serif';
+    line-height: 22.4px;
+    max-width: 730px;
+    word-break: keep-all;
+    text-align: center;
+    word-spacing: 1px;
+}
+
+

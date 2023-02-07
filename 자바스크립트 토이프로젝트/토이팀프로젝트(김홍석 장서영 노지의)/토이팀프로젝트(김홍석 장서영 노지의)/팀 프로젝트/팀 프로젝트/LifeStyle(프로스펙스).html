@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeStyle(프로스펙스)</title>
+    <!--jQuery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--AOS cdn-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="resources/container.css"><!--css파일-->
+    <link rel="stylesheet" href="노지의프로젝트/css/top.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/nav.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/ARCHIV.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/SPONSORSHIP.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/SMARTFIT.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/main.css">
+    <link rel="stylesheet" href="노지의프로젝트/css/footer.css">
+    <link rel="stylesheet" href="productDetail.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="//image.prospecs.com/front/images/renewal/favicon.ico"><!--사이트탭아이콘-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- 구글 라이브러리 - 테이블 -->
+      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        #top {
+            
+
+        }
+
+        #container {
+            padding-top: 80px;
+            width: 1640px;
+            margin: auto;
+        }
+
+
+        body {
+            overflow-x: hidden;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* .modal-content {
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-body {
+  padding: 0;
+}
+.btn-close {
+  position: absolute;
+  right: 0;
+  padding: 1em;
+}
+h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+}
+.myform {
+  padding: 2em;
+  max-width: 100%;
+  color: #fff;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+}
+@media (max-width: 576px) {
+  .myform {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.form-control:focus {
+  box-shadow: inset 0 -1px 0 #7e7e7e;
+}
+.form-control {
+  background-color: inherit;
+  color: #fff;
+  padding-left: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
+}
+.myform .btn {
+  width: 100%;
+  font-weight: 800;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 0.5em 0;
+}
+.myform .btn:hover {
+  background-color: inherit;
+  color: #fff;
+  border-color: #fff;
+}
+.modal p {
+  text-align: center;
+  padding-top: 2em;
+  color: grey;
+}
+.modal p a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+.modal a:hover {
+  color: #fff;
+} */
+
+
+
+
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <script style="visibility: hidden; z-index: -100;">AOS.init();</script>
+    <div id="wrap">
+        <div class="wrap-1">
+            <div id="top"><!--top시작-->
+                <div id="top_in">
+                    <div id="top_left">
+                        <a href=""><img src="노지의프로젝트/img/logo.png" alt=""></a>
+                    </div>
+                    <div id="top_center">
+                        <div id="top_center_shop"><a href="">SHOP</a>
+                            <div id="nav">
+                                <div id="nav_in">
+                                    <div id="nav_list">
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">SHOES</a></dt>
+                                            <dt><a href="" class="nav_under_font">런닝화</a></dt>
+                                            <dt><a href="" class="nav_under_font">워킹화</a></dt>
+                                            <dt><a href="" class="nav_under_font">스포츠화</a></dt>
+                                            <dt><a href="" class="nav_under_font">트레킹화</a></dt>
+                                            <dt><a href="" class="nav_under_font">스니커즈</a></dt>
+                                            <dt><a href="" class="nav_under_font">샌들</a></dt>
+                                            <dt><a href="" class="nav_under_font">슬리퍼</a></dt>
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">MEN</a></dt>
+                                            <dt><a href="" class="nav_under_font">티셔츠</a></dt>
+                                            <dt><a href="" class="nav_under_font">스웻셔츠 & 후디</a></dt>
+                                            <dt><a href="" class="nav_under_font">아우터</a></dt>
+                                            <dt><a href="" class="nav_under_font">팬츠 & 레깅스</a></dt>
+                                            <dt><a href="" class="nav_under_font">숏팬츠 & 스커트</a></dt>
+                                            <dt><a href="" class="nav_under_font">트레이닝 상/하</a></dt>
+                                            <dt><a href="" class="nav_under_font">기타</a></dt>
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">WOMEN</a></dt>
+                                            <dt><a href="" class="nav_under_font">티셔츠</a></dt>
+                                            <dt><a href="" class="nav_under_font">스웻셔츠 & 후디</a></dt>
+                                            <dt><a href="" class="nav_under_font">아우터</a></dt>
+                                            <dt><a href="" class="nav_under_font">스포츠 브라</a></dt>
+                                            <dt><a href="" class="nav_under_font">팬츠 & 레깅스</a></dt>
+                                            <dt><a href="" class="nav_under_font">숏팬츠 & 스커트</a></dt>
+                                            <dt><a href="" class="nav_under_font">트레이닝 상/하</a></dt>
+                                            <dt><a href="" class="nav_under_font">기타</a></dt>
+
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">LIFESTYLE</a></dt>
+                                            <dt><a href="" class="nav_m_font">신발</a></dt>
+                                            <dt><a href="" class="nav_under_font">스니커즈</a></dt>
+                                            <dt><a href="" class="nav_under_font">샌들</a></dt>
+                                            <br>
+                                            <dt><a href="" class="nav_m_font">의류</a></dt>
+                                            <dt><a href="" class="nav_under_font">티셔츠</a></dt>
+                                            <dt><a href="" class="nav_under_font">스웻셔츠 & 후디</a></dt>
+                                            <dt><a href="" class="nav_under_font">아우터</a></dt>
+                                            <dt><a href="" class="nav_under_font">팬츠 & 레깅스</a></dt>
+                                            <dt><a href="" class="nav_under_font">숏팬츠 & 스커트</a></dt>
+                                            <dt><a href="" class="nav_under_font">트레이닝 상/하</a></dt>
+                                            <dt><a href="" class="nav_under_font">기타</a></dt>
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">BAG/ACC</a></dt>
+                                            <dt><a href="" class="nav_under_font">가방</a></dt>
+                                            <dt><a href="" class="nav_under_font">모자 & 헤드밴드</a></dt>
+                                            <dt><a href="" class="nav_under_font">양말</a></dt>
+                                            <dt><a href="" class="nav_under_font">장갑 & 암가드</a></dt>
+                                            <dt><a href="" class="nav_under_font">홈트레이닝</a></dt>
+                                            <dt><a href="" class="nav_under_font">라켓스포츠</a></dt>
+                                            <dt><a href="" class="nav_under_font">기타</a></dt>
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">KIDS</a></dt>
+                                            <dt><a href="" class="nav_m_font">신발</a></dt>
+                                            <dt><a href="" class="nav_m_font">의류</a></dt>
+                                            <dt><a href="" class="nav_m_font">용품</a></dt>
+                                        </dl>
+                                        <dl id="dropdown">
+                                            <dt><a href="" class="nav_top_font nav_top_bLine">SALE</a></dt>
+                                            <dt><a href="" class="nav_m_font">신발</a></dt>
+                                            <dt><a href="" class="nav_m_font">남성의류</a></dt>
+                                            <dt><a href="" class="nav_m_font">여성의류</a></dt>
+                                            <dt><a href="" class="nav_m_font">용품</a></dt>
+                                        </dl>
+                                    </div>
+                                    <div id="nav_best">
+                                        <ul>
+                                            <li class="nav_top_font nav_top_bLine">BEST 50</li>
+                                            <li class="nav_top_font nav_top_bLine">GIFT CARD</li>
+                                        </ul>
+                                        <a href="">
+                                            <img src="//image.prospecs.com/files/upload/display/202211/202211081724166.png/dims/optimize"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="top_center_event"><a href="">EVENT</a></div>
+                        <div id="top_center_archiv"><a href="">ARCHIV</a>
+                            <div id="nav2">
+                                <div id="ARCHIV">
+                                    <ul class="nav_top_font">
+                                        <li><a href="">LOOK BOOK</a></li>
+                                        <li><a href="">NEWS</a></li>
+                                        <li><a href="">ISSUE</a></li>
+                                    </ul>
+                                    <div>
+                                        <a href=""><img
+                                                src="//image.prospecs.com/files/upload/display/202211/202211210949305.png/dims/optimize"
+                                                alt=""></a>
+                                        <a href=""><img
+                                                src="//image.prospecs.com/files/upload/display/202211/202211210952111.png/dims/optimize"
+                                                alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="top_center_sponsorship"><a href="">SPONSORSHIP</a>
+                            <div id="nav3">
+                                <div id="SPONSORSHIP">
+                                    <dl>
+                                        <dt><a href="" class="nav_top_font nav_top_bLine">프로스포츠</a></dt>
+                                        <dt><a href="" class="nav_under_font">LG트윈스</a></dt>
+                                        <dt><a href="" class="nav_under_font">FC서울</a></dt>
+                                        <dt><a href="" class="nav_under_font">GS칼텍스</a></dt>
+                                        <dt><a href="" class="nav_under_font">LG세이커스</a></dt>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="" class="nav_top_font nav_top_bLine">익스트림 스포츠</a></dt>
+                                        <dt><a href="" class="nav_under_font">CAMEL RACE</a></dt>
+                                        <dt><a href="" class="nav_under_font">유소년BMX</a></dt>
+                                    </dl>
+                                    <dl>
+                                        <dt><a href="" class="nav_top_font nav_top_bLine">프로스포츠</a></dt>
+                                        <dt><a href="" class="nav_under_font">야구 국가대표</a></dt>
+                                        <dt><a href="" class="nav_under_font">럭비 국가대표</a></dt>
+                                        <dt><a href="" class="nav_under_font">레슬링 국가대표</a></dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="top_center_smartfit"><a href="">SMART FIT</a>
+                            <div id="nav4">
+                                <div id="nav4_in">
+                                    <div id="SMARTFIT">
+                                        <h3>SMART FIT</h3>
+                                        <p>프로스펙스 스마트핏은 내 발에 완벽한 사이즈와 상품을 추천해 주고, 맞춤신발 제작까지 해 주는 SMART한 서비스입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="top_right">
+                        <a id="seach"><img src="노지의프로젝트/img/search.png" alt=""></a>
+                        <a id="cart"><img src="노지의프로젝트/img/bag.png" alt=""></a>
+                        <a id="login" href="../토이프로젝트/기본틀.html">LOGIN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="container"><!--container 시작-->
+            <div id="container-top"><!--[home/lifestyle/신발]-->
+                <div class="container-home">HOME
+                    <p>&nbsp; &gt; &nbsp; </p>
+                </div>
+                <div class="container-lifestyle"> LIFESTYLE
+                    <p>&nbsp; &gt;&nbsp; </p>
+                </div>
+                <div class="container-shoe">&nbsp;&nbsp;신발
+                    <p> </p>
+                </div>
+            </div><!--container-top 끝-->
+
+
+            <div id="container-lifestyle"><!--[lifestyle]-->
+                LIFESTYLE
+            </div><!--containder-lifestyle 끝-->
+
+
+            <div id="container-kinds"><!--[신발 스니커즈 샌들/슬라이드]-->
+                <input type="radio" name="kinds" id="kind3" checked>
+                <div id="container-kinds-list1" class="to-right-underline">신발</div>
+                <input type="radio" name="kinds" id="kind2">
+                <div id="container-kinds-list2" class="to-right-underline">스니커즈</div>
+                <input type="radio" name="kinds" id="kind1">
+                <div id="container-kinds-list3" class="to-right-underline">샌들/슬라이드</div>
+            </div><!--containder-kinds 끝-->
+
+
+
+
+            <div id="container-filter"><!--[n개의 상품][필터검색/등록순]-->
+                <div id="numberOfItems">n개의 상품</div>
+                <div id="filter-sorting-container">
+                    <button id="filter-search">
+                        필터검색
+                        <img src="https://image.prospecs.com/front/images/renewal/icon_filter.svg" alt="필터아이콘"
+                            width="22px" height="22px">
+                    </button>
+
+                    <div id="filter-screen" data-aos="fade-up"><!--필터창-->
+
+
+                        <div id="filter-screen-header">
+                            <div class="filter-header">필터검색</div>
+                            <button class="exit-button" id="exit-button">X</button>
+                        </div>
+
+
+                        <div id="filter-screen-body">
+                            <div class="filter-gender">
+                                <div class="filter-category">성별</div>
+                                <div class="input-container">
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="gender" id="gender1">
+                                        <label for="gender1">전체</label>
+                                    </div>
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="gender" id="gender2">
+                                        <label for="gender2">남성</label>
+                                    </div>
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="gender" id="gender3">
+                                        <label for="gender3">여성</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="filter-color">
+                                <div class="filter-category">컬러</div>
+                                <div class="input-container">
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color1">
+                                        <label for="filter-color1">전체</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color2">
+                                        <label for="filter-color2">화이트</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color3">
+                                        <label for="filter-color3">오렌지</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color4">
+                                        <label for="filter-color4">베이지</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color5">
+                                        <label for="filter-color5">핑크</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color6">
+                                        <label for="filter-color6">레드</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color7">
+                                        <label for="filter-color7">그레이</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color8">
+                                        <label for="filter-color8">퍼플</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color9">
+                                        <label for="filter-color9">그린</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color10">
+                                        <label for="filter-color10">블루</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color11">
+                                        <label for="filter-color11">네이비</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" name="color" id="filter-color12">
+                                        <label for="filter-color12">블랙</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="filter-price">
+                                <div class="filter-category">가격</div>
+                                <div class="input-container">
+                                    <div class="text-box-container">
+                                        <input type="text" id="min-price" name="price">
+                                        ~
+                                        <input type="text" id="max-price" name="price">
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price1" name="price">
+                                        <label for="filter-price1">0 ~ 3만원</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price2" name="price">
+                                        <label for="filter-price2">3 ~ 5만원</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price3" name="price">
+                                        <label for="filter-price3">5 ~ 10만원</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price4" name="price">
+                                        <label for="filter-price4">10 ~ 20만원</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price5" name="price">
+                                        <label for="filter-price5">20 ~ 30만원</label>
+                                    </div>
+
+                                    <div class="filter-textbox">
+                                        <input type="checkbox" id="filter-price6" name="price">
+                                        <label for="filter-price6">30만원 ~</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-size">
+                                <div class="filter-category">SIZE</div>
+                                <div class="input-container">
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size1" name="size">
+                                        <label for="filter-size1">&nbsp;전체</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size2" name="size">
+                                        <label for="filter-size2">&nbsp;180</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size3" name="size">
+                                        <label for="filter-size3">&nbsp;190</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size4" name="size">
+                                        <label for="filter-size4">&nbsp;200</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size5" name="size">
+                                        <label for="filter-size5">&nbsp;205</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size6" name="size">
+                                        <label for="filter-size6">&nbsp;210</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size7" name="size">
+                                        <label for="filter-size7">&nbsp;220</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size8" name="size">
+                                        <label for="filter-size8">&nbsp;225</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size9" name="size">
+                                        <label for="filter-size9">&nbsp;230</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size10" name="size">
+                                        <label for="filter-size10">&nbsp;235</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size11" name="size">
+                                        <label for="filter-size11">&nbsp;240</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size12" name="size">
+                                        <label for="filter-size12">&nbsp;245</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size13" name="size">
+                                        <label for="filter-size13">&nbsp;250</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size14" name="size">
+                                        <label for="filter-size14">&nbsp;255</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size15" name="size">
+                                        <label for="filter-size15">&nbsp;260</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size16" name="size">
+                                        <label for="filter-size16">&nbsp;265</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size17" name="size">
+                                        <label for="filter-size17">&nbsp;270</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size18" name="size">
+                                        <label for="filter-size18">&nbsp;275</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size19" name="size">
+                                        <label for="filter-size19">&nbsp;280</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size20" name="size">
+                                        <label for="filter-size20">&nbsp;285</label>
+                                    </div>
+                                    <div class="filter-textbox"><input type="checkbox" id="filter-size21" name="size">
+                                        <label for="filter-size21">&nbsp;290</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="filter-screen-footer">
+                            <button id="reset-filter-btn">초기화</button>
+                            <button id="submit-filter-btn">필터적용</button>
+                        </div>
+                    </div><!--필터창 끝-->
+                    <button id="sorting">최근등록순</button>
+                    <ul id="sort-list">
+                        <input type="radio" name="sort" id="recent-sort" checked>
+                        <input type="radio" name="sort" id="sale-sort">
+                        <input type="radio" name="sort" id="price-sort-reverse">
+                        <input type="radio" name="sort" id="price-sort">
+                        <li class="sort-list">
+                            <p>최근등록순</p>
+                        </li>
+                        <li class="sort-list">
+                            <p>판매순</p>
+                        </li>
+                        <li class="sort-list">
+                            <p>높은가격순</p>
+                        </li>
+                        <li class="sort-list">
+                            <p>낮은가격순</p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--containder-filter 끝-->
+
+            <div id="container-items"><!--[상품컨테이너]-->
+                <!-- <div class="container-item" data-aos="fade-up"
+     data-aos-anchor-placement="center-center">
+                <img src="###" alt="상품이미지" width="380" height="380">
+                <div class="item-category">[LIFESTYLE]</div>
+                <div class="item-name">상품명</div>
+                <div class="item-price">49000</div>
+                <div class="item-sale-container">
+                    <div class="item-sale">20%</div>
+                    <div class="item-sale-price">39200원</div>
+                </div>
+                <div class="item-gender-coupon">
+                    <div class="item-gender-m">남</div>
+                    <div class="item-gender-f">여</div>
+                    <div class="item-coupon">쿠폰</div>
+                </div>
+            </div> -->
+            </div><!--containder-items 끝-->
+
+            <div id="container-viewmore"><!--[더보기]-> 검색창으로 수정-->
+                <div class="search">
+                    <input type="search" onkeyup="searchKeyBoard();" id="search" style="height: 100%; display: inline-block; margin: 0px;">
+                    <label for="search"><button onclick ="searchByBtn();" style="height: 100%; width: 60px; display: inline-block; margin: 0px;">검색</button></label>
+                </div>
+            </div><!--containder-viewmore 끝-->
+        </div><!--container 끝-->
+        <div id="go-top-btn"></div><!--페이지 맨위로 옮기는 버튼-->
+        <div id="go-bottom-btn"></div>
+
+        <div id="footer">
+            <div id="footer_in">
+                <div id="footer_left">
+                    <a id="footer_img" href=""><img src="노지의프로젝트/img/footer_logo.svg" alt=""></a>
+                    <div id="footer_left_top">
+                        <ul>
+                            <li>(주)LS네트웍스</li>
+                            <li>대표이사 : 문성준 | 사업자등록번호 : 622-81-04805</li>
+                            <li>통신판매업 신고번호 : 2016-경남김해-0229</li>
+                            <li>경상남도 김해시 호계로 428, 1층(부원동) 사업자정보확인</li>
+                            <li>개인정보관리 책임자 : 예재승</li>
+                            <li>마케팅/제휴 문의 : prospecs.brand@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div id="footer_left_bottom">
+                        <ul>
+                            <li class="text_gray font-bold">SGI서울보증안내</li>
+                            <li class="text_gray">
+                                고객님께서 안전거래를 위해 현금 등으로 결제하신 경우,<br>
+                                저희 쇼핑몰에서 가입한 소비자피해보상보험 서비스를 이용하실 수 있습니다. <a class="font-bold">서비스 가입 사실 확인</a>
+                            </li>
+                            <li class="font-bold copyright">프로스펙스닷컴 | COPYRIGHT© LS NETWORKS CO. ALL RIGHTS RESERVED
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer_right">
+                    <div id="footer_right_1">
+                        <ul>
+                            <li class="font-bold">개인정보처리방침</li>
+                            <li>이용약관</li>
+                            <li>고객센터</li>
+                            <li>A/S 안내</li>
+                            <li>공지사항</li>
+                            <li>앱다운로드</li>
+                        </ul>
+                    </div>
+                    <div id="footer_right_2">
+                        <div id="footer_icon">
+                            <a href=""><img src="노지의프로젝트/img/icon_facebook.svg" alt=""></a>
+                            <a href=""><img src="노지의프로젝트/img/icon_youtube.svg" alt=""></a>
+                            <a href=""><img src="노지의프로젝트/img/icon_insta.svg" alt=""></a>
+                        </div>
+                        <div id="contact_us">CONTACT US</div>
+                        <ul id="footer_phone">
+                            <li class="text_gray">구매 / 배송 문의</li>
+                            <li>080-710-1020</li>
+                            <li class="text_gray">상품정보 / AS문의</li>
+                            <li>080-023-1020</li>
+                        </ul>
+                        <ul id="footer_time" class="text_gray">
+                            <li>MON - FRI 09 : 00 - 18:00</li>
+                            <li>주말, 공휴일 휴무</li>
+                            <li>BREAK TIME : 12:30 - 13:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources/item_Object.js"></script>
+    <script src="resources/db대용객체배열.js"></script>
+    <script src="resources/기능구현.js"></script>
+    <script src="resources/필터화면 동작구현부.js"></script>
+    <script src="resources/필터기능구현.js"></script>
+    <script src="resources/상단제목_정렬 버튼이벤트효과.js"></script>
+    <script src="resources/이벤트효과_구현.js"></script>
+    <script src="resources/전체화면 동적구현.js"></script>
+    <script style="visibility: hidden; z-index: -100;">
+        doFiltering();
+        makeItems();
+        document.getElementById("numberOfItems").innerHTML = resultSet.length + "개의 상품";     
+    </script>
+</body>
+
+</html>

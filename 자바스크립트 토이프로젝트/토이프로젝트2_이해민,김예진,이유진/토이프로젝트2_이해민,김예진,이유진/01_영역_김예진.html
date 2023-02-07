@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2? family= Noto+Sans+KR & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>영역</title>
+    <style>
+        .header{
+            width: 100%;
+            height: 80px;
+            border: 0px solid black;
+            background-color: #5c46ff;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+        }
+
+        .header>div{
+            box-sizing: border-box;
+            border: 0px solid red;
+            float: left;
+        }
+
+        #header_1{
+            width: 13%;
+            height: 100%;
+            padding: 28.5px 60px;
+        }
+
+        #navigator{
+            width: 72%;
+            height: 100%;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+        }
+        #newIcon{
+            margin: 8px 0px 0px 430px;
+            display: block;
+        }
+
+        #navi{
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+        #navi>li>ul{z-index: 1;}
+        #navi>li{
+            float: left;
+            text-align: center;
+            margin-left: 30px;
+        }
+        .header_a{  
+            font-size: 17px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .navi_bar2:hover{
+            color: white;
+            font-weight: bold;
+        }
+
+        #navi>li>ul>li{
+            text-align: start;
+            list-style: none;
+            font-size: 17px;
+        }
+        .headera_1{
+            color: black;
+            text-decoration: none;
+        }
+        .headera_1:hover{color:#5c46ff}
+        
+        #navi>li>a:hover+ul{
+            display: block;
+        }
+
+        #navi>li>ul:hover{display: block;}
+       
+        #header_content{position: relative;}
+
+        #content_menu{
+            width: 240px;
+            height: 250.19px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            padding: 0;
+            position: absolute;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            
+        }
+
+        #content_menu>li>a>span{vertical-align: top;}
+        #content_menu li{padding: 14px 20px;}
+        #guide_content{position: relative;}
+        #guide_menu{
+            width: 240px;
+            height: 192.64px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            padding: 0;
+            position: absolute;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+        }
+        #guide_menu>li>a>span{vertical-align: top;}
+        #guide_menu li{padding: 14px 20px;}
+        
+
+        #header_3{
+            width: 15%;
+            height: 100%;
+            padding: 20px 0px 0px 70px;
+        }
+
+        #button{
+            width:123.2px;
+            height: 40px;
+            background: white;
+            border-radius: 7px;
+            border: 2px solid white;
+            background-color: #5c46ff;
+            color: white;
+        }
+
+        #button>span{
+            font-size: 15px;
+        }
+
+        #sound{
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        
+        .content{
+            width: 100%;
+            height: 3999px;
+        }
+
+        .content>div{
+            box-sizing: border-box;
+            /* border: 1px solid black; */
+        }
+        #content_1{
+            width: 100%;
+            height: 520px;
+            background: #5c46ff;
+        }
+
+        #content_1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #content_1>h2{
+            font-size: 64px;
+            color: #FFFFFF;
+            margin-top: 95px;
+            line-height: 70px;
+            font-weight: 800;
+            
+        }
+
+        #start_btn{
+            width: 156px;
+            height: 68px;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: none;
+            background-color: #FFFFFF;
+            color: #5c46ff;
+        }
+
+        #content1_icon{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #content1_icon>li{
+            float: left;
+            margin: 20px;
+            opacity: 0.6;
+        }
+
+        #content_2{
+            width: 100%;
+            height: 500px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        #content2_text>h2{
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        #content2_text>p{
+            font-size: 22px;
+            line-height: 30px;
+            font-weight:lighter;
+            margin-top: -16px;
+        }
+
+        #content_3{
+            width: 100%;
+            height: 500px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            font-size: 48px;
+            line-height: 60px;
+        }
+        p{
+            font-size: 22px;
+            line-height: 30px;
+            font-weight:lighter;
+            margin-top: -16px;
+        }
+        #content_4{
+            width: 100%;
+            height: 1887px;
+            margin-top: 50px;
+        }
+
+        #content4_img1{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_dkny.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img2{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_samsung.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+
+        #content4_img3{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_puma.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+
+        #content4_img4{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_marineserre.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img5{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_amore.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img6{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_binggrae.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img7{
+            width: 336px;
+            height: 435px;
+            background: url( https://studio.zepeto.me/img/business/img_home_business_supra.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img8{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_samdasoo.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4_img9{
+            width: 336px;
+            height: 435px;
+            background: url(https://studio.zepeto.me/img/business/img_home_business_xexymix.png) no-repeat 50% 100% ;
+            background-size: contain;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+            margin: 20px;
+        }
+        #content4{
+            width: 308px;
+            height: 415px;
+        }
+
+        #brand_name{
+            font-size: 28px;
+            margin: 8px 0px;
+            padding: 0px 0px 0px 5px;
+        }
+
+        #brand_ex{
+            font-size: 17px;
+            margin: 12px 0px;
+            padding: 0px 0px 0px 5px;
+        }
+
+        .imgline1,.imgline2,.imgline3 {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+        #content4_text{
+            text-align: center;
+        }
+
+        #content_5{
+            width: 100%;
+            height: 424px;
+            margin-top: 18px;
+            text-align: center;
+            padding: 60px;
+        }
+
+        #last_btn{
+            width: 156px;
+            height: 68px;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: none;
+            background-color:  #5c46ff;
+            color: #FFFFFF;
+        }
+
+
+        .footer1 {
+            height: 219px;
+            border-bottom: 1px solid lightgray;
+            margin: 0px;
+        }
+
+        .footer1>div {
+            width: 100%;
+            display: inline;
+           
+
+        }
+
+        .footer2 {
+            height: 107px;
+            margin: auto;
+
+        }
+        .footer2>div{
+            width: 100%;
+            display: inline;
+            
+        }
+
+        #mini>ul {
+            display: inline;
+            float: left;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        #mini>ul>li {
+            list-style-type: none;
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 5px 5px 0px 0px;
+            font-weight: lighter;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            color: rgb(153, 153, 156);
+        }
+
+        #app>div {
+            display: inline;
+            float: left;
+        }
+
+        #google,#apple {
+            width: 128px;
+            height: 40px;
+            background-color: #f5f5f6;
+            border-radius: 8px;
+            font-family: 'Noto Serif', serif;
+            font-weight: bold;
+            transform: translateX(1050px);
+            margin: 0px 10px;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-left: 20px;
+            margin-top: 10px;
+
+        }
+        #mini2 {
+            padding-top: 10px;
+        }
+        #mini2 li {
+            color: rgb(153, 153, 156);
+            display: inline;
+            list-style-type: none;
+            font-size: 13px;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            font-weight: lighter;
+            font-size: 12px;
+            float: left;
+        }
+        #mini2 a {
+            color: rgb(153, 153, 156);
+        }
+        #sns_list li{
+            color: rgb(153, 153, 156);
+            display: inline;
+            list-style-type: none;
+            padding: 5px 5px 5px 5px;
+            font-size: 12px;
+            float: left;
+            transform: translateX(930px);
+            margin: 0px 5px;
+        }
+        #lang{
+            border: none;
+            color: rgb(153, 153, 156);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="header">
+
+            <div id="header_1">
+                <a href="제페토메인_이해민.html"><img src="resources/image/제페토로고 흰색.png" ></a>
+            </div>
+            
+            <div id="navigator">
+                <img src="https://studio.zepeto.me/img/icon_new_bubble.svg" id="newIcon" width="28px" height="20px">
+                <ul id="navi">
+                    <li id="header_content"><a href="" class="navi_bar1 header_a">콘텐츠 ∨</a>
+                        <ul id="content_menu">
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_item.svg" style="margin-right: 15px;"><span>아이템</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_world.svg" style="margin-right: 15px;"><span>월드</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_live.svg" style="margin-right: 15px;"><span>라이브</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_build.svg" style="margin-right: 15px;"><span>빌드잇</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="navi_bar2 header_a">크리에이터 프로그램</a></li>
+                    <li><a href="" class="navi_bar2 header_a">비즈니스</a></li>
+                    <li id="guide_content"><a href="" class="navi_bar3 header_a">가이드 ∨</a>
+                        <ul id="guide_menu">
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg" style="margin-right: 15px;"><span>아이템 가이드</span><img src="https://studio.zepeto.me/img/icon_new_bubble.svg" style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg" style="margin-right: 15px;"><span>월드 가이드</span><img src="https://studio.zepeto.me/img/icon_new_bubble.svg" style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_learn.svg" style="margin-right: 15px;"><span>학습</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="navi_bar2 header_a">지원</a></li>
+                </ul>
+            </div>
+    
+            <div id="header_3">
+                <button id="button"><span><a href="05_회원가입(re)_김예진.html" style="color: white;">콘텐츠 관리</a></span></button>
+                <span id="sound"><a href=""><img src="resources/image/확성기128.png" width="28px" height="28px"></a></span>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div id="content_1" data-aos="fade-up" >
+                <h2> &nbsp;전 세계 3억 유저에게 <br> 내 브랜드를 알릴 기회.</h2>
+                <button type="button" id="start_btn">시작하기</button>
+                <ul id="content1_icon">
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_kitty.png" width="64" height="64"></li>
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_nike.png" width="64" height="64"></li>
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_disney.png" width="64" height="64"></li>
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_mypet2.png" width="64" height="64"></li>
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_bt21.png" width="64" height="64"></li>
+                    <li><img src="https://studio.zepeto.me/img/business/logo_business_linefriends.png" width="64" height="64"></li>
+                </ul>
+            </div>
+            
+    
+            <div  id="content_2" data-aos="fade-up">
+                <img src="https://studio.zepeto.me/img/business/img_business_01.png" width="720" height="500">
+                <div id="content2_text" style="width: 720px;">
+                    <h2>밀레이엄과 Z세대. <br> 제페토에 모두 모였다.</h2>
+                    <p>제페토는 새로운 경험과 스토리를 즐기는 세대에게 비즈니<br>
+                        스를 알릴 수 있는 가장 적함한 플랫폼입니다.</p>
+                </div>
+            </div>
+    
+            <div id="content_3" data-aos="fade-up">
+                <div id="content3_text">
+                    <h2>브랜드 아이템? <br> 제페토에서도 시선강탈.</h2>
+                    <p>익숙한 브랜드를 그대로 구현한 3D아이템은 제페토를 즐<br>기는 사람이 제품과 브랜드에 빠져들게 합니다.</p>
+                </div>
+                <img src="https://studio.zepeto.me/img/business/img_business_02.png" width="720" height="500">
+            </div>
+    
+            <div  id="content_4">
+                <div data-aos="fade-up" id="content4_text">
+                    <h2>이제 많은 브랜드가 <br> 제페토와 함께</h2>
+                    <p>전 세계의 다양한 브랜드가 제페토에서 성공적인 비즈니스를 펼치고 있습니다.</p>
+                </div>
+                
+                <div  class="imgline1" data-aos="fade-up">
+                    <div id="content4_img1">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_dkny.png" width="64" height="64">
+                            <h3 id="brand_name">DKNY</h3>
+                            <p id="brand_ex">매 시즌 인기 오프라인 아이템 출시</P>
+                        </div>
+                    </div>
+                    <div id="content4_img2">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_samsung.png" width="64" height="64">
+                            <h3 id="brand_name">삼성전자</h3>
+                            <p id="brand_ex">아이템, 월드, 부스 등을 활용해 제페<br>토스럽게 해석한 신제품 출시 이벤트<br> 진행</p>
+                        </div>
+                    </div>
+                    <div id="content4_img3">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_puma.png" width="64" height="64">
+                            <h3 id="brand_name">Puma</h3>
+                            <p id="brand_ex">매 시즌 인기 오프라인 아이템 출시</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="imgline2" data-aos="fade-up" >
+                    <div id="content4_img4">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_marineserre.png" width="64" height="64">
+                            <h3 id="brand_name">Marine Serre</h3>
+                            <p id="brand_ex">인기 오프라인 아이템 출시</p>
+                        </div>
+                    </div>
+                    <div id="content4_img5">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_amore.png" width="64" height="64">
+                            <h3 id="brand_name">아모레 퍼시픽</h3>
+                            <p id="brand_ex">설화수 세계관의 영감을 받은 다양한 아이템 출시</p>
+                        </div>
+                    </div>
+                    <div id="content4_img6">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_binggrae.png" width="64" height="64">
+                            <h3 id="brand_name">빙그레</h3>
+                            <p id="brand_ex">인기 월드인 슬라임파티를 활용해 바<br>나나맛 우유 등 빙그레 제품 PPL 진<br>행</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="imgline3" data-aos="fade-up">
+                    <div id="content4_img7">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_supra.png" width="64" height="64">
+                            <h3 id="brand_name">SUPRA</h3>
+                            <p id="brand_ex">인기 오프라인 아이템 출시</p>
+                        </div>
+                    </div>
+                    <div id="content4_img8">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_samdasoo.png" width="64" height="64">
+                            <h3 id="brand_name">제주 삼다수</h3>
+                            <p id="brand_ex">삼다수의 청정세계관을 담은 새로운 월드 출시</p>
+                        </div>
+                    </div>
+                    <div id="content4_img9">
+                        <div id="content4">
+                            <img src="https://studio.zepeto.me/img/business/icon_home_business_xexymix.png" width="64" height="64">
+                            <h3 id="brand_name">젝시믹스</h3>
+                            <p id="brand_ex">인기 오프라인 아이템 출시</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content_5" data-aos="fade-up" >
+                <div id="content5_text">
+                    <h2>제페토에서 무료로 <br> 브랜드 아이템을 출시하세요</h2>
+                    <button type="button" id="last_btn">시작하기</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer1">
+            <div id="mini">
+                <ul>제품
+                    <li><a href="" target="_blank">ZEPETO</a></li>
+                    <li><a href="" target="_blank">ZEPETO Studio</a></li>
+                </ul>
+                <ul>NAVER Z
+                    <li><a href="" target="_blank">뉴스</a></li>
+                    <li><a href="https://recruit.naverz-corp.com/" target="_blank">한국 채용</a></li>
+                    <li><a href="https://careers-us.zepeto.me/" target="_blank">미국 채용</a></li>
+                    <li><a href="https://www.naverz-corp.com/ko/contact" target="_blank">제휴 제안</a></li>
+                </ul>
+                <ul>지원
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/900000840946" target="_blank">공지</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/360008587094" target="_blank">결제</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/360008579213" target="_blank">계정˙안전</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/requests/new" target="_blank">문의</a></li>
+                </ul>
+                <ul>커뮤니티
+                    <li><a href="https://safetycenter.zepeto.me/" target="_blank">안전센터</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/articles/900005448466-Community-Guidelines" target="_blank">가이드라인</a></li>
+                </ul>
+            </div>
+            <div id="app">
+                <div id="google">
+                    <a id="" href="https://play.google.com/store/apps/details?id=me.zepeto.main&hl=ko&gl=US">
+                        <img src="	https://studio.zepeto.me/img/img_24_googleplay.svg">
+                        <span style="vertical-align: top;">Google Play</span>
+    
+                    </a>
+                </div>
+                <div id="apple" >
+                    <a id="" href="https://apps.apple.com/kr/app/zepeto/id1350301428">
+                        <img src="	https://studio.zepeto.me/img/img_24_appstore.svg">
+                        <span style="vertical-align: top;">App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <div id="mini2">
+                <ul>
+                    <li>&copy NAVER Z Corp.All rights reserced.</li>
+                    <li>|</li>
+                    <li><a href="https://studio.zepeto.me/ko/terms" target="_blank">이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="https://support.zepeto.me/hc/ko/articles/360050411493" target="_blank">개인정보처리방침</a></li>
+                    <li>|</li>
+                    <li><a href="https://support.zepeto.me/hc/ko" target="_blank">문의하기</a></li>
+                    <li>|</li>
+                    <li><a href="https://studio.zepeto.me/ko/credits">credits</a></li>
+                </ul>
+            </div>
+            <div id="sns_list">
+                <ul>
+                    <li>
+                        <select id="lang">
+                            <option>English</option>
+                            <option selected>한국어</option>
+                            <option>日本語</option>
+                            <option>中文</option>
+                            <option>ไทย</option>
+                        </select>
+                    </li>
+                    <li><a href="https://www.instagram.com/zepeto.official/" ><img src="resources/image/인스타그램.png" width="20px" ></a></li>
+                    <li><a href="https://twitter.com/zepeto_official" target="_blank"><img src="resources/image/트위터.png" width="20px"></a></li>
+                    <li><a href="https://www.youtube.com/c/ZEPETO_official/" target="_blank"><img src="resources/image/유튜브.png" width="20px"></a></li>
+                    <li><a href="https://www.tiktok.com/@zepeto.official.tt" target="_blank"><img src="resources/image/틱톡.png" width="20px"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+        <script>
+            AOS.init();
+          </script>
+        
+    </div>
+
+    <script>
+        $(function(){
+            $(".navi_bar1").hover(function(){
+                $(".navi_bar1").css({"color":"white","font-weight":"bold"}).text("콘텐츠 ∧");
+            },function(){
+                $(".navi_bar1").css({"color":"rgba(255, 255, 255, 0.6)","font-weight":"normal"}).text("콘텐츠 ∨");
+            })
+
+            $(".navi_bar3").hover(function(){
+                $(".navi_bar3").css({"color":"white","font-weight":"bold"}).text("가이드 ∧");
+            },function(){
+                $(".navi_bar3").css({"color":"rgba(255, 255, 255, 0.6)","font-weight":"normal"}).text("가이드 ∨");
+            })
+        })
+    </script>
+    
+</body>
+</html>

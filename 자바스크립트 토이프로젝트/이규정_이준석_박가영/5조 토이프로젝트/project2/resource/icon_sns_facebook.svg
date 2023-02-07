@@ -1,0 +1,15 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#rwbho140ga)">
+        <path d="M180 0H0v180h180V0z" fill="url(#b7vav3ilib)"/>
+        <path d="M76.95 180.01h25.43v-64.24h23.54l2.45-24.23s.51-1.2-2.06-1.2h-23.93V72.01s-1.07-13.83 12.71-13.83h14.05v-21.4s-6.05-2.68-20.68-2.54a35.75 35.75 0 0 0-23 9.5s-8.49 7.59-8.49 16.22v30.33H52.86v25.43h24.09v64.29z" fill="#fff"/>
+    </g>
+    <defs>
+        <linearGradient id="b7vav3ilib" x1="90" y1="0" x2="90" y2="180" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#18ADFF"/>
+            <stop offset="1" stop-color="#0064E0"/>
+        </linearGradient>
+        <clipPath id="rwbho140ga">
+            <path fill="#fff" d="M0 0h180v180H0z"/>
+        </clipPath>
+    </defs>
+</svg>

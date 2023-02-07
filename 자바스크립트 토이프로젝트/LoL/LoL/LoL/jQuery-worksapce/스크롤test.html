@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../jQuery-worksapce/resources/css/스크롤test.css">
+</head>
+
+<body>
+
+  <header id="header1">
+    <div class="inner1" style="background-image: url(../jQuery-worksapce/resources/image/배경1.png);"></div>
+    <div class="inner2" style="background-image: url(../jQuery-worksapce/resources/image/배경2.png);"></div>
+    <div class="inner3" style="background-image: url(../jQuery-worksapce/resources/image/배경3.png);"></div>
+    <div class="inner4" style="background-image: url(../jQuery-worksapce/resources/image/배경4.png);"></div>
+    <div class="inner5" style="background-image: url(../jQuery-worksapce/resources/image/배경5.png);"></div>
+    <div class="inner6" style="background-image: url(../jQuery-worksapce/resources/image/배경6.png);"></div>
+    <div class="inner7" style="background-image: url(../jQuery-worksapce/resources/image/배경7.png);"></div>
+    <div class="header2">
+      <video src="../jQuery-worksapce/resources/video/배경영상1.webm" muted autoplay loop class="vi1"></video>
+    </div>
+  </header>
+  
+  <section></section>
+  
+  <div class="header3">
+
+  </div>
+
+<script>
+  $(function(){
+    $('.vi1').hide();
+  });
+
+  $(window).scroll(function(){		
+	if($('body, html').scrollTop() > 1190){	
+		$('.vi1').fadeIn();
+	}	
+})
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(".inner1").css("transform","value");
+    $(".inner2").css("transform","value");
+    $(".inner3").css("transform","value");
+    $(".inner4").css("transform","value");
+    $(".inner5").css("transform","value");
+   /* const inner2 = document.querySelector(".inner2");
+    const inner3 = document.querySelector(".inner3");
+    const inner4 = document.querySelector(".inner4");
+    const inner5 = document.querySelector(".inner5");*/
+    const inner6 = document.querySelector(".inner6");
+    const inner7 = document.querySelector(".inner7");
+    const section = document.querySelector("section");
+
+    window.onscroll = function () {
+      let value = window.pageYOffset / section.offsetTop + 1;
+      /*inner1.style.transform = `scale(${value})`;*/
+      /*inner2.style.transform = `scale(${value})`;
+      inner3.style.transform = `scale(${value})`;
+      inner4.style.transform = `scale(${value})`;
+      inner5.style.transform = `scale(${value})`;*/
+      inner6.style.transform = `scale(${value})`;
+      inner7.style.transform = `scale(${value})`;
+    };
+
+    $(function () {
+      var $window = $(window);
+      var scrollTime = 1.2;
+      var scrollDistance = 170;
+
+      $window.on("mousewheel", function (event) {
+
+        event.preventDefault();
+
+        var delta = event.originalEvent.wheelDelta / 120
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+
+        TweenMax.to($window, scrollTime, {
+          scrollTop: { y: finalScroll, autoKill: true },
+          ease: Power1.easeOut,
+          autoKill: true,
+          overwrite: 5
+        });
+
+      });
+
+    });
+
+
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

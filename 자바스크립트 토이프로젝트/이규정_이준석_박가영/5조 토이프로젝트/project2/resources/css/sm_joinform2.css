@@ -1,0 +1,327 @@
+html{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    overflow: overlay;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+html *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 13px;
+    color: #191919;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+.wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.sub{
+    height: 100%;
+}
+header{
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    background: #191919;
+    height: 44px;
+    display: block;
+}
+.headerBox{
+    position: relative;
+    max-width: 1340px;
+    height: 44px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.headerBox>a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #191919;
+}
+.navBtn{
+    position: absolute;
+    left: 30px;
+    font-size: 0;
+    background: url(https://www.smtown.com/resources/images/svg/btn_menu.svg) no-repeat left / 100%;
+    width: 22px;
+    height: 26px;
+    top: 9px;
+}
+a{
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+}
+.headerBox h1{
+    position: absolute;
+    font-size: 0;
+    top: 15px;
+    left: 72px;
+    font-weight: 400;
+}
+.headerBox h1 a{
+    display: block;
+    width: 96px;
+    height: 14px;
+    background: url(https://www.smtown.com/resources/images/svg/gnb_smtown.svg) no-repeat 0 / 100%;
+}
+.headerBox ul{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+ul, li{
+    list-style: none;
+}
+.headerBox ul li{
+    float: left;
+}
+.headerBox ul li a.username{
+    display: block;
+    background: url(https://www.smtown.com/resources/images/svg/btn_mypage.svg) no-repeat 0 / 23px;
+    height: 23px;
+    padding-left: 32px;
+}
+.headerBox ul li a{
+    color: #fff;
+    line-height: 23px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.headerBox ul li a:visited{
+    text-decoration: none;
+    border: 0;
+}
+.subWrap{
+    min-height: calc(100% - 158px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.sigupContent{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 110px 30px 200px;
+}
+.sigupContent h2{
+    font-size: 35px;
+    line-height: 70px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.sigupBox{
+    border-top: 3px solid #191919;
+    border-bottom: none
+}
+.sigupBox dl{
+    display: block;
+    clear: both;
+    padding: 50px 0 20px;
+}
+dl, dt, dd{
+    list-style: none;
+}
+.sigupContent dl dt{
+    float: left;
+    margin-bottom: 20px;
+    clear: both;
+    width: 200px;
+    padding-left: 20px;
+    line-height: 50px;
+    color: #666;
+    font-size: 15px;
+}
+.sigupContent dl dd{
+    float: left;
+    margin-bottom: 20px;
+}
+.sigupContent dl dd input{
+    width: 420px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    padding: 0 17px 1px;
+    font-size: 15px;
+    font-family: 'Noto Sans KR';
+    background-color: #fff;
+    border-radius: 4px;
+}
+input[type="text"]{
+    background: #f2f2f2;
+}
+input[type="password"]{
+    background: #f2f2f2;
+}
+input{
+    margin: 0;
+    outline: 0;
+    color: #191919;
+    vertical-align: middle;
+}
+.register-password-description{
+    padding: 14px 0 0 20px;
+    font-size: 14px;
+    line-height: 1.79;
+    color: #ababab;
+    border-top: 1px solid #e5e5e5;
+    word-wrap: break-word;
+    word-break: keep-all;
+    display: inline-block;
+    margin-left: -10px;
+    margin-right: 4px;
+}
+.btnBox{
+    margin-top: 36px;
+    text-align: center;
+    font-size: 0;
+}
+.cancelBtn{
+    margin-right: 20px;
+    border: 1px solid #191919;
+    color: #191919;
+    background: #fff;
+    width: 220px;
+    display: inline-block;
+    height: 50px;
+    line-height: 48px;
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+.checkBtn{
+    border: 1px solid #191919;
+    color: #fff;
+    background: #191919;
+    width: 220px;
+    display: inline-block;
+    height: 50px;
+    line-height: 48px;
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 500;
+}
+button{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+}
+.sub footer {
+    position: relative;
+    width: 100%;
+    height: 114px;
+    background: none;
+}
+.sub footer > div {
+    position: relative;
+    max-width: 1340px;
+    height: 114px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.sub footer .logo {
+    display: block;
+    top: 40px;
+    width: 110px;
+    height: 24.328px;
+    background: url(https://www.smtown.com/resources/images/svg/logo_smentertainment.svg) no-repeat 0 0 / 100% auto;
+    position: absolute;
+}
+.sub footer ul.footer-center {
+    text-align: center;
+    padding: 46px 320px 0 130px;
+}
+.sub footer ul.footer-center li {
+    margin: 0 13px 5px;
+}
+.sub footer ul li {
+    display: inline-block;
+}
+.sub footer ul.footer-center li a {
+    font-size: 12px;
+    color: #191919;
+}
+.sub footer ul.footer-right {
+    right: 30px;
+    top: 44px;
+    position: absolute;
+}
+.sub footer ul.footer-right li {
+    margin-right: 5px;
+    font-size: 11px;
+    color: #191919;
+}
+.select_box {
+    position: relative;
+    padding-right: 10px;
+}
+.sub footer ul.footer-right select {
+    margin-top: -2px;
+    background: transparent;
+    font-size: 11px;
+    color: #191919;
+}
+.select_box .select {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    opacity: 0;
+}
+select {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 0;
+}
+.sub footer ul.footer-right select option {
+    font-size: 11px;
+    line-height: 14px;
+}
+.sub footer ul.footer-right .select_box .select_value {
+    display: block;
+    font-family: "SMTOWN";
+    font-size: 11px;
+    color: #191919;
+    line-height: 14px;
+    background: url(https://www.smtown.com/resources/images/btn-icon-bullet-b.png) no-repeat 100% 5px;
+    padding: 0 14px 0 0;
+}
+.sigupContent dl dd span {
+    margin-bottom: 10px;
+}
+.errorTxt {
+    display: block;
+    margin-top: 12px;
+    color: #ff1601;
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    text-align: left;
+}

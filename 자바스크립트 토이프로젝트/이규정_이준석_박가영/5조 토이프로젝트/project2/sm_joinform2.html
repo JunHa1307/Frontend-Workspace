@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/sm_joinform2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="sub">
+            <header>
+                <div class="headerBox">
+                    <a href="" class="navBtn">navBtn</a>
+                    <h1>
+                        <a href="https://www.smtown.com/">SMTOWN</a>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.smtown.com/account/login?returnUrl=/mypage" class="username">LOGIN</a>
+                        </li>
+                    </ul>   
+                </div>
+            </header>
+            <div class="subWrap">
+                <div class="sigupContent">
+                    <form action="" method="post" id="signup">
+                        <h2>회원가입</h2>
+                        <div class="sigupBox">
+                            <dl>
+                                <dt>이메일</dt>
+                                <dd>
+                                    <input type="text" id="userId" name="userId" placeholder="이메일을 입력해 주세요.">
+                                    <span id="userId.errors" class="errorTxt"></span>
+                                </dd>
+                                <dt>이름</dt>
+                                <dd>
+                                    <input type="text" id="userName" name="userName" placeholder="이름을 입력해 주세요.">
+                                    <span id="userName.errors" class="errorTxt"></span>
+                                </dd>
+                                <dt>비밀번호</dt>
+                                <dd>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력해 주세요.">
+                                    <span id="password.errors" class="errorTxt"></span>
+                                </dd>
+                                <dt>비밀번호 재확인</dt>
+                                <dd>
+                                    <input type="password" id="rePassword" name="rePassword" placeholder="비밀번호를 한 번 더 입력해 주세요.">
+                                    <span id="rePassword.errors" class="errorTxt"></span>
+                                </dd>
+                            </dl>
+                            <div class="register-password-description">
+                                * 비밀번호는 8~20자리의 영문 대/소문자, 숫자, 특수문자 등 2종류 이상으로 조합해주시기 바랍니다.
+                            </div>
+                        </div>
+                        <div class="btnBox">
+                            <a href="" class="cancelBtn">취소</a>
+                            <button type="submit" class="checkBtn" onclick="return sigup();">가입</button>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_csrf">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <div>
+                    <a href="javascript:void(0);" class="logo"></a>
+                    <ul class="footer-center">
+                        <li>
+                            <a href="https://www.smentertainment.com/" target="_blank">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="https://recruit.smentertainment.com/" target="_blank">채용정보</a>
+                        </li>
+                        <li>
+                            <a href="https://www.smtown.com/notice">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="https://www.smtown.com/policy/terms">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="https://www.smtown.com/policy/privacy">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-right">
+                        <li>
+                            <div class="select_box">
+                                <select class="select" id="family-sites">
+                                    <option value="">FAMILY SITE</option>
+                                    <option value="">SM C&C</option>
+                                    <option value="">에스엠타운트래블</option>
+                                    <option value="">투어익스프레스</option>
+                                    <option value="">호텔트리스</option>
+                                    <option value="">SM GLOBAL PACKAGE</option>
+                                    <option value="">SM JAPAN</option>
+                                    <option value="">Dream Maker</option>
+                                    <option value="">GalaxiaSM</option>
+                                    <option value="">Esteem</option>
+                                    <option value="">MYSTIC STORY</option>
+                                    <option value="">KEYEAST</option>
+                                    <option value="">SM GLOBAL SHOP</option>
+                                    <option value="">SMTOWN &STORE</option>
+                                    <option value="">CELEBRAND</option>
+                                    <option value="">DearU</option>
+                                    <option value="">비컨홀딩스</option>
+                                </select>
+                                <a href="" class="select_value">FAMILY SITE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select_box">
+                                <select class="select" id="change-locale">
+                                    <option value="">Language</option>
+                                    <option value="ko">한국어</option>
+                                    <option value="em">ENGLISH</option>
+                                    <option value="zh">中文</option>
+                                    <option value="ja">日本語</option>
+                                </select>
+                                <a href="" class="select_value">한국어</a>
+                            </div>
+                        </li>
+                        <li>ⓒ SM ENTERTAINMENT</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function sigup(){
+            let userId = document.getElementById("userId");
+            let userName = document.getElementById("userName");
+            let password = document.getElementById("password");
+            let rePassword = document.getElementById("rePassword");
+
+            let Id_RegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+            let p_RegExp = /^(?!((?:[A-Za-z]+)|(?:[~!@#$%^&*()_+=]+)|(?:[0-9]+))$)[A-Za-z\d~!@#$%^&*()_+=]{7,19}$/;
+            
+
+            document.getElementById("userId.errors").innerHTML = "";
+            document.getElementById("userName.errors").innerHTML = "";
+            document.getElementById("password.errors").innerHTML = "";
+            document.getElementById("rePassword.errors").innerHTML = "";
+
+            if(userId.value == "" && userName.value == "" && password.value == "" && rePassword.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                document.getElementById("userName.errors").innerHTML = "이름을 입력해 주세요.";
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                document.getElementById("rePassword.errors").innerHTML = "비밀번호를 한 번 더 입력해 주세요.";
+                return false;
+            }
+
+            // if(!Id_RegExp.test(userId.value) && userName.value == "" && password.value == "" && rePassword.value == ""){
+            //     document.getElementById("userId.errors").innerHTML = "이메일 형식이 올바르지 않습니다.";
+            //     document.getElementById("userName.errors").innerHTML = "이름을 입력해 주세요.";
+            //     document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+            //     document.getElementById("rePassword.errors").innerHTML = "비밀번호를 한 번 더 입력해 주세요.";
+            //     return false;
+            // }
+
+            // if(!p_RegExp.test(password.value) && userName.value == "" && userId.value == "" && rePassword.value == ""){
+            //     document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+            //     document.getElementById("userName.errors").innerHTML = "이름을 입력해 주세요.";
+            //     document.getElementById("password.errors").innerHTML = "입력하신 비밀번호가 유효하지 않습니다.";
+            //     document.getElementById("rePassword.errors").innerHTML = "비밀번호를 한 번 더 입력해 주세요.";
+            //     return false;
+            // }
+
+            // if(password.value != rePassword.value && userName.value == "" && userId.value == "" && password.value == ""){
+            //     document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+            //     document.getElementById("userName.errors").innerHTML = "이름을 입력해 주세요.";
+            //     document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+            //     document.getElementById("rePassword.errors").innerHTML = "입력하신 비밀번호가 일치하지 않습니다.";
+            //     return false;
+            // }
+
+            if(userId.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                return false;
+            }
+
+            if(!Id_RegExp.test(userId.value)){
+                document.getElementById("userId.errors").innerHTML = "이메일 형식이 올바르지 않습니다.";
+                return false;
+            }
+
+            if(userName.value == ""){
+                document.getElementById("userName.errors").innerHTML = "이름을 입력해 주세요.";
+                return false;
+            }
+
+            if(password.value == ""){
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                return false;          
+            }
+
+            if(!p_RegExp.test(password.value)){
+                document.getElementById("password.errors").innerHTML = "입력하신 비밀번호가 유효하지 않습니다.";
+                return false;
+            }
+
+            if(rePassword.value == ""){
+                document.getElementById("rePassword.errors").innerHTML = "비밀번호를 한 번 더 입력해 주세요.";
+                return false;
+            }
+
+            if(password.value != rePassword.value){
+                document.getElementById("rePassword.errors").innerHTML = "입력하신 비밀번호가 일치하지 않습니다.";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>ZEPETO Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  
+  <!-- Swiper 라이브러리 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://studio.zepeto.me/_next/static/css/a8281ee1d95eef77.css" data-n-g="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+
+        div{
+            display: block;
+        }
+        ul {
+            display: block;
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .fade-up{
+            opacity:0;
+        }
+
+        /* 헤더영역 */
+        
+        header{
+            height: 8%;
+        }
+
+        .header{
+            width: 100%;
+            height: 80px;
+            background-color: black;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .header>div{
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #header_1{
+            width: 13%;
+            height: 100%;
+            padding : 27px;
+        }
+
+        #navigator{
+            width: 72%;
+            height: 100%;
+        }
+        #newIcon{
+            margin: 8px 0px 0px 430px;
+            display: block;
+        }
+        #navi{
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        #navi>li{
+            float: left;
+            text-align: center;
+            margin-left: 30px;
+        }
+        .header_a{  
+            font-size: 17px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .headera_1{
+            color: black;
+            text-decoration: none;
+        }
+        .headera_1:hover{color:#5c46ff}
+        .navi_bar2:hover{
+            color: white;
+            font-weight: bold;
+        }
+
+        #navi>li>ul>li{
+            text-align: start;
+            list-style: none;
+            font-size: 17px;
+        }
+        #navi>li>a:hover+ul{
+            display: block;
+        }
+
+        #navi>li>ul:hover{display: block;}
+       
+        #header_content{position: relative;}
+
+        #content_menu{
+            width: 240px;
+            height: 250.19px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            position: absolute;
+            top: 30px;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+        }
+
+        #content_menu>li>a>span{vertical-align: top;}
+        #content_menu li{padding: 14px 20px;}
+        #guide_content{position: relative;}
+        #guide_menu{
+            width: 240px;
+            height: 192.64px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            top: 30px;
+            position: absolute;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05) ;
+        }
+        #guide_menu>li>a>span{vertical-align: top;}
+        #guide_menu li{padding: 14px 20px;}
+        
+
+        #header_3{
+            width: 15%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        #button{
+            width:123.2px;
+            height: 40px;
+            background: white;
+            border-radius: 7px;
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+        }
+
+        #button>span{
+            font-size: 15px;
+        }
+
+        #sound{
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        
+        /* 컨텐츠 영역 */
+
+        content{
+            height: 82%;
+            display: block;
+            text-align: center;
+        }
+
+        .content-txt .content-title{
+            font-size: 70px;
+            font-weight: 700;
+        }
+
+        .content-txt .content-desc{
+            font-weight: 400;
+            font-size: 25px;
+        }
+
+        .mainhome{
+            height: 20%;
+            overflow: hidden;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%; 
+            margin: 0px auto; 
+            position: relative;
+        }
+
+        .homevideo{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .content-text1{
+            position: absolute; 
+            top: 38%; 
+            width: 100%;
+            z-index: 1;
+            
+        }
+
+        .content-title1{
+            margin-top: -24px; 
+            text-align: center; 
+            font-size: 64px; 
+            color: #ffffff; 
+            line-height: 70px;
+            font-weight: 800;
+            text-shadow: 0 0 8px rgb(0 0 0 / 20%);
+            
+        }
+
+        .btn-link {
+            margin-top: 40px;
+            display: inline-block;
+            height: 68px;
+            line-height: 68px;
+            padding: 0 34px;
+            border-radius: 34px;
+            background-color: #FFFFFF;
+            font-weight: 700;
+            font-size: 22px;
+            color: #5c46ff;
+            box-sizing: border-box;
+            box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+        }
+
+        #content-1{
+            height: 20%;
+        }
+
+        .creator-item .number {
+            display: block;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        #content-1 .content-txt{
+            margin-top: 150px;
+        }
+
+        .creator-item{
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
+
+        .creator-item{
+            display: inline-block;
+            max-width: 286px;
+            width: calc(33.333% - 20px);
+            vertical-align: top;
+        }
+
+        ul .creator-item{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        #content-2{
+            height: 15%;
+            padding: 60px 60px;
+            
+        }
+
+        #content-2 .content-txt{
+            margin: 50px 50px;
+        }
+
+        .service-item{
+            position: relative;
+            display: inline-block;
+            padding: 42px 100px 100px;
+            border-radius: 16px;
+            background-color: #FFFFFF;
+            width: calc(33.333% - 36px);
+            max-width: 320px;
+            height: 416px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        .service-desc{
+            margin-top: 10px;
+            font-size: 17px;
+            line-height: 24px;
+            color: #5c5c61;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+            
+        }
+
+        .btn-more{
+            position: absolute;
+            bottom: 32px;
+            left: 60px;
+            right: 60px;
+            display: inline-block;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 24px;
+            background-color: #5c46ff;
+            font-size: 17px;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+
+        .icon-item{
+            background-image: url(https://studio.zepeto.me/img/product_icon_item.svg);
+            display: inline-block;
+            width: 88px;
+            height: 88px;
+            background-size: 88px 88px;
+            background-repeat: no-repeat;
+        }
+
+        .icon-world{
+            background-image: url(https://studio.zepeto.me/img/product_icon_world.svg);
+            display: inline-block;
+            width: 88px;
+            height: 88px;
+            background-size: 88px 88px;
+            background-repeat: no-repeat;
+        }
+
+        .icon-live{
+            background-image: url(https://studio.zepeto.me/img/product_icon_live.svg);
+            display: inline-block;
+            width: 88px;
+            height: 88px;
+            background-size: 88px 88px;
+            background-repeat: no-repeat;
+        
+        }
+
+        #content-3{ /* 스와이프 슬라이드 */
+            height: 15%;
+            padding-bottom: 20px;
+            overflow: hidden;
+        }
+
+        #content-3 .content-txt{
+            padding-top: 100px;
+        }
+
+        #content-3 .swiper-wraper{
+            display: flex;
+            justify-content: center;
+        }
+
+        .swiper {
+            position: relative;
+            height: 600px;
+            width: 1600px;
+        }
+
+        .swiper-slide {
+            width: 20%;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 252px;
+            height: 252px;
+        }
+        
+
+        .swiper-slide-active img{
+            width : 324px;
+            height: 324px;
+        }
+        .swiper-slide .profile-box{
+            opacity: 0;
+            position: absolute;
+            margin-top: 400px;
+
+        }
+        
+        .swiper-slide-active .profile-box{
+            opacity: 1;
+        }
+
+
+        .profile-box .name {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            margin-top : 30px;
+        }
+
+        .profile-box .tag {
+            display: block;
+            margin-top: 4px;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #5c5c61;
+        }
+
+        #content-4{ 
+            height: 15%;
+            background-color: #f8f8fa;
+            padding-top : 20px;
+        }
+
+        #content-4 .content-txt{
+            z-index: 10;
+            text-align: center;
+        }
+
+        .creator-video{
+            width: auto;
+            height: auto;
+        }
+
+        #content-5{
+            height: 15%;
+            text-align: center;
+        }
+
+        .step-item{
+            position: relative;
+            display: inline-block;
+            width: calc(33.333% - 55px);
+            font-size: 24px;
+            vertical-align: top;
+        }
+
+        .step-item .number{
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 700;
+            height: 40px;
+            width: 40px;
+            line-height: 38px;
+            background-color: #F0F0F0;
+            border-radius: 50%;
+        }
+        
+        .step-item .step-title {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .step-desc{
+            margin-top: 12px;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #5c5c61;
+        }
+
+        svg{
+            width: 28;
+            height: 28;
+            fill: none;
+            color: rgb(199, 199, 201);
+            stroke-width: 2;
+            margin-right: 0px;
+        }
+
+        .step-box{
+            margin: 80px auto 0;
+            background-color: #f8f8fa;
+            border-radius: 16px;
+            padding: 56px 48px;
+            max-width: 1184px;
+            box-sizing: border-box;
+        }
+
+        .step-item .arrow-right {
+            display: flex;
+            position: absolute;
+            top: 90px;
+            left: 0px;
+        }
+
+        .btn-start{
+            display: inline-block;
+            font-weight: 500;
+            margin-top: 40px;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 34px;
+            border-radius: 28px;
+            background-color: #5c46ff;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+
+        /* 푸터 영역 */
+        footer{
+            height: 10%;
+        }
+
+        footer .wrap {
+            width: 100%;
+            margin: auto;
+
+        }
+
+        footer .wrap>div {
+            border: 1px, solid, black;
+            width: 100%;
+        }
+
+        .footer1 {
+            height: 219px;
+            border-top : 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            margin-top: 100px;
+        }
+
+        .footer1>div {
+            width: 100%;
+            display: inline;
+           
+
+        }
+
+        .footer2 {
+            height: 107px;
+            margin-top: 20px;
+        }
+
+        .footer2>div{
+            width: 100%;
+            display: inline;
+            
+            
+        }
+
+        #mini>ul {
+            display: inline;
+            float: left;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 40px;
+            margin-left: 100px;
+        }
+
+        #mini>ul>li {
+            list-style-type: none;
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 5px 5px 0px 0px;
+            font-weight: lighter;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #app>div {
+            display: inline;
+            float: left;
+            
+        }
+
+        #google,#apple {
+            width: 128px;
+            height: 35px;
+            background-color: #f5f5f6;
+            border-radius: 8px;
+            font-family: 'Noto Serif', serif;
+            font-weight: bold;
+            transform: translateX(780px);
+            margin: 0px 10px;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-left: 20px;
+            margin-top: 40px;
+        }
+
+        #mini2 {
+            padding-top: 10px;
+            
+        }
+
+        #mini2 ul{
+            margin-left: 90px;
+        }
+
+        #mini2 li {
+            color: rgb(153, 153, 156);
+            display: inline;
+            list-style-type: none;
+            font-size: 13px;
+            margin: auto;
+            padding: 5px 5px 5px 5px;
+            font-weight: lighter;
+            font-size: 12px;
+            float: left;
+        }
+
+        #mini2 a {
+            color: rgb(153, 153, 156);
+        }
+        #sns_list li{
+            color: rgb(199, 199, 201);
+            display: inline;
+            list-style-type: none;
+            padding: 5px 5px 5px 5px;
+            font-size: 12px;
+            float: left;
+            transform: translateX(900px);
+            margin: 0px 5px;
+        }
+        #lang{
+            border: none;
+            color: rgb(153, 153, 156);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div id="header_1">
+                <a href=""><img src="resources/image/로고3.png" style="width: 160px;"></a>
+            </div>
+
+            <div id="navigator">
+                <img src="https://studio.zepeto.me/img/icon_new_bubble.svg" id="newIcon" width="28px" height="20px">
+                <ul id="navi">
+                    <li id="header_content"><a href="" class="navi_bar1 header_a">콘텐츠 ∨</a>
+                        <ul id="content_menu">
+                            <li ><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_item.svg" style="margin-right: 15px;"><span>아이템</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_world.svg" style="margin-right: 15px;"><span>월드</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_live.svg" style="margin-right: 15px;"><span>라이브</span></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_product_icon_build.svg" style="margin-right: 15px;"><span>빌드잇</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="크리에이터프로그램_최종_이유진.html" class="navi_bar2 header_a">크리에이터 프로그램</a></li>
+                    <li><a href="01_영역_김예진.html" class="navi_bar2 header_a">비즈니스</a></li>
+                    <li id="guide_content"><a href="" class="navi_bar3 header_a">가이드 ∨</a>
+                        <ul id="guide_menu">
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg" style="margin-right: 15px;"><span>아이템 가이드</span><img src="https://studio.zepeto.me/img/icon_new_bubble.svg" style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg" style="margin-right: 15px;"><span>월드 가이드</span><img src="https://studio.zepeto.me/img/icon_new_bubble.svg" style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img src="https://studio.zepeto.me/img/gnb_guide_icon_learn.svg" style="margin-right: 15px;"><span>학습</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="navi_bar2 header_a">지원</a></li>
+                </ul>
+            </div>
+
+            <div id="header_3">
+                <button id="button"><a href="05_회원가입(re)_김예진.html"><span>콘텐츠 관리</span></a></button>
+                <span id="sound"><a href=""><img src="resources/img/확성기128.png" width="28px" height="28px"></a></span>
+            </div>
+        </div>
+    </header>
+  
+    <main>
+        <content>
+            <div class="mainhome">
+                <div class="bgvideo">
+                    <video class="homevideo" src="https://studio.zepeto.me/video/bg_home_video.mp4" style="width:100%;" playsinline autoplay muted loop>
+                        <source src="https://studio.zepeto.me/video/bg_home_video.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+                <div class="content-text1">
+                    <h2 class="content-title1 fade-up">상상하는 모든 것. <br>제페토 스튜디오에서.</h2>
+                    <a class="btn-link fade-up" href="https://studio.zepeto.me/ko/console/auth/signin?redirect=%2Fko%2Fconsole">시작하기</a>
+                </div>
+            </div>
+            <div id="content-1">
+                <div class="wrap">
+                    <div class="content-txt fade-up">
+                        <h2 class="content-title">크리에이터를 위한 제페토.</h2>
+                        <p class="content-desc">제페토 크리에이터는 제페토 세상의 모든 것을 직접 만들 수 있습니다.<br>
+                            전 세계 3억 유저에게 당신의 아이디어를 보여주세요!
+                        </p>
+                    </div>
+                    <div class="ct1-img fade-up">
+                        <img src="https://studio.zepeto.me/img/img_creators.png" style="width:60%;">
+                    </div>
+                    <div class="list-box fade-up">
+                        <ul>
+                            <li class="creator-item">
+                                <span class="number">6800만</span>
+                                <span class="text">스튜디오 아이템 판매량</span>
+                            
+                            </li>
+                            <li class="creator-item">
+                                <span class="number">230만</span>
+                                <span class="text">스튜디오 크리에이터 수</span>
+                            
+                            </li>
+                            <li class="creator-item">
+                                <span class="number">3억</span>
+                                <span class="text">제페토 가입자 수</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-2" style="background-color: #f8f8fa;">
+                <div class="wrap">
+                    <div class="content-txt">
+                        <h2 class="content-title fade-up">제페토 세상이 내손안에.</h2>
+                        <p class="content-desc fade-up">아이템, 월드, 라이브까지.<br>
+                            제페토는 크리에이터가 아이디어를 펼칠 수 있는 최고의 플랫폼입니다.
+                        </p>
+                    </div>
+                    <div class="list-box fade-up">
+                        <ul class="service-list">
+                            <li class="service-item">
+                                <span class="icon-item"></span>
+                                <h3>아이템</h3>
+                                <p class="service-desc">패션아이템을 만들고 수익을 창출하세요.</p>
+                                <a class="btn-more" href="https://studio.zepeto.me/ko/products/item">
+                                    <span class="text">더 알아보기</span>
+                                </a>
+                            </li>
+                            <li class="service-item">
+                                <span class="icon-world"></span>
+                                <h3>월드</h3>
+                                <p class="service-desc">제페토 세상에 내 아이디어가 담긴 월드를 만드세요.</p>
+                                <a class="btn-more" href="https://studio.zepeto.me/ko/products/world">
+                                    <span class="text">더 알아보기</span>
+                                </a>
+                            </li>
+                            <li class="service-item">
+                                <span class="icon-live"></span>
+                                <h3>라이브</h3>
+                                <p class="service-desc">전세계 유저들과 실시간 방송하세요.</p>
+                                <a class="btn-more" href="https://studio.zepeto.me/ko/products/live">
+                                    <span class="text">더 알아보기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-3">
+                <div class="wrap">
+                    <div class="content-txt">
+                        <h2 class="content-title fade-up">3억 명을 사로잡을<br> 크리에이터가 될 기회.</h2>
+                        <p class="content-desc fade-up">230만이 넘는 제페토 크리에이터가 전 세계 3억 유저에게 아이디어를 선보이고 있습니다. <br>제페토의 대표 크리에이터를 바로 만나보세요.</p>
+                    </div>
+                <div class="swiper mySwiper fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_01.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">Lenge</span>
+                                <span class="tag">@lenge</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_05.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">코코</span>
+                                <span class="tag">@coco</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_04.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">CLoud</span>
+                                <span class="tag">@cloud</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_03.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">하리</span>
+                                <span class="tag">@hari</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_02.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">아티  ARTY</span>
+                                <span class="tag">@arty_</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_01.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">Lenge</span>
+                                <span class="tag">@lenge</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_05.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">코코</span>
+                                <span class="tag">@coco</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_04.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">CLoud</span>
+                                <span class="tag">@cloud</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_03.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">하리</span>
+                                <span class="tag">@hari</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_02.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">아티  ARTY</span>
+                                <span class="tag">@arty_</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_03.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">하리</span>
+                                <span class="tag">@hari</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-box">
+                                <img src="https://studio.zepeto.me/img/img_slider_02.png">
+                            </div>
+                            <div class="profile-box">
+                                <span class="name">아티  ARTY</span>
+                                <span class="tag">@arty_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-4">
+                <div class="wrap">
+                    <div class="content-txt">
+                        <h2 class="content-title">크리에이터의 수익 창출은 기본.</h2>
+                        <p  class="content-desc">다양한 콘텐츠를 만들고 수익도 올려보세요.</p>
+                    </div>
+                    <div class="video-box fade-up">
+                        <video class="creator-video" playsinline autoplay muted loop class="background-video">
+                            <source src="https://studio.zepeto.me/video/home_profit_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div id="content-5">
+                <div class="wrap">
+                    <div class="content-txt">
+                        <h2 class="content-title">이제 나도 제페토 크리에이터.</h2>
+                        <p class="content-desc">간단한 3가지 과정만 거치면 제페토 크리에이터가 될 수 있습니다.<br>
+                        궁금한 점이 있다면 사이트 상단 [지원]을 통해 문의해 주세요.</p>
+                        <a class="btn-start" href="https://studio.zepeto.me/ko/console/auth/signin?redirect=%2Fko%2Fconsole">
+                            <span class="text">시작하기</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="step-box fade-up">
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <span class="number">1</span>
+                            <dl class="step-info">
+                                <dt class="step-title">제페토 스튜디오 가입하기</dt>
+                                <dd class="step-desc">제페토 계정만 있다면 누구나 무료로 가입할 수 있습니다.</dd>
+                            </dl>
+                        </li>
+                        <li class="step-item">
+                            <span class="arrow-right">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#C7C7C9" stroke-width="2">
+                                    <path d="M10 20L17.9999 11.9998L9.99996 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+                                </svg>
+                            </span>
+                            <span class="number">2</span>
+                            <dl class="step-info">
+                                <dt class="step-title">콘텐츠 제작</dt>
+                                <dd class="step-desc">제작에 필요한 모든 가이드를 제공합니다. 지금 바로 시작하세요.</dd>
+                            </dl>
+                        </li>
+                        <li class="step-item">
+                                <span class="arrow-right">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#C7C7C9" stroke-width="2">
+                                        <path d="M10 20L17.9999 11.9998L9.99996 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path>
+                                    </svg>
+                                </span>
+                            <span class="number">3</span>
+                            <dl class="step-info">
+                                <dt class="step-title">콘텐츠 심사</dt>
+                                <dd class="step-desc">제페토 유저들이 안전하고 즐겁게 즐길 수 있도록 심사를 거친 후 공개됩니다. 바로 시작하세요.</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </content>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div class="footer1">
+                <div id="mini">
+                    <ul>제품
+                        <li><a href="" target="_blank">ZEPETO</a></li>
+                        <li><a href="" target="_blank">ZEPETO Studio</a></li>
+                    </ul>
+                    <ul>NAVER Z
+                        <li><a href="" target="_blank">뉴스</a></li>
+                        <li><a href="https://recruit.naverz-corp.com/" target="_blank">한국 채용</a></li>
+                        <li><a href="https://careers-us.zepeto.me/" target="_blank">미국 채용</a></li>
+                        <li><a href="https://www.naverz-corp.com/ko/contact" target="_blank">제휴 제안</a></li>
+                    </ul>
+                    <ul>지원
+                        <li><a href="https://support.zepeto.me/hc/ko/sections/900000840946" target="_blank">공지</a></li>
+                        <li><a href="https://support.zepeto.me/hc/ko/sections/360008587094" target="_blank">결제</a></li>
+                        <li><a href="https://support.zepeto.me/hc/ko/sections/360008579213" target="_blank">계정˙안전</a></li>
+                        <li><a href="https://support.zepeto.me/hc/ko/requests/new" target="_blank">문의</a></li>
+                    </ul>
+                    <ul>커뮤니티
+                        <li><a href="https://safetycenter.zepeto.me/" target="_blank">안전센터</a></li>
+                        <li><a href="https://support.zepeto.me/hc/ko/articles/900005448466-Community-Guidelines" target="_blank">가이드라인</a></li>
+                    </ul>
+                </div>
+                <div id="app">
+                    <div id="google">
+                        <a id="" href="https://play.google.com/store/apps/details?id=me.zepeto.main&hl=ko&gl=US">
+                            <img src="	https://studio.zepeto.me/img/img_24_googleplay.svg">
+                            <span style="vertical-align: top;">Google Play</span>
+    
+                        </a>
+                    </div>
+                    <div id="apple" >
+                        <a id="" href="https://apps.apple.com/kr/app/zepeto/id1350301428">
+                            <img src="	https://studio.zepeto.me/img/img_24_appstore.svg">
+                            <span style="vertical-align: top;">App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div id="mini2">
+                    <ul>
+                        <li style="font-weight: bold;">&copy NAVER Z Corp.All rights reserced.</li>
+                        <li>|</li>
+                        <li><a href="https://studio.zepeto.me/ko/terms" target="_blank">이용약관</a></li>
+                        <li>|</li>
+                        <li><a href="https://support.zepeto.me/hc/ko/articles/360050411493" target="_blank">개인정보처리방침</a></li>
+                        <li>|</li>
+                        <li><a href="https://support.zepeto.me/hc/ko" target="_blank">문의하기</a></li>
+                        <li>|</li>
+                        <li><a href="https://studio.zepeto.me/ko/credits">credits</a></li>
+                    </ul>
+                </div>
+                <div id="sns_list">
+                    <ul>
+                        <li>
+                            <select id="lang">
+                                <option>English</option>
+                                <option selected>한국어</option>
+                                <option>日本語</option>
+                                <option>中文</option>
+                                <option>ไทย</option>
+                            </select>
+                        </li>
+                        <li><a href="https://www.instagram.com/zepeto.official/"><img src="resources/인스타그램.png" width="20px" ></a></li>
+                        <li><a href="https://twitter.com/zepeto_official" target="_blank"><img src="resources/트위터.png" width="20px"></a></li>
+                        <li><a href="https://www.youtube.com/c/ZEPETO_official/" target="_blank"><img src="resources/유튜브.png" width="20px"></a></li>
+                        <li><a href="https://www.tiktok.com/@zepeto.official.tt" target="_blank"><img src="resources/틱톡.png" width="20px"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+            
+
+  
+  
+
+  <!-- Swiper 스크립트 -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 5,
+      spaceBetween: 2,
+      loop: true,
+      loopAdditionalSlides: 1,
+      centeredSlides: true,
+      autoplay: {     // 슬라이드 자동 재생
+          delay: 3000, // 시간 설정
+          disableOnInteraction: true, // 스와이프 후 자동 재생 정지
+        },
+      
+    });
+  </script>
+  <script>
+        $(document).ready(function() {
+            $(window).scroll( function(){
+                $('.fade-up').each( function(i){
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight()/5;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    
+                    if( bottom_of_window > bottom_of_element ){
+                        $(this).animate({'opacity':'1','margin-bottom':'0px'},300);
+                    }
+                }); 
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+            $(".navi_bar1").hover(function(){
+                $(".navi_bar1").css({"color":"white","font-weight":"bold"}).text("콘텐츠 ∧");
+            },function(){
+                $(".navi_bar1").css({"color":"rgba(255, 255, 255, 0.6)","font-weight":"normal"}).text("콘텐츠 ∨");
+            })
+
+            $(".navi_bar3").hover(function(){
+                $(".navi_bar3").css({"color":"white","font-weight":"bold"}).text("가이드 ∧");
+            },function(){
+                $(".navi_bar3").css({"color":"rgba(255, 255, 255, 0.6)","font-weight":"normal"}).text("가이드 ∨");
+            })
+        })
+    </script>
+</body>
+
+</html>

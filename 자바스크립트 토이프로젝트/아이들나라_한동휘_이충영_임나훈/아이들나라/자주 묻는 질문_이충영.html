@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주 묻는 질문</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        div{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+        }
+
+        .wrap{
+            width: 100%;
+            height: 0%;
+            margin: auto;
+        }
+
+        .wrap>div{
+            width:100%;
+        }
+
+        #header{
+            height: 15%;
+            position: fixed;
+            background-color: white;
+            margin-top: -1%;
+        }
+        #content1{
+            height:30%;
+        }
+        
+        #content2{
+            height : 60%;
+            
+        }
+      
+        #header>div   {height:100%; float:left;}
+
+        #header_1{
+            width:20%; 
+            margin: 0%;
+            padding: 3%;
+            font-size: 29px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+        #back_btn{
+            font-size: 18px;
+            font-weight: 900;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #header_2{
+            width:65%;
+        }
+        #header_3{
+            width:15%;
+        }
+        #header_3_1{
+          width: 50%;
+          height: 100%; 
+          float: left;
+          text-align: center;
+          padding: 6%;
+        }
+        #down_btn{
+            width: 130.09px;
+            height: 48px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            background: white;
+            border: 3px solid lightgray;
+            margin: 30% 0% 0% -50%;
+        }
+     
+        #icon {
+            display: none;
+        }
+
+        #icon+label {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 30px;
+            cursor: pointer; 
+            z-index: 5; 
+            margin: 40% 0% 0% -30%;     
+        }
+
+        #icon+label>span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 30px;
+            background: #000;
+            transition: all 0s; 
+        }
+
+        #icon+label>span:nth-child(1) {
+            top: 0px;
+        }
+
+        #icon+label>span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+
+        #icon+label>span:nth-child(3) {
+            bottom: 0px;
+        }
+
+        #icon:checked+label>span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        #icon:checked+label>span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #icon:checked+label>span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        #icon+label+#hamburger {
+            position: fixed; 
+            width: 500px;
+            height: 100%;
+            background-color: white;
+            top: 0px;
+            padding: 2% 25px 25px 25px;
+            box-sizing: border-box;
+            right: -500px;
+            transition: all 0.5s;
+        }
+
+        #icon:checked+label+#hamburger {
+            right: 0px;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a {
+            color: black;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a:hover {
+            color: gray;
+        }
+
+        #headerMenu {
+            font-size: xx-large;
+            margin-top: 100px;
+        }
+
+        #Menu {
+            padding: 20px;
+            list-style: none;
+        }
+
+        #categryfont {
+            text-decoration-line: none ;
+        }
+
+        .img{
+            margin: 90% 0% 0% 0%;
+            width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);
+        }
+
+        #header_3_2{
+           width: 50%;
+           height: 100%;
+           float: left;
+           padding: 10%;
+           opacity: 1;
+           pointer-events: all;
+        }
+       
+        #content1_1{  
+            height:70%; 
+            width: 100%;
+            padding: 10% 1% 5% 15%;
+        }
+        #content1_2{ 
+            height:30%;
+            width:100%; 
+            /* padding: 2% 1% 0% -10%; */
+           
+            margin-top: -2%;
+            margin-bottom: 2%;
+        }
+        #search_input{
+            border-radius: 250px;
+            height:50px;
+            width: 1450px;
+            font-size: 15px;
+            background-color: white;
+            border-color: lightgray;
+            text-align: left;
+            margin-left: 15%;
+            padding: 0%;
+        }
+        
+        #content2_1{ 
+            height:35%;
+            width: 100%;
+            background-color: rgba(255, 255, 0, 0.247);
+            padding: 1% 1% 10% 15%;
+        }
+       
+        .text_box{
+            width: 480px;
+            height: 170px;
+            border-radius: 10%;
+            border-color: white;
+            background-color: white;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 2%
+        }
+        #content2_2{ 
+             height:65%; 
+             width:100%;    
+             padding: 1% 1% 10% 15%;
+        }
+        .navi{
+            cursor: pointer;
+            width: 130px;
+            margin: 0.05em;
+            border-radius: 40%;
+            height: 60px;
+            border-color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+       
+        .question{
+            background: white;
+            width: 1400px;
+            height: 120px;
+            text-align: left;
+            line-height: 30px;
+            border-radius: 10px;
+            border : 1px solid lightgray;
+            cursor: pointer;
+            padding: 2%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        #answer{
+            border : 1px solid lightgray;
+            background-color: rgb(236, 234, 234);
+            width: 1400px;
+            height: 100px;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+            display: none;
+            
+        }
+        .q_btn{
+            cursor: pointer;
+            background-color: white;
+            border-color: lightgray;
+            border-radius: 10px;
+        }
+        
+        #footer{
+            height: 550px;
+            background-color: rgb(236, 234, 240);
+        }
+        #footer_1{
+            height: 50%;
+            width: 100%;  
+            
+        }
+        #footer_1_1{
+            width: 70%;
+            height: 100%;
+            float: left;
+            font-size: 20px;
+            padding: 1%;
+        }
+        #footer_1_2{
+            width: 30%;
+            height: 100%;
+            float: left;
+            text-align: right;  
+            padding: 1% 
+                     
+        }
+       
+        #footer_2{
+            height: 50%;
+            width: 100%;
+            float: left;
+            padding: 1%;
+        }
+        #p3{
+            text-align: right;
+        }
+        .img_1{width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1">
+                <a class="header__back">
+                    <button id= back_btn value="back" onclick="history.go(-1)">
+                        <img class="header__back-icon header__back--black" src="https://www.i-nara.co.kr/img/icon/icon_left_black.svg" alt="">
+                        <img class="header__back-icon header__back--white" src="/img/icon/icon_left_white.svg" alt="">
+                        <span class="header__back-text">자주 묻는 질문</span>
+                    </button>
+                </a>
+            </div>
+            <div id="header_2"></div>
+            
+            <div id="header_3">
+                <div id="header_3_1">
+                <a href="앱 다운로드_임나훈.html"><button id="down_btn">앱 다운로드</button></a>
+                </div>
+                
+                <div id="header_3_2">
+                    <input type="checkbox" id="icon"> 
+                        <label for="icon">
+                            <span></span> 
+                            <span></span> 
+                            <span></span>
+                        </label>
+                        
+                        <div id="hamburger">
+                            <ul id="headerMenu">
+                                <li id="Menu"><a href="메인페이지_한동휘.html" id="categryfont">
+                                홈 바로가기
+                                </a></li>
+                                        
+                                <!-- <li id="Menu"><a href="" id="categryfont">이벤트</a></li>		
+
+                                <li id="Menu"><a href=" " id="categryfont">
+                                서비스 소개
+                                </a></li> -->
+
+                                <li id="Menu"><a href="이용권 안내_임나훈.html" id="categryfont">
+                                이용권 안내
+                                </a></li>
+
+                                <li id="Menu"><a href="공지사항_이충영.html" id="categryfont">공지사항</a></li>
+
+                                <li id="Menu"><a href="자주 묻는 질문_이충영.html"  id="categryfont">자주 묻는 질문</a></li>
+
+                                <li id="Menu">
+                                    <a href="https://www.instagram.com/i.nara.play/"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                                    <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                                    <a href="https://cafe.naver.com/uplusmom"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>                 
+                                </li>
+						    </ul>                           
+					    </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div id="content1">
+            <div id="content1_1">
+                <h1 style="font-size: 60px; font-family: 'Jua', sans-serif;">자주 묻는 질문</h1>
+                <h2 style=" font-size : 30px; font-weight: 400;">아이들나라에 자주 궁금한 내용을 모았습니다.</h2>
+            </div>
+            <div id="content1_2">
+                <input type="text" id="search_input" placeholder="검색어를 입력하세요.">                                
+            </div>            
+        </div>
+        
+        <div id="content2">
+            
+            <div id="content2_1">
+                <h2 style="font-size: 30px; font-weight: 700;">자주 묻는 질문 TOP3</h2>
+                <button class="text_box" style="text-align: left;">1<br><h4 class="fromLeft">무료체험 상품은 어떻게 이용할 수 있나요?</h4></button>
+                <button class="text_box" style="text-align: left;">2<br><h4 class="fromLeft">아이들나라 이용권은 정기결제 <br>서비스인가요?</h4></button>
+                <button class="text_box" style="text-align: left;">3<br><h4 class="fromLeft">아이들나라 이용권을 가입하면<br> 어떤 콘텐츠를 볼 수 있나요?</h4></button>
+                
+                <style>
+                .active{
+                    background-color: yellow;    
+                              
+                };
+                h4 { 
+                    color: #000;
+                    display:inline-block; 
+                    margin:0;
+                    text-transform:uppercase; 
+                }
+                h4:after {
+                    display:block;
+                    content: '';
+                    border-bottom: solid 2px black;
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                }
+                h4:hover:after { transform: scaleX(1); }  
+                h4.fromLeft:after{  transform-origin:  0% 50%; } 
+                </style>
+
+                <script>  
+                    $(document).ready(function(){
+                    $(".text_box").click(function(){
+                    $(this).toggleClass('active');
+                    });
+                });
+                </script>
+              
+                
+            </div>
+            <div id="content2_2">
+                <button class="navi">전체</button>
+                <button class="navi">이용권문의</button>
+                <button class="navi">무료체험</button>
+                <button class="navi">가입&구독</button>
+                <button class="navi">결제</button>
+                <button class="navi">환불</button>
+                <button class="navi">시청</button>
+                <button class="navi">번호이동</button>
+                <button class="navi">해지/탈퇴</button>
+                <button class="navi">요금제</button>
+                <button class="navi">기타</button>
+                <style>
+                    .active2{
+                        background-color : gray;              
+                    };
+                  
+                </style>
+                    
+                <script>  
+                        $(document).ready(function(){
+                        $(".navi").click(function(){
+                        $(this).toggleClass('active2');
+                        });
+                    });                  
+                 </script>
+                <br><br>
+              
+                <div class="question"><button class="q_btn">무료체험</button> 무료체험 상품은 어떻게 이용할 수 있나요?</div>
+               
+                <p id="answer">
+                    무료체험은 아이들나라 앱에서 ‘한달 무료 체험하기’(프로모션 화면 내 ‘한달 무료 체험하기’버튼)를 통해 가입가능합니다.
+                    <br>
+                    단, 한달 무료 체험 후 가입한 앱스토어에서 해지하지 않을 시 다음 결제일에 정기 결제되는 점 유의 부탁드립니다. </p>
+                
+                <div class="question"><button class="q_btn">이용권문의</button>
+                    아이들나라 이용권은 정기결제 서비스인가요?
+                </div>
+               
+                <p id="answer">
+                네. 아이들나라 이용권은 월 단위 정기결제 서비스입니다.
+                <br>
+                아이들나라 이용권은 매월 정기 결제되는 구독형 상품입니다.
+                <br>
+                최초 결제하신 앱 스토어의 결제 수단으로 매월 결제됩니다.
+                </p>
+
+                <div class="question"><button class="q_btn">이용권문의</button> 아이들나라 이용권을 가입하면 어떤 콘텐츠를 볼 수 있나요?</div>
+                <p id="answer">아이들나라 이용권 가입 시, 아이들나라에 편성된 약6만 편의 VOD 콘텐츠와 디즈니러닝플러스, 퀴즈백과, 화상독서, 코딩 등의 서비스를 이용할 수 있습니다. </p>
+
+                <div class="question"><button class="q_btn">이용권문의</button> 기존 사용하던 상품(키즈월정액)이 있는데 아이들나라 이용권 가입이 가능한가요?</div>
+                <p id="answer">기존에 이용하던 상품이 있더라도 아이들나라 가입은 허용됩니다. <br>단, 아이들나라 이용권 가입시 기존 유료상품은 즉시 해지 또는 예약해지 처리됩니다. (상품별 정책에 따라 다름)</p>
+            
+                <script>
+                    $(function(){
+                        $(".question").click(function(){                         
+                            let $answer = $(this).next();                       
+                            if($answer.css("display") == "none"){                                
+                                $(this).siblings("#answer").slideUp();                                
+                                $answer.slideDown(0);
+                            }else{                             
+                                $answer.slideUp(0);
+                            }                        
+                        });
+                    });
+                </script>           
+            </div>          
+        </div>
+        
+        <div id="footer">
+            <div id="footer_1">  
+                <div id="footer_1_1"><br>
+                    <!-- <a href="" style="text-decoration-line: none; color: black;">이벤트</a><br>
+                    <a href="" style="text-decoration-line: none; color: black;">서비스 소개</a><br> -->
+                    <a href="이용권 안내_임나훈.html" style="text-decoration-line: none; color: black;">이용권 안내</a><br>
+                    <a href="공지사항_이충영.html" style="text-decoration-line: none; color: black;">공지사항</a><br>
+                    <a href="자주 묻는 질문_이충영.html" style="text-decoration-line: none; color: black;">자주 묻는 질문</a>
+                </div>       
+                
+                <div id="footer_1_2"><br>
+                    <a href="https://www.instagram.com/i.nara.play/"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                    <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                    <a href="https://cafe.naver.com/uplusmom"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>
+                    
+                </div>
+               
+            </div>
+            
+            <div id="footer_2">
+               <div id="footer_2_1">
+                    <a href="" style="text-decoration-line: none; color: black;">이용약관</a> 
+                    <a href="" style="text-decoration-line: none; color: black;">개인정보처리방침</a> 
+               </div>
+            
+               <div id="footer_2_2">
+                <p id="p1">
+                    (주)엘지유플러스 | 대표이사 황현식 | 주소 : 서울특별시 용산구 한강대로 32 | 사업자등록번호 : 220-81-39938
+                </p>
+                <p id="p2">
+                    고객센터 1600-1002
+                </p>
+                <p id="p3">
+                    Copyright ⓒ LG Uplus Corp. All Rights Reserved.
+                </p>
+               </div>           
+            </div>          
+        </div>
+    </div>
+</body>
+</html>

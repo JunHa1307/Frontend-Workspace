@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Samsung</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/image/favicon.ico">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+@font-face {font-family: "Samsung Sharp Sans Regular";src: url("resources/font/SamsungSharpSans-Regular.ttf") format("ttf"), url("resources/font/SamsungSharpSans-Regular.woff") format("woff");}
+@font-face {font-family: "Samsung Sharp Sans"; src: url("resources/font/Samsung-Sharp-Sans-Bold.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Bold.woff") format("woff");}
+/* @font-face {font-family: "SamsungOneLatin 400"; src: url("resources/font/SamsungOneLatin-400-400.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");} */
+@font-face {font-family: "Samsung Sharp Sans Medium"; src: url("resources/font/Samsung-Sharp-Sans-Medium-Regular.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");}
+@font-face {font-family: "SamsungOneLatin 600"; src:url("resources/font/SamsungOneLatin-600-600.ttf") format("ttf"), url("resources/font/SamsungOneLatin-600-600.woff") format("woff");}
+@font-face {font-family: "SamsungOneLatin 400"; src: url("resources/font/fdb.onlinewebfonts.com/t/320c13313c59da5da266cc849be7166d.eot"); src: url("resources/font/@font-face/320c13313c59da5da266cc849be7166d.eot") format("embedded-opentype"), url("resources/font/@font-face/320c13313c59da5da266cc849be7166d.woff2") format("woff2"), url("resources/font/@font-face/320c13313c59da5da266cc849be7166d.woff") format("woff"), url("resources/font/SamsungOneLatin\ 400\ 400.ttf") format("truetype"), url("resources/font/@font-face/320c13313c59da5da266cc849be7166d.svg") format("svg"); }
+
+
+/* 애니메이션 효과 */
+
+@keyframes header-rolling {
+    0% {
+        transform: translateY(250%)
+    }
+
+    5% {
+        transform: translateY(150%)
+    }
+
+    20% {
+        transform: translateY(150%)
+    }
+
+    25% {
+        transform: translateY(50%)
+    }
+
+    40% {
+        transform: translateY(50%)
+    }
+
+    45% {
+        transform: translateY(-50%)
+    }
+
+    60% {
+        transform: translateY(-50%)
+    }
+
+    65% {
+        transform: translateY(-150%)
+    }
+
+    80% {
+        transform: translateY(-150%)
+    }
+
+    85% {
+        transform: translateY(-250%)
+    }
+
+    100% {
+        transform: translateY(-250%)
+    }
+}
+
+@keyframes imgBig {
+    0%{
+        transform: scale(1.10);
+    }100%{
+        transform: scale(1.0);
+    }
+}
+
+@keyframes bannermove {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-40%, 0);
+        }
+    }
+
+@keyframes move {
+    50% {
+        height: 0;
+        top: 50;
+        bottom: 130;
+    }
+} 
+
+
+/* 전체 */
+.wrap{
+    width: 100%;
+    height: 7163px;
+}
+div{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+body{ margin: 0; }
+
+/* header */
+.header_a{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.44444;
+    color: #000;
+    position: relative;
+}
+.header_list>li{
+    margin-right: 23px;
+    margin-top: 3px;
+}
+.header_b{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.44444;
+    color: #000;
+    padding: 7px;
+}
+.header_a::after{
+    content:"";
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    transition: all .5s;
+}
+.header_a::before{
+    content:"";
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    transition: all .5s;
+}
+.header_a:hover:after{  width: 50%; }
+.header_a:hover:before{ width: 50%; }
+.header-navi>ul,.header-wrap,.header-navi,.header-widget{
+    font-family:  'Samsung Sharp Sans Regular';
+    display: flex;
+}
+ul{ list-style: none; }
+.header-navi>ul{
+    width: 435.92px;
+    height: 26.36px;
+}
+.header-wrap{
+    width: 100%;
+    height: 90px;
+    padding: 0px 50px 0px 50px;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    background-color: white;
+}
+.header-navi{
+    height: 100%;
+    width: 634.92px;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+}
+.header-widget{
+    height: 100%;
+    width: 394.5px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.widget{
+    width: 300px;
+    height: 28px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    overflow: hidden;
+}
+.widget>ul>li{
+    animation: header-rolling 15s ease-in-out infinite;
+    overflow: hidden;
+    font-family: "Samsung Sharp Sans";
+    font-size: 18px;
+    line-height: 1.44444;
+    font-weight: bold;
+}
+.search{
+    width: 100%;
+    height: 400px;
+    visibility: hidden;
+    background-color: white;
+    font-family: 'Samsung Sharp Sans Regular','Noto Sans KR', sans-serif;
+    position: absolute;
+    top : 100px;
+    z-index: 8;
+}
+#search_img2{
+    position: absolute;
+    bottom: 200px;
+    left: 665px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+#search_img2>img{
+    width: 100%;
+}
+.search_in{
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+}
+
+#search_input{
+    margin-top: 20%;
+    width: 100%;
+    height:  80px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 40px;
+    font-family: 'Samsung Sharp Sans Medium','Noto Sans KR', sans-serif;
+}
+#search_input:focus{ outline: none; }
+.search_list>ul{
+    display: flex;
+    padding: 0;
+}
+.search_list>ul>li{ padding-right: 20px;}
+.search_list>ul>li>a{
+    color: black;
+    text-decoration: none;
+}
+#lang1{
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.list{
+    position: absolute;
+    right: 25%;
+    display: none;
+    z-index: 9;
+}
+.list>ul>li{ padding-bottom: 7px; }
+#lang1:hover>.list{ display: block; }
+#li2{
+    text-decoration: none; 
+    color: black;
+    border-bottom: 2px black solid;
+    font-family: "Samsung Sharp Sans",'Noto Sans KR', sans-serif;
+}
+#li1{
+    text-decoration: none; 
+    color: grey;
+    font-family: "Samsung Sharp Sans",'Noto Sans KR', sans-serif;
+}
+p{ 
+    font-family: "SamsungOneLatin 400"; 
+    margin: 0;
+}
+
+
+/* content */
+.content1{
+    padding-top: 200px;
+    margin: auto;
+    height: 1300px;
+    width: 75%;
+    position: relative;
+}
+span{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+#img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    animation: imgBig 1s;
+}
+.img:hover{ transform: scale(1.10); }
+.right{
+    height :200px;
+    width: 55%;
+    position: absolute;
+    left:45%;
+}
+.con-right{ width: 100%; }
+#over{
+    overflow: hidden;
+    height: 800px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.content2{
+    margin: auto;
+    height: 1800px;
+    width: 75%;
+}
+.content5{
+    margin: auto;
+    height: 500px;
+    width: 75%;
+    margin-top: 20px;
+}
+.con5>div{
+    float: left;
+    height: 100%; 
+}
+.con5{
+    width: 100%;
+    height: 90%;
+}
+.content2>div{
+    float: left;
+}
+.con2_1{
+    width: 50%;
+    height: 1100px;
+    position: sticky;
+    top : 0;
+}
+.con2_2{ width: 50%; }
+.c2_1{
+    height: 450px;
+    position: relative;
+}
+#c2_1{
+    height: 470px;
+    position: relative;
+}
+.space{
+    height: 150px;
+    width: 100%;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 13%;
+    padding-right: 13%;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+#con2_img{
+    width: 95%;
+    height: 75%;
+    overflow: hidden;
+}
+.c2_01{
+    width: 52%;
+    height: 230px;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+}
+.span_1{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 260px;
+    font-size: 14px;
+}
+.span_2{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 340px;
+}
+#span_2{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 360px;
+}
+#content3{
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    position:relative;
+}
+#content6{
+    height: 690px;
+    width: 100%;
+}
+.img1{
+    width: 100%;
+    height: 125%;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+}
+
+/* toggle */
+.title{
+    height: 100%;
+    width: 75%;
+    margin: auto;
+    cursor: pointer;
+    font-family: "Samsung Sharp Sans";
+    font-size: 40px;
+    padding-top: 45px;
+    border-top: 1px solid black;
+}
+.title_1{
+    height: 2%;
+    width: 75%;
+    margin: auto;
+    border-top: 1px solid black;
+}
+.title_wrap{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(245, 244, 244);
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    left: 85%;
+    bottom: 37%;
+    transition: all 0.5s;
+    transform: rotate(-90deg);
+}
+#arrow{
+    transform: rotate(90deg);
+}
+.arrow>img{
+    width: 30px;
+    height: 30px;
+}
+
+.title_wrap_1{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(245, 244, 244);
+    position: relative;
+}
+.toggle{
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: none;
+}
+.toggle_wrap{
+    width: 100%;
+    height: 570px;
+    display: none;
+    background-color:  rgb(245, 244, 244);
+}
+.toggle1{
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: none;
+    background-color:  rgb(245, 244, 244);
+}
+.toggle_wrap_1{
+    width: 100%;
+    height: 930px;
+    display: none;
+    background-color:  rgb(245, 244, 244);
+}
+.toggle_wrap_2{
+    width: 100%;
+    height: 1000px;
+    display: none;
+    background-color:  rgb(245, 244, 244);
+}
+.to_1{
+    display: block;
+}
+.t2>div{
+    height: 100%;
+    float: left;
+}
+.t1{
+    height: 20%;
+    width: 100%;
+}
+.t2{
+    height: 80%;
+    width: 100%;
+}
+.t3{
+    width: 33.3%;
+}
+.t4{
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.t1_1{
+    height: 10%;
+    width: 100%;
+}
+.t2_1>div{
+    height: 100%;
+    float: left;
+}
+.t2_1{
+    height: 45%;
+    width: 100%;
+}
+.t3_1{
+    width: 33.3%;
+}
+.t4_1{
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.t4_11{
+    width: 90%;
+    height: 55%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.text_bold{
+    font-family: "Samsung Sharp Sans";
+}
+.text_latin{
+    font-family:  "SamsungOneLatin 400", 'Noto Sans KR', sans-serif ;
+    font-size: 14.4px;
+}
+.text_regular{
+    font-family:  'Samsung Sharp Sans Regular','Noto Sans KR', sans-serif;
+}
+.small_latin{
+    font-family:  "SamsungOneLatin 400", 'Noto Sans KR', sans-serif ;
+    font-size: 12px;
+}
+.text_title{
+    color :black;
+    text-decoration: none;
+    font-family: "Samsung Sharp Sans", 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.banner {
+    width:3500px; 
+    height:100%;
+    display:flex;
+    flex-wrap:nowrap;
+    animation: bannermove 20s linear infinite;
+}
+
+/* more 부분 */
+.more{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.more>a{
+    font-size:20px; 
+    font-family: "Samsung Sharp Sans Regular"; 
+    text-decoration: none; 
+    color : black;
+}
+#animate {
+    background-color: white;
+    z-index: 2;
+    position:absolute;
+    cursor: pointer;
+    top: 50px;
+    left:50%;
+    width: 1px;
+    height: 35px;
+    border : 1px solid grey;
+    background: gray;
+    touch-action: manipulation;
+    animation: move 3s ease infinite;
+    cursor: pointer;
+}
+.more2{
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    top: 50px;
+    left:50%;
+    z-index: 9;
+    background-color: white;
+}
+    
+
+/* footer */
+.footer{
+    height: 70px;
+    width: 100%;
+}
+.footer>div{
+    height: 100%;
+    float: left;
+}
+#footer_list1{
+    width: 60%;
+    font-family:"Samsung Sharp Sans Medium", 'Noto Sans KR', sans-serif;
+    vertical-align: middle;
+    
+}
+#footer_list1>ul{ display: flex; }
+#footer_list1>ul>li{
+    margin-right: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+#footer_list2{
+    width: 40%;
+    vertical-align: middle;
+}
+#footer_list2>ul{
+    display: flex;
+    justify-content: end;
+}
+#footer_list2>ul>li{
+    padding-right: 30px;
+    padding-top: 7px;
+}
+.footer_a{
+    color :black;
+    text-decoration: none;
+    font-family:"Samsung Sharp Sans Medium", 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header-wrap">
+            <div class="header-navi">
+                <a href="삼성디자인-main.html" >
+                    <img src="resources/image/header-logo-samsung-design-svg.svg" style="width: 181px;height: 25px; padding-top: 7px;">
+                </a>
+                <ul class="header_list">
+                    <li><a href="our stories_en.html" class="header_a">Our Stories</a></li>
+                    <li><a href="about us.html" class="header_a">About Us</a></li>
+                    <li><a href="career us.html" class="header_a">Career</a></li>
+                    <li><a href="news_en.html" class="header_a">News</a></li>
+                </ul>
+            </div>
+            <div class="header-widget">
+                <div class="widget"><ul>
+                    <li><a href="삼성디자인-main-eng.html#toggle_0" class="header_b">#A_Sence_of_Color</a></li>
+                    <li><a href="삼성디자인-main-eng.html#toggle_1" class="header_b">#Expanding_the_World</a></li>
+                    <li><a href="삼성디자인-main-eng.html#toggle_2" class="header_b">#Living_Smarter</a></li>
+                    <li><a href="삼성디자인-main-eng.html#toggle_3" class="header_b">#Inspire_for_the_Better</a></li>
+                    <li><a href="삼성디자인-main-eng.html#toggle_4" class="header_b">#Design_for_All</a></li>
+                    <li><a href="삼성디자인-main-eng.html#toggle_0" class="header_b">#A_Sence_of_Color</a></li>
+                </ul>
+            </div>
+            <div id="search_img"><img src="resources/image/header-search-icn2022.svg" style="cursor : pointer"></div>
+            <div id="lang1">
+                    <img src="resources/image/header-lang-icn2022.svg" id="lang2" style="cursor: pointer;">
+                    <div class="list">
+                        <ul>
+                            <li><a href="삼성디자인-main.html" id="li1">KR</a></li>
+                            <li><a href="삼성디자인-main-eng.html" id="li2">EN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search_in">
+                <input type="search" placeholder="Input Keyword" id="search_input">
+                <div id="search_img2"><img src="resources/image/header-search-icn2022.svg"></div>
+                <div class="search_list">
+                    <ul>
+                        <li><a href="" class="">Galaxy Z Unpacked</a></li>
+                        <li><a href="" class="">Watch5</a></li>
+                        <li><a href="" class="">One UI</a></li>
+                        <li><a href="" class="">Bespoke</a></li>
+                        <li><a href="" class="">Metaverse</a></li>
+                        <li><a href="" class="">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="veil" style="position: absolute; width: 100%; height: 50%; bottom: 0px; background-color: black; opacity: 0.6; z-index: 5; display: none;"></div>
+    
+        <div class="content1"> 
+            <span class="text_bold" style=" font-size: 40px;" >Opening a New Chapter</span><br>
+            <div class="text_latin" style="font-size: 25px; padding-top: 20px;"><p>Interview with Samsung’s Newly Joining Designers of 2022</p></div><br>
+            <div id="over"><a href=""><img src="resources/image/인터뷰.jpg" id="img" class="img"></a></div>
+            <div class="right">
+                <div class="con-right text_latin" data-aos="fade-up" data-aos-duration="1000">Here are five newly joining designers at Samsung Electronics who are creating a better future with their warm approach towards people and creative perspectives towards the world. Hear about their stories as they embark on new journeys as a Samsung designer.</div><br>
+                <div class="con-right small_latin" data-aos="fade-up" data-aos-duration="1000">Career  |  Dec 15, 2022</div><br>
+            </div>
+        </div>
+        
+        <div class="space text_regular" style="margin-bottom: 15px;">Latest<br><hr></div>
+        
+        <div class="content2"> 
+            <div class="con2_1">
+                <div id="con2_img" data-aos="fade-up"  data-aos-duration="2000">
+                    <a href=""><img src="resources/image/이미지1.jpg" class="img"></a>
+                </div>
+                <br>
+                <span class="text_title" >Designing Words</span><br>
+                <span class="text_latin">Samsung UX Writing guide</span><br><br>
+                <span class="text_latin">UX Writing is just as important as graphics and interface design when it comes to User Experience. This is the story of Samsung Design’s UX Writing that aspires to provide more joyful and helpful experiences to users.
+                <br><br>   
+                <span class="small_latin">Our Stories  |  Nov 29, 2022</span>
+            </div>
+            <div class="con2_2" >
+                <div class="c2_1" data-aos="fade-up"  data-aos-duration="1000">
+                    <div class="c2_01"  data-aos="fade-up"  data-aos-duration="300">
+                        <a href="디자인삼성_AWARDS.html"><img src="resources/image/이미지2.jpg" class="img"></a>
+                    </div>
+                    <span>
+                        <a href="디자인삼성_AWARDS.html" class="text_title">Design Award<br> Winner</a>
+                        <p>Award Winning Samsung Designs</p>
+                        <div class="text_latin span_1" ><p>Meet Samsung Electronics’ award-winning designs that garnered praise this past year at international design awards including iF, IDEA, GOOD DESIGN KOREA.</p></div>
+                        <div class="small_latin span_2 ">About Us  |  Dec 15, 2022<br><br><br><br><hr></div> 
+                    </span>
+                </div>
+                <div class="c2_1" data-aos="fade-up"  data-aos-duration="1000">
+                    <div class="c2_01"  data-aos="fade-up"  data-aos-duration="300">
+                        <a href=""><img src="resources/image/이미지3.jpg" class="img"></a>
+                    </div>
+                    <span>
+                        <a href="" class="text_title">The Wave: Epilogue</a>
+                        <p>Into the Flow</p>
+                        <div class="text_latin span_1"><p>Each artwork in the exhibition portrays a unique beauty within the massive waves of renewal. Experience the expressions of infinite possibilities born out of the merging of recycled materials, technology, and creativity through 「The Wave: Creating a Virtuous Cycle」 exhibition.</p></div>
+                        <div class="small_latin span_2 ">Our Stories  |  Nov 22, 2022<br><br><br><br><hr> </div> 
+                    </span>
+                </div>
+                <div id="c2_1" data-aos="fade-up"  data-aos-duration="1000">
+                    <div class="c2_01"  data-aos="fade-up"  data-aos-duration="300">
+                        <a href=""><img src="resources/image/이미지4.jpg" class="img"></a>
+                    </div>
+                    <span>
+                        <a href="" class="text_title" style="font-weight : bold">The Wave: Creating a Virtuous Cycle</a>
+                        <p>A Natural Flow of Renewing Resources</p>
+                        <div class=" text_latin span_1" ><p>「The Wave: Creating a Virtuous Cycle」 is an exhibition that embodies Samsung Electronics’ efforts and contemplations towards a sustainable future by adding a virtuous cycle in our everyday lives. The exhibition presents artwork from Samsung designers and handcraft artists that reinterprets the meaning of resource circulation.</p></div>
+                        <div class="small_latin " id="span_2">Our Stories  |  Nov 11, 2022 <br><br><br><br><hr></div> 
+                    </span>
+                </div>
+                <div class="c2_1" data-aos="fade-up"  data-aos-duration="1000">
+                    <div class="c2_01"  data-aos="fade-up"  data-aos-duration="300">
+                        <a href=""><img src="resources/image/이미지27.jpg" class="img"></a>
+                    </div>
+                    <span>
+                        <a href="" class="text_title" style="font-weight : bold">The Wave: Prologue</a>
+                        <p>Waves of a Virtuous Cycle, The Beginning</p>
+                        <div class="text_latin span_1"><p>Samsung Electronics will present the 「The Wave: Creating a Virtuous Cycle」 exhibition in Seoul. Please look forward to the various works you will encounter in the naturally flowing waves of circulation.</p></div>
+                        <div class="small_latin span_2">Our Stories  |  Nov 08, 2022</div> 
+                    </span>
+                </div>
+            </div>
+        </div>
+   
+        <div id="content3">
+            <div class="banner">
+                <div><a href=""><img src="resources/image/이미지배너.jpg" class="img1"></a></div>
+                <div><a href=""><img src="resources/image/이미지배너.jpg" class="img1"></a></div>
+                <div><a href=""><img src="resources/image/이미지배너.jpg" class="img1"></a></div>
+            </div>
+        </div>
+        <div class="space text_regular" style="background-color:  rgb(245, 244, 244);" id="toggle_0">
+            Sort by # <br>
+        </div>
+        <div class="title_wrap">
+            <div class="title" id="toggle_1">#A_Sence_of_Color
+                <div class="arrow" id="arrow"><img src="resources/image/화살표2.png" ></div>
+            </div> 
+        </div>
+        <div class="toggle_wrap to_1">
+            <div class="toggle to_1">
+                <div class="t1" data-aos="fade-up" data-aos-duration="1000"><p>What if you could express the vast range of your imaginative thoughts and emotions in vivid colors? Open up the various<br> color palettes of different Samsung products to find the best suite of colors that can perfectly capture your mood.</p></div>
+                <div class="t2">
+                    <div class="t3" data-aos="fade-up" data-aos-duration="200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지5.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Going Beyond Innovation</a></span><br><br>
+                        <span class="text_latin">Samsung Galaxy Z Flip4 and Galaxy Z Fold4 Design Story</span><br><br>
+                        <span class="small_latin">Aug 11, 2022</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="600">
+                        <div class="t4"><a href=""><img src="resources/image/이미지6.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Make Your Own Lifestyle</a></span><br><br>
+                        <span class="text_latin">Put a Spotlight on Your Life with Bespoke Design</span><br><br>
+                        <span class="small_latin">Nov 30, 2021</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지7.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Everyone's Taste Counts</a></span><br><br>
+                        <span class="text_latin">Samsung BESPOKE Refrigerator Design Story</span><br><br>
+                        <span class="small_latin">Jun 27, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="title_wrap">
+             <div class="title" id="toggle_2"> #Expanding_the_World
+                <div class="arrow"><img src="resources/image/화살표2.png" ></div>
+             </div>
+        </div>
+        <div class="toggle_wrap">
+            <div class="toggle ">
+                <div class="t1" data-aos="fade-up"  data-aos-duration="1000"><p>Samsung Design’s creative pursuits range from visualizing new worlds inspired by the wonders of science fiction to <br>building metaverse adventures. Take a leap into the limitless world of Samsung’s products that come with both powerful <br>performances and immersive content.</p></div>
+                <div class="t2">
+                    <div class="t3" data-aos="fade-up" data-aos-duration="200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지8.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Welcome to Samsung<br>Space Tycoon</a></span><br><br>
+                        <span class="text_latin">The Samsung X Roblox Metaverse Experience</span><br><br>
+                        <span class="small_latin">Jul 12, 2022</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="600">
+                        <div class="t4"><a href=""><img src="resources/image/이미지9.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Futuristic Voyage</a></span><br><br>
+                        <span class="text_latin">The Adventures and Challenges of the Odyssey Expedition</span><br><br>
+                        <span class="small_latin">May 26, 2020</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지10.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Exploring the Odyssey</a></span><br><br>
+                        <span class="text_latin">Samsung Gaming PC Odyssey Design Story</span><br><br>
+                        <span class="small_latin">May 10, 2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="title_wrap">
+            <div class="title" id="toggle_3"> #Living_Smarter
+                <div class="arrow" ><img src="resources/image/화살표2.png" ></div>
+            </div>
+        </div>
+        <div class="toggle_wrap_1">
+            <div class="toggle1 ">
+                <div class="t1_1" data-aos="fade-up" data-aos-duration="1000"><p>When technology connects with our homes and user experiences are integrated into our daily lives, a life we’ve only<br> dreamed of becomes a reality. Samsung SmartThings Home Life bridges together diverse tastes, lifestyles, and our<br> everyday activities.</p></div>
+                <div class="t2_1">
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="200">
+                        <div class="t4_11"><a href=""><img src="resources/image/이미지11.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Living Smarter and Better</a></span><br><br>
+                        <span class="text_latin">SmartThings Home Life Story</span><br><br>
+                        <span class="small_latin">Apr 26, 2022</span>
+                    </div>
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="600">
+                        <div class="t4_11"><a href=""><img src="resources/image/이미지12.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Robot with a Sense</a></span><br><br>
+                        <span class="text_latin">Samsung BESPOKE Jet Bot AI+ Design Story</span><br><br>
+                        <span class="small_latin">May 27, 2021</span>
+                    </div>
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="t4_11"><a href=""><img src="resources/image/이미지13.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Six Sides of the Cube</a></span><br><br>
+                        <span class="text_latin">Samsung BESPOKE Cube Refrigerator Design Story</span><br><br>
+                        <span class="small_latin">Oct 29, 2020</span>
+                    </div>
+                </div>
+                <div class="t2_1">
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="500">
+                        <div class="t4_11"><a href=""><img src="resources/image/이미지14.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Made to Your Taste</a></span><br><br>
+                        <span class="text_latin">Samsung BESPOKE Family Hub UX Design Story</span><br><br>
+                        <span class="small_latin">Aug 13, 2020</span>
+                    </div>
+                    <div class="t3_1"></div>
+                    <div class="t3_1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="title_wrap">
+            <div class="title" id="toggle_4">  #Inspire_for_the_Better
+                <div class="arrow" ><img src="resources/image/화살표2.png" ></div>
+            </div>
+        </div>
+
+        <div class="toggle_wrap_2">
+            <div class="toggle1 ">
+                <div class="t1_1" data-aos="fade-up" data-aos-duration="1000"><p>Great insight widens our perspectives and helps us create a better world for everyone. We are here to tell the story of<br> Samsung Design’s journey into ushering in a better tomorrow through innovative and sustainable efforts that can<br> prepare us for the future.</p></div>
+                <div class="t2_1">
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="200">
+                        <div class="t4_1"><a href=""><img src="resources/image/이미지15.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Together for a Better<br>Tomorrow</a></span><br><br>
+                        <span class="text_latin">Moving Forward Together Part 3</span><br><br>
+                        <span class="small_latin">Nov 09, 2021</span>
+                    </div>
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="600">
+                        <div class="t4_1"><a href=""><img src="resources/image/이미지16.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Together for a Better<br>Care</a></span><br><br>
+                        <span class="text_latin">Moving Forward Together Part 2</span><br><br>
+                        <span class="small_latin">Oct 26, 2021</span>
+                    </div>
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="t4_1"><a href=""><img src="resources/image/이미지17.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Together for a Better<br>Home</a></span><br><br>
+                        <span class="text_latin">Moving Forward Together Part 1</span><br><br>
+                        <span class="small_latin">Sep 30, 2021</span>
+                    </div>
+                </div>
+                <div class="t2_1">
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="500">
+                        <div class="t4_1"><a href=""><img src="resources/image/이미지18.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Empowering a New<br>Future Part 2</a></span><br><br>
+                        <span class="text_latin">Designs for a Sustainable Society</span><br><br>
+                        <span class="small_latin">Oct 06, 2020</span>
+                    </div>
+                    <div class="t3_1" data-aos="fade-up" data-aos-duration="800">
+                        <div class="t4_1"><a href=""><img src="resources/image/이미지19.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Empowering a New<br>Future Part 1</a></span><br><br>
+                        <span class="text_latin">Designs for Tomorrow</span><br><br>
+                        <span class="small_latin">Sep 24, 2020</span>
+                    </div>
+                    <div class="t3_1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="title_wrap">
+            <div class="title"> #Design_for_All
+                <div class="arrow" ><img src="resources/image/화살표2.png" ></div>
+            </div>
+        </div>
+
+        <div class="toggle_wrap">
+            <div class="toggle ">
+                <div class="t1" data-aos="fade-up" data-aos-duration="1000"><p>Ever wondered how universal designs that carefully and thoughtfully cater to all users are created? Learn more about <br>Samsung Design’s efforts and deliberations in building products and services that can be enjoyed by all users.</p></div>
+                <div class="t2">
+                    <div class="t3" data-aos="fade-up" data-aos-duration="200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지20.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Keeping Children Safe<br>and Happy</a></span><br><br>
+                        <span class="text_latin">Hoping for a Joyful Future with Children</span><br><br>
+                        <span class="small_latin">Jul 23, 2019</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="600">
+                        <div class="t4"><a href=""><img src="resources/image/이미지21.jpg" class="img"></a></div>
+                        <span><a href="" class="text_title">Everyone Should See the<br>World in Full Colors</a></span><br><br>
+                        <span class="text_latin">For Anyone to Experience the Happiness Which Colors Give</span><br><br>
+                        <span class="small_latin">Jun 12, 2018</span>
+                    </div>
+                    <div class="t3" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="t4"><a href=""><img src="resources/image/이미지22.png" class="img"></a></div>
+                        <span><a href="" class="text_title">Anyone Can Read</a></span><br><br>
+                        <span class="text_latin">Making All Information Accessible</span><br><br>
+                        <span class="small_latin">Jun 29, 2017</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title_wrap_1">
+            <div class="title_1"></div>
+        </div>
+
+        <div class="space text_regular" style="margin-top:100px" > News <br><hr></div>
+
+        <div class="content5">
+            <div class="con5">
+                <div class="t3">
+                    <div class="t4" data-aos="fade-up" data-aos-duration="200"><a href=""><img src="resources/image/이미지23.jpg" class="img"></a></div>
+                    <span><a href="" class="text_title">IDEA Design Awards 2022</a></span><br><br>
+                    <div class="text_latin" style="margin-right: 25px;">Samsung Electronics Co., Ltd. announced the win of 42 awards, including two Golds, five Silvers, one Bronze and 34 finalists, at the International Design Excellence Awards 2022 (IDEA 2022).</div><br>
+                    <span class="small_latin">Sep 13, 2022</span>
+                </div>
+                <div class="t3">
+                    <div class="t4" data-aos="fade-up" data-aos-duration="600"><a href=""><img src="resources/image/이미지25.jpg" class="img"></a></div>
+                    <span><a href="" class="text_title">iF Design Awards 2022</a></span><br><br>
+                    <div class="text_latin" style="margin-right: 25px;">Samsung Electronics Co., Ltd. received a total of 71 awards, including three Gold Awards, at the International Forum (iF) Design Award 2022, a prestigious German international design competition.</div><br>
+                    <span class="small_latin">Apr 13, 2022</span>
+                </div>
+                <div class="t3">
+                    <div class="t4" data-aos="fade-up" data-aos-duration="1200"><a href=""><img src="resources/image/이미지28.jpg" class="img"></a></div>
+                    <span><a href="" class="text_title">IDEA Design Awards 2021</a></span><br><br>
+                    <div class="text_latin" style="margin-right: 25px;">Samsung Electronics Co., Ltd. today announced that it has won 48 awards at the world-renowned International Design Excellence Awards (IDEA) 2021, including seven Silvers, three Bronzes and thirty-eight finalists.</div><br>
+                    <span class="small_latin">May 02, 2022</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="more">
+            <div class="more2"></div>
+            <div id="animate"></div>
+            <a href="news_en.html">More</a>
+         </div>
+
+        <div id="content6">
+            <a href=""><img src="resources/image/이미지26.jpg" class="img2"></a>
+        </div>
+
+        <div class="footer">
+            <div id="footer_list1">
+                <ul>
+                    <li style="padding-bottom:7px"><img src="resources/image/footer-logo-samsung-design-svg.svg" ></li>
+                    <li >© 2023 SAMSUNG All Rights Reserved.</li>
+                    <li >|</li>
+                    <li >For questions, <a href="" class="footer_a">click here</a></li>
+                    <li >|</li>
+                    <li><a href="" class="footer_a">Privacy and Cookies</a></li>
+                </ul>
+            </div>
+            <div id="footer_list2">
+                <ul>
+                    <li><a href="our stories_en.html" class="footer_a">Our Stories</a></li>
+                    <li><a href="about us.html" class="footer_a">About Us</a></li>
+                    <li><a href="career us.html" class="footer_a">Career</a></li>
+                    <li><a href="news_en.html" class="footer_a">News</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        $(function(){
+            $(".title_wrap").click(function(){
+                let title = $(this).children(".title");
+                let $p =  $(this).next();
+                if($p.css("display") =="none"){
+                   $p.slideDown(100); 
+                   $p.children().css("display","block");
+                   title.children(".arrow").css("transform","rotate(90deg)");
+                }else{
+                    $p.slideUp(100); 
+                    $p.children().css("display","none");
+                    title.children(".arrow").css("transform","rotate(-90deg)");
+                }
+            });
+        });
+
+        $(function(){
+            $("#search_img").click(function(){
+                if($(".search").css("visibility")=="hidden"){
+                   $(".search").css("visibility","visible");
+                    $(".widget").css("visibility","hidden");
+                    $("#search_img").css("visibility","hidden");
+                    $('body').css({overflow :"hidden",scroll:"no"});
+                    $("#search_input").focus();
+                    $("#veil").css("display","block");
+                }
+            });
+        });
+        
+
+        $(function(){
+            $("#veil").click(function(){
+                if($(".search").css("visibility")=="visible"){
+                    $(".search").css("visibility","hidden"); 
+                    $(".widget").css("visibility","visible");
+                    $("#search_img").css("visibility","visible");
+                    $('body').css({overflow :"scroll",scroll:"yes"});
+                    $("#veil").css("display","none");
+                }
+            });
+        });
+
+        AOS.init();
+
+    </script>
+    
+</body>
+</html>

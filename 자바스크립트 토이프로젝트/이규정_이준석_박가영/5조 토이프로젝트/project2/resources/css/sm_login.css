@@ -1,0 +1,340 @@
+html{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    overflow: overlay;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+html *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 13px;
+    color: #191919;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+.wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.sub{
+    height: 100%;
+}
+header{
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    background: #191919;
+    height: 44px;
+    display: block;
+}
+.headerBox{
+    position: relative;
+    max-width: 1340px;
+    height: 44px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.headerBox>a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #191919;
+}
+.navBtn{
+    position: absolute;
+    left: 30px;
+    font-size: 0;
+    background: url(https://www.smtown.com/resources/images/svg/btn_menu.svg) no-repeat left / 100%;
+    width: 22px;
+    height: 26px;
+    top: 9px;
+}
+a{
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+}
+.headerBox h1{
+    position: absolute;
+    font-size: 0;
+    top: 15px;
+    left: 72px;
+    font-weight: 400;
+}
+.headerBox h1 a{
+    display: block;
+    width: 96px;
+    height: 14px;
+    background: url(https://www.smtown.com/resources/images/svg/gnb_smtown.svg) no-repeat 0 / 100%;
+}
+.headerBox ul{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+ul, li{
+    list-style: none;
+}
+.headerBox ul li{
+    float: left;
+}
+.headerBox ul li a.username{
+    display: block;
+    background: url(https://www.smtown.com/resources/images/svg/btn_mypage.svg) no-repeat 0 / 23px;
+    height: 23px;
+    padding-left: 32px;
+}
+.headerBox ul li a{
+    color: #fff;
+    line-height: 23px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.headerBox ul li a:visited{
+    text-decoration: none;
+    border: 0;
+}
+.subWrap{
+    min-height: calc(100% - 158px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.vcenter-wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+.loginContent{
+    width: 420px;
+    margin: -150px auto 0;
+}
+.loginBox{clear: both;}
+.loginBox h2{
+    display: block;
+    border-bottom: 2px solid #191919;
+    font-size: 35px;
+    margin-bottom: 50px;
+    padding-bottom: 23px;
+    font-weight: 400;
+}
+.inputBox div{margin-bottom: 10px;}
+.inputBox input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 17px 1px;
+    font-size: 15px;
+    color: #191919;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+input{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    color: #191919;
+    vertical-align: middle;
+    border-radius: 0;
+}
+input[type="checkbox"]{display: none;}
+input[type="checkbox"]+input[type="hidden"]+label{
+    display: inline-block;
+    min-width: 21px;
+    min-height: 21px;
+    line-height: 20px;
+    cursor: pointer;
+    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_off.svg) no-repeat;
+    background-size: 21px;
+    padding-left: 33px;
+    box-sizing: border-box;
+    width: 100%;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.loginBox label{
+    font-size: 14px;
+    color: #666;
+    margin: 13px 0 23px;
+}
+label{vertical-align: middle;}
+.loginBtn{
+    display: block;
+    background: #191919;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.findWrap{
+    margin: 22px 0 0;
+}
+.joinBtn{
+    float: left;
+    color: #666;
+    font-size: 14px;
+}
+.joinBtn:visited{
+    text-decoration: none;
+    border: 0;
+}
+.pwBtn{
+    float: right;
+    color: #666;
+    font-size: 14px;
+}
+.pwBtn:link{
+    text-decoration: none;
+    border: 0;
+}
+.lysn-merge-button-wrap{margin-top: 23px;}
+.lysn-merge-button{
+    font-size: 14px;
+    font-weight: normal;
+    color: #666666;
+    position: relative;
+    padding-right: 12px;
+}
+.lysn-merge-button:visited{
+    text-decoration: none;
+    border: 0;
+}
+.ico-gray-gt{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 7px;
+    height: 12px;
+    background: url(https://www.smtown.com/resources/images/svg/member/btn_login_chevron.svg) no-repeat bottom right 7px 12px;
+}
+.ico-gray-gt>img{
+    width: 7px;
+    margin-top: 2px;
+    
+}
+footer{
+    height: 114px;
+    position: relative;
+    width: 100%;
+    background: none;
+    display: block;
+}
+footer>div{
+    height: 114px;
+    padding-bottom: 105px;
+    position: relative;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.logo{
+    top: 40px;
+    margin-left: -55px;
+    display: block;
+    width: 110px;
+    height: 24.328px;
+    background: url(https://www.smtown.com/resources/images/svg/logo_smentertainment.svg) no-repeat 0 0 / 100% auto;
+    position: absolute;
+}
+.logo:link{
+    text-decoration: none;
+    border: 0;
+    color: #191919;
+}
+.sub footer ul li{
+    display: inline-block;
+}
+.footer-center{
+    padding: 46px 320px 0 130px;
+    text-align: center;
+}
+.footer-center li{
+    margin: 0 13px 5px;
+    display: inline-block;
+}
+.footer-center li a{
+    font-size: 12px;
+    color: #191919;
+}
+.footer-center li a:visited{
+    text-decoration: none;
+    border: 0;
+}
+.footer-right{
+    right: 30px;
+    top: 44px;
+    position: absolute;
+}
+.footer-right li{
+    margin-right: 5px;
+    font-size: 11px;
+    color: #191919;
+}
+.select_box{
+    position: relative;
+    padding-right: 10px;
+}
+.sub footer ul.footer-right select {
+    margin-top: -2px;
+    background: transparent;
+    font-size: 11px;
+    color: #191919;
+}
+.select_box .select{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    opacity: 0;
+    border: 0;
+    outline: none;
+}
+.sub footer ul.footer-right select option {
+    font-size: 11px;
+    line-height: 14px;
+}
+.select_value{
+    display: block;
+    font-size: 11px;
+    color: #191919;
+    line-height: 14px;
+    background: url(https://www.smtown.com/resources/images/btn-icon-bullet-b.png) no-repeat 100% 5px;
+    padding: 0 14px 0 0;
+}
+.errorTxt{
+    display: block;
+    margin-top: 12px;
+    color: #ff1601;
+    font-size: 14px;
+    text-align: left;
+}
+input[type="checkbox"]:checked + input[type='hidden'] + label{
+    background: url(https://www.smtown.com/resources/images/svg/member/btn_check_on.svg) no-repeat;
+    background-size: 21px;
+}
+
+

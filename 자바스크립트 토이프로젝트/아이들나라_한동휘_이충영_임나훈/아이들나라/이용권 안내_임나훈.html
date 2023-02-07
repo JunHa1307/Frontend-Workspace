@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용권 안내</title>
+    <style>
+        .wrap{
+            width: 100%;
+            height: 3570px; /*3627.89*/
+            border: 0px solid red;
+        }
+
+        div{
+            box-sizing: border-box;
+            border: 0px solid black;
+        }
+
+        #header{
+            width: 100%;
+            height: 150px;
+            background: white;
+            display: flex;
+            position: fixed;
+            margin-top: -1%;
+        }
+
+        #header_1{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 80px;
+        }
+
+        #header_1 img{
+            margin-top: 5px;
+        }
+        #header_1>a{
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        #header_2{
+            width: 60%;
+            height: 100%;
+        }
+
+        #header_3{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #first_btn{
+            width: 130.09px;
+            height: 48px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            background: white;
+            border: 3px solid lightgray;
+            
+        }
+
+        #content{
+            width: 100%;
+            height: 2609px; /*2802.42*/
+        }
+
+        #content_1{
+            width: 100%;
+            height: 250px;
+            padding: 120px 250px;
+           
+        }
+
+        #content_1>span{
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        #content_1>p{
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        #content_2{
+            width: 100%;
+            height: 330px;
+            margin-top: 50px;
+        }
+
+        #img1{
+            display: block; 
+            margin: auto;
+            
+        }
+
+        #content_3{
+            width: 100%;
+            height: 1200px;
+        }
+
+        #contet3_1{
+            width: 100%;
+            height: 528px;
+        }
+
+        #content3_2{
+            width: 100%;
+            height: 557.67px;
+        }
+        #content_3 img{
+            display: block;
+            margin: auto;
+            padding: 30px 0px;
+        }
+
+        #content_4{
+            width: 100%;
+            height: 752px;  /*756*/
+            margin: 0 auto;
+        }
+
+  
+
+        #content_4 p{
+            font-size: 18px;
+            color: gray;
+            line-height: 40px;
+        }
+
+        #footer{
+            width: 100%;
+            height: 473.53px;
+            background-color: lightgrey;
+            margin-top: 178.2px;
+        }
+
+        #footer_1{
+            height: 50%;
+            width: 100%;  
+            
+        }
+        #footer_1_1{
+            width: 70%;
+            height: 100%;
+            float: left;
+            font-size: 15px;
+            padding: 1%;
+        }
+        #footer_1_2{
+            width: 30%;
+            height: 100%;
+            float: left;
+            text-align: right;  
+            padding: 1% 
+                     
+        }
+       
+        #footer_2{
+            height: 50%;
+            width: 100%;
+            float: left;
+            padding: 1%;
+        }
+        #p3{
+            text-align: right;
+        }
+
+        
+        #icon {
+            display: none;
+            
+
+        }
+
+
+        #icon+label {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 25px;
+            cursor: pointer; 
+            z-index: 5; 
+            margin: 0% 0% 0% -30%;     
+            
+        }
+
+        #icon+label>span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 30px;
+            background: #000;
+            transition: all 0s; 
+            margin-left: 45px;
+        }
+
+        #icon+label>span:nth-child(1) {
+            top: 0px;
+        }
+
+        #icon+label>span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+
+        #icon+label>span:nth-child(3) {
+            bottom: 0px;
+        }
+
+        #icon:checked+label>span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        #icon:checked+label>span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #icon:checked+label>span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        #icon+label+#hamburger {
+            position: fixed; 
+            width: 500px;
+            height: 100%;
+            background-color: white;
+            top: 0px;
+            padding: 2% 25px 25px 25px;
+            box-sizing: border-box;
+            right: -500px;
+            transition: all 0.5s;
+
+        }
+
+        #icon:checked+label+#hamburger {
+            right: 0px;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a {
+            color: black;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a:hover {
+            color: gray;
+        }
+
+        #headerMenu {
+            font-size: xx-large;
+            margin-top: 88px;
+        }
+
+        #Menu {
+            padding: 20px;
+            list-style: none;
+        }
+
+        #categryfont {
+            text-decoration-line: none ;
+        }
+
+        .img{
+            margin: 50% 0% 0% 0%;
+            width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);
+        }
+
+        .item span{
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #btn3{
+            /* display: block;
+            margin: auto; */
+            padding: 20px 0px;
+            margin: 0 auto;
+            margin-top: 180px;
+            width: 215px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #ffe207 ;
+            border: 0px solid lightgray;
+
+        }
+
+        #back_btn{
+            font-size: 18px;
+            font-weight: 900;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .img_1{width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);}
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1">
+                <a class="header__back">
+                    <button id= back_btn value="back" onclick="history.go(-1)">
+                        <img class="header__back-icon header__back--black" src="https://www.i-nara.co.kr/img/icon/icon_left_black.svg" alt="">
+                        <img class="header__back-icon header__back--white" src="/img/icon/icon_left_white.svg" alt="">
+                        <span class="header__back-text">이용권 안내</span>
+                    </button>
+                </a>
+            </div>
+            <div id="header_2"></div>
+            <div id="header_3">
+                <a href="앱 다운로드_임나훈.html" ><button type="button" id="first_btn">앱 다운로드 </button></a>                
+                <div id="header_3_1">
+                    <input type="checkbox" id="icon"> 
+                        <label for="icon">
+                            <span></span> 
+                            <span></span> 
+                            <span></span>
+                        </label>
+                        
+                        <div id="hamburger">
+                            <ul id="headerMenu">
+                                <li id="Menu"><a href="메인페이지_한동휘.html" id="categryfont">
+                                홈 바로가기
+                                </a></li>
+                                        
+                                <!-- <li id="Menu"><a href="" id="categryfont">이벤트</a></li>      
+
+                                <li id="Menu"><a href="" id="categryfont">
+                                서비스 소개
+                                </a></li> -->
+
+                                <li id="Menu"><a href="이용권 안내_임나훈.html" id="categryfont">
+                                이용권 안내
+                                </a></li>
+
+                                <li id="Menu"><a href="공지사항_이충영.html" id="categryfont">공지사항</a></li>
+
+                                <li id="Menu"><a href="자주 묻는 질문_이충영.html"  id="categryfont">자주 묻는 질문</a></li>
+
+                                <li id="Menu">
+                                    <a href="https://www.instagram.com/i.nara.play/"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                                    <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                                    <a href="https://cafe.naver.com/uplusmom"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>                 
+                                </li>
+                      </ul>
+                            
+                   </div>
+                        
+                    </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content_1">
+                <span style="font-family: iSangang; line-height: normal;" >아이들나라 이용권</span>
+                <p>한번의 결제로 아이들나라 만의 특별한 콘텐츠를 이용하세요.</p>
+            </div>
+            <div id="content_2">
+                <img  id="img1" src="아이들 나라/이용권 .png" height="300">
+            </div>
+
+            <div id="content_3">
+                <div id="content3_1">
+                    <img src="아이들 나라/컨텐츠2.png" width="1560px" height="526px" id="img2">
+                </div>
+                <div id="content3_2">
+                    <img src="아이들 나라/궁금해요.png" width="1560px" height= "526px" id="img3">
+                </div>
+                
+            </div>
+
+
+            <div id="content_4" style="width: 1560px;">
+                <p>
+                    <b id="info" style="font-size:24px; font-weight: 900; color: black;">구독 유의사항</b><br><br>
+                    <b>[구독 결제]</b><br>
+                    1. 결제 금액은 부가세 포함 금액입니다.<br>
+                    2. 가입하신 날짜를 기준으로 매월 자동 결제되는 상품입니다.<br>
+                    3. 이용권 구독 시, 결제하신 구글 혹은 애플에 등록된 계정으로 요금이 부과됩니다.<br>
+                </p>
+                <p>
+                    <b>[구독해지]</b><br>
+                    1. AOS(안드로이드 사용자) 가입 후 다음 결제일 전까지 이용권을 해지하지 않을 경우,구글마켓에 등록된 다음 결제 주기의 이용권 결제금액이 기존 등록한 결제 수단으로 자동 청구됩니다.<br>
+                    2. iOS(애플 사용자) 가입 후 구독을 갱신하지 않으려면 다음 결제일 최소 24시간 전에 구독을 해지해야 합니다.<br>
+                    3. 해지 신청을 하는 경우, 현 이용권의 결제 주기가 종료될 때 서비스 이용은 자동으로 종료됩니다. 즉, 해지하더라도 다음 달 결제일 전 날까지는 서비스를 이용할 수 있습니다.<br>
+                    </p>
+                
+                
+                    <p>
+                        <b>[환불]</b><br>
+                        1. 가입 후 7일 이내 이용내역이 없을 경우 결제 취소 및 환불 신청이 가능하며, 결제 후 7일 경과, 서비스 이용 시에는 환불이 불가합니다.<br>
+
+                        2. AOS(안드로이드 사용자) 인앱으로 결제하신 고객은 반드시 구글 플레이스토어 > 내 프로필 > 결제 및 정기결제 > 정기결제에서 결제를 해지하여야 다음달 이용권이 자동 갱신되지 않습니다.<br>
+
+                        3. iOS(애플 사용자) 인앱으로 결제하신 고객은 반드시 최초 결제하신 App Store > Apple ID 선택 > Apple ID 보기 > 구독관리에서 자동 결제를 해지하여야 다음달 이용권이 자동 갱신되지 않습니다.<br>
+                    </p>
+                
+                    <p>
+                        <b>[기타]</b><br>
+                        1.
+                        인앱에 등록한 결제 정보 변경, 잔액 부족 등으로 결제가 정상적으로 처리되지 않았을 시에는 유효한 결제 수단에 청구가 완료될 때까지 서비스 이용이
+                        제한될 수 있습니다.<br>
+
+                        2.
+                        LG유플러스 통신사를 이용하고 계신 경우, 결제하신 구글 플레이스토어 또는 앱스토어에서 아이들나라 이용권을 해지하고 해지가 완료되어야만 휴대폰
+                        명의 변경이 가능합니다.<br>
+
+                        3.
+                        아이들나라 서비스 중 화상독서는 화상 수업 특성 상 저사양 단말 사용 시 정상적 이용이 어렵습니다. 정확한 단말 정보는 아이들나라 홈페이지 또는
+                        고객센터를 통해 확인 가능합니다. (최소 <br> &nbsp; &nbsp;사양 : AOS 버전  11 이상 / IOS 버전 13 이상)
+                    </p>
+                </div>
+            </div>
+            
+            <div  id="btn3" class="btn"  style="text-align: center;" >
+                <a href="앱 다운로드_임나훈.html" style="text-decoration-line: none;">
+                <span> 앱 다운로드</span>
+                </a>
+            </div>
+            <div id="btn-result">
+
+            </div>
+        
+            <script>
+                $(function(){
+        
+                    $(".btn").hover(function(){
+                        $(this).addClass("lime");
+                    }, function(){
+                        $(this).removeClass("lime");
+                    })
+                });
+                
+                
+        
+            </script>
+
+
+    <div id="footer">
+        <div id="footer_1">  
+            <div id="footer_1_1"><br>
+                <!-- <a href="" style="text-decoration-line: none; color: black;">이벤트</a><br>
+                <a href="" style="text-decoration-line: none; color: black;">서비스 소개</a><br> -->
+                <a href="이용권 안내_임나훈.html" style="text-decoration-line: none; color: black;">이용권 안내</a><br>
+                <a href="공지사항_이충영.html" style="text-decoration-line: none; color: black;">공지사항</a><br>
+                <a href="자주 묻는 질문_이충영.html" style="text-decoration-line: none; color: black;">자주 묻는 질문</a>
+            </div>       
+            
+            <div id="footer_1_2"><br>
+                <a href="https://www.instagram.com/i.nara.play/"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                <a href="https://cafe.naver.com/uplusmom"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>   
+                
+            </div>
+       </div>
+       <div id="footer_2">
+          <div id="footer_2_1">
+               <a href="" style="text-decoration-line: none; color: black;">이용약관</a> 
+               <a href="" style="text-decoration-line: none; color: black;">개인정보처리방침</a> 
+          </div>
+       
+          <div id="footer_2_2">
+               <p id="p1">
+                   (주)엘지유플러스 | 대표이사 황현식 | 주소 : 서울특별시 용산구 한강대로 32 | 사업자등록번호 : 220-81-39938
+               </p>
+               <p id="p2">
+                   고객센터 1600-1002
+               </p>
+               <p id="p3">
+                   Copyright ⓒ LG Uplus Corp. All Rights Reserved.
+               </p>
+          </div>           
+       </div>
+    </div>
+    
+  
+   
+</div>
+</body>
+</html>

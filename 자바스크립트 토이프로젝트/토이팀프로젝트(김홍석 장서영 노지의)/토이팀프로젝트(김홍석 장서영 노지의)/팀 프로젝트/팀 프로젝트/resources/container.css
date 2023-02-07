@@ -1,0 +1,505 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#container-top {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 14px;
+    display: inline-block;
+
+}
+#container-top p{
+    display: inline-block;
+}
+
+.container-home {
+    color: #999999;
+    display: inline-block;
+}
+
+.container-lifestyle {
+    color: #999999;
+    display: inline-block;
+}
+
+.container-shoe {
+    color: #222222;
+    font-weight: 900;
+    display: inline-block;
+}
+
+#container-lifestyle {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 57px;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#container-kinds {
+    width: 100%;
+    height: 51px;
+    margin-bottom: 57px;
+    font-size: 26px;
+    font-weight: 900;
+    color: #999999;
+    display: inline-block;
+}
+
+#container-kinds>input[type="radio"] {
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#container-kinds>div {
+    margin-right: 32px;
+    display: inline-block;
+}
+
+#kind3:checked+#container-kinds-list1 {
+    color: black;
+}
+
+#kind3:checked+#container-kinds-list1:after {
+    width: 100%;
+    opacity: 1;
+}
+
+#kind2:checked+#container-kinds-list2 {
+    color: black;
+}
+
+#kind2:checked+#container-kinds-list2:after {
+    width: 100%;
+    opacity: 1;
+}
+
+#kind1:checked+#container-kinds-list3 {
+    color: black;
+}
+
+#kind1:checked+#container-kinds-list3:after {
+    width: 100%;
+    opacity: 1;
+}
+
+#container-kinds>div:hover {
+    cursor: pointer;
+    color: #222222;
+}
+
+#container-filter {
+    width: 100%;
+    height: 26px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#container-filter button {
+    border: none;
+    /* background-color: white; */
+    cursor: pointer;
+}
+
+#filter-sorting-container {
+    width: 225px;
+    height: 26px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+#filter-screen {
+    width: 1100px;
+    height: 720px;
+    position: absolute;
+    right: 150px;
+    top: 40px;
+    border: 1px solid #222;
+    background-color: white;
+    display: none;
+    padding: 40px;
+    z-index: 99999;
+
+}
+
+.filter-category {
+    font-size: 16px;
+    font-weight: bold;
+    width: 90px;
+    height: 100%;
+}
+
+.input-container {
+    height: 100%;
+    width: 928px;
+}
+
+.text-box-container {
+    height: 43px;
+    width: 100%;
+}
+
+.filter-textbox {
+    width: 137px;
+    height: 20px;
+    position: relative;
+    display: inline-block; 
+}
+
+.filter-textbox>label {
+    display: inline-block;
+    position: absolute;
+    left: 27px;
+    top: -2px;
+}
+
+#filter-screen-header {
+    width: 1020px;
+    height: 40px;
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-header {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.exit-button {
+    width: 24px;
+    height: 24px;
+    font-size: 19px;
+    font-weight: bold;
+    background-color: white;
+    margin-right: 10px;
+
+}
+
+#filter-screen-body {
+    margin-top: 30px;
+    width: 1020px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#filter-screen-body input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+#filter-screen-body input:checked {
+    accent-color: black;
+}
+
+#filter-screen-body #filter-color2:checked {
+    accent-color: white;
+}
+
+#filter-screen-body #filter-color3:checked {
+    accent-color: #FF7510;
+}
+
+#filter-screen-body #filter-color4:checked {
+    accent-color: #F5F5DC;
+}
+
+#filter-screen-body #filter-color5:checked {
+    accent-color: #FF69B4;
+}
+
+#filter-screen-body #filter-color6:checked {
+    accent-color: #FF0000;
+}
+
+#filter-screen-body #filter-color7:checked {
+    accent-color: #808080;
+}
+
+#filter-screen-body #filter-color8:checked {
+    accent-color: #800080;
+}
+
+#filter-screen-body #filter-color9:checked {
+    accent-color: #008000;
+}
+
+#filter-screen-body #filter-color10:checked {
+    accent-color: #0000FF;
+}
+
+#filter-screen-body #filter-color11:checked {
+    accent-color: #000080;
+}
+
+
+.filter-gender {
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.filter-color {
+    width: 100%;
+    height: 57px;
+    display: flex;
+}
+
+.filter-price {
+    width: 100%;
+    height: 84px;
+    display: flex;
+}
+
+.filter-size {
+    width: 100%;
+    height: 130px;
+    display: flex;
+}
+
+#filter-screen-footer {
+    height: 55px;
+    width: 1020px;
+    display: flex;
+    justify-content: center;
+}
+
+#filter-screen-footer>button {
+    width: 160px;
+    height: 100%;
+    border: 1px solid #222;
+    margin: 0 10px;
+}
+#reset-filter-btn{
+    background-color: white;
+    color: #222;
+    font-size: 16px;
+    font-weight: 900;
+}
+#submit-filter-btn{
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+#numberOfItems,
+#filter-search,
+#sorting {
+    font-size: 18px;
+    color: #222222;
+    font-weight: bold;
+    background-color: white;
+}
+
+#sort-list {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 117px;
+    height: 205px;
+    background-color: white;
+    border: 1px black solid;
+    padding: 0;
+}
+
+#sort-list>li {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    width: 104px;
+    height: 40px;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    padding-left: 10px;
+    /* background-color: gray; */
+}
+
+#sort-list>li:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+
+}
+
+#sort-list>li>p {
+    margin-left: 10px;
+}
+
+#sort-list>input {
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: -200;
+}
+
+
+#container-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.container-item {
+    width: 380px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.item-category {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-name {
+    font-size: 20px;
+}
+
+.item-price {
+    color: #BABABA;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: line-through;
+    line-height: 1;
+}
+
+.item-sale {
+    display: inline-block;
+    color: #ff0052;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-sale-price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.item-gender-m {
+    color: white;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    background-color: #222;
+    display: inline-block;
+}
+
+.item-gender-f {
+    color: white;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ff0052;
+    display: inline-block;
+}
+
+.item-coupon {
+    text-align: center;
+    width: 38px;
+    height: 24px;
+    background-color: white;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    margin-left: 8px;
+    font-weight: 900;
+    font-size: 14px;
+    display: inline-block; 
+}
+
+#container-viewmore {
+
+    width: 100%;
+    height: 60px;
+    margin: 140px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.search button, .search input{
+    border: 2px solid #222;
+    font-weight: bold;
+    font-size: 18px;
+}
+.search label, .search button{
+    cursor: pointer;
+}
+
+
+/*밑줄이 왼쪽에서 오른쪽으로 이동하는 에니메이션
+참고사이트 : https://goodbypoor.tistory.com/162;
+*/
+.to-right-underline {
+    position: relative;
+}
+
+.to-right-underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0px;
+    height: 7px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #222222;
+}
+
+.to-right-underline:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+#go-top-btn{
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #222222;
+    background: #fff url("https://image.prospecs.com/front/images/renewal/icon_top_arrow.svg") center no-repeat;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+#go-bottom-btn{
+    position: fixed;
+    bottom: 25px;
+    right: 80px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #222222;
+    background: #fff url("https://image.prospecs.com/front/images/renewal/icon_top_arrow.svg") center no-repeat ;
+    transform: scaleY(-1); 
+    cursor: pointer;
+    transition-duration: 1s;
+}     

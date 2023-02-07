@@ -1,0 +1,1201 @@
+    /* wrap > main > top > lefttop, righttop
+                        detail > tab, content, review
+                 delivery > deliveryhead, deliverytable
+            
+        
+           gototop : GO TO TOP
+           bottom : 옵션선택
+        */
+/*incontent, #content height 주석처리*/
+    /* font */
+
+    * {
+        font-family: Poppins, 'Spoqa Han Sans Neo', sans-serif;
+    }
+
+    .bolder {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .font1 {
+        color: #999;
+        font-size: 18px;
+    }
+
+    .font2 {
+        font-size: 18px;
+        color: #222;
+        margin-left: 9px;
+        font-weight: bolder;
+    }
+
+    .font3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .font10 {
+        font-size: 16px;
+        margin-top: 14px;
+    }
+
+    .bold {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+
+
+    .font-m {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0px;
+    }
+
+    .font-l {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 10px 0px 0px 0px;
+    }
+
+
+    /* WRAP */
+
+    .wrap {
+        padding: 0px 271px;
+      /*   overflow: hidden; */
+        height: 7600px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #main {
+        height: 7500px !important;
+        width: 100%;
+        padding-top: 200px;
+
+    }
+
+    /* TOP */
+    .top {
+        width: 1364px;
+        height: 1370px;
+        padding: 0px 0px 130px;
+        border-bottom: 3px solid black;
+    }
+
+    /* lefttop */
+    #lefttop {
+        width: 700px;
+        height: 1240px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #thumbs * {
+        vertical-align: top;
+    }
+
+    .thumbnail {
+        width: 700px;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .slick-dots {
+        padding: 20px 0px 0px 0px;
+        height: 540px;
+        width: 700px;
+        display: inline-flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .slick-dots li {
+        margin: 20px 20px 0px 0px;
+        margin: 0 auto;
+        height: 160px;
+        width: 160px;
+        display: inline-flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .slick-dots li button {
+        margin: 20px 20px 0px 0px;
+        margin: 0 auto;
+        height: 160px;
+        width: 160px;
+        display: inline-flex;
+        flex-wrap: nowrap;
+
+    }
+
+    #lefttop1 {
+        position: relative;
+        width: 700px;
+        height: 700px;
+    }
+
+    #lefttop1 img {
+        width: 700px;
+        height: 700px;
+    }
+
+    #lefttop2 .slick-arrow {
+        /* background: #eee;
+            color: #eee; */
+        background: white;
+        color: white;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        border: none;
+
+        position: absolute;
+        z-index: 10;
+    }
+
+    #camera {
+        position: absolute;
+        bottom: 20px;
+        right: 13px;
+        width: 55px !important;
+        height: 55px !important;
+
+    }
+
+    #camera img {
+        width: 55px !important;
+        height: 55px !important;
+    }
+
+    #camera1 {
+        position: absolute;
+        display: inline-block;
+        width: 190px !important;
+        height: 56px !important;
+        bottom: 20px;
+        right: 90px;
+        opacity: 1;
+        padding: 9px 15px;
+        border-radius: 10px;
+        vertical-align: top;
+        background-image: linear-gradient(to right, #34cb98 29%, #1fc25b 150%);
+        border-style: none;
+        display: none;
+        z-index: 10;
+    }
+
+    #camera1::after {
+        content: '';
+        bottom: -11px;
+        right: -12px;
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 5px solid transparent;
+        border-top: 20px solid #1fc25b;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        transform: rotate(-75deg);
+        z-index: 10;
+    }
+
+
+    #camera1>strong {
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 3px;
+        display: inline-block;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #camera1>p {
+        font-size: 12px;
+        opacity: 0.7;
+        line-height: 16px;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #lefttop2 .slick-next {
+        cursor: pointer;
+        position: absolute;
+        top: 280px;
+        right: 0px;
+        background: lightgray;
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_arrow_R_white.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        display: none;
+    }
+
+    #lefttop2 .slick-prev {
+        cursor: pointer;
+        position: absolute;
+        top: 280px;
+        left: 0px;
+        background: lightgray;
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_arrow_L_white.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        display: none;
+
+    }
+
+    #lefttop2 {
+        display: block;
+        height: 20px;
+    }
+
+    /* righttop */
+    #righttop {
+        height: 1141px;
+        width: 650px;
+        padding: 40px 0px 0px 84px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #righttop1 {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #righttop2 {
+        margin: 20px 0px 0px 0px;
+        height: 115px;
+        border-bottom: 2px solid black;
+
+    }
+
+    #righttop1-1 p {
+        margin: 0;
+    }
+
+    #units>button {
+        border: none;
+    }
+
+    #share {
+        background: url(https://image.prospecs.com/front/images/renewal/icon_share.svg) no-repeat center center;
+        width: 44px;
+        height: 44px;
+
+    }
+
+    #sub-amount {
+        margin-top: 4px;
+    }
+
+    .benefitbox {
+        padding: 30px 20px 30px 30px;
+        width: 560px;
+        height: 590px;
+        border: 1px solid #eee;
+        font-size: 16px;
+        line-height: 20px;
+        
+
+    }
+    .benefitbox20 {
+        height: 0px;
+        width: 580px;
+        overflow: hidden;
+
+        transition-duration: 0.5s;
+    }
+    .benefitbox li{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6px;
+
+    }
+    .benefitbox ul{
+       list-style-type: none;
+
+
+    }
+
+    
+
+    .benefitbox ul {
+        padding: 0;
+    }
+
+    li .benefitbox1 {
+        text-align: right;
+        margin-top: 14px;
+    }
+
+    #slide {
+        /*  padding: 15px 0px 15px 0px; */
+        margin: 0px 0px 20px 0px;
+        /*  height: 55px; 적용하면 숨어있는 div가 원래 요소와 겹침 */
+
+        position: relative;
+        cursor: pointer;
+        box-sizing: content-box;
+        border-bottom: 1px solid #eee;
+    }
+
+    #slide>a {
+        font-size: 18px;
+        line-height: 55px;
+        font-weight: 700;
+
+    }
+
+    .slidebtn {
+        position: absolute;
+        right: 5px;
+        top: 20px;
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_arrow_D.svg);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 10px !important;
+        transition-duration: 0.3s;
+
+    }
+
+    /* option */
+    .option-size {
+        position: relative;
+        padding: 10px 0px 10px 10px;
+        margin-top: 20px;
+        position: relative;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+    }
+
+    .option-size span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .option-color {
+        display: inline-block;
+    }
+
+    .sizebtn {
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_down_gray.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54px;
+        height: 100%;
+        text-indent: -1;
+    }
+    #sizeselect-option{
+        position: absolute;
+        width: 600px;
+        background-color: white;
+        bottom : 310px;
+        
+
+    }
+    #sizeselect-top {
+        position: absolute;
+        width: 566px;
+        background-color: white;
+        
+    }
+
+    .sizeselect {
+        border: 1px solid #222;
+        width: inherit;
+        height: 300px;
+        overflow: auto;
+        display: none;
+        z-index: 5;
+    }
+
+    .sizeselect li {
+        padding: 11px 18px;
+        font-size: 16px;
+        color: #222;
+        line-height: 26px;
+    }
+
+    .defaultsize {
+        background: #f5f5f5;
+
+    }
+
+    .default {
+        pointer-events: none;
+    }
+
+    .sizeselect ul {
+        padding: 8px 0px;
+
+
+    }
+
+    /* 갑자기 나타난 가격창 */
+    .plus button {
+        width: 44px;
+        height: 44px;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 0;
+    }
+
+    .plus {
+        display: inline-flex;
+        padding-right: 30px;
+    }
+
+    .close {
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        padding-left: 50px;
+        background: url(https://image.prospecs.com/front/images/renewal/icon_close.svg) no-repeat center center/100% 100%;
+    }
+
+
+
+    .selectedsize div {
+        display: inline-block;
+    }
+
+    .selectedsize>.size {
+        padding: 0px 220px 0px 10px;
+    }
+
+    .selectedsize {
+        padding: 20px 0px;
+        border-bottom: 2px solid #222;
+    }
+
+    .total {
+        padding: 30px 0px;
+        text-align: end;
+    }
+
+    .tot {
+        display: none;
+    }
+
+    .total>p {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+
+
+    /* 구매하기버튼 */
+
+    .buy {
+        display: inline-block;
+        width: 280px;
+        height: 70px;
+        text-align: center;
+        -webkit-box-flex: 1;
+        border: 1px solid #222;
+        font-size: 20px;
+        font-weight: 700;
+
+
+    }
+
+    #buy-1 {
+        display: flex;
+        padding-bottom: 40px;
+        line-height: 65px;
+        padding-top: 20px;
+    }
+
+    .buy1 {
+
+        background: black;
+        color: white;
+    }
+
+    .buy2 {
+
+        background: white;
+        color: black;
+    }
+
+    /* 재고확인 */
+    #stock {
+        display: inline-block;
+        padding: 18px 16px;
+        text-align: center;
+        border: 1px solid #222;
+        width: 100%;
+    }
+
+    /* naver pay */
+    #npay {
+        margin: 20px 0px 0px 0px;
+    }
+
+    #npay-button {
+        padding: 22px 0px;
+    }
+
+    #npay1 {
+        display: flex;
+    }
+
+    #npay1-1 {
+        width: 137px;
+        height: 50px;
+        background: url(https://image.prospecs.com/front/images/renewal/naverpay_text.png) no-repeat center/contain;
+
+    }
+
+    #npay1-2 {
+        width: 290px;
+        height: 50px;
+        background: url(https://image.prospecs.com/front/images/renewal/icon_naverpay.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #23C300;
+
+    }
+
+    #npay1-3 {
+        width: 50px;
+        height: 50px;
+        background-image: url(https://img.pay.naver.net/static/images/button/2022_09_diff/npay_sp_zzim.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid #bfc4c7;
+    }
+
+    #money {
+        display: none;
+    }
+
+    #npay-event {
+        position: relative;
+    }
+
+    .eventbtn {
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        padding: 0;
+        background: url(https://img.pay.naver.net/static/images/button/renewal/npay_sp_more.png);
+        text-decoration: none;
+    }
+
+    .eventprevbtn {
+        right: 20px;
+        background-position: 0 0;
+    }
+
+    .eventnextbtn {
+        right: 5px;
+        background-position: -15px 0;
+    }
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /* DETAIL */
+
+
+
+
+    #detail {
+        height: 6000px;
+
+    }
+
+    #detail1>ul {
+        text-align: center;
+        list-style-type: circle;
+    }
+
+    #detail1>ul>li {
+        display: inline-block;
+        font-size: 18px;
+    }
+
+    #detail2 {
+        padding: 20px 80px 20px 24px;
+    }
+
+    #productdetail {
+        cursor: pointer;
+        position: relative;
+        height: 64px;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px 80px 20px 0px;
+        border: 1px solid #222;
+    }
+
+
+    .detailbtn {
+        position: absolute;
+        right: 30px;
+        top: 28px;
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_arrow_D.svg);
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 10px !important;
+        transition-duration: 0.3s;
+    }
+
+    .drop1 th {
+        height: 36px;
+        padding: 7px 0;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .drop1>tr>td {
+        height: 36px;
+        padding: 7px 0;
+        font-size: 16px;
+        color: #999;
+    }
+
+    #drop {
+        padding: 30px 23px;
+        border: 1px solid #222;
+        border-top: none;
+        width: 1361px;
+        height: 330px;
+    }
+
+    #dropcover {
+        height: 0px;
+        width: inherit;
+        overflow: hidden;
+
+        transition-duration: 0.5s;
+    }
+
+
+
+
+
+
+
+    /* tab */
+    .tab {
+        height: 91px;
+        width: 100%;
+        padding: 20px 0px;
+       
+        top: 50;
+        background-color: white;
+        z-index: 5;
+    }
+
+    .displayfixed {
+        position: fixed;
+        top: 0;
+    }
+
+    .tab label {
+        cursor: pointer;
+        font-size: 26px;
+        display: inline-block;
+        height: 51px !important;
+        font-weight: bold;
+        color: #999999;
+        margin-left: 32px;
+        position: relative;
+    }
+    .tab label:hover {
+        color: #222222;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.3s;
+    }
+
+    .tab label:hover::after {
+        color: #222222;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .tab label::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 8px;
+        background-color: #222;
+        width: 0%;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.3s;
+        opacity: 0;
+    }
+    .topscroll{
+        color: #222222 !important;
+    }
+
+    .topscrollunderline{
+        opacity: 1 !important;
+        color: #222222 !important;
+        width: 100% !important;
+    }
+
+
+    #scrollevent1:checked+#labelevent1{
+        color: #222222;
+      
+    }
+    #scrollevent1:checked+#labelevent1::after{
+        opacity: 1;
+        color: #222222;
+        width: 100%;
+    }
+
+    #scrollevent2:checked+#labelevent2{
+        color: #222222;
+      
+    }
+    #scrollevent2:checked+#labelevent2::after{
+        opacity: 1;
+        color: #222222;
+        width: 100%;
+    }
+
+    #scrollevent3:checked+#labelevent3{
+        color: #222222;
+      
+    }
+    #scrollevent3:checked+#labelevent3::after{
+        opacity: 1;
+        color: #222222;
+        width: 100%;
+    }
+
+   
+
+    /*  content */
+    #content {
+        /* height: 1805px; */
+        padding: 80px 0px;
+    }
+
+    #incontent {
+        /* height: 716px; */
+    }
+
+    #point {
+        margin: 100px 202px 18px;
+        font-size: 20px !important;
+    }
+
+    /* review */
+    #review {
+        height: 2600px;
+
+        border: 1px solid black;
+        position: relative;
+        width: 100%;
+        /* 넓이 값은 조정해서 사용 */
+        
+        overflow: hidden;
+    }
+
+    iframe {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /* AI 추천상품 */
+
+    #aiproduct {
+        padding: 0px 0px 30px 10px;
+        font-size: 24px;
+
+    }
+
+    #filter {
+        padding-bottom: 20px;
+    }
+
+    #filter label {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgb(204,204,204);
+    }
+
+    #white+label {
+        background: #FFFFFF;
+    }
+
+    #lightpink+label {
+        background: #FFA6A6;
+    }
+
+    #blue+label {
+        background: #729FCF;
+    }
+
+    #mint+label {
+        background: #54E0DC;
+    }
+
+    #gray+label {
+        background: #666666;
+    }
+
+    #lightgray+label {
+        background: #B2B2B2;
+    }
+
+    .tab input, #filter input {
+        opacity: 0;
+    }
+
+
+    /* ai slide */
+    #track {
+        height: 444px;
+        width: 1364px;
+    }
+
+    .trackdraggable {
+        height: 384px;
+        width: 1364px;
+        padding-bottom: 60px;
+    }
+
+    .trackdraggable button {
+        display: none !important;
+    }
+
+    .trackdraggable .slick-slide {
+        cursor: pointer;
+        width: 300px !important;
+        height: 384px !important;
+        margin: 0px 10px !important;
+    }
+    .trackdraggable img {
+        width: 300px !important;
+        
+    }
+
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /* AD */
+    .adproduct {
+        margin: 20px 0px 17px;
+        padding: 35px 0px 0px;
+        height: 220px;
+
+    }
+
+    .adproduct img {
+        width: 1364px;
+        height: auto;
+    }
+
+    .adproduct .slick-arrow {
+        display: none !important;
+    }
+
+
+    .draggable {
+        position: relative;
+    }
+
+
+    /* ----------------------------------------------------------------------------------------------- */
+
+    /* delivery */
+    #delivery {
+        height: 1400px;
+        padding-top: 100px;
+    }
+
+    #delivery li {
+        font-size: 16px;
+        list-style: none;
+
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 100px 0px;
+    }
+
+    #delivery li:before {
+        content: "·";
+        font-size: 20px;
+        vertical-align: left;
+        line-height: 20px;
+        padding-right: 5px;
+    }
+
+    #delivery th {
+        font-size: 18px !important;
+
+    }
+
+    #delivery b {
+        font-size: 24px;
+        line-height: 3;
+
+    }
+
+    .table-sm {
+        border-top: 2px solid #222;
+    }
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /* 옵션선택 */
+    /* 
+
+    #bottomoption {
+        height: 950px;
+        transition-duration: 0.5s;
+        width: 100%;
+*/
+    .dropbtn {
+        background-image: url(https://image.prospecs.com/front/images/renewal/icon_down_gray.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 0;
+        position: absolute;
+        top: 3px;
+        right: 5px;
+        width: 54px;
+        height: 100%;
+        text-indent: -1;
+        z-index: 8;
+        transform: rotate(-180deg);
+    }
+
+    #optionselectbtn {
+        cursor: pointer;
+        background-color: #222;
+        display: none;
+        z-index: 7;   
+        width: 260px;
+        height: 60px;
+        border-bottom: none;
+        position: absolute;
+        color: white;
+        line-height: 310%;
+        font-size: 18px;
+        font-weight: 500;
+        top : -60px;
+        right : 0px;
+        margin-right: 8px;
+        border: 1px solid black;
+    }
+
+    #bottomoption {
+        float: right;
+        position: fixed;
+        width: 958px;
+        height: 630px;
+        bottom: 0;
+        right: 260px;
+        z-index: 10;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    #bottombox2 {
+        width: 958px;
+        height: 700px;
+       
+    }
+    
+    .bottombox {
+        bottom : -630px;
+        height: 630px;
+        width: 958px;
+        position: relative;
+        transition-duration: 0.5s;
+    }
+
+    .bottomoption2{
+        border : 2px solid black;
+        background-color: white;
+        width: 930px;
+        height: 630px;
+        display: inline-block;
+        padding: 0px 0px 70px 30px;
+        margin: 0px 0px 70px 20px;
+       
+
+    }
+   
+    #leftoption {
+
+        display: inline-flex;
+        flex-direction: column;
+        width: 600px;
+    }
+    #rightoption {
+        display: inline-flex;
+        padding-left: 30px;
+       
+    }
+    #lo1 {
+        text-align: left;
+
+    }
+
+    #lo2 {
+        display: inline-block;
+        float: right;
+        overflow: hidden;
+
+    }
+
+    #lo2 button {
+        border: none;
+    }
+    .buybtn1 {
+        cursor: pointer;
+        width: 250px;
+        height: 50px;
+       
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        line-height: 54px;
+        background: #222;
+        color: white;
+      
+        
+    }
+
+    .buybtn2 {
+        cursor: pointer;
+        width: 250px;
+        height: 50px;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        line-height: 54px;
+        background: white;
+        color: 222;
+        border: 1px solid black;
+        
+    }
+    #rightoption {
+        flex-direction: column;
+
+    }
+    #optiontop {
+        border-bottom: 2px solid #222;
+    }
+    #optiontop>div {
+        padding-top: 30px;
+        display: inline-block;
+    }
+
+
+    /* ----------------------------------------------------------------------------------------------- */
+    /* GO TO TOP */
+    #gototopbtn {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        border: 3px solid #222222;
+        background: #fff url(https://image.prospecs.com/front/images/renewal/icon_top_arrow.svg) center no-repeat;
+    }
+
+    /* ----------------------------------------------------------------------------------------------- */
+
+    /*hover*/
+    .slick-dots li:hover {
+        border : 1px solid #222222;
+        box-shadow: 10px 10px 40px 0 rgb(0 0 0 / 20%);
+        transition-duration: .5s;
+    }
+    .option-color img:hover {
+        border : 1px solid #222222;
+        box-shadow: 1px 1px 2px ;
+        transition-duration: .5s;
+    }
+
+    
+    .minusbtn:hover, .plusbtn:hover{
+        border : 1px solid #222222;
+        transition-duration: .5s;
+    }
+
+    #slide:hover {
+        font-size: 20px;
+        border-bottom: 1px solid #222222;
+        transition-duration: .5s;
+        
+    }
+    .option-size:hover {
+        border : 1px solid #222222;
+        font-size: 18px;
+        transition-duration: .5s;
+    }
+    .option-size:hover::after {
+        border : 1px solid #222222;
+        transition-duration: .5s;
+        
+    }
+    .buy:hover {
+        font-size: 21px;
+     
+    }
+    #stock:hover {
+        border : 1px solid black;
+        font-weight: 500;
+    }
+    .buybtn1:hover, .buybtn2:hover{
+        font-size: 17px;
+    }
+    .close:hover{
+        transform: scale( 1.5 );   
+     }
+
+     #gototopbtn:hover {
+        transform: scale( 1.01 );   
+     }
+
+     #filter label:hover{
+        border : 1px solid black;
+        transition-duration: .5s;
+     }
+     .heart:hover, #share:hover {
+        transform: scale( 1.1);  
+        
+     }

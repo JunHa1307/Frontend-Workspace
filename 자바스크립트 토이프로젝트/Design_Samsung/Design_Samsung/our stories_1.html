@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>Our Stoties | Design Samsung</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/image/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <!-- <script language="Javascript">
+        
+            function click() {
+                 return;
+            }
+        
+        </script> -->
+        
+    <style>
+    @font-face {font-family: "Samsung Sharp Sans Regular";src: url("resources/font/SamsungSharpSans-Regular.ttf") format("ttf"), url("resources/font/SamsungSharpSans-Regular.woff") format("woff");}
+    @font-face {font-family: "Samsung Sharp Sans"; src: url("resources/font/Samsung-Sharp-Sans-Bold.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Bold.woff") format("woff");}
+    @font-face {font-family: "SamsungOneLatin 400"; src: url("resources/font/SamsungOneLatin-400-400.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");}
+    @font-face {font-family: "Samsung Sharp Sans Medium"; src: url("resources/font/Samsung-Sharp-Sans-Medium-Regular.ttf") format("ttf"), url("resources/font/Samsung-Sharp-Sans-Medium-Regular.woff") format("woff");}
+    @font-face {font-family: "SamsungOneLatin 600"; src:url("resources/font/SamsungOneLatin-600-600.ttf") format("ttf"), url("/font/SamsungOneLatin-600-600.woff") format("woff");}   
+        #wrap {
+            width: 100%;
+            height: 3460px;
+            /* border: 1px solid blue; */
+
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #content {
+            padding-top: 100px;
+            height: 3100px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* position: relative; */
+            width: 80%;
+            margin-left: 220px;
+            box-sizing: border-box;
+        }
+        #content1 {
+            padding-top: 100px;
+            height: 1200px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* position: relative; */
+            width: 100%;
+           
+            box-sizing: border-box;
+            /* background-color: antiquewhite; */
+        }
+
+
+        div {
+            /* border: 1px solid red; */
+            /* text-align: center; */
+            box-sizing: border-box;
+        }
+        .ab {
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 1.44444;
+            color: #000;
+            padding: 7px;
+        }
+
+        .bi>div {
+            float: left;
+            height: 100%;
+        }
+        .bodyimg{
+            height: 50%;
+            width: 33.3%;
+        }
+        .header_a{
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 1.44444;
+        color: #000;
+        position: relative;
+        /* background-color: aqua; */
+    }
+    .header_aa>li{
+        margin-right: 23px;
+        margin-top: 3px;
+    }
+    .header_b{
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 1.44444;
+        color: #000;
+        padding: 7px;
+    }
+    .header_a::after{
+        content:"";
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        transition: all .5s;
+        
+    }
+    .header_a::before{
+        content:"";
+        right: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        transition: all .5s;
+    }
+    .header_a:hover:after{
+        width: 50%;
+    }
+    .header_a:hover:before{
+        width: 50%;
+    }
+    .header-navi>ul,.header-wrap,.header-navi,.header-widget{
+        font-family:  'Samsung Sharp Sans Regular', 'Noto Sans KR', sans-serif;
+        display: flex;
+    }
+    ul{
+        list-style: none;
+    }
+    .header-navi>ul{
+        width: 435.92px;
+        height: 26.36px;
+    }
+    .header-wrap{
+        width: 100%;
+        height: 90px;
+        padding: 0px 50px 0px 50px;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9;
+        background-color: white;
+    }
+    .header-navi{
+        height: 100%;
+        width: 634.92px;
+        position: relative;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .header-widget{
+        height: 100%;
+        width: 394.5px;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .widget{
+        width: 300px;
+        height: 31px;
+        padding-right: 40px;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        overflow: hidden;
+        
+    }
+    .widget>ul>li{
+        animation: header-rolling 15s ease-in-out infinite;
+        overflow: hidden;
+        font-family: "Samsung Sharp Sans" ,'Noto Sans KR', sans-serif;
+        font-size: 18px;
+        line-height: 1.44444;
+        font-weight: bold;
+    }
+    .search{
+            width: 100%;
+            height: 400px;
+            visibility: hidden;
+            background-color: white;
+            font-family: 'Samsung Sharp Sans Regular', 'Noto Sans KR', sans-serif;
+            position: absolute;
+            top : 100px;
+            z-index: 8;
+            /* background-color: beige; */
+           
+        }
+        #s_img{
+            position: absolute;
+            bottom: 200px;
+            left: 665px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+        #s_img>img{
+            width: 100%;
+        }
+        .search_in{
+            position: relative;
+            width: 700px;
+            height: 400px;
+            background-color: white;
+            margin: auto;
+           
+        }
+
+        #search_input{
+           
+           margin-top: 20%;
+            width: 100%;
+            height:  80px;
+           border-top: 0px;
+           border-left: 0px;
+           border-right: 0px;
+           font-size: 40px;
+           font-family: 'Samsung Sharp Sans Medium', 'Noto Sans KR', sans-serif;
+         
+        }
+        #search_input:focus{
+            outline: none;
+        }
+        .s_li>ul{
+            display: flex;
+            padding: 0;
+        }
+        .s_li>ul>li{
+            padding-right: 20px;
+        }
+        .s_li>ul>li>a{
+            color: black;
+            text-decoration: none;
+            
+        }
+        #lang2{
+            width: 25px;
+            height: 25px;
+            position: relative;
+         
+        }
+        #lang{
+            cursor: pointer;
+        }
+        .ll{
+            position: absolute;
+            right: 25%;
+            display: none;
+            z-index: 9;
+        }
+        .ll>ul>li{
+           padding-bottom: 7px;
+        }
+        #lang2:hover>.ll{
+            display: block;
+        }
+        #li1{
+            text-decoration: none; 
+            color: black;
+            border-bottom: 2px black solid;
+            font-family: "Samsung Sharp Sans" , 'Noto Sans KR', sans-serif;
+        }
+        #li2{
+            text-decoration: none; 
+            color: grey;
+            font-family: "Samsung Sharp Sans" , 'Noto Sans KR', sans-serif;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 20%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(0);
+            }
+        }
+
+        @keyframes header-rolling {
+            0% {
+                transform: translateY(250%)
+            }
+
+            5% {
+                transform: translateY(150%)
+            }
+
+            20% {
+                transform: translateY(150%)
+            }
+
+            25% {
+                transform: translateY(50%)
+            }
+
+            40% {
+                transform: translateY(50%)
+            }
+
+            45% {
+                transform: translateY(-50%)
+            }
+
+            60% {
+                transform: translateY(-50%)
+            }
+
+            65% {
+                transform: translateY(-150%)
+            }
+
+            80% {
+                transform: translateY(-150%)
+            }
+
+            85% {
+                transform: translateY(-250%)
+            }
+
+            100% {
+                transform: translateY(-250%)
+            }
+        }
+
+        .space {
+            width: 100%;
+            height: 90px;
+        }
+
+        .b1 {
+            width: 429px;
+            height: 240px;
+            overflow: hidden;
+            padding-left: 0;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+        }
+
+        .img:hover {
+            transform: scale(1.10);
+        }
+        .bi{
+            width: 100%;
+            height: 500px;
+            
+        }
+        .bold{
+            font-size: 30px;
+            font-family: "Samsung Sharp Sans" , 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+           
+        }
+        .bold>a{
+            text-decoration : none;
+        }
+        .bold1{
+            font-size: 16px;
+            font-family: "SamsungOneLatin 400" , 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        .bold2{
+            font-size: 12px;
+            font-family: "Samsung Sharp Sans Regular" ,'Noto Sans KR', sans-serif;
+        }
+        .footer{
+            height: 70px;
+            width: 100%;
+        }
+        .footer>div{
+            height: 100%;
+            float: left;
+        }
+        #f1{
+            width: 40%;
+            font-family:"Samsung Sharp Sans Medium" , 'Noto Sans KR', sans-serif;
+            vertical-align: middle;
+        }
+        #f1>ul{
+            display: flex;
+        }
+        #f1>ul>li{
+            padding-right: 10px;
+            padding-top: 9px;
+            font-size: 14px;
+        }
+        #f2{
+            width: 60%;
+            vertical-align: middle;
+        }
+        #f2>ul{
+            display: flex;
+            justify-content: end;
+        }
+        #f2>ul>li{
+            padding-right: 30px;
+            padding-top: 7px;
+        }
+        .footer_a{
+            color :black;
+            text-decoration: none;
+            font-family:"Samsung Sharp Sans Medium" , 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+           
+        }
+        .more{
+            height: 200px;
+            width: 100%;
+           
+        }
+        .more{
+            height: 200px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }   
+        .mo{
+            display: none;
+           
+            height: 2100px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* position: relative; */
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+            margin-left: 220px;
+         
+        }
+        #animate {
+            background-color: white;
+            z-index: 2;
+            position:absolute;
+            cursor: pointer;
+            top: 50px;
+            left: 50%;
+            width: 1px;
+            height: 35px;
+            border : 1px solid grey;
+            background: gray;
+            touch-action: manipulation;
+            animation: move 3s ease infinite;
+            
+        }
+       
+        .more2{
+            height: 5px;
+            width: 10px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            z-index: 9;
+            background-color: white;
+        }
+       
+         @keyframes move {
+            50% {
+                
+                height: 0;
+                top: 50;
+                bottom: 130;
+            }
+               
+           
+        } 
+
+        .a, .b, .c, .d{
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="header-wrap">
+            <div class="header-navi">
+                <a href="삼성디자인-main.html" >
+                    <img src="resources/image/header-logo-samsung-design-svg.svg" style="width: 181px;height: 25px; padding-top: 7px;">
+                </a>
+                <ul class="header_aa">
+                    <li><a href="our stories_1.html" class="header_a">Our Stories</a></li>
+                    <li><a href="about us_1.html" class="header_a">About Us</a></li>
+                    <li><a href="career_1.html" class="header_a">Career</a></li>
+                    <li><a href="news_1.html" class="header_a">News</a></li>
+                </ul>
+            </div>
+            <div class="header-widget">
+                <div class="widget"><ul>
+                    <li><a href="" class="header_b">#A_Sence_of_Color</a></li>
+                    <li><a href="" class="header_b">#Expanding_the_World</a></li>
+                    <li><a href="" class="header_b">#Living_Smarter</a></li>
+                    <li><a href="" class="header_b">#Inspire_for_the_Better</a></li>
+                    <li><a href="" class="header_b">#Design_for_All</a></li>
+                    <li><a href="" class="header_b">#A_Sence_of_Color</a></li>
+                </ul></div>
+                <div id="sc"><img src="resources/image/header-search-icn2022.svg" style="cursor : pointer"></div>
+                <div id="lang2">
+                    <img src="resources/image/header-lang-icn2022.svg" id="lang">
+                    <div class="ll">
+                        <ul>
+                            <li><a href="our stories_1.html" id="li1">KR</a></li>
+                            <li><a href="our stories_en.html" id="li2">EN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="search_in">
+                <input type="search" placeholder="Input Keyword" id="search_input">
+                <div id="s_img"><img src="resources/image/header-search-icn2022.svg"></div>
+                <div class="s_li">
+                    <ul>
+                        <li><a href="" class="">Galaxy Z Unpacked</a></li>
+                        <li><a href="" class="">Watch5</a></li>
+                        <li><a href="" class="">One UI</a></li>
+                        <li><a href="" class="">Bespoke</a></li>
+                        <li><a href="" class="">Metaverse</a></li>
+                        <li><a href="" class="">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div id="veil" style="position: absolute; width: 100%; height: 50%; bottom: 0px; background-color: black; opacity: 0.6; z-index: 5; display: none;"></div>
+        <div id="content" class="subcontent"data-aos="fade-up" 
+        data-aos-duration="1000">
+            <div class="bi">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-1.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Designing Words</a></span><br><br>
+                    <span class="bold1">삼성 UX Writing 가이드</span><br><br>
+                    <span class="bold2">Nov 29, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-2.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold" ><a href="" style="color: #000;">The Wave: Epilogue</a></span><br><br>
+                    <span class="bold1">순환의 물결 속으로</span><br><br>
+                    <span class="bold2">Nov 22, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-3.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">The Wave: 순환의 물결</a></span><br><br>
+                    <span class="bold1">자연스럽게 흐르는 자원 순환</span><br><br>
+                    <span class="bold2">Nov 11, 2022</span>
+                </div>
+            </div>
+            <div class="bi" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-4.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">The Wave: Prologue</a></span><br><br>
+                    <span class="bold1">순환의 물결, 이야기의 시작</span><br><br>
+                    <span class="bold2">Nov 08, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-6.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">New faces for the Watch</a></span><br><br>
+                    <span class="bold1">새로운 갤럭시 워치 페이스 이야기</span><br><br>
+                    <span class="bold2">Aug 23, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-5.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Going Beyond Innovation</a></span><br><br>
+                    <span class="bold1">삼성 갤럭시 Z 플립4와 갤럭시 Z 폴드4 디자인스토리</span><br><br>
+                    <span class="bold2">Aug 11, 2022</span>
+                </div>
+            </div>
+            <div class="bi" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-7.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Welcome to Samsung Space<br> Tycoon</a></span><br><br>
+                    <span class="bold1">삼성 X 로블록스의 가상 현실 경험</span><br><br>
+                    <span class="bold2">Jul 12, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-8.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Samsung India Keyboard</a></span><br><br>
+                    <span class="bold1">29개 인도 지역 언어를 위한 새로운 키보드</span><br><br>
+                    <span class="bold2">Jun 16, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-9.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Closer to you</a></span><br><br>
+                    <span class="bold1">새미 캐릭터 스토리</span><br><br>
+                    <span class="bold2">May 24, 2022</span>
+                </div>
+            </div>
+            <div class="bi" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-10.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">T7 with the Shield</a></span><br><br>
+                    <span class="bold1">Portable SSD T7 Shield 디자인스토리</span><br><br>
+                    <span class="bold2">May 10, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-11.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Living Smarter and Better</a></span><br><br>
+                    <span class="bold1">SmartThings Home Life 스토리</span><br><br>
+                    <span class="bold2">Apr 26, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-12.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">One Way, Your Way</a></span><br><br>
+                    <span class="bold1">일상에 더 가까이 삼성 One UI 4</span><br><br>
+                    <span class="bold2">Mar 29, 2022</span>
+                </div>
+            </div>
+            <div class="bi" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-13.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Expand Your World</a></span><br><br>
+                    <span class="bold1">삼성 갤럭시 Tab S8 디자인스토리</span><br><br>
+                    <span class="bold2">Mar 03, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-14.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Standard of Premium</a></span><br><br>
+                    <span class="bold1">삼성 갤럭시 S22 디자인스토리</span><br><br>
+                    <span class="bold2">Feb 17, 2022</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-15.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Feel Free to Shine</a></span><br><br>
+                    <span class="bold1">삼성 The Freestyle 디자인스토리</span><br><br>
+                    <span class="bold2">Jan 18, 2022</span>
+                </div>
+            </div>
+            <div class="bi" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-16.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">No Place Like Home</a></span><br><br>
+                    <span class="bold1">집에서 즐거운 휴일을 보내는 방법</span><br><br>
+                    <span class="bold2">Dec 16, 2021
+                    </span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-17.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Make Your Own Lifestyle</a></span><br><br>
+                    <span class="bold1">모두가 주인공이 되는 비스포크 디자인</span><br><br>
+                    <span class="bold2">Nov 30, 2021</span>
+                </div>
+                <div class="bodyimg">
+                    <div class="b1"><a href=""><img src="resources/image/3-18.jpg" alt="" class="img"></a></div><br><br>
+                    <span class="bold"><a href="" style="color: #000;">Together for a Better<br> Tomorrow</a></span><br><br>
+                    <span class="bold1">우리가 바라보는 더 나은 내일 Part 3</span><br><br>
+                    <span class="bold2">Nov 09, 2021</span>
+                </div>
+            </div>
+        </div> 
+        <div class="more">
+            <div class="more2"></div>
+            <div id="animate"></div>
+            <p style="font-size: 20px; font-family: Samsung Sharp Sans Regular;">More</p>
+        </div>
+             
+        <div class="mo">
+        <div class="bi a">
+            <div class="bodyimg" >
+                <div class="b1"><a href=""><img src="resources/image/3-19.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Together for a Better Care</a></span><br><br>
+                <span class="bold1">우리가 바라보는 더 나은 내일 Part 2</span><br><br>
+                <span class="bold2">Oct 26, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-20.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Together for a Better Home</a></span><br><br>
+                <span class="bold1">우리가 바라보는 더 나은 내일 Part 1</span><br><br>
+                <span class="bold2">Sep 30, 2021</span>
+            </div>
+            <div class="bodyimg"data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="b1"><a href=""><img src="resources/image/3-21.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Moving Forward Together</a></span><br><br>
+                <span class="bold1">함께하는 내일을 위한 디자인 스토리</span><br><br>
+                <span class="bold2">Sep 30, 2021</span>
+            </div>
+        </div>
+        <div class="bi b" >
+            <div class="bodyimg" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="b1"><a href=""><img src="resources/image/3-22.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Flow Around Circle</a></span><br><br>
+                <span class="bold1">삼성 갤럭시 워치4 디자인스토리</span><br><br>
+                <span class="bold2">Dec 16, 2021
+                </span>
+            </div>
+            <div class="bodyimg" data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="b1"><a href=""><img src="resources/image/3-23.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Simply Bold. Becoming<br> Absolute.</a></span><br><br>
+                <span class="bold1">삼성 갤럭시 Z 폴드3와 갤럭시 Z 플립3의 혁신이 나아가는 길</span><br><br>
+                <span class="bold2">Aug 13, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-24.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Robot with a Sense</a></span><br><br>
+                <span class="bold1">삼성 BESPOKE 제트 봇 AI 디자인스토리</span><br><br>
+                <span class="bold2">May 27, 2021</span>
+            </div>
+        </div>
+        <div class="bi c">
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-25.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Delightfully Light</a></span><br><br>
+                <span class="bold1">삼성 갤럭시 북 프로와 갤럭시 북 프로 360 디자인스토리</span><br><br>
+                <span class="bold2">Apr 30, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-26.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Artificial Landscapes</a></span><br><br>
+                <span class="bold1">MICRO LED 스크린 아이덴티티 디자인스토리</span><br><br>
+                <span class="bold2">Apr 15, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-27.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Next Station of Clean</a></span><br><br>
+                <span class="bold1">삼성 BESPOKE 제트 디자인스토리</span><br><br>
+                <span class="bold2">Mar 25, 2021</span>
+            </div>
+        </div>
+        <div class="bi d">
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-28.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Complete Immersion</a></span><br><br>
+                <span class="bold1">비움으로 완성한 삼성 Neo QLED 8K</span><br><br>
+                <span class="bold2">Mar 04, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-29.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Form Follows Sound</a></span><br><br>
+                <span class="bold1">삼성 갤럭시 버즈 프로 디자인스토리</span><br><br>
+                <span class="bold2">Feb 04, 2021</span>
+            </div>
+            <div class="bodyimg">
+                <div class="b1"><a href=""><img src="resources/image/3-30.jpg" alt="" class="img"></a></div><br><br>
+                <span class="bold"><a href="" style="color: #000;">Samsung in the Sound</a></span><br><br>
+                <span class="bold1">삼성 브랜드 사운드 디자인스토리</span><br><br>
+                <span class="bold2">Jan 14, 2021</span>
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div id="f1">
+                <ul>
+                    <li><img src="resources/image/footer-logo-samsung-design-svg.svg" style="margin-top:3px"></li>
+                    <li style="margin-top:5px">© 2023 SAMSUNG All Rights Reserved.</li>
+                    <li style="margin-top:4px">|</li>
+                    <li ><a href="" class="footer_a">이메일 문의</a></li>
+                    <li style="margin-top:4px">|</li>
+                    <li><a href="" class="footer_a">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div id="f2">
+                <ul>
+                    <li><a href="our stories_1.html" class="footer_a">Our Stories</a></li>
+                    <li><a href="about us_1.html" class="footer_a">About Us</a></li>
+                    <li><a href="career_1.html" class="footer_a">Career</a></li>
+                    <li><a href="news_1.html" class="footer_a">News</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $(".more").click(function(){
+                $(".more").css("display","none");
+                let $p =  $(this).next();
+                if($p.css("display") =="none"){
+                   $p.slideDown(0); 
+                }
+            });
+        });
+
+        window.addEventListener('scroll' ,function(){
+        let value = window.scrollY
+        console.log("scrollY", value);
+        
+        let a = document.querySelector(".a");
+        if(value>2550){
+            a.style.animation='fadeInUp 1s forwards ';
+       
+        }
+      
+        if(value>3050){
+            let b = document.querySelector(".b");
+            b.style.animation='fadeInUp 1s forwards'
+         
+        }
+      
+        if(value>3500){
+            let c = document.querySelector(".c");
+            c.style.animation='fadeInUp 1s forwards'
+    
+        }
+    
+       if(value>4000){
+            let d = document.querySelector(".d");
+            d.style.animation='fadeInUp 1s forwards'
+        
+        }
+
+
+    });
+    </script>
+    <script> 
+        AOS.init();
+    </script>
+    <script>
+        $(function(){
+            $("#sc").click(function(){
+                if($(".search").css("visibility")=="hidden"){
+                   $(".search").css("visibility","visible");
+                    $(".widget").css("visibility","hidden");
+                    $("#sc").css("visibility","hidden");
+                    $("#img").hover(function(){
+                        $("#img").css("transform","scale(1.0)");
+                    });
+                    $('body').css({overflow :"hidden",scroll:"no"});
+                    $("#search_input").focus();
+                    $("#veil").css("display","block");
+                }
+            });
+        });
+        
+
+        $(function(){
+            $("#veil").click(function(){
+                if($(".search").css("visibility")=="visible"){
+                    $(".search").css("visibility","hidden"); 
+                    $(".widget").css("visibility","visible");
+                    $("#sc").css("visibility","visible");
+                    $('body').css({overflow :"scroll",scroll:"yes"});
+                    $("#veil").css("display","none");
+                }
+            });
+        })
+
+    
+</script>
+</body>
+
+</html>

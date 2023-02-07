@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플레이 방법 - 리그 오브 레전드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../jQuery-worksapce/resources/css/롤toy.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="first"></div>
+
+    <div class="second">
+      <div class="second-text">
+        <span class="second-text1">소환사의 협곡에 오신 것을 환영합니다</span>
+        <h1 class="second-text2">기본 정보를 배워 보세요</h1>
+        <p class="second-text3">우선 리그 오브 레전드의 기본부터 알아보겠습니다. 아래 가이드를 통해 가장 인기 있는 게임 모드를 간략히 배워 보세요.</p>
+        <div><button class="second-btn">플레이하기</button></div>
+      </div>
+
+      <div class="second-background">
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경1.png);" class="inner1"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경2.png);" class="inner2"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경3.png);" class="inner3"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경4.png);" class="inner4"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경5.png);" class="inner5"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경6.png);" class="inner6"></div>
+        <div style="background-image: url(../jQuery-worksapce/resources/image/배경7.png);" class="inner7"></div>
+      </div>
+
+
+    </div>
+    <div class="third">
+      <div class="third-text">
+        <div class="third-text1">리그 오브 레전드란?</div>
+        <div class="third-text2">리그 오브 레전드는 5명의 강력한 챔피언으로 구성된 양 팀이 서로의 기지를 파괴하기 위해 치열한 사투를 벌이는 전략 게임입니다. 140여 명의 챔피언 중
+          하나를 선택해 화려한 플레이를 펼치며 적을 처치하고 포탑을 파괴해 승리를 쟁취하세요.</div>
+        <video src="../jQuery-worksapce/resources/video/배경영상1.webm" muted autoplay loop class="vi1"></video>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <script>
+    let st;
+    let dh;
+    $(function () {
+      dh = $('body').height();
+      console.log('body의 높이 : ' + dh);
+
+      $(window).scroll(function () {
+        st = $(this).scrollTop();
+
+        /* $('body').html('<div id=box>scrollTop(): '+st + 'px</div>'); */
+        if (st > 1700) {
+          $(".vi1").css("opacity", "1");
+          $(".vi1").css("transition", "0.5s");
+          $(".third-text1").css("opacity", "1");
+          $(".third-text1").css("transition", "0.5s");
+          $(".third-text2").css("opacity", "1");
+          $(".third-text2").css("transition", "0.5s");
+
+        } else {
+          $(".vi1").css("opacity", "0");
+          $(".vi1").css("transition", "2s");
+          $(".third-text1").css("opacity", "0");
+          $(".third-text1").css("transition", "2s");
+          $(".third-text2").css("opacity", "0");
+          $(".third-text2").css("transition", "2s");
+        };
+      });
+    });
+
+   $(function(){
+    $(window).scroll(function(){
+      if(st > 1900){
+        $(".vi1").css("transform", "translateY(300px)");
+        $(".third-text1").css("transform", "translateY(300px)");
+        $(".third-text2").css("transform", "translateY(300px)");
+        $(".vi1").css("transition", "2s");
+        $(".third-text1").css("transition", "2s");
+        $(".third-text2").css("transition", "2s");
+      }else{
+        $(".vi1").css("transform", "translateY(-100px)");
+        $(".third-text1").css("transform", "translateY(-100px)");
+        $(".third-text2").css("transform", "translateY(-100px)");
+        $(".vi1").css("transition", "2s");
+        $(".third-text1").css("transition", "2s");
+        $(".third-text2").css("transition", "2s");
+      };
+    });
+   });
+
+   $(function(){
+    $(window).scroll(function(){
+      if(st > 2200){
+        $(".vi1").css({ "scale": "0.9", "transition": "3s" });
+        $(".third-text1").css({ "scale": "0.9", "transition": "3s" });
+        $(".third-text2").css({ "scale": "0.9", "transition": "3s" });
+      }else{
+        $(".vi1").css({ "scale": "1", "transition": "3s" });
+        $(".third-text1").css({ "scale": "1", "transition": "3s" });
+        $(".third-text2").css({ "scale": "1", "transition": "3s" });
+      };
+    });
+   });
+  </script>
+
+
+  <script>
+
+    $("body").on("mousewheel", function (e) {
+      var wheel = e.originalEvent.wheelDelta;
+
+      if (wheel > 0) {
+        //스크롤 올릴때
+        console.log("올리는 중");
+        $('.inner1,.inner2,.inner3,.inner4,.inner5').css({ "scale": "1", "transition": "1.2s" })
+        $('.inner6').css({ "scale": "1", "transition": "1.2s" })
+        $('.inner7').css({ "scale": "1", "transition": "1.2s" })
+      } else {
+        //스크롤 내릴때
+        console.log("내리는 중");
+        $('.inner1,.inner2,.inner3,.inner4,.inner5').css({ "scale": "1.1", "transition": "1.2s" })
+        $('.inner6').css({ "scale": "1.2", "transition": "1.2s" })
+        $('.inner7').css({ "scale": "1.3", "transition": "1.2s" })
+      }
+    });
+
+
+  </script>
+
+
+
+  <!--
+<script>
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 100){
+            $('.inner').css("height","110%");
+        };
+    });
+</script>
+
+
+
+
+<script>
+    $( document ).ready( function() {
+      var jbTime = 5000;
+      $( '.second' ).animate( {
+        opacity: '1'
+      }, jbTime, function() {
+        $( '.jb-2' ).animate( {
+          opacity: '1'
+        }, jbTime, function() {
+          $( '.jb-3' ).animate( {
+            opacity: '1'
+          }, jbTime );
+        } );
+      } );
+    } );
+  </script>
+-->
+
+
+</body>
+
+</html>

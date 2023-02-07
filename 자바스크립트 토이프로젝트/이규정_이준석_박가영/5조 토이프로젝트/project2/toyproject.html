@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <style>
+    #topBtn {
+
+      right: 2%;
+      bottom: 2%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      background: #000;
+      color: #fff;
+      font-size: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .top {
+      background-color: #2f2f2f;
+      color: white;
+      max-width: 1280px;
+      margin: 0px auto;
+    }
+
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .myInfo,
+    .naverInfo {
+      display: flex;
+    }
+
+    .myInfo>div,
+    .naverInfo>div {
+      padding: 5px;
+      display: flex;
+    }
+
+    .wrap {
+      background-color: #2f2f2f;
+      width: 1903px;
+      height: 99px;
+    }
+
+    .top2 {
+      background-color: #2f2f2f;
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0px auto;
+    }
+
+    .left,
+    .right {
+      display: flex;
+    }
+
+    .left>div,
+    .right>div {
+      padding: 5px;
+      display: flex;
+    }
+
+    .title:hover {
+      background-color: gray;
+    }
+
+    h4 {
+      background: lightgrey;
+      width: 400px;
+      height: 50px;
+      line-height: 30px;
+      border-radius: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    h2 {
+     
+      background-color: lightgray;
+      border: 1px solid lightgray;
+      width: 1000px;
+      height: 200px;
+      margin-top: 5px;
+      border-radius: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: none;
+    }
+
+    #navi>li>ul {
+
+      list-style-type: none;
+      padding: 0;
+      /* 평소에 가려주다가 마우스가 올라가는 순간
+               펼쳐지는 효과부여 1단계*/
+      display: none;
+    }
+
+    /* 평소에는 안보여지다가, 마우스가 올라가는 순간 펼쳐지는 효과부여 2단계 */
+    #navi>li>div:hover+ul {
+      display: block;
+      /* 메인메뉴에만 마우스가 올라갈때 보여지도록 설정 */
+    }
+
+    /* 3단계 */
+    #navi>li>ul:hover {
+      /* 서브메뉴에도 마우스가 올라갈 때 유지가 되게끔 속성 부여 */
+      display: block;
+    }
+
+    #navi>li>ul>h4:hover {
+      /* 서브메뉴에도 마우스가 올라갈 때 유지가 되게끔 속성 부여 */
+      display: block;
+    }
+
+    #navi>li>div>h4:hover {
+      display: block;
+
+    }
+
+    #navi>li>ul {
+      position: absolute;
+    }
+    .leftmenu1:hover{
+      color: blue;
+    }
+    .leftmenu2:hover{
+      color: blue;
+    }
+    .leftmenu3:hover{
+      color: blue;
+    }
+    .leftmenu4:hover{
+      color: blue;
+    }
+    .leftmenu5:hover{
+      color: blue;
+    }
+    .rightmenu1:hover{
+      color: black;
+    }
+    .rightmenu2:hover{
+      color: black;
+    }
+    .rightmenu3:hover{
+      color: black;
+    }
+    .rightmenu4:hover{
+      color: black;
+    }
+    .qa:hover{
+      background-color:darkgray;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div class="wrap">
+      <div class="headerWrap">
+        <div class="top">
+          <div class="naverInfo">
+            <div><b>NAVER</b></div>
+            <div><img src="free-icon-add-cart-8728527.png" style="width: 20px;height: 20px;">네이버쇼핑</div>
+          </div>
+          <div class="myInfo">
+            <div><a href="로그인.html" style="color: white; text-decoration: none;">로그인</a></div>
+            <div><img src="free-icon-menu-4436689.png" style="width: 30px;height: 30px; "></div>
+          </div>
+        </div>
+        <div class="top2">
+          <div class="left">
+            <div><img src="mark.jpg" style="width: 42px;height: 42px; border-radius: 70%;"></div>
+            <div style="font-size: small;"><br>셀렙브랜드 | </div>
+            <div style="font-size: small;"><br>관심고객수 4,118 </div>
+          </div>
+          <div class="right">
+            <div><input placeholder="검색어를 입력하세요" style="border-radius: 15px; ;">&nbsp&nbsp<img src="dod.png"
+                style="width: 30px; height: 30px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div style="width: 1903px;height: 225px;  ">
+        <div style="width: 1280px; height:125px; display: flex; justify-content: space-between; margin: auto;">
+          <div> <br><br><button id="btn3" onclick="test1();"
+              style="background-color: black;color: white; width: 148px;height: 36px;border-radius: 15px;"><img
+                src="bell2.png" style="width: 15px;height: 15px; "> 알람받기</button></div>
+          <div><img src="centermark.jpg" width="400px" height="80px"></div>
+          <div><br><br><button
+              style="background-color: #f7f7f7; size: width  100px; height: 24px; border-radius: 15px;"><span
+                style="color: rgba(0,0,0,.45); font-size: small;">전체381.917</span></button></div>
+        </div>
+        <hr>
+          <div style="width: 1302px;height: 106px; display: flex;justify-content: center; margin: auto; gap: 30px;">
+            <div class="leftmenu1">베스트</div>
+            <div class="leftmenu2">ALL 옳치옳치<img src="free-icon-tooth-5954474.png " style="width: 15px; height: 15px;"></div>
+            <div class="leftmenu3">유리한홈트<img src="free-icon-exercise-1683155.png" style="width: 15px; height: 15px;"></div>
+            <div class="leftmenu4">리틀 버드<img src="free-icon-neckerchief-6012219.png" style="width: 15px; height: 15px;"></div>
+            <div class="leftmenu5">Teen't<img src="free-icon-lipstick-1069335.png" style="width: 15px; height: 15px;"></div>
+            <div style="color: lightgrey; display: flex;  gap: 30px; ">
+            <div class="rightmenu1">묻고 답하기</div>
+            <div class="rightmenu2">공지사항</div>
+            <div class="rightmenu3">쇼핑스토리</div>
+            <div class="rightmenu4">판매자 정보</div>
+          </div>
+          </div>
+          </div>
+          </div>
+    <div id="content2">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="back.png" width="1903px" height="400px">
+          </div>
+          <div class="swiper-slide">
+            <img src="back2.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="back3.png" width="1903px" height="400px">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need pagination -->
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <div id="content3" style="text-align: center;font-size: large;">
+      <strong style="font-size: large;">NEW ITEM</strong>
+    </div>
+    <div id="conten4" style="display: flex; justify-content: center;  ">
+      <div style="position: relative; padding: 10px;">
+        <img src="teeth.jpg">
+        <h3
+          style=" position: absolute;top: 100%;left: 46%;transform: translate( -80%, -100% );  background-color:white;color: black; ">
+          무불소치약 친환경 어린이 키즈 선물 9000원 <s style="font-size: small;color: gray;">36000</s><b
+            style="color: lightskyblue;">75%</b></h3>
+      </div>
+      <div style="position: relative;padding: 10px;">
+        <img src="brush.jpg">
+        <h3
+          style=" position: absolute;top: 100%;left: 46%;transform: translate( -80%, -100% );  background-color:white;color: black; ">
+          부드러운 미세모 친환경 대나무 칫솔40000원<s style="font-size: small;color: gray;">50000원</s><b
+            style="color: lightskyblue;">20%</b></h3>
+      </div>
+      <div style="position: relative;padding: 10px;">
+        <img src="brush2.jpg">
+        <h3
+          style=" position: absolute;top: 100%;left: 46%;transform: translate( -80%, -100% );  background-color:white;color: black; ">
+          부드러운 미세모 친환경 대나무 칫솔16800원<s style="font-size: small;color: gray;">20000원</s><b
+            style="color: lightskyblue;">16%</b></h3>
+      </div>
+      <div style="position: relative;padding: 10px;">
+        <img src="brush3.jpg">
+        <h3
+          style=" position: absolute;top: 100%;left: 46%;transform: translate( -80%, -100% );  background-color:white;color: black; ">
+          부드러운 미세모 친환경 대나무 칫솔 4400원 <s style="font-size: small;color: gray;">5000원</s><b
+            style="color: lightskyblue;">12%</b></h3>
+      </div>
+    </div>
+    </div>
+    <div style="width: 100px; height: 100px;">
+    </div>
+    <div style="width: 1903px;height: 62px; text-align: center;">
+      <div><b>쇼핑 스토리</b></div>
+    </div>
+    <hr>
+    <div style="width: 1280px;height: 311px;display: flex;  justify-content: center; margin: auto; ">
+      <div><img src="yesweek.jpg" style="width: 408px ;height: 230px; padding: 50px; "></div>
+      <div>
+        <br><br>
+        <P style="font-size: small; color: gray;"><strong>[SPECIAL EVENT] 옳치옳치 위크!</strong><br>11월 한 달 동안 매주 찾아오는
+          SPECIAL EVENT 마지막
+          이벤트 제품은? 환경을 생각한 건강한
+          칫솔&amp;
+          치약 옳은 칫솔, 옳은 치약, 옳치옳치!! 단 일주일간 진행되는 이벤트 혜택을 놓치지 마세요 CHECK POINT
+          1. 특별 할인 이벤트 ✔️ 기간: 11월 22일 월요일 오전 11시~금요일 23:59까지
+          ✔️ 이벤트 혜택: 치약 단품 구매시 50% 할인 1 세트 구매시 50% 할인 2세트 구매시 60% 할인 CHECK POINT
+          2. 인스타그램 퀴즈 이벤트! 셀럽브랜드 인스타그램 팔로우 하고, 퀴즈 풀면 추첨을 통해 경품을 드려요!
+          ✔️ 기간: 11월 29일 월요일 오전 11:00 ~ 12월 3일 금요일 오전 11:59분까지
+          ✔️ 참여방법 1. 셀럽브랜드 인스타그램 팔로우 필수!
+          2. 셀럽브랜드 인스타그램 스토리에서 정답 확인
+          3. 셀럽브랜드 인스타그램에 DM으로 정답 보내기!
+          ✔️ 경품대상 DM 수신 기준 1, 25, 50, 75, 100번째 정답자에게 옳치옳치 세트(김희철 스페셜 에디션) 증정!)
+          해당 퀴즈 게시물에 '좋아요'누르고 댓글로 친구소환을 가장 많이 한 참여자에게도 옳치옳치 세트를 드립니다. [게시물 바로가기]
+          ✔️ 당첨자 발표: 12월 7일 13시 공개됩니다. (계정 당 최초 1회만 참여 인정, 중복참여 불가) [셀럽브랜드 인스타그램 바로가기]
+          ※ 셀럽브랜드 제품은 해외 지역으로 배송이 불가합니다. 구매시 참고 부탁드립니다
+        </P>
+      </div>
+    </div>
+    <hr>
+    <div style="width: 1280px;height: 311px; display: flex;  justify-content: center; margin: auto; ">
+      <div><img src="week2.jpg" style="width: 408px ;height: 230px; padding: 50px;"></div>
+      <div>
+        <br><br>
+        <P style="font-size: small;color: gray;"><strong>[SPECIAL EVENT] 유리한 위크!</strong><br>
+          오픈 기념 이벤트 11월 한 달 동안 매주 찾아오는 SPECIAL EVENT 3번째 이벤트 제품은?
+          추워진 겨울 날씨에도 포기 할 수 없는 건강 관리를 위해! 모두 모두 담은 홈 트레이닝 세트!!
+          유리한 홈트 어린이 제품 공통 안전 기준을 모두 통과한 유리한 홈트 어린 아이들과 함께 사용해도 안심이에요!
+          단, 일주일! 유리한 홈트 위크에만 만날 수 있는 가격을 놓치지 마세요! CHECK POINT 1. 많이 살수록 할인율이 UP! UP!
+          ✔ 기간: 11월 22일 월요일 오전 11시~금요일 23:59까지 ✔ 이벤트 혜택: 단품 구매시 40% 할인 2종 세트 구매시 50% 할인 CHECK POINT
+          2. 인스타 퀴즈 이벤트! 셀럽브랜드 인스타그램 팔로우 하고, 퀴즈 풀면 추첨을 통해 경품을 드려요!
+          ✔ 기간: 11월 22일 월요일 오전 11:00 ~ 11월 26일 금요일 오전 11:59분까지 ✔ 참여방법 1. 셀럽브랜드 인스타그램 팔로우 필수!
+          2. 셀럽브랜드 인스타그램 스토리에서 정답 확인 3. 셀럽브랜드 인스타그램에 DM으로 정답 보내기!
+          ✔ 경품대상 DM 수신기준 99번째 정답자에게 '유리한홈트 SET'를! DM 수신기준 1, 50, 100번째 정답자에게 '미니 폼롤러'를 드립니다.
+          해당 퀴즈 게시물 '좋아요' 누르고 댓글로 친구 소환을 가장 많이한 참여자에게도 '미니 폼롤러'를 드립니다. (경품 색상은 랜덤이며, 색상 선택 불가합니다.)
+          ✔ 당첨자 발표: 11/30 13 시 인스타그램에 공개됩니다. ✔ 계정 당 최초 1회만 참여 인정, 중복 참여 불가 [셀럽브랜드 인스타그램 바로가기]
+          ※ 셀럽브랜드 제품은 해외 지역으로 배송이 불가합니다. 구매시 참고 부탁드립니다.</P>
+      </div>
+    </div>
+    <hr>
+    <div style="width: 1280px;height: 311px; display: flex;  justify-content: center;margin: auto; ">
+      <div><img src="week3.jpg" style="width: 408px ;height: 230px; padding: 50px;"></div>
+      <div><br><br>
+        <p style="font-size: small;color: gray;"><strong>[SPECIAL EVENT] 옳치옳치 위크!</strong><br>
+          오픈 기념 이벤트 11월 한 달 동안 매주 찾아오는 SPECIAL EVENT 2번째 이벤트 제품은?
+          피부 톤에 어울리는 3가지 컬러를 담아 SET로 구성했어요! 피부 톤(웜 톤/쿨 톤), 나의 기분, 그 날의 분위기에 맞춰 컬러를 선택하거나,
+          컬러 조합을 통해 나만의 컬러로 만들어 사용 할 수 있어요! 1. 많이 살수록 할인율이 UP! UP!
+          ✔ 기간: 11월 15일 월요일 오전 11시~금요일 23:59까지 ✔ 이벤트 혜택: 1개 구매시 40% 할인 2개 구매시 50% 할인 CHECK POINT
+          2. 인스타 퀴즈 이벤트! 셀럽브랜드 인스타그램 팔로우 하고, 퀴즈 풀면 추첨을 통해 경품을 드려요!
+          ✔ 기간: 11월 15일 월요일 오전 11:00 ~ 11월 19일 금요일 오전 11:59분까지
+          1. 셀럽브랜드 인스타그램 팔로우 필수!
+          2. 셀럽브랜드 인스타그램 스토리에서 정답 확인
+          3. 셀럽브랜드 인스타그램에 DM으로 정답 보내기!
+          4. DM 수신기준 웜톤 1 번째, 50번째 / 쿨톤 2번째, 51번째 정답자에게 경품 증정
+          5. 인스타그램 게시물에 좋아요 누르고 친구 소환하세요. 가장 많은 친구를 소환한 참여자 2명에게도 선물을 드립니다.
+          ✔ 당첨자 발표: 11/23 13 시 인스타그램에 공개됩니다. ✔ 계정 당 최초 1회만 참여 인정, 중복 참여 불가 [셀럽브랜드 인스타그램 바로가기]
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div id="content6" style="width: 1280px;height: 684px; background-color: lightgrey;margin: auto;">
+      <div style="height: 62px; width: 1280px; text-align: center"><br><b>베스트상품리뷰</b></div>
+      <div style="width: 1280px;height: 544px;  display: flex; justify-content: center; ">
+        <div>
+          <img src="neck.jpg " width="296px" height="296px" style="padding: 10px;">
+          <div style="width: 296px;height: 178px; background-color: white; border: solid 3px lightskyblue;">
+            <pre><br>     <img src="free-icon-left-quotes-sign-39711.png" style="width: 20px;height: 20px;">
+      휘뚜루마뚜루 정말좋아요!
+                  <p > wns****님</p></pre>
+          </div>
+        </div>
+        <div>
+          <img src="teethbruxh.jpg" width="296px" height="296px" style="padding: 10px;">
+          <div style="width: 296px;height: 178px; background-color: white;border: solid 3px lightskyblue;">
+            <pre><br>     <img src="free-icon-left-quotes-sign-39711.png" style="width: 20px;height: 20px;">
+      부드럽지만 잘 닦여서 좋아요!
+                  <p> wns****님</p></pre>
+          </div>
+        </div>
+        <div>
+          <img src="girllip.jpg" width="296px" height="296px" style="padding: 10px;">
+          <div style="width: 296px;height: 178px; background-color: white;border: solid 3px lightskyblue;">
+            <pre><br>      <img src="free-icon-left-quotes-sign-39711.png" style="width: 20px;height: 20px;">
+      지속력도 좋고 컬러도 이뻐요~!
+                <p > wns****님</p></pre>
+          </div>
+        </div>
+        <div>
+          <img src="brush.jpg" width="296px" height="296px" style="padding: 10px;">
+          <div style="width: 296px;height: 178px; background-color: white;border: solid 3px lightskyblue;">
+            <pre><br>     <img src="free-icon-left-quotes-sign-39711.png" style="width: 20px;height: 20px;">
+      어머님 아버님이 좋아하세요~!
+              <p > wns****님</p></pre>
+          </div>
+        </div>
+      </div>
+      <div style="justify-content: center; display: flex; ">
+        <ul id="navi">
+
+          <li>
+            <div>
+              <a style="color: black;" href="" class="qa"><b>공지사항 및 Q&A</b></a>
+            </div>
+            <ul style=" text-align: center;">
+              <li>
+                <h4>Q.배송 전 주소지 변경 시 유의사항 안내</h4>
+              </li>
+              <h2>A.배송 전 주소지 변경이 필요할 경우 
+                오후 1시 이전 변경 부탁드립니다.
+                오후 1시 이후 변경 시 주문 정보가 택배사로 전달되어 
+                배송이 진행되어 기존 입력 주소로 전달되는 일이
+                발생할 수 있습니다.</h2>
+              <li>
+                <h4>Q. CJ대한통운 택배 총파업으로 인한 배송지연 안내</h4>
+              </li>
+              <h2>A. 안녕하세요. 
+                CJ대한통운 총파업에 따른 배송지연 안내드립니다.
+                서비스 정상화까지 게시글 하단의 표에서 확인되는 서비스 불가 지역으로의 배송은 보류됩니다.
+                서비스 불가 지역으로 출고가 되는 경우 
+                1) 터미널 잔류 및 분실 가능성이 높고,
+                2) 물류센터로 강제 회송 가능성이 있어 발송 자체에 제한이 있습니다. 
+                서비스가 정상화 되면 최대한 빠르게 배송할 수 있도록 하겠습니다.
+                이용에 불편을 드려 죄송합니다.
+                감사합니다.</h2>
+              <li>
+                <h4>[당첨자 발표] 셀럽브랜드 라이브방송 댓글이벤트 당첨</h4>
+              </li>
+              <h2>안녕하세요! 
+                셀럽브랜드 라이브방송 "댓글이벤트" 당첨을 축하드립니다!
+                [ 당첨자 ]
+                  아몬드**
+                  아이스**
+                  hj*</h2>
+              <li>
+                <h4>[Teen’t] 쿨톤&웜톤 수현틴트 런칭기념 3+3 EVENT</h4>
+              </li>
+              <h2>안녕하세요, 셀럽브랜드입니다.
+                Teen't 런칭 기념으로 진행하였던 쿨톤&웜톤 1+1 EVENT가        
+                여러분들의 많은 성원에 힘입어 2주간 EVENT 연장 후 
+                5월 9일 종료됩니다.    
+                고객 여러분들의 많은 관심과 사랑에 감사드립니다. 
+                앞으로 더 좋은 EVENT 기대해주세요!
+                고맙습니다!</h2>
+              <li>
+                <h4>Q. 코로나19로 인한 고객센터 운영 안내</h4>
+              </li>
+              <h2>안녕하세요. 셀럽브랜드입니다.
+                코로나19 확산세로 인한 내부 운영 방침으로
+                고객센터 전화 및 네이버 톡톡 문의 이용 시 연결이 지연될 수 있습니다.
+                문의 사항이 있으신 경우 묻고 답하기 게시판을 이용 부탁드리며,
+                최대한 빠른 답변을 해드릴 수 있도록 하겠습니다.
+                서비스 이용에 불편을 드려 대단히 죄송합니다.</h2>
+          </li>
+
+        </ul>
+        </li>
+
+      </div>
+    </div>
+
+    <div id="footer" style="width: 1280px;height: 438px; margin: auto;">
+      <img src="centermark.jpg" style="width: 160px;height: 30px;"><br>
+      <p style="display: inline;"><img src="mark.jpg" style="width : 20px;height: 20px;">
+        반품 배송비, 반품 배송주소 등은 해당 상품 페이지 내 안내를 참고해주세요. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp (주)에스엠컬처앤콘텐츠 광고사업부문
+        010-8951-8162 <button>잘못된 번호 신고</button></p>
+      &nbsp&nbsp&nbsp&nbsp<img
+        src="https://static-resource-smartstore.pstatic.net/smartstore/p/static/20230131201941/media/icon_instagram_26x26_purple.cedfab80.svg"
+        style="width : 30x;height: 30px;">
+
+      <p style="font-size: small;">네이버 약관 | 네이버페이 이용약관 | 전자금융거래 이용약관 | <b>개인정보처리방침</b> | 책임의 한계와 법적고지 | 청소년보호정책 |
+        지식재산권신고센테 | 안전거래 가이드 </p>
+      <br>
+      <pre><b style="font-size: small;">네이버(주)                                                                  고객센터                                                      전자금융거래 분쟁처리</b></pre>
+      <pre style="color: grey; font-size: small">사업자등록번호 220-81-62517 | 통신판매업신고번호 2006-경기성남-0692호                  강원도 춘천시 퇴계로 89 강원전문건설회관                                 전화 1588-3819
+대표이사 최수연 | 경기도 성남시 분당구 정자일로 95, NVAER 1784, 13561                  전화 1588-3819                                                           <b style="font-size: small;">1:1문의 바로가기</b><a href="#" style="display: scroll; position: fixed; bottom: 30px; right: 10px;"><img src="up.png" style="width: 50px;"></a>
+전화 1588-3819 | 이메일 helpcustomer@naver.com | 사업자등록정보확인                    결제도용신고 1588-3816
+호스팅 서비스 제공 : NAVER Cloud                                                       <b style="font-size: small;">1:1문의 바로가기</b>
+</pre>
+
+    </div>
+    <!-- <div>
+        <span id="topBtn">top</span>
+      </div> -->
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper', {
+        // 슬라이드를 버튼으로 움직일 수 있습니다.
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 현재 페이지를 나타내는 점이 생깁니다. 클릭하면 이동합니다.
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+
+        // 현재 페이지를 나타내는 스크롤이 생깁니다. 클릭하면 이동합니다.
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
+
+        // 3초마다 자동으로 슬라이드가 넘어갑니다. 1초 = 1000
+        autoplay: {
+          delay: 3000,
+        },
+      });
+      let btn3 = document.getElementById("btn3");
+      //이벤트를 부여하고자 하는 요소 객체.addEventListener("이벤트명",이벤트핸들러)
+      btn3.addEventListener("click", function () {
+        alert("로그인이 필요한 서비스 입니다 로그인 하시겠습니까?")
+
+
+
+      });
+      $(function () {
+        $("li").click(function () {
+          //$(this) : 현재 클릭 이벤트가 발생한 요소 (div)
+          //$(this).next() : 현재 클릭 이벤트가 발생한 요소 (div) 바로 뒤에 있는 요소
+
+          // jQuery 방식으로 선택된 요소를 담아둘 때 변수명 앞에 $를 붙이곤 함. 
+          let $p = $(this).next();
+
+          if ($p.css("display") == "none") {
+            //css() 메소드에 속성명만 작성시 해당 속성의 속성값을 반환(get/setter 동시에)
+
+            // 2단계 : 기존에 열려있는 p태그들 모두 닫아주기
+            $(this).siblings("h2").slideUp(); // 닫아주기
+
+            // 1단계
+            $p.slideDown(500); // 시간부여도 가능 
+          } else {
+            // 사라지게끔 
+            $p.slideUp(500); // 시간부여도 가능 
+          }
+
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>

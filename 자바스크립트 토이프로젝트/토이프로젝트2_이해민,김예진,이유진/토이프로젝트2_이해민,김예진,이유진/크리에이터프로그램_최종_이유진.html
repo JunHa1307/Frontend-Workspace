@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https: //fonts.googleapis.com/css2? family= Noto+Sans+KR & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="resources/프로필.js" defer></script>
+    <title>ZEPETO Studio_made_yj</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        #title {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #text {
+            font-size: 22px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #my_btn,
+        #my_btn2 {
+            min-width: 126px;
+            height: 56px;
+            border: none;
+            border-radius: 100px;
+            background: #5c46ff;
+            color: white;
+            padding: 14px 34px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #card_list>ul>li {
+            display: inline-flex;
+            list-style-type: none;
+            width: 320px;
+            height: 360px;
+            background: rgb(244, 243, 243);
+            border: none;
+            border-radius: 20px;
+            padding: 0px;
+            margin: 0px 15px;
+            vertical-align: middle;
+
+        }
+
+        #card_img {
+            width: 88px;
+            height: 88px;
+        }
+
+        #card_title {
+            font-size: 28px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-top: 15px;
+            margin: 8px auto 0px;
+            text-align: center;
+        }
+
+        #card_text {
+            width: 63%;
+            font-size: 17px;
+            font-weight: 400;
+            margin: 8px auto 0px;
+            color: rgb(92, 92, 97);
+            text-align: center;
+        }
+
+        #num {
+            border: none;
+            border-radius: 50%;
+            background-color: rgb(92, 70, 255);
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            padding: 8px;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+
+        }
+
+        #standard>ul>li {
+            display: inline;
+            list-style-type: none;
+            align-items: center;
+  
+        }
+
+        #standard>ul>li>div {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0px 5px 10px 0px;
+        }
+
+        #standard_text {
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 600;
+            width: 410px;
+            height: 120px;
+
+        }
+
+        #question>li {
+            list-style-type: none;
+            display: inline-flex;
+            vertical-align: middle;
+
+        }
+
+        #q_mark {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(238, 235, 235);
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 3px 10px 8px 10px;
+            margin-right: 5px;
+
+        }
+
+        #faq_list {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+        }
+
+        #faq_list>div {
+            margin: 20px;
+        }
+
+        #q_text {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #q_btn {
+            background: url("https://studio.zepeto.me/_next/static/media/ic_24_chevron_down.b03357b8.svg") no-repeat;
+            width: 15px;
+            height: 15px;
+            background-size: contain;
+            cursor: pointer;
+            background-position: 50% 50%;
+            margin-top: 10px;
+            float: right;
+        }
+
+        #answer {
+            display: none;
+            width: 95%;
+            padding: 5px 50px 5px 50px;
+        }
+
+        #content4 {
+            background: rgb(242, 244, 245);
+            margin-top: 10px;
+        }
+
+        #faq_wrap {
+            width: 60%;
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            margin: 30px 0px 30px 0px;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        .items {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .active {
+            display: flex;
+            height: 600px;
+            width: 900px;
+            color: white;
+            position: relative;
+        }
+
+        button,
+        button:active,
+        button:focus {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: white;
+            box-shadow: 0px 0px 3px rgb(209, 202, 202);
+            outline: none;
+            cursor: pointer;
+        }
+
+        .next {
+            right: -50px;
+            background-image: url(resources/오른쪽화살표.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+        }
+
+        .prev {
+            left: -50px;
+            background-image: url(resources/왼쪽화살표.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        .stepper {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .step {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: rgb(218, 214, 214);
+            margin: 0 5px;
+        }
+
+        .active-step {
+            background-color: rgb(88, 87, 87);
+        }
+
+        .active>div {
+            margin: 15px
+        }
+
+        #p1 {
+            position: absolute;
+            background-size: cover;
+            border-radius: 20px;
+            top: 0%;
+            left: 0%;
+            right: 50%;
+            bottom: 50%;
+        }
+
+        #p2 {
+            position: absolute;
+            background-size: cover;
+            border-radius: 20px;
+            top: 0%;
+            left: 50%;
+            right: 0%;
+            bottom: 50%;
+        }
+
+        #p3 {
+            position: absolute;
+            background-size: cover;
+            border-radius: 20px;
+            top: 50%;
+            left: 0%;
+            right: 50%;
+            bottom: 0%;
+        }
+
+        #p4 {
+            position: absolute;
+            background-size: cover;
+            border-radius: 20px;
+            top: 50%;
+            left: 50%;
+            right: 0%;
+            bottom: 0%;
+        }
+
+        .profile>p {
+            text-align: left;
+            margin: 0px 0px 10px 20px;
+            display: flex;
+            padding: 0px 0px 0px 0px;
+            width: 50%;
+        }
+
+        #p_name {
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .profile {
+            position: relative;
+        }
+
+        #p_link>span {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            cursor: pointer;
+        }
+
+        #content1 {
+            position: relative;
+        }
+
+        #submit {
+            position: absolute;
+            display: flex;
+            float: left;
+            top: 2%;
+            left: 20%;
+            box-shadow: 0px 0px 3px rgb(209, 202, 202);
+        }
+
+        .footer1 {
+            width: 100%;
+            height: 150px;
+            border-bottom: 1px solid rgb(236, 233, 233);
+            border-top: 1px solid rgb(236, 233, 233);
+            margin-top: 10px;
+        }
+
+        .footer1>div {
+            display: inline;
+        }
+
+        .footer2 {
+            width: 100%;
+            height: 100px;
+            margin: auto;
+            position: relative;
+            vertical-align: middle;
+
+        }
+
+        .footer2>div {
+
+            display: inline-block;
+            vertical-align: middle;
+            align-items: center;
+
+        }
+
+        #mini>ul {
+            display: inline;
+            float: left;
+            font-weight: bold;
+            font-size: 13px;
+            margin: 10px 0px 10px 10px;
+        }
+
+        #mini>ul>li {
+            list-style-type: none;
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 5px 5px 0px 0px;
+            font-weight: lighter;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            color: rgb(153, 153, 156);
+        }
+
+        #app>div {
+            display: inline-block;
+
+        }
+
+        #google,
+        #apple {
+            width: 130px;
+            height: 40px;
+            background-color: #f5f5f6;
+            border-radius: 8px;
+            font-family: 'Noto Serif', serif;
+            font-weight: bold;
+            transform: translateX(800%);
+            margin: 0px 10px;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-left: 10px;
+            margin-top: 10px;
+
+        }
+
+        #mini2 {
+            padding-top: 10px;
+        }
+
+        #mini2 li {
+            color: rgb(153, 153, 156);
+            display: inline-block;
+            list-style-type: none;
+            font-size: 13px;
+            margin: auto;
+            font-weight: lighter;
+            font-size: 12px;
+
+        }
+
+        #mini2 a {
+            color: rgb(153, 153, 156);
+        }
+
+        #sns_list {
+            top: 0;
+            transform: translateX(390%);
+            float: left;
+            position: absolute;
+            margin-top: 10px;
+
+        }
+
+        #sns_list li {
+            color: rgb(153, 153, 156);
+            display: inline-block;
+            list-style-type: none;
+            padding: 5px 5px 5px 5px;
+            font-size: 12px;
+            vertical-align: middle;
+
+        }
+
+        #lang {
+            border: none;
+            color: rgb(153, 153, 156);
+            cursor: pointer;
+        }
+
+        .header {
+            height: 80px;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 800;
+        }
+
+        #sub_text>li {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            border: 1px solid #999;
+            appearance: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        input[type="checkbox"]:checked {
+            background-image: url(resources/확인\(체크\).png);
+            background-size: contain;
+            border: none;
+        }
+
+        #answer {
+            font-size: 14px;
+            color: #5c5c61;
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            background-color: white;
+        }
+
+        .header>div {
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #header_1 {
+            width: 13%;
+            height: 100%;
+            padding: 28.5px 60px;
+        }
+
+        #navigator {
+            width: 72%;
+            height: 100%;
+        }
+
+        #newIcon {
+            margin: 8px 0px 0px 430px;
+            display: block;
+        }
+
+        #navi {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        #navi>li {
+            float: left;
+            text-align: center;
+            margin-left: 30px;
+        }
+
+        .header_a {
+            font-size: 17px;
+            text-decoration: none;
+            color: #292930;
+        }
+
+        .headera_1 {
+            color: #292930;
+            text-decoration: none;
+        }
+
+        .navi_bar2:hover {
+            color: #5c46ff;
+            font-weight: bold;
+        }
+
+        #navi>li>ul>li {
+            text-align: start;
+            list-style: none;
+            font-size: 17px;
+        }
+
+        #navi>li>a:hover+ul {
+            display: block;
+        }
+
+        #navi>li>ul:hover {
+            display: block;
+        }
+
+        #header_content {
+            position: relative;
+        }
+
+        #content_menu {
+            width: 240px;
+            height: 250.19px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            padding: 0;
+            position: absolute;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05);
+        }
+
+        #content_menu>li>a>span {
+            vertical-align: top;
+        }
+
+        #content_menu li {
+            padding: 14px 20px;
+        }
+
+        #guide_content {
+            position: relative;
+        }
+
+        #guide_menu {
+            width: 240px;
+            height: 192.64px;
+            border-radius: 20px;
+            background: white;
+            display: none;
+            padding: 0;
+            position: absolute;
+            box-shadow: 0px 3px 13px 0px rgb(0, 0, 0, 0.05);
+        }
+
+        #guide_menu>li>a>span {
+            vertical-align: top;
+        }
+
+        #guide_menu li {
+            padding: 14px 20px;
+        }
+
+
+        #header_3 {
+            width: 15%;
+            height: 100%;
+            padding: 0px 0px 0px 0px;
+
+        }
+
+        #button {
+            width: 123.2px;
+            height: 40px;
+            background: rgb(255, 255, 255, 0);
+            border-radius: 7px;
+            border: 2px solid #292930;
+            color: #292930;
+        }
+
+        #button>span {
+            font-size: 15px;
+        }
+
+        #sound {
+            vertical-align: middle;
+            margin-left: 10px;
+            z-index: 70000;
+
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.068);
+        }
+
+        .wrap{
+            position: relative;
+        }
+
+        #video_bg {
+            width: 1000px;
+            height: 562px;
+            border-radius: 30px;
+            position: absolute;
+            /* float: left; */
+            top: 2%;
+            left: 25%;
+        }
+
+        #video {
+            background-size: cover;
+            width: 1000px;
+            height: 562px;
+            border-radius: 30px;
+        }
+
+        #video_close {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            float: right;
+            top: 10px;
+            right: 15px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            float: right;
+            margin-right: 20px;
+            background-image: url(resources/닫기3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div id="header_1">
+                <a href="제페토메인_이해민.html"><img src="resources/제페토 로고.png"></a>
+            </div>
+
+            <div id="navigator">
+                <img src="https://studio.zepeto.me/img/icon_new_bubble.svg" id="newIcon" width="28px" height="20px">
+                <ul id="navi">
+                    <li id="header_content"><a href="" class="navi_bar1 header_a">콘텐츠 ∨</a>
+                        <ul id="content_menu">
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_product_icon_item.svg"
+                                        style="margin-right: 15px;"><span>아이템</span></a></li>
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_product_icon_world.svg"
+                                        style="margin-right: 15px;"><span>월드</span></a></li>
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_product_icon_live.svg"
+                                        style="margin-right: 15px;"><span>라이브</span></a></li>
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_product_icon_build.svg"
+                                        style="margin-right: 15px;"><span>빌드잇</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="navi_bar2 header_a" style="color: #5c46ff; font-weight: bold;">크리에이터 프로그램</a>
+                    </li>
+                    <li><a href="01_영역_김예진.html" class="navi_bar2 header_a">비즈니스</a></li>
+                    <li id="guide_content"><a href="" class="navi_bar3 header_a">가이드 ∨</a>
+                        <ul id="guide_menu">
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg"
+                                        style="margin-right: 15px;"><span>아이템 가이드</span><img
+                                        src="https://studio.zepeto.me/img/icon_new_bubble.svg"
+                                        style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_guide_icon_guide.svg"
+                                        style="margin-right: 15px;"><span>월드 가이드</span><img
+                                        src="https://studio.zepeto.me/img/icon_new_bubble.svg"
+                                        style="margin: 0px 0px 2px 20px"></a></li>
+                            <li><a href="" class="headera_1"><img
+                                        src="https://studio.zepeto.me/img/gnb_guide_icon_learn.svg"
+                                        style="margin-right: 15px;"><span>학습</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="navi_bar2 header_a">지원</a></li>
+                </ul>
+            </div>
+
+            <div id="header_3">
+                <div>
+                    <div><button id="button"><span><a href="05_회원가입(re)_김예진.html" style="color: black;">콘텐츠 관리</a></span></button></div>
+                    <div id="sound" style="margin-left: 47%; margin-top: 8%;"><a href=""><img src="resources/확성기검정.png"
+                                width="28px" height="28px"></a></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="center" id="content1">
+                <h2 id="title" data-aos="fade-up" data-aos-duration="3000">제페토 크리에이터 프로그램</h2>
+                <div id="text">제페토와 함께 성장할 공식 크리에이터를 모집합니다.<br>크리에이터를 위한 특별한 혜택을 확인해보세요.</div>
+                <div id="my_btn">지원하기</div>
+                <div id="card_list" data-aos="fade-up" data-aos-duration="2000">
+                    <ul>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/ZPnDs3wK898tkNfRE1Zx854/SAO9I3wK88n2385662826143b213aa4b3b3b1f7707ftkNg3OjHGo3T/img_creator_contents1_01.png/style30">
+                                </div>
+                                <div id="card_title">공식인증마크</div>
+                                <div>
+                                    <p id="card_text">제페토 공식 크리에이터 인증마크가 부여됩니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/KQaCR3wK89btkSeezquYPQz/rgtWS3wK88n4dd8a4aa3ad83ffe3b78ec054ea65532tkSegygHYX3p/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%20%ED%99%8D%EB%B3%B4.png/style30">
+                                </div>
+                                <div id="card_title">크리에이터 홍보</div>
+                                <div>
+                                    <p id="card_text">제페토 피드 및 공식 SNS에 크리에이터 콘텐츠가 추천됩니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/yS8E13wK89btkShQoE96L3X/dgEyG3wK88z32c5db5e55f46c1d0521e6e68db7b724tkShYHGZV4BI/%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EC%B4%88%EB%8C%80.png/style30">
+                                </div>
+                                <div id="card_title">커뮤니티 초대</div>
+                                <div>
+                                    <p id="card_text">제페토 공식 크리에이터 커뮤니티에서 다양한 제페토 소식을 제공합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/PYoGC3wK898tkSjjvnter2l/bLBRW3wK88z36b3e0273624e91d3a35cf73d244a3catkSjlMwgSOov/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%B4%88%EB%8C%80.png/style30">
+                                </div>
+                                <div id="card_title">라이브 권한 부여</div>
+                                <div>
+                                    <p id="card_text">라이브를 진행할 수 있는 권한이 부여됩니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/RTe763wK89atkSerfpMlACc/LPFzr3wK88zd735c466870aec35dca892ba1aa5f75atkSetdvWzPNW/%ED%94%BC%EB%93%9C%20%EA%B8%B0%EB%8A%A5%20%ED%99%95%EC%9E%A5.png/style30">
+                                </div>
+                                <div id="card_title">피드 기능 확장</div>
+                                <div>
+                                    <p id="card_text">피드에 외부 컨텐츠 기능을 추가할 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/DMBiU3wK87VtnfyMWOqAhAj/jgFc23wK87pfa2752507f31a51e522b6e95c84875a3tnfyR9HXs9y8/style29%20(2).webp/style30">
+                                </div>
+                                <div id="card_title">슬롯 / 젬 지급</div>
+                                <div>
+                                    <p id="card_text">콘텐츠 제작에 필요한 아바타 추가 슬롯, 재화을 지원합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/fdC4W3wK87XtnfyvuBUnzFN/7ciDe3wK87Icbff15fc993cc39eedb19472ddf3cfbetnfyBRMCI5Z1/style29.webp/style30">
+                                </div>
+                                <div id="card_title">다이렉트 Q&A</div>
+                                <div>
+                                    <p id="card_text">운영자와 크리에이터 활동에 대한 1:1 커뮤니케이션을 지원합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/FYrOB3wK87htnfz2GqkKayO/oCTpF3wK87Ia723087c165e3ecaa778c45e19491722tnfz9dz9vNke/%EB%8B%A4%EC%9D%B4%EB%A0%89%ED%8A%B8%20Q%26A.png/style30">
+                                </div>
+                                <div id="card_title">이벤트 초대</div>
+                                <div>
+                                    <p id="card_text">제페토의 각종 이벤트 및 오프라인 행사에 우선 초대됩니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <div><img id="card_img"
+                                        src="https://asset-zepetoful.zepeto.io/ttn7jks47ozr/rl41n3wK899tkSnK0A4Bfta/AgHLG3wK88nfae25bb539e17ef100af4a6cd634fd64tkSnS4PYSZIa/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%20%ED%98%91%EC%97%85%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%A7%84%ED%96%89.png/style30">
+                                </div>
+                                <div id="card_title">크리에이터 현업 이벤트 진행</div>
+                                <div>
+                                    <p id="card_text">공식 크리에이터와 다양한 현업 이벤트를 진행합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center" id="content2" data-aos="fade-up" data-aos-duration="2000">
+                <h2 id="title">지원 신청 기준</h2>
+                <div id="standard">
+                    <ul>
+                        <li>
+                            <div id="num">1</div>
+                            <div id="standard_text">[아이템],[월드],[콘텐츠],[라이브] 등 영역에서 재능과 감각을 보이는 크리에이터</div>
+                        </li>
+                        <li>
+                            <div id="num">2</div>
+                            <div id="standard_text">제페토 팔로워 5만 초과 계정 운영 또는 주요 SNS 팔로워 1,000명 초과 채널 운영</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div id="num">3</div>
+                            <div id="standard_text">최근 30일 이내 제페토 혹은 주요 SNS 채널에 제페토 관련 콘텐츠 제작 및 배포한 경험</div>
+                        </li>
+                        <li>
+                            <div id="num">4</div>
+                            <div id="standard_text">최근 6개월 이내 제페토 계정이 불건전한 행위로 인한 이용 제한 사례가 없는 제페토 유저</div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://studio.zepeto.me/img/creator/img_creator_contents2_01.png" width="1184px"
+                        height="400px">
+                </div>
+            </div>
+
+            <div class="center" id="content3" data-aos="fade-up" data-aos-duration="2000">
+                <h2 id="title">제페토 인기 공식 크리에이터</h2>
+                <div id="text">제페토 활용 콘텐츠로 활동하고 있는 공식 크리에이터 입니다.<br> 크리에이터의 프로필을 확인해보세요.</div>
+                <div id="container">
+                    <button class="prev"></button>
+                    <div class="items">
+                        <div class="item active">
+                            <div class="profile juno" id="p1"
+                                style="background-color: rgb(132, 86, 196); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/pqU0c3wK89btkSCeqLihnmh/ukSgc3wK88zd730d7ec00454e85571e1509ccfa56abtkSChnq3ujZ0/img_home_official_juno-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">주노</p>
+                                <p id="p_email">@juno</p>
+                                <p id="p_text">또 다른 나를 발견할 수 있는 제페토에서, 상상만 하던 여러분의 무한한 꿈을 실현해보아요!</p>
+                                <p id="p_link">
+                                    <span id="view_profile_juno">View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile minzi" id="p2"
+                                style="background-color: rgb(82, 181, 195); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/feU1O3wK89btkSCFqEVCXkN/R6MqP3wK88z3cb923018aa7fd327bcd878ab9cbce9atkSCMVXTA7Od/img_home_official_mizinko_hover-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">みじんこ@ぷらすま</p>
+                                <p id="p_email">@mizinko_</p>
+                                <p id="p_text">좋아하는 얼굴,체형,옷. 내가 사랑하는 모든 것을 담은 또 하나의 나를 만들 수 있어요. 제페토에서는 자기 색으로 스타가 될 수
+                                    있습니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>
+                                        View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile viola" id="p3"
+                                style="background-color: rgb(74, 164, 113); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/hydbb3wK89atkSDpRwcOqWy/aIbUL3wK88z27b3cd111b77bbf4cb3b53cb8a11f31btkSDsogJrxAE/img_home_official_melovizpt-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">Viola.ZPT</p>
+                                <p id="p_email">@melovi_zpt</p>
+                                <p id="p_text">제페토는 나만의 창의성을 표현하고, 제가 즐기는 것들을 많은 사람들과 공유할 수 있어요. 동시에 재미있는 환경을 만들 수 있어요.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile cha" id="p4"
+                                style="background-color: rgb(214, 175, 0); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/jZo703wK89btkSDPXyKhsET/7o4PV3wK88na347567f220ef6a5e5482a8a8cc6231ctkSDUVEElRE7/img_home_official_zepecha_hover-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">Cha</p>
+                                <p id="p_email">@zepecha</p>
+                                <p id="p_text">제페토에서는 누구나 아이돌처럼 인기를 얻을 수 있고, 다양한 활동을 통해 수익까지 얻을 수 있어서 좋아요.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="profile blackswan" id="p1"
+                                style="background-color: rgb(82, 181, 195); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/GDAnG3wK898tkSEsaJaQExV/pFahl3wK88n02d607742a574b19f61e0b82790ea4ectkSEv1VNcjzR/img_home_official_zepeswan-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">Blackswan</p>
+                                <p id="p_email">@zepsewan</p>
+                                <p id="p_text">제페토는 나를 표현하고, 다양한 놀거리를 즐기며 다른 나라의 친구들을 만날 수 있습니다. 그리고 수익까지 창출할 수 있는 놀라운
+                                    곳이에요!
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile zombie" id="p2"
+                                style="background-color: rgb(132, 86, 196) ; background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/1oNJr3wK898tkSEYJ2otubB/UMTXs3wK88n941c11582a80f042e0c700f6a3a47e93tkSF1anRB9VE/img_home_official_joshy-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">Zombiejoshy</p>
+                                <p id="p_email">@joshy</p>
+                                <p id="p_text">제페토는 전 세계 사람들과 친해질 수 있는 기회를 주었고, 제 콘텐츠를 새로운 사람들에게 보여줄 수 있는 환경을 만들어 줍니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile ssso" id="p3"
+                                style="background-color: rgb(214, 175, 0); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/UEeM43wK899tkSFtbmN90Hb/2o3X93wK88n40131b24dec22fc3bd484a4a937421cctkSFvUcYwow6/img_home_official_sssozpt-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">쏘 𝑳 ͨ</p>
+                                <p id="p_email">@ssso_zpt</p>
+                                <p id="p_text">제페토에서 나의 부캐를 만들어 상상하던 것들을 실현할 수 있고, 시간과 공간에 구애받지 않고 활동할 수 있다는게 가장 큰
+                                    장점입니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile nuppe" id="p4"
+                                style="background-color: rgb(74, 164, 113); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/18hvW3wK899tkSG1o6srDbj/867Tb3wK88z55190f502b1173a14f4a65b6f3a942f8tkSG5rEeMmAa/img_home_official_nuppet-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">月山-Tsuki×Yama-</p>
+                                <p id="p_email">@nuppe_t</p>
+                                <p id="p_text">제페토에서 현실 세계에서는 할 수 없는 것을 표현할 수 있습니다. 라이브를 통해 제페토에서 인기 Vtuber가 될 수 있었습니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="profile zde" id="p1"
+                                style="background-color: rgb(82, 181, 195); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/LPgUx3wK899tkSA6nZjb8ya/1RepY3wK88zbedf8d06638165b9510b691bf73d2a61tkSA8zgjZExm/img_home_official_zdeshop-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">ZDE URN</p>
+                                <p id="p_email">@zde_shop</p>
+                                <p id="p_text">취미로 시작해서 인기 크리에이터까지 제페토에서 모든 걸 이룰 수 있습니다.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile 1yn" id="p2"
+                                style="background-color: rgb(132, 86, 196); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/7CmUe3wK89btkSAFUSyGAjk/Bfwx43wK88nc7845e3e5629ac1edc3777a42c666380tkSAIyemK5Rv/img_home_official_1ynoo9-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">はりん</p>
+                                <p id="p_email">@1yn_oo9</p>
+                                <p id="p_text">좋아하는 활동을 하면서 수익도 얻을 수 있는 줄 몰랐어요! 제페토는 새로운 길을 열어주고 무한한 가능성을 보여주는 플랫폼입니다!
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile monica" id="p3"
+                                style="background-color: rgb(214, 175, 0); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/2MLQY3wK899tkSBbdp3SuhL/CsRol3wK88n96ee64942b117f5fd01ab48505dcf0a5tkSBedd6PlIs/img_home_official_monica-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">MONICA QUIN</p>
+                                <p id="p_email">@monica</p>
+                                <p id="p_text">크리에이터가 된 후, 창의성을 표현하는데 큰 도움을 주었고 그것을 통해 재미를 느낄 수 있습니다.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile karma" id="p4"
+                                style="background-color: rgb(74, 164, 113) ; background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/X1Qte3wK899tkSBIaRcHUAj/8CD8b3wK88ne35221321c3e358b654a643b02e769c4tkSBLEx2iunF/img_home_official_karma-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">Karma</p>
+                                <p id="p_email">@karma.karma</p>
+                                <p id="p_text">제페토 크리에이터가 되면서 완전히 새로운 길이 열렸고 제가 진정으로 즐기는 것을 할 수 있게 되었어요.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="profile angel" id="p1"
+                                style="background-color: rgb(82, 181, 195); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/sRQiM3wK89atkSpGC2lL4P7/aYGvQ3wK88n2511d4f168af9c25428e6b9aa9dc8c52tkSr2DWSUOOy/img_home_official_angel-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">angel</p>
+                                <p id="p_email">@angel0_0zpt</p>
+                                <p id="p_text">제페토에서 아이템, 월드, 동영상 제작 등 다양한 분야에 도전해 보세요! 크리에이터 활동을 통해 새로운 나를 찾는 기회입니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile love" id="p2"
+                                style="background-color: rgb(132, 86, 196); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/yLFxh3wK899tkLCVZPunqEp/YWur23wK88z6e3c875cdad954b1575eb9f0a4370ea2tkLDCpOc5tj6/img_creator_contents3_20.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">설이 𝑳 ͨ</p>
+                                <p id="p_email">@lovelove</p>
+                                <p id="p_text">크리에이터 활동을 통해 수익을 내면서 다양한 메타버스 활동을 할 수 있는 기회를 얻게 된 것은 제겐 큰 행운인거 같아요.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile fanny" id="p3"
+                                style="background-color: rgb(214, 175, 0); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/5mT3I3wK899tkStRKmpxobb/2LxZn3wK88n415d2bd8aed573f75f9071a94a1c5a61tkStYlXprTaZ/img_home_official_sylvettefanny-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">Fanny Tjandra</p>
+                                <p id="p_email">@sylvette.fanny</p>
+                                <p id="p_text">제페토는 나의 새로운 모습을 보여줄 수 있는 공간이에요. 모델부터 아이돌까지, 당신이 원하는 무엇이든 되어 보세요!</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile zqueen" id="p4"
+                                style="background-color: rgb(74, 164, 113); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/Lzvp53wK89btkSuT3HsdNxO/On05i3wK88n25fb956fb8755b2fe2ee09f6202507e5tkSuY8eZ24sW/img_home_official_zqueen-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">ʑɱ✫Qᴜᴇᴇɴɪᴇᴇᴇ</p>
+                                <p id="p_email">@zqueen</p>
+                                <p id="p_text">우리가 소통하고, 창의력을 발휘하며 꿈꾸던 사람이 될 수 있는 훌륭한 플랫폼입니다.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="profile breez" id="p1"
+                                style="background-color: rgb(132, 86, 196); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/rJacM3wK899tkSvFTwHc8lz/x1H7V3wK88n00f2254f32d9ce5299019c19cfcf659ftkSvKvrDF138/img_home_official_breezeblox-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">Breezeblox</p>
+                                <p id="p_email">@breezeblow</p>
+                                <p id="p_text">예술,패션,비디오를 통해 당신이 상상하는 모든 것을 현실로 가져올 수 있는 곳입니다.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile amel" id="p2"
+                                style="background-color: rgb(82, 181, 195); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/lvE1v3wK899tkSxQR36VQb2/AKAmC3wK88nab372395cafc398f662198c256761daetkSxTLuhhjOF/img_home_official_amelkim-min.png/style29);">
+                                <p id=""><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px">
+                                </p>
+                                <p id="p_name">AmeLKim ᵃʂ</p>
+                                <p id="p_email">@amelkim</p>
+                                <p id="p_text">다른 유저들에게 즐거움과 영감을 줄 수 있는 콘텐츠를 꾸준히 만든다면, 누구나 훌륭한 크리에이터가 될 수 있습니다.
+                                </p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile same" id="p3"
+                                style="background-color: rgb(74, 164, 113); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/aZnrx3wK898tkSyDV2W5I4g/J24Lw3wK88n52fac6d60af028db4d5cfb8bb93520f6tkSyGD2DXsF9/img_home_official_sametaro-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">さめたろう</p>
+                                <p id="p_email">@sametaro</p>
+                                <p id="p_text">메타버스 세계에서는 원하는 모든 것에 도전할 수 있습니다! 크리에이터로 활동하면서 제페토와 함께 성장해요!</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="profile ron" id="p4"
+                                style="background-color: rgb(214, 175, 0); background-image: url(https://asset-zepetoful.zepeto.io/ttn7jks47ozr/gsRwH3wK898tkSzwcmOqmx0/yy3QQ3wK88z9a9a3a7b131bb992eccbbf413b33fcc9tkSzyWnWl5Ql/img_home_official_ronron-min.png/style29);">
+                                <p><img src="https://studio.zepeto.me/_next/static/media/ic_quote.1d934d8e.png"
+                                        width="28px"></p>
+                                <p id="p_name">RonRon</p>
+                                <p id="p_email">@ronron</p>
+                                <p id="p_text">제페토를 통해 새로운 일에 대한 재미와 즐거움, 수익을 얻고 경력을 쌓는다는 것은 가장 큰 장점입니다.</p>
+                                <p id="p_link">
+                                    <span>View Profile
+                                        <img
+                                            src="	https://studio.zepeto.me/_next/static/media/ic_24_chevron_right.261e2426.svg">
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stepper">
+                        <div class="step active-step"></div>
+                        <div class="step"></div>
+                        <div class="step"></div>
+                        <div class="step"></div>
+                        <div class="step"></div>
+                    </div>
+                    <button class="next"></button>
+                </div>
+
+            </div>
+
+            <div class="center" id="content4" data-aos="fade-up" data-aos-duration="2000">
+                <div id="faq_wrap">
+                    <h2 id="title">FAQ</h2>
+                    <div id="faq_list">
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발기준을 충족하지 못하면 어떻게 되나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">프로그램 신청 시 심사 기준을 충족하지 않을 경우 승인이 거부될 수 있습니다. 신청 시 심사기준에 맞는지 체크사항을 확인해 주십시오.
+                        </div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발기준을 충족하면 자동으로 심사가 이루어 지나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">제페토 공식 크리에이터 신청서를 통해 지원을 해주셔야 심사가 진행됩니다. 안내에 따라 신청서를 작성해주십시오.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발 기준에 있는 주요 SNS 채널은 어떤 것인가요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">영상 콘텐츠를 올릴 수 있는 소셜 플랫폼을 의미하며 유튜브, 인스타그램, 트위치, 페이스북, 틱톡 등이 포함됩니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">개인만 신청할 수 있나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">1인 크리에이터 및 인플루언서, MCN, 스튜디오, 기업 등 제페토와 함께 성장을 원하는 분들은 모두 신청 가능합니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">연령 제한이 있나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">제페토 크리에이터 프로그램은 아동이 아닌 이용자를 대상으로 모집을 진행하며, 아동으로 확인되시는 경우, 크리에이터 선정이 취소될 수도
+                            있습니다.(만
+                            14세 미만 아동)</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발된 후, 팔로워가 떨어지면 어떻게 되나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">심사 시점에 팔로워 수치가 미달 시 승인이 거부될 수 있습니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">심사 기간 및 선발 절차는 어떻게 되나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">심사 결과는 선정되신 분 한에 이메일로 안내드립니다. 심사는 최대 30일 소요되며, 지원 상황에 따라 심사가 지연될 수 있습니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">심사가 거부되면, 별도 연락을 주나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">공식 크리에이터로 선정되신 분은 이메일로 안내드리며, 거부된 경우 별도의 안내를 드리지 않습니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발된 후, 활동 기간 및 꼭 지켜야 할 내용이 있나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">활동 기간은 6개월이며, 활동 종료 1개월 이전 종료 의사 표현이 없을 시 자동 연장 됩니다. '제페토 크리에이터 활동 가이드'는 별도 안내해
+                            드립니다.</div>
+                        <div class="question" id="question">
+                            <li id="q_mark">Q</li>
+                            <li id="q_text">선발된 후, 크리에이터 권한을 포기 및 거부할 수 있나요?</li>
+                            <li id="q_btn"></li>
+                        </div>
+                        <div id="answer">권한 포기 및 거부는 가능합니다. 운영자 측에 의사를 전달해 주시면 별도 지침에 따라 안내드립니다. 다만, 지원 혜택은 모두 회수하며 추후
+                            재심사 및
+                            선발이 불가합니다.</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="center" id="content5" data-aos="fade-up" data-aos-duration="2000">
+                <h2 id="title">지금 바로 제페토 크리에이터<br> 프로그램에 지원하세요.</h2>
+                <div id="text">제페토와 함께 성장할 공식 크리에이터를 모집합니다.<br>크리에이터를 위한 특별한 혜택을 확인해보세요.</div>
+                <div id="my_btn2" type="button">지원하기</div>
+            </div>
+
+            <div class="center" id="submit"
+                style="border-radius: 13px; width: 40%; margin-left: 12%; padding: 5px; background: white;">
+                <div style="width: 100%; cursor: pointer;"><img id="sub_close" src="resources/닫기2.png" width="30px"
+                        height="22px" style="display: flex; float: right; margin-left: 400px;"></div>
+                <h3 style="font-size: 20px; text-align: left;">프로그램 지원 시 확인사항</h3>
+                <p style="font-size: 15px; padding: 20px; margin-bottom: 0; box-sizing: content-box; color: #5c5c61;">
+                    프로그램 지원 시 아래 사항을 꼭 확인 후 지원 부탁드립니다. 충족하지 않을 경우 공식 크리에이터 선정이 불가능하며, 선정 후에도 취소될 수 있습니다.
+                    심사 결과는 선정되신 분 한에 이메일로 안내드립니다.
+                </p>
+
+                <ul id="sub_text"
+                    style="box-sizing: content-box; padding-right: 20px; margin-bottom: 10px; color: #5c5c61;">
+                    <li>프로그램에 신청하는 제페토 계정 및 운영 채널은 정책 및 활동 가이드 라인 준수 여부를 확인합니다.</li>
+                    <li>제페토 팔로워가 5만 명을 초과하거나, 본인이 운영하는 외부 SNS의 팔로워가 1,000명을 초과해야 합니다.</li>
+                    <li>최근 30일 이내 제페토 관련 콘텐츠가 제작/배포되어 있어야 합니다.</li>
+                    <li>최근 6개월 이내 제페토 계정이 불건전 행위로 인한 제한 사례가 없어야 합니다.</li>
+                    <li>본인 명의의 제페토 계정과 외부 운영 채널을 사용해야 합니다.</li>
+                    <li>제페토 크리에이터 프로그램은 아동이 아닌 이용자를 대상으로 모집을 진행하며, 아동으로 확인되시는 경우 크리에이터 선정이 취소될 수도 있습니다.</li>
+                </ul>
+
+                <div style="font-size: 15px; margin-top: 10px;">
+                    <input id="sub_ck" type="checkbox" style="vertical-align: middle;"></input>
+                    <label for="sub_ck" style="vertical-align: middle; color: #5c5c61;">위 사항을 모두 확인하였습니다.</label>
+                </div>
+
+                <div id="sub_btn"
+                    style="font-size: 14px; background-color: #c7c7c9; color: white; margin: 10px; padding-top: 10px; width: 100px; height: 30px; border-radius: 12px; text-align: center; box-sizing: content-box;">
+                    지원하기</div>
+
+            </div>
+        </div>
+
+        <div class="footer1">
+            <div id="mini">
+                <ul>제품
+                    <li><a href="" target="_blank">ZEPETO</a></li>
+                    <li><a href="" target="_blank">ZEPETO Studio</a></li>
+                </ul>
+                <ul>NAVER Z
+                    <li><a href="" target="_blank">뉴스</a></li>
+                    <li><a href="https://recruit.naverz-corp.com/" target="_blank">한국 채용</a></li>
+                    <li><a href="https://careers-us.zepeto.me/" target="_blank">미국 채용</a></li>
+                    <li><a href="https://www.naverz-corp.com/ko/contact" target="_blank">제휴 제안</a></li>
+                </ul>
+                <ul>지원
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/900000840946" target="_blank">공지</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/360008587094" target="_blank">결제</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/sections/360008579213" target="_blank">계정˙안전</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/requests/new" target="_blank">문의</a></li>
+                </ul>
+                <ul>커뮤니티
+                    <li><a href="https://safetycenter.zepeto.me/" target="_blank">안전센터</a></li>
+                    <li><a href="https://support.zepeto.me/hc/ko/articles/900005448466-Community-Guidelines"
+                            target="_blank">가이드라인</a></li>
+                </ul>
+            </div>
+            <div id="app">
+                <div id="google">
+                    <a id="" href="https://play.google.com/store/apps/details?id=me.zepeto.main&hl=ko&gl=US">
+                        <img src="	https://studio.zepeto.me/img/img_24_googleplay.svg">
+                        <span style="vertical-align: top; color: #292930;">Google Play</span>
+
+                    </a>
+                </div>
+                <div id="apple">
+                    <a id="" href="https://apps.apple.com/kr/app/zepeto/id1350301428">
+                        <img src="	https://studio.zepeto.me/img/img_24_appstore.svg">
+                        <span style="vertical-align: top; color: #292930;">App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer2">
+            <div id="mini2">
+                <ul>
+                    <li style="font-weight: bold;">&copy NAVER Z Corp.All rights reserced.</li>
+                    <li>|</li>
+                    <li><a href="https://studio.zepeto.me/ko/terms" target="_blank">이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="https://support.zepeto.me/hc/ko/articles/360050411493" target="_blank">개인정보처리방침</a>
+                    </li>
+                    <li>|</li>
+                    <li><a href="https://support.zepeto.me/hc/ko" target="_blank">문의하기</a></li>
+                    <li>|</li>
+                    <li><a href="https://studio.zepeto.me/ko/credits">credits</a></li>
+                </ul>
+            </div>
+            <div id="sns_list">
+                <ul>
+                    <li>
+                        <select id="lang">
+                            <div>
+                                <option>English</option>
+                                <option selected>한국어</option>
+                                <option>日本語</option>
+                                <option>中文</option>
+                                <option>ไทย</option>
+                            </div>
+                        </select>
+                    </li>
+                    <li><a href="https://www.instagram.com/zepeto.official/"><img src="resources/인스타그램.png"
+                                width="20px"></a></li>
+                    <li><a href="https://twitter.com/zepeto_official" target="_blank"><img src="resources/트위터.png"
+                                width="20px"></a></li>
+                    <li><a href="https://www.youtube.com/c/ZEPETO_official/" target="_blank"><img
+                                src="resources/유튜브.png" width="20px"></a></li>
+                    <li><a href="https://www.tiktok.com/@zepeto.official.tt" target="_blank"><img src="resources/틱톡.png"
+                                width="20px"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="video_bg">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/s6gS2Gh8rd0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <div id="video_close"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+        jQuery(document).ready(function () {
+
+            $("#title").fadeIn(800);
+
+        });
+
+        $(function () {
+            console.log($(".question"));
+            $(".question").click(function () {
+
+                $(this).next("#answer").slideToggle();
+
+
+            });
+        });
+
+
+        let curPos = 0;
+
+        function prev() {
+            if (curPos > 0) {
+                $("button").removeAttr("disabled")
+
+                $($(".item")[curPos]).toggleClass("active")
+                $($(".step")[curPos]).toggleClass("active-step")
+                $(".item").hide();
+                curPos -= 1;
+                $($(".item")[curPos]).toggleClass("active")
+                $($(".step")[curPos]).toggleClass("active-step")
+                $(".active").fadeIn(800);
+            }
+            if (curPos == 0) {
+                $(".prev")[0].setAttribute("disabled", 'true')
+            }
+        }
+
+        function next() {
+            if (curPos < 4) {
+                $("button").removeAttr("disabled")
+                $($(".item")[curPos]).toggleClass("active")
+                $($(".step")[curPos]).toggleClass("active-step")
+                $(".item").hide();
+                curPos += 1;
+                $($(".item")[curPos]).toggleClass("active")
+                $($(".step")[curPos]).toggleClass("active-step")
+                $(".active").fadeIn(800);
+            }
+            if (curPos == 4) {
+                $(".next")[0].setAttribute("disabled", 'true')
+            }
+        }
+        function init() {
+            $(".item").hide()
+            $(".active").show()
+            $(".prev").click(prev)
+            $(".next").click(next)
+        }
+        $(document).ready(function () {
+            init();
+        })
+
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(function () {
+
+            $("#submit").hide();
+
+            $("#my_btn").click(function () {
+                $("#submit").show();
+                $("body").css("background-color", "rgba(0,0,0,0.1)");
+                $(".header").css("background-color", "rgba(0,0,0,0.003)");
+            });
+
+            $("#my_btn2").click(function () {
+                $("#submit").show();
+                $('html').scrollTop('0');
+                $("body").css("background-color", "rgba(0,0,0,0.1)");
+                $(".header").css("background-color", "rgba(0,0,0,0.003)");
+            });
+
+
+            $("#sub_close").click(function () {
+                $("#submit").hide();
+                $("body").css("background-color", "");
+                $(".header").css("background-color", "");
+            });
+
+            $("#sub_ck").change(function () {
+                if ($("#sub_ck").is(":checked")) {
+                    $("#sub_btn").css({ background: "#5c46ff", cursor: "pointer" })
+
+                } else {
+                    $("#sub_btn").css({ background: "#c7c7c9", cursor: "default" })
+                }
+            });
+
+
+        });
+
+
+    </script>
+    <script>
+        $(function () {
+            $(".navi_bar1").hover(function () {
+                $(".navi_bar1").css({ "color": "#5c46ff", "font-weight": "bold" }).text("콘텐츠 ∧");
+            }, function () {
+                $(".navi_bar1").css({ "color": "black", "font-weight": "normal" }).text("콘텐츠 ∨");
+            })
+
+            $(".navi_bar3").hover(function () {
+                $(".navi_bar3").css({ "color": "#5c46ff", "font-weight": "bold" }).text("가이드 ∧");
+            }, function () {
+                $(".navi_bar3").css({ "color": "black", "font-weight": "normal" }).text("가이드 ∨");
+            })
+        })
+    </script>
+
+    <script>
+
+        $(function () {
+            $("#video_close").click(function () {
+                $("#video_bg").remove();
+
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

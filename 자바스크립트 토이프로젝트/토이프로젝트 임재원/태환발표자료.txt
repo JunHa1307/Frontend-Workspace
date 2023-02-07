@@ -1,0 +1,38 @@
+// 스크립트
+// 페이지 영역 맞춰서 스크롤하는 스크립트
+window.addEventListener("wheel", function(e){   // 휠 기능 삭제
+e.preventDefault();
+},{passive : false});
+
+
+
+var mHtml = $("html");        // 휠 기능 삭제
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+
+$(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {                      // deltay ->휠 아래로 내리는 모션
+        if(page == 5) return;  // 기능 적용할 페이지 개수
+        page++;                 
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height(); // 각 섹션의 top부분을 의미
+    mHtml.animate({scrollTop : posTop}); 
+});
+// 증감연산자로 휠이동후에 위치하는 페이지 전역변수에 삽입
+// 1페이지의 탑은 0
+2페이지의 탑은 1 -> 1페이지 바로 아래 위치해야하니까 딱 1페이지 높이만큼 이동해
+고정시키면된다. 나머지 밑의 페이지들은 내린 섹션의 높이의 합만큼 움직이면됨
+
+
+// 스크롤 버튼 스크립트
+$(".downBtn").click(function(){
+    $('html, body').animate({scrollTop:($('#content1').height())}, 550);
+});  
+
+// 버튼을 클릭했을때 컨텐츠1까지 스크롤

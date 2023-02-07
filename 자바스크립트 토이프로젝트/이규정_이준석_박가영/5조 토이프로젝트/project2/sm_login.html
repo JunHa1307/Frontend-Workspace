@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/sm_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="sub">
+            <header>
+                <div class="headerBox">
+                    <a href="" class="navBtn">navBtn</a>
+                    <h1>
+                        <a href="https://www.smtown.com/">SMTOWN</a>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.smtown.com/account/login?returnUrl=/mypage" class="username">LOGIN</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="subWrap">
+                <div class="vcenter-wrap">
+                    <div class="loginContent">
+                        <div class="loginBox">
+                            <h2>로그인</h2>
+                            <form action="" method="post" id="fsignin">
+                                <div class="inputBox">
+                                    <div>
+                                        <input type="text" id="userId" name="userId" placeholder="이메일" value autocomplete="off">
+                                        <span id="userId.errors" class="errorTxt"></span>
+                                    </div>
+                                    <div>
+                                        <input type="password" id="password" name="password" placeholder="비밀번호" value autocomplete="off">
+                                        <span id="password.errors" class="errorTxt"></span>
+                                    </div>
+                                </div>
+                                <input type="checkbox" id="loginMaintain" name="maintenance" value="true">
+                                <input type="hidden" name="_maintenance" value="on">
+                                <label for="loginMaintain">로그인 상태 유지</label>
+                                <button type="submit" class="loginBtn" value="submit" onclick="return login();">로그인</button>                                
+                                <div>
+                                    <input type="hidden" name="_csrf">
+                                </div>
+                            </form>
+                            <div class="findWrap" style="display: flex; justify-content: space-between;">
+                                <a href="sm_joinform.html" class="joinBtn">회원가입</a>
+                                <a href="https://www.smtown.com/find/password" class="pwBtn">비밀번호 찾기</a>
+                            </div>
+                            <div class="lysn-merge-button-wrap">
+                                <a href="https://www.smtown.com/lysn/auth/step1" class="lysn-merge-button">
+                                    Lysn 팬클럽 가입정보 이관하기
+                                    <span class="ico ico-gray-gt"><img src="resources/image/btn_login_chevron.svg" alt=""></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div>
+                        <ul class="footer-center">
+                            <a href="javascript:void(0);" class="logo"></a>
+                            <li>
+                                <a href="https://www.smentertainment.com/" target="_blank">회사소개</a>
+                            </li>
+                            <li>
+                                <a href="https://recruit.smentertainment.com/" target="_blank">채용정보</a>
+                            </li>
+                            <li>
+                                <a href="https://www.smtown.com/notice">공지사항</a>
+                            </li>
+                            <li>
+                                <a href="https://www.smtown.com/policy/terms">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="https://www.smtown.com/policy/privacy">개인정보처리방침</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-right">
+                            <li>
+                                <div class="select_box on">
+                                    <select class="select" id="family-sites">
+                                        <option value="">FAMILY SITE</option>
+                                        <option value="">SM C&C</option>
+                                        <option value="">에스엠타운트래블</option>
+                                        <option value="">투어익스프레스</option>
+                                        <option value="">호텔트리스</option>
+                                        <option value="">SM GLOBAL PACKAGE</option>
+                                        <option value="">SM JAPAN</option>
+                                        <option value="">Dream Maker</option>
+                                        <option value="">GalaxiaSM</option>
+                                        <option value="">Esteem</option>
+                                        <option value="">MYSTIC STORY</option>
+                                        <option value="">KEYEAST</option>
+                                        <option value="">SM GLOBAL SHOP</option>
+                                        <option value="">SMTOWN &STORE</option>
+                                        <option value="">CELEBRAND</option>
+                                        <option value="">DearU</option>
+                                        <option value="">비컨홀딩스</option>
+                                    </select>
+                                    <a href="" class="select_value">FAMILY SITE</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="select_box on">
+                                    <select class="select" id="change-locale">
+                                        <option value="">Language</option>
+                                        <option value="ko">한국어</option>
+                                        <option value="em">ENGLISH</option>
+                                        <option value="zh">中文</option>
+                                        <option value="ja">日本語</option>
+                                    </select>
+                                    <a href="" class="select_value">한국어</a>
+                                </div>
+                            </li>
+                            <li>ⓒ SM ENTERTAINMENT</li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login(){
+            let userId = document.getElementById("userId");
+            let password = document.getElementById("password");     
+
+            document.getElementById("userId.errors").innerHTML = "";
+            document.getElementById("password.errors").innerHTML = "";
+
+            if(userId.value == "" && password.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                return false;
+            }
+
+            if(userId.value == ""){
+                document.getElementById("userId.errors").innerHTML = "이메일을 입력해 주세요.";
+                return false;
+            }
+
+            if(password.value == ""){
+                document.getElementById("password.errors").innerHTML = "비밀번호를 입력해 주세요.";
+                return false;            
+            }
+    }
+      
+
+
+    </script>
+</body>
+</html>

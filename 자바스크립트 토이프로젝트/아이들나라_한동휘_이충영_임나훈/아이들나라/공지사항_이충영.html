@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        div{
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+            
+        }
+
+        .wrap{
+            width: 100%;
+            height: 1700px;
+            background-color:rgb(247, 245, 245);
+        }
+
+        .wrap>div{
+            width:100%;
+           
+        }
+
+        #header{
+            height: 15%;
+            background-color:rgb(247, 245, 245);
+            position: fixed;
+            margin-top: -1%;
+        }
+        #content1{
+            height:25%;
+            background-color:rgb(247, 245, 245);
+            padding: 10% 0% 10% 10%;
+            
+        }
+        
+        #content2{
+            height : 45%;
+            background-color:rgb(247, 245, 245);
+        }
+        
+        #section{
+            height: 80%;
+            width: 85%;
+            margin: 2.5% 8%;           
+        }
+        .picture{
+            height: 100%;
+            width: 33.3%;
+            float: left;
+        }
+        .p_btn{
+            width: 500px;
+            height: 500px;
+            margin: 0%;
+            cursor: pointer;
+            border-radius: 11%;
+            border-color: white;     
+            
+        }
+        .p_btn:hover{
+            box-shadow: 5px 30px 5px 10px rgba(0,0,0,0.20);
+            transition: 0.1s ease-in;
+            transform: translate(-10px,-10px);
+          
+        }
+
+
+
+        #img_1{
+            height: 70%;
+            width: 495px;
+            margin: -1%;
+            background-color: rgb(238, 238, 21);          
+            border-radius: 40px 40px 0px 0px;
+        }
+        #text_1{
+            height: 40%;
+            width: 495px;
+            background-color: white;
+            margin: -3% -1%;
+            border-radius: 0px 0px 40px 40px;
+        }
+        #img_2{
+            height: 70%;
+            width: 495px;
+            margin: -1%;
+            background-color: rgb(247, 202, 210);       
+            border-radius: 40px 40px 0px 0px;
+        }
+        #text_2{
+            height: 40%;
+            background-color: white;
+            margin: -3% -1%;
+            border-radius: 0px 0px 40px 40px;
+        }
+        #img_3{
+            height: 70%;
+            width: 495px;
+            margin: -1%;
+            background-color: rgb(211, 241, 253);          
+            border-radius: 40px 40px 0px 0px;
+        }
+        #text_3{
+            height: 40%;
+            background-color: white;
+            margin: -3% -1%;
+            border-radius: 0px 0px 40px 40px;
+        }
+        #date{
+            text-align: left;
+            margin: 6%;
+            color: rgb(170, 168, 168);
+            font-size: 20px;
+            font-weight: 500
+            ;
+        }
+        #header>div   {height:100%; float:left;}
+
+        #header_1{
+            width:20%; 
+            margin: 0%;
+            padding: 3%;
+            font-size: 29px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        #back_btn{
+            font-size: 18px;
+            font-weight: 900;
+            background-color: rgb(247, 245, 245);
+            border: none;
+            cursor: pointer;
+        }
+        
+        #header_2{
+            width:65%;
+        }
+        #header_3{
+            width:15%;
+        }
+        #header_3_1{
+          width: 50%;
+          height: 100%; 
+          float: left;
+          text-align: center;
+          padding: 6%;
+        }
+        #down_btn{
+            width: 130.09px;
+            height: 48px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 700;
+            background: white;
+            border: 3px solid lightgray;
+            margin: 30% 0% 0% -50%;
+        }
+       
+        #icon {
+            display: none;
+        }
+
+
+        #icon+label {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 30px;
+            cursor: pointer; 
+            z-index: 5; 
+            margin: 40% 0% 0% -30%;     
+        }
+
+        #icon+label>span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 5px;
+            border-radius: 30px;
+            background: #000;
+            transition: all 0s; 
+        }
+
+        #icon+label>span:nth-child(1) {
+            top: 0px;
+        }
+
+        #icon+label>span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+
+        #icon+label>span:nth-child(3) {
+            bottom: 0px;
+        }
+
+        #icon:checked+label>span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        #icon:checked+label>span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #icon:checked+label>span:nth-child(3) {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+
+        #icon+label+#hamburger {
+            position: fixed; 
+            width: 500px;
+            height: 100%;
+            background-color: white;
+            top: 0px;
+            padding: 2% 25px 25px 25px;
+            box-sizing: border-box;
+            right: -500px;
+            transition: all 0.5s;
+            
+        }
+
+        #icon:checked+label+#hamburger {
+            right: 0px;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a {
+            color: black;
+        }
+
+        #icon:checked+label+#hamburger>ul>li>a:hover {
+            color: gray;
+        }
+
+        #headerMenu {
+            font-size: xx-large;
+            margin-top: 100px;
+        }
+
+        #Menu {
+            padding: 20px;
+            list-style: none;
+        }
+
+        #categryfont {
+            text-decoration-line: none ;
+        }
+
+        .img{
+            margin: 90% 0% 0% 0%;
+            width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);
+        }
+
+        #header_3_2{
+           width: 50%;
+           height: 100%;
+           float: left;
+           padding: 10%;
+        }
+     
+        #footer{
+            height: 30%;
+            background-color: white;
+        }
+        #footer_1{
+            height: 50%;
+            width: 100%;  
+            
+        }
+        #footer_1_1{
+            width: 70%;
+            height: 100%;
+            float: left;
+            font-size: 20px;
+            padding: 1%;
+        }
+        #footer_1_2{
+            width: 30%;
+            height: 100%;
+            float: left;
+            text-align: right;  
+            padding: 1% 
+                     
+        }
+       
+        #footer_2{
+            height: 50%;
+            width: 100%;
+            float: left;
+            padding: 1%;
+        }
+        #p3{
+            text-align: right;
+        }
+        .img_1{width: 55px; height: 54px; border-radius: 30px; border: none; background: rgb(247, 245, 245);}
+       
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="header_1">
+                <a class="header__back">
+                    <button id= back_btn value="back" onclick="history.go(-1)">
+                        <img class="header__back-icon header__back--black" src="https://www.i-nara.co.kr/img/icon/icon_left_black.svg" alt="">
+                        <img class="header__back-icon header__back--white" src="/img/icon/icon_left_white.svg" alt="">
+                        <span class="header__back-text">공지사항</span>
+                    </button>
+                </a>
+            </div>
+            <div id="header_2"></div>
+            
+            <div id="header_3">
+                <div id="header_3_1">
+                <a href="앱 다운로드_임나훈.html"><button id="down_btn">앱 다운로드</button></a>
+                </div>
+                
+                <div id="header_3_2">
+                    <input type="checkbox" id="icon"> 
+                        <label for="icon">
+                            <span></span> 
+                            <span></span> 
+                            <span></span>
+                        </label>
+                        
+                        <div id="hamburger">
+                            <ul id="headerMenu">
+                                <li id="Menu"><a href="메인페이지_한동휘.html" id="categryfont">
+                                홈 바로가기
+                                </a></li>
+                                        
+                                <!-- <li id="Menu"><a href="" id="categryfont">이벤트</a></li>		
+
+                                <li id="Menu"><a href="https://www.i-nara.co.kr/preview" id="categryfont">
+                                서비스 소개
+                                </a></li> -->
+
+                                <li id="Menu"><a href="이용권 안내_임나훈.html" id="categryfont">
+                                이용권 안내
+                                </a></li>
+
+                                <li id="Menu"><a href="공지사항_이충영.html" id="categryfont">공지사항</a></li>
+
+                                <li id="Menu"><a href="자주 묻는 질문_이충영.html"  id="categryfont">자주 묻는 질문</a></li>
+
+                                <li id="Menu">
+                                    <a href="https://www.instagram.com/i.nara.play/"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                                    <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                                    <a href="https://cafe.naver.com/uplusmom"><button class="img"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>                 
+                                </li>
+						    </ul>
+                            
+					    </div>
+                 </div>
+            </div>
+        </div>
+        
+        <div id="content1">
+            <h1 style="font-size: 65px; font-family: 'Jua', sans-serif;">공지사항</h1>
+            <h3 style="font-size: 30px; font-weight: 400;">아이들나라의 업데이트 정보 등 다양한 소식을 알려드립니다.</h3>
+        </div>
+        
+        <div id="content2">
+            <div id="section">
+                <div class="picture">
+                    <a href="https://www.i-nara.co.kr/news/1">
+                        <button class= p_btn>
+                            <div id="img_1">
+                                <img src="https://cdn-web-management.i-nara.co.kr/notices/1/images/notice_image_1_20221105142822_30815.png"
+                                height="350px" style="margin: -4%;">                            
+                            </div>
+                            <div id="text_1">
+                                <br>
+                                <h1 style="text-align: left; margin: 6%;">아이들나라 신규 월정액 상품 출시</h1>
+                                <br>
+                                <h3 id="date">2022.11.03</h3>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+                <div class="picture">
+                    <a href=https://www.i-nara.co.kr/news/3">
+                        <button class= p_btn>
+                            <div id="img_2">
+                                <img src="https://cdn-web-management.i-nara.co.kr/notices/0/images/notice_image_0_20221105142638_44071.png"
+                                height="350px" style="margin: -4%;">
+                            </div>
+                            <div id="text_2">
+                                <br>
+                                <h1 style="text-align: left; margin: 6%;" >아이들나라 이용 약관 및 개인정보<br>처리방침 변경의 건</h1>
+                                <h3 id="date">2022.11.05</h3>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+                <div class="picture">
+                    <a href="https://www.i-nara.co.kr/news/2">
+                        <button class= p_btn>
+                            <div id="img_3">
+                                <img src="https://cdn-web-management.i-nara.co.kr/notices/2/images/notice_image_2_20221105142843_56079.png"
+                                height="350px" style="margin: -4%;">
+                            </div>
+                            <div id="text_3">
+                                <br>
+                                <h1 style="text-align: left; margin: 6%;">아이들나라 기본월정액 상품명 변경<br>공지</h1>
+                                <h3 id="date">2022.11.05</h3>
+                            </div>
+                        </button>
+                    </a>  
+                </div>
+            </div>  
+        </div>
+        
+        <div id="footer">
+            <div id="footer_1">  
+                <div id="footer_1_1"><br>
+                    <!-- <a href="" style="text-decoration-line: none; color: black;">이벤트</a><br>
+                    <a href="" style="text-decoration-line: none; color: black;">서비스 소개</a><br> -->
+                    <a href="이용권 안내_임나훈.html" style="text-decoration-line: none; color: black;">이용권 안내</a><br>
+                    <a href="공지사항_이충영.html" style="text-decoration-line: none; color: black;">공지사항</a><br>
+                    <a href="자주 묻는 질문_이충영.html" style="text-decoration-line: none; color: black;">자주 묻는 질문</a>
+                </div>       
+                
+                <div id="footer_1_2"><br>
+                    <a href="https://www.instagram.com/i.nara.play/"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_instagram.svg" style="width: 30px;"></button></a>
+                    <a href="https://www.youtube.com/channel/UCNpn5wSQjDXI57cgnRhudXw"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_youtube.svg" style="width: 30px;"></button></a>
+                    <a href="https://cafe.naver.com/uplusmom"><button class="img_1"><img src="https://www.i-nara.co.kr/img/icon/icon_sns_cafe.svg" style="width: 30px;"></button></a>
+                    
+                </div>
+               
+            </div>
+            
+            <div id="footer_2">
+               <div id="footer_2_1">
+                    <a href="" style="text-decoration-line: none; color: black;">이용약관</a> 
+                    <a href="" style="text-decoration-line: none; color: black;">개인정보처리방침</a> 
+               </div>
+            
+               <div id="footer_2_2">
+                <p id="p1">
+                    (주)엘지유플러스 | 대표이사 황현식 | 주소 : 서울특별시 용산구 한강대로 32 | 사업자등록번호 : 220-81-39938
+                </p>
+                <p id="p2">
+                    고객센터 1600-1002
+                </p>
+                <p id="p3">
+                    Copyright ⓒ LG Uplus Corp. All Rights Reserved.
+                </p>
+               </div>           
+            </div>          
+        </div>
+    </div>
+</body>
+</html>

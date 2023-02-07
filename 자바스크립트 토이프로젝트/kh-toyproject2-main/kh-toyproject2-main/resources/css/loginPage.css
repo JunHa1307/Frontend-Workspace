@@ -1,0 +1,250 @@
+/* 로그인 섹션 자체 css  */
+
+#secLogin {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.411);
+  z-index: 990;
+}
+
+/* -----------------기존 로그인화면 내부 css들 영역--------------------- */
+
+#main {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  position: relative;
+  animation: fadeInUp 1s;
+}
+#loginForm1 {
+  width: 30%;
+  height: 600px;
+  background: white;
+  margin-top: 100px;
+  margin-left: 35%;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 3px 3px 3px 2px;
+  /* display: table-column; */
+  /* display: none; */
+}
+
+#loginForm2 {
+  width: 30%;
+  height: 700px;
+  background: white;
+  margin-top: 50px;
+  margin-left: 35%;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 3px 3px 3px 2px;
+  flex-direction: column;
+}
+
+#loginEmailBar,
+#loginPwdBar {
+  width: 60%;
+  height: 9%;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  border-radius: 11px;
+  margin-left: 20%;
+}
+
+#userEmail,
+#userPwd,
+#userPwd1,
+#userEmail2,
+#userPwd2,
+#userPwd3,
+#logoutInput {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#userEmail:hover,
+#userPwd:hover,
+#userEmail2:hover,
+#userPwd2:hover,
+#userPwd3:hover,
+#logoutInput:hover {
+  outline: 5px solid skyblue;
+}
+
+#loginBar {
+  width: 60%;
+  height: 7%;
+  border-radius: 11px;
+  margin-left: 20%;
+  box-sizing: border-box;
+}
+
+#loginBtn,
+#loginBtn2 {
+  width: 100%;
+  height: 80%;
+  border: none;
+  box-sizing: border-box;
+  background: red;
+  border-radius: 50px;
+  margin-top: 10%;
+  font-weight: bold;
+}
+
+#loginBtn:hover,
+#loginBtn2:hover {
+  background-color: #ad081b;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1500px;
+  background-color: black;
+  z-index: -1;
+  opacity: 0.6;
+  /* display: none; */
+}
+#loginLogo {
+  color: red;
+  margin-left: 46%;
+  margin-top: 5%;
+}
+
+#loginFooter {
+  text-align: center;
+  font-size: 5px;
+  margin-top: 7%;
+}
+
+#signdiv {
+  margin-left: 16%;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#loginForm2 {
+  display: none;
+}
+
+.bi-pinterest {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+#loginContent1 {
+  text-align: center;
+}
+#sign2 {
+  margin-left: 17%;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+/* -----------------기존 회원 탈퇴 내부 css들 영역--------------------- */
+
+#loginForm3 {
+  display: none;
+  width: 30%;
+  height: 500px;
+  background: white;
+  margin-top: 100px;
+  margin-left: 35%;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 3;
+  box-shadow: 3px 3px 3px 2px;
+}
+
+#outPassword {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-color: gray;
+  margin-left: 25%;
+}
+
+#outPassword:hover {
+  outline: 5px solid skyblue;
+}
+
+#exitd {
+  width: 30%;
+  height: 40%;
+  margin-top: 5%;
+  margin-left: 10%;
+  float: left;
+}
+
+#cancled {
+  width: 30%;
+  height: 40%;
+  margin-top: 5%;
+  margin-left: 19%;
+  float: left;
+}
+
+#cancle:hover {
+  color: white;
+  background-color: red;
+}
+
+#cancle {
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  border: 0.7px solid gray;
+  margin-bottom: 50px;
+}
+
+#exit {
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  border: 0.7px solid gray;
+  margin-bottom: 50px;
+}
+
+#exit:hover {
+  color: white;
+  background-color: lightskyblue;
+}
+#outd {
+  margin-top: 10%;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+#loginForm3 p {
+  font-size: 5px;
+  margin-left: 10%;
+  margin-top: 10%;
+}

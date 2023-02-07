@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sm</title>
+    <link rel="stylesheet" href="resources/css/sm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="resources/js/sm.js">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="has-playlist sticky-ready sticky-header-active">
+    <div class="site-bg">
+        <img src="resources/image/artwork-440x440.jpg" id="bgimg">
+    </div>
+    <main class="layout">
+        <div class="layout__cover">
+            <div class="player">
+                <div class="media-player">
+                    <div class="cover-container">
+                        <img src="resources/image/artwork-440x440.jpg" class="cover-image">
+                        <div id="play_button">
+                            <a href="javascript:void(0);">
+                                <span><img src="resources/image/play_button.svg" id="playbtn"></span>
+                            </a>
+                        </div>
+                        <div id="pnbtn">
+                            <a href="javascript:void(0);">
+                                <img src="resources/image/controls_next.svg" id="nextbtn" style="width: 20px; height: 20px; margin-top: 143px; margin-left: 286px; position: absolute; display: none;">
+                            </a>
+                            <a href="javascript:void(0);">
+                                <img src="resources/image/controls_prev.svg" id="prevbtn" style="width: 20px; height: 20px; margin-top: 141px; margin-left: 14px; position: absolute; display: none;">
+                            </a>
+                        </div>
+                        <div><img src="resources/image/pause_button.svg" id="pausebtn" style="position:absolute; width: 35px; display:none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout__cover-sizer"></div>
+        <div class="layout__header">
+            <header class="header">
+                <a href="https://nct127.lnk.to/Ay-Yo#music-services" class="header__link">
+                    <h1>
+                        NCT 127 
+                        <br>
+                        Ay-Yo 
+                        <br>
+                        The 4th Album Repackage
+                    </h1>
+                    <p>Choose music service</p>
+                </a>
+            </header>
+        </div>
+        <div class="layout__header-sizer"></div>
+        <div class="layout__content">
+            <nav class="music-service-list" role="navigation">
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://shop.nct127.com/?utm_source=Original&utm_campaign=NCT127Ay-Yo-The4thAlbumRepackage20230104&utm_medium=original&utm_referrer=https%3A%2F%2Fwww.smtown.com%2F&utm_board=virginmusic-us&utm_country=US&utm_linkurl=NCT127.lnk.to%2Fay-yo">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_nct127_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn" style="width: 65px;">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://smglobalshop.com/products/pre-order-nct-127-the-4th-album-repackage-ay-yo-a-ver">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_smglobalshop_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn" style="width: 65px;">
+                                <span class="btn_label">Go To</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://music.apple.com/kr/album/1662799809?app=music&at=11l5V7&ct=LFV_6d9944cef73bb15d2d4a77cab5f48e2c&itscg=30440&itsct=catchall_p3&lId=27395455&cId=none&sr=3&src=Linkfire&ls=1">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_applemusic_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://www.deezer.com/album/393165487?app_id=140685&utm_source=partner_linkfire&utm_campaign=6d9944cef73bb15d2d4a77cab5f48e2c&utm_medium=Original&utm_term=objective-stream&utm_content=album-393165487">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_deezer_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://soundcloud.com/nct127official/sets/ay-yo-the-4th-album-repackage">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_soundcloud_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://open.spotify.com/album/3VjW3uIc8WG4tXF2wKW9BJ?referral=labelaffiliate&utm_source=1011lwwmhouL&utm_medium=Universal_Korea&utm_campaign=labelaffiliate">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_spotify_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://music.youtube.com/playlist?list=OLAK5uy_lmRrudUgec9tHhWymBzLzF_HqBcE6zMAM&src=Linkfire&lId=57fcd367-4869-44a9-a5b7-d48847327f1b&cId=d3d58fd7-4c47-11e6-9fd0-066c3e7a8751">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_youtubemusic_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://music.apple.com/kr/album/ay-yo-the-4th-album-repackage/1662799809">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_itunes_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn" style="width: 90px;">
+                                <span class="btn_label">Pre-order</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="music-service-list__item">
+                    <a class="music-service-list__link" href="https://www.youtube.com/watch?v=R9XpA_zXDDI">
+                        <div class="music-service-list__content">
+                            <img src="resources/image/logo_youtube_onlight.svg" class="music-service-list__img">
+                            <button class="btn music-service-list__btn">
+                                <span class="btn_label">Play</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <footer style="display: block;">
+            <div id="lnk-c-footer" style class="is-ready">
+                <div class="lnk-c-footnote is-active">
+                    <p>
+                        By using this service, you agree to the use of cookies.
+                        <button class="link-c-inline-btn--white" onclick="lnk_consent('open_preferenes')">Click here</button>
+                        to manage your permissions.
+                    </p>
+                    <div class="lnk-c-footnote__affiliate">This page may contain affiliate links.</div>
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+            $(function(){
+                $("#playbtn").click(function(){
+                    $("#playbtn").toggle(300);
+                    $("#pausebtn").toggle(300);
+
+                    $("#nextbtn").hide(100);
+                    $("#prevbtn").hide(100);
+
+                    $(this).css("backgroundColor", "rgba(0,0,0,.5)");
+                });
+
+                $("#pausebtn").click(function(){
+                    $("#playbtn").toggle(300);
+                    $("#pausebtn").toggle(300);
+                    $("#nextbtn").toggle(300);
+                    $("#prevbtn").toggle(300);
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>
